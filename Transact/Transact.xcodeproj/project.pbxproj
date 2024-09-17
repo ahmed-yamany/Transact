@@ -7,102 +7,161 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EE18F98B2C9994A300CD30A6 /* TransactApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE18F98A2C9994A300CD30A6 /* TransactApp.swift */; };
-		EE18F98D2C9994A300CD30A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE18F98C2C9994A300CD30A6 /* ContentView.swift */; };
-		EE18F98F2C9994A400CD30A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE18F98E2C9994A400CD30A6 /* Assets.xcassets */; };
-		EE18F9922C9994A400CD30A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE18F9912C9994A400CD30A6 /* Preview Assets.xcassets */; };
+		EED8F5F02C9995A100B11D2B /* TransactApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED8F5EF2C9995A100B11D2B /* TransactApp.swift */; };
+		EED8F5F42C9995A200B11D2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED8F5F32C9995A200B11D2B /* Assets.xcassets */; };
+		EED8F5FF2C9996C900B11D2B /* TransactCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED8F5FE2C9996C900B11D2B /* TransactCoordinator.swift */; };
+		EED8F6022C9996D900B11D2B /* Coordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED8F6012C9996D900B11D2B /* Coordinator.framework */; };
+		EED8F6032C9996D900B11D2B /* Coordinator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EED8F6012C9996D900B11D2B /* Coordinator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EED8F6062C99971A00B11D2B /* TransactFactoryContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED8F6052C99971A00B11D2B /* TransactFactoryContainer.swift */; };
+		EED8F60B2C9997FB00B11D2B /* SwiftUIViews in Resources */ = {isa = PBXBuildFile; fileRef = EED8F60A2C9997FB00B11D2B /* SwiftUIViews */; };
+		EED8F60D2C99984300B11D2B /* SwiftUIViews in Frameworks */ = {isa = PBXBuildFile; productRef = EED8F60C2C99984300B11D2B /* SwiftUIViews */; };
+		EED8F60F2C999B1000B11D2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED8F60E2C999B1000B11D2B /* AppDelegate.swift */; };
+		EED8F6112C999BB800B11D2B /* HTTPClient in Resources */ = {isa = PBXBuildFile; fileRef = EED8F6102C999BB800B11D2B /* HTTPClient */; };
+		EED8F6132C999BC400B11D2B /* URLSessionHTTPClient in Resources */ = {isa = PBXBuildFile; fileRef = EED8F6122C999BC400B11D2B /* URLSessionHTTPClient */; };
+		EED8F6152C999C3000B11D2B /* HTTPClient in Frameworks */ = {isa = PBXBuildFile; productRef = EED8F6142C999C3000B11D2B /* HTTPClient */; };
+		EED8F6172C999C3500B11D2B /* URLSessionHTTPClient in Frameworks */ = {isa = PBXBuildFile; productRef = EED8F6162C999C3500B11D2B /* URLSessionHTTPClient */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		EED8F6042C9996D900B11D2B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EED8F6032C9996D900B11D2B /* Coordinator.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		EE18F9872C9994A300CD30A6 /* Transact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Transact.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE18F98A2C9994A300CD30A6 /* TransactApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactApp.swift; sourceTree = "<group>"; };
-		EE18F98C2C9994A300CD30A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		EE18F98E2C9994A400CD30A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EE18F9912C9994A400CD30A6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EED8F5EC2C9995A100B11D2B /* Transact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Transact.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EED8F5EF2C9995A100B11D2B /* TransactApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactApp.swift; sourceTree = "<group>"; };
+		EED8F5F32C9995A200B11D2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EED8F5FE2C9996C900B11D2B /* TransactCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactCoordinator.swift; sourceTree = "<group>"; };
+		EED8F6012C9996D900B11D2B /* Coordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Coordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EED8F6052C99971A00B11D2B /* TransactFactoryContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactFactoryContainer.swift; sourceTree = "<group>"; };
+		EED8F60A2C9997FB00B11D2B /* SwiftUIViews */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftUIViews; sourceTree = "<group>"; };
+		EED8F60E2C999B1000B11D2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EED8F6102C999BB800B11D2B /* HTTPClient */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = HTTPClient; sourceTree = "<group>"; };
+		EED8F6122C999BC400B11D2B /* URLSessionHTTPClient */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = URLSessionHTTPClient; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EE18F9842C9994A300CD30A6 /* Frameworks */ = {
+		EED8F5E92C9995A100B11D2B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EED8F6022C9996D900B11D2B /* Coordinator.framework in Frameworks */,
+				EED8F60D2C99984300B11D2B /* SwiftUIViews in Frameworks */,
+				EED8F6172C999C3500B11D2B /* URLSessionHTTPClient in Frameworks */,
+				EED8F6152C999C3000B11D2B /* HTTPClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EE18F97E2C9994A300CD30A6 = {
+		EED8F5E32C9995A100B11D2B = {
 			isa = PBXGroup;
 			children = (
-				EE18F9892C9994A300CD30A6 /* Transact */,
-				EE18F9882C9994A300CD30A6 /* Products */,
+				EED8F5EE2C9995A100B11D2B /* Transact */,
+				EED8F6082C9997BB00B11D2B /* Swift Packages */,
+				EED8F5ED2C9995A100B11D2B /* Products */,
+				EED8F6002C9996D900B11D2B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		EE18F9882C9994A300CD30A6 /* Products */ = {
+		EED8F5ED2C9995A100B11D2B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EE18F9872C9994A300CD30A6 /* Transact.app */,
+				EED8F5EC2C9995A100B11D2B /* Transact.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EE18F9892C9994A300CD30A6 /* Transact */ = {
+		EED8F5EE2C9995A100B11D2B /* Transact */ = {
 			isa = PBXGroup;
 			children = (
-				EE18F98A2C9994A300CD30A6 /* TransactApp.swift */,
-				EE18F98C2C9994A300CD30A6 /* ContentView.swift */,
-				EE18F98E2C9994A400CD30A6 /* Assets.xcassets */,
-				EE18F9902C9994A400CD30A6 /* Preview Content */,
+				EED8F5FD2C9996A100B11D2B /* App */,
+				EED8F5F32C9995A200B11D2B /* Assets.xcassets */,
 			);
 			path = Transact;
 			sourceTree = "<group>";
 		};
-		EE18F9902C9994A400CD30A6 /* Preview Content */ = {
+		EED8F5FD2C9996A100B11D2B /* App */ = {
 			isa = PBXGroup;
 			children = (
-				EE18F9912C9994A400CD30A6 /* Preview Assets.xcassets */,
+				EED8F60E2C999B1000B11D2B /* AppDelegate.swift */,
+				EED8F5EF2C9995A100B11D2B /* TransactApp.swift */,
+				EED8F5FE2C9996C900B11D2B /* TransactCoordinator.swift */,
+				EED8F6052C99971A00B11D2B /* TransactFactoryContainer.swift */,
 			);
-			path = "Preview Content";
+			path = App;
+			sourceTree = "<group>";
+		};
+		EED8F6002C9996D900B11D2B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EED8F6012C9996D900B11D2B /* Coordinator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EED8F6082C9997BB00B11D2B /* Swift Packages */ = {
+			isa = PBXGroup;
+			children = (
+				EED8F6122C999BC400B11D2B /* URLSessionHTTPClient */,
+				EED8F6102C999BB800B11D2B /* HTTPClient */,
+				EED8F60A2C9997FB00B11D2B /* SwiftUIViews */,
+			);
+			path = "Swift Packages";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EE18F9862C9994A300CD30A6 /* Transact */ = {
+		EED8F5EB2C9995A100B11D2B /* Transact */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EE18F9952C9994A400CD30A6 /* Build configuration list for PBXNativeTarget "Transact" */;
+			buildConfigurationList = EED8F5FA2C9995A200B11D2B /* Build configuration list for PBXNativeTarget "Transact" */;
 			buildPhases = (
-				EE18F9832C9994A300CD30A6 /* Sources */,
-				EE18F9842C9994A300CD30A6 /* Frameworks */,
-				EE18F9852C9994A300CD30A6 /* Resources */,
+				EED8F5E82C9995A100B11D2B /* Sources */,
+				EED8F5E92C9995A100B11D2B /* Frameworks */,
+				EED8F5EA2C9995A100B11D2B /* Resources */,
+				EED8F6042C9996D900B11D2B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Transact;
+			packageProductDependencies = (
+				EED8F60C2C99984300B11D2B /* SwiftUIViews */,
+				EED8F6142C999C3000B11D2B /* HTTPClient */,
+				EED8F6162C999C3500B11D2B /* URLSessionHTTPClient */,
+			);
 			productName = Transact;
-			productReference = EE18F9872C9994A300CD30A6 /* Transact.app */;
+			productReference = EED8F5EC2C9995A100B11D2B /* Transact.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		EE18F97F2C9994A300CD30A6 /* Project object */ = {
+		EED8F5E42C9995A100B11D2B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
-					EE18F9862C9994A300CD30A6 = {
+					EED8F5EB2C9995A100B11D2B = {
 						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
-			buildConfigurationList = EE18F9822C9994A300CD30A6 /* Build configuration list for PBXProject "Transact" */;
+			buildConfigurationList = EED8F5E72C9995A100B11D2B /* Build configuration list for PBXProject "Transact" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,42 +169,46 @@
 				en,
 				Base,
 			);
-			mainGroup = EE18F97E2C9994A300CD30A6;
-			productRefGroup = EE18F9882C9994A300CD30A6 /* Products */;
+			mainGroup = EED8F5E32C9995A100B11D2B;
+			productRefGroup = EED8F5ED2C9995A100B11D2B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EE18F9862C9994A300CD30A6 /* Transact */,
+				EED8F5EB2C9995A100B11D2B /* Transact */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		EE18F9852C9994A300CD30A6 /* Resources */ = {
+		EED8F5EA2C9995A100B11D2B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE18F9922C9994A400CD30A6 /* Preview Assets.xcassets in Resources */,
-				EE18F98F2C9994A400CD30A6 /* Assets.xcassets in Resources */,
+				EED8F5F42C9995A200B11D2B /* Assets.xcassets in Resources */,
+				EED8F60B2C9997FB00B11D2B /* SwiftUIViews in Resources */,
+				EED8F6132C999BC400B11D2B /* URLSessionHTTPClient in Resources */,
+				EED8F6112C999BB800B11D2B /* HTTPClient in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EE18F9832C9994A300CD30A6 /* Sources */ = {
+		EED8F5E82C9995A100B11D2B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE18F98D2C9994A300CD30A6 /* ContentView.swift in Sources */,
-				EE18F98B2C9994A300CD30A6 /* TransactApp.swift in Sources */,
+				EED8F60F2C999B1000B11D2B /* AppDelegate.swift in Sources */,
+				EED8F6062C99971A00B11D2B /* TransactFactoryContainer.swift in Sources */,
+				EED8F5FF2C9996C900B11D2B /* TransactCoordinator.swift in Sources */,
+				EED8F5F02C9995A100B11D2B /* TransactApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		EE18F9932C9994A400CD30A6 /* Debug */ = {
+		EED8F5F82C9995A200B11D2B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -208,7 +271,7 @@
 			};
 			name = Debug;
 		};
-		EE18F9942C9994A400CD30A6 /* Release */ = {
+		EED8F5F92C9995A200B11D2B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -264,14 +327,13 @@
 			};
 			name = Release;
 		};
-		EE18F9962C9994A400CD30A6 /* Debug */ = {
+		EED8F5FB2C9995A200B11D2B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Transact/Preview Content\"";
 				DEVELOPMENT_TEAM = 4U8DMJ33ZN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -293,14 +355,13 @@
 			};
 			name = Debug;
 		};
-		EE18F9972C9994A400CD30A6 /* Release */ = {
+		EED8F5FC2C9995A200B11D2B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Transact/Preview Content\"";
 				DEVELOPMENT_TEAM = 4U8DMJ33ZN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -325,25 +386,40 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EE18F9822C9994A300CD30A6 /* Build configuration list for PBXProject "Transact" */ = {
+		EED8F5E72C9995A100B11D2B /* Build configuration list for PBXProject "Transact" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EE18F9932C9994A400CD30A6 /* Debug */,
-				EE18F9942C9994A400CD30A6 /* Release */,
+				EED8F5F82C9995A200B11D2B /* Debug */,
+				EED8F5F92C9995A200B11D2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EE18F9952C9994A400CD30A6 /* Build configuration list for PBXNativeTarget "Transact" */ = {
+		EED8F5FA2C9995A200B11D2B /* Build configuration list for PBXNativeTarget "Transact" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EE18F9962C9994A400CD30A6 /* Debug */,
-				EE18F9972C9994A400CD30A6 /* Release */,
+				EED8F5FB2C9995A200B11D2B /* Debug */,
+				EED8F5FC2C9995A200B11D2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EED8F60C2C99984300B11D2B /* SwiftUIViews */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftUIViews;
+		};
+		EED8F6142C999C3000B11D2B /* HTTPClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = HTTPClient;
+		};
+		EED8F6162C999C3500B11D2B /* URLSessionHTTPClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = URLSessionHTTPClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = EE18F97F2C9994A300CD30A6 /* Project object */;
+	rootObject = EED8F5E42C9995A100B11D2B /* Project object */;
 }

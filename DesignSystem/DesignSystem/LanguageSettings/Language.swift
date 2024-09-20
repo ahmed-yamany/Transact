@@ -12,27 +12,26 @@ public enum Language: String, CaseIterable, Hashable {
     case en
     case ar
     // swiftlint: enable identifier_name
-    
+
     public var layoutDirection: LayoutDirection {
         switch self {
-            case .en:
-                    .leftToRight
-            case .ar:
-                    .rightToLeft
+        case .en:
+            .leftToRight
+        case .ar:
+            .rightToLeft
         }
     }
-    
+
     public var local: Locale {
-        Locale(identifier: self.rawValue)
+        Locale(identifier: rawValue)
     }
-    
+
     public var path: String {
         // swiftlint: disable force_unwrapping
-        Bundle(for: Settings.self).path(forResource: rawValue, ofType: "lproj")!
-//        Bundle.main.path(forResource: rawValue, ofType: "lproj")!
+        Bundle(for: LanguageSettings.self).path(forResource: rawValue, ofType: "lproj")!
         // swiftlint: enable force_unwrapping
     }
-    
+
     public var bundle: Bundle {
         // swiftlint: disable force_unwrapping
         Bundle(path: path)!

@@ -7,14 +7,12 @@
 
 import SwiftUI
 import SwiftUIViews
-import SwiftUIModifiers
 import DesignSystem
-import Splash
 
 @main
 struct TransactApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    @ObservedObject var settings = SettingsFactoryContainer.settings
+    @ObservedObject var languageSettings = LanguageSettings.shared
     
     var body: some Scene {
         WindowGroup {
@@ -24,7 +22,8 @@ struct TransactApp: App {
             .viewDidLoad {
                 TransactFactoryContainer.appCoordinator.start()
             }
-            .environmentSettings(settings)
+            .configureLanguageSettings(languageSettings)
+            
         }
     }
 }

@@ -8,5 +8,5 @@
 import Foundation
 
 func localized(forKey key: String, table: String, fallbackValue value: String) -> String {
-    SettingsFactoryContainer.settings.language.bundle.localizedString(forKey: key, value: value, table: table)
+    LanguageSettings.shared.language.bundle.localizedString(forKey: key, value: value, table: table)
 }

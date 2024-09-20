@@ -9,7 +9,6 @@ import SwiftUI
 import Coordinator
 import Splash
 import SwiftUIModifiers
-import DesignSystem
 
 struct SplashFactoryContainer {
     

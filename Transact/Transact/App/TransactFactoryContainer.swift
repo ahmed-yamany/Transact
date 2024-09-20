@@ -39,4 +39,10 @@ final class TransactFactoryContainer {
 
     @MainActor
     static var appCoordinator: TransactCoordinatorProtocol = TransactCoordinator(router: router())
+    
+    @MainActor
+    static func refreshAppCoordinator() -> TransactCoordinatorProtocol {
+        Self.appCoordinator = TransactCoordinator(router: router())
+        return Self.appCoordinator
+    }
 }

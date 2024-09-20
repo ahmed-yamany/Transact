@@ -7,15 +7,24 @@
 
 import SwiftUI
 import SwiftUIViews
+import SwiftUIModifiers
+import DesignSystem
+import Splash
 
 @main
 struct TransactApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    var appCoordinator = TransactFactoryContainer.appCoordinator
+    @ObservedObject var settings = SettingsFactoryContainer.settings
     
     var body: some Scene {
         WindowGroup {
-            NavigationControllerView(navigationController: appCoordinator.router.navigationController)
+            NavigationControllerView(
+                navigationController: TransactFactoryContainer.refreshAppCoordinator().router.navigationController
+            )
+            .viewDidLoad {
+                TransactFactoryContainer.appCoordinator.start()
+            }
+            .environmentSettings(settings)
         }
     }
 }

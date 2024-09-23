@@ -17,10 +17,10 @@ public struct SplashView: View {
     
     public var body: some View {
         HStack {
-            Text(L10n.appName)
+            Text(.h3Label(text: L10n.appName, color: .primary))
+//                .lineSpacing(50)
             
             Image(systemName: "house")
         }
-        .background(.blue)
     }
 }

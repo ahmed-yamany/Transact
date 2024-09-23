@@ -20,7 +20,7 @@ public protocol LanguageSettingsProtocol: ObservableObject {
 public class LanguageSettings: LanguageSettingsProtocol {
     @ObservedObject public static var shared = LanguageSettings()
     
-    @Published public var language: Language = .en {
+    @Published public var language: Language = .english {
         didSet {
             storedLanguage = language.rawValue
         }
@@ -29,6 +29,6 @@ public class LanguageSettings: LanguageSettingsProtocol {
     @UserDefault(key: \.appLanguage) private var storedLanguage: String?
     
     private init() {
-        language = Language(rawValue: storedLanguage ?? Language.en.rawValue) ?? .en
+        language = Language(rawValue: storedLanguage ?? Language.english.rawValue) ?? .english
     }
 }

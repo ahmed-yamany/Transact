@@ -8,16 +8,14 @@
 import SwiftUI
 
 public enum Language: String, CaseIterable, Hashable {
-    // swiftlint: disable identifier_name
-    case en
-    case ar
-    // swiftlint: enable identifier_name
-
+    case english = "en"
+    case arabic = "ar"
+         
     public var layoutDirection: LayoutDirection {
         switch self {
-        case .en:
+        case .english:
             .leftToRight
-        case .ar:
+        case .arabic:
             .rightToLeft
         }
     }

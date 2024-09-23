@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		EE7958912C9C653900C61658 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7958902C9C653900C61658 /* SplashView.swift */; };
 		EE7958932C9C654600C61658 /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7958922C9C654600C61658 /* SplashCoordinator.swift */; };
-		EE7958B32C9C698200C61658 /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7958B22C9C698200C61658 /* DesignSystem.framework */; };
-		EE7958B42C9C698200C61658 /* DesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE7958B22C9C698200C61658 /* DesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EEF3A8652CA1B38C00C6BC3E /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF3A8642CA1B38C00C6BC3E /* DesignSystem.framework */; };
+		EEF3A8662CA1B38C00C6BC3E /* DesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEF3A8642CA1B38C00C6BC3E /* DesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,7 +20,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EE7958B42C9C698200C61658 /* DesignSystem.framework in Embed Frameworks */,
+				EEF3A8662CA1B38C00C6BC3E /* DesignSystem.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -28,10 +28,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EE7958862C9C64C000C61658 /* Splash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Splash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE7958902C9C653900C61658 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		EE7958922C9C654600C61658 /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
-		EE7958B22C9C698200C61658 /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEF3A8572CA1B36100C6BC3E /* Splash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Splash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEF3A8642CA1B38C00C6BC3E /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE7958B32C9C698200C61658 /* DesignSystem.framework in Frameworks */,
+				EEF3A8652CA1B38C00C6BC3E /* DesignSystem.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,17 +50,9 @@
 			isa = PBXGroup;
 			children = (
 				EE7958882C9C64C000C61658 /* Splash */,
-				EE7958872C9C64C000C61658 /* Products */,
-				EE7958B12C9C698200C61658 /* Frameworks */,
+				EEF3A8572CA1B36100C6BC3E /* Splash.framework */,
+				EEF3A8632CA1B38C00C6BC3E /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		EE7958872C9C64C000C61658 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EE7958862C9C64C000C61658 /* Splash.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		EE7958882C9C64C000C61658 /* Splash */ = {
@@ -72,10 +64,10 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
-		EE7958B12C9C698200C61658 /* Frameworks */ = {
+		EEF3A8632CA1B38C00C6BC3E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EE7958B22C9C698200C61658 /* DesignSystem.framework */,
+				EEF3A8642CA1B38C00C6BC3E /* DesignSystem.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -109,7 +101,7 @@
 			);
 			name = Splash;
 			productName = Splash;
-			productReference = EE7958862C9C64C000C61658 /* Splash.framework */;
+			productReference = EEF3A8572CA1B36100C6BC3E /* Splash.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -136,7 +128,7 @@
 				Base,
 			);
 			mainGroup = EE79587C2C9C64C000C61658;
-			productRefGroup = EE7958872C9C64C000C61658 /* Products */;
+			productRefGroup = EE79587C2C9C64C000C61658;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (

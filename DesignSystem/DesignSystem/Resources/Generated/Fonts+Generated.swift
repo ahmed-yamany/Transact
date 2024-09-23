@@ -10,16 +10,23 @@
   import SwiftUI
 #endif
 
-// Deprecated typealiases
-@available(*, deprecated, renamed: "FontConvertible.Font", message: "This typealias will be removed in SwiftGen 7.0")
-public typealias Font = FontConvertible.Font
-
 // swiftlint:disable superfluous_disable_command file_length implicit_return
 
 // MARK: - Fonts
 
 // swiftlint:disable identifier_name line_length type_body_length
 public enum FontFamily {
+  public enum Cairo {
+    public static let regular = FontConvertible(name: "Cairo-Regular", family: "Cairo", path: "Cairo.ttf")
+    public static let black = FontConvertible(name: "Cairo-Regular_Black", family: "Cairo", path: "Cairo.ttf")
+    public static let bold = FontConvertible(name: "Cairo-Regular_Bold", family: "Cairo", path: "Cairo.ttf")
+    public static let extraBold = FontConvertible(name: "Cairo-Regular_ExtraBold", family: "Cairo", path: "Cairo.ttf")
+    public static let extraLight = FontConvertible(name: "Cairo-Regular_ExtraLight", family: "Cairo", path: "Cairo.ttf")
+    public static let light = FontConvertible(name: "Cairo-Regular_Light", family: "Cairo", path: "Cairo.ttf")
+    public static let medium = FontConvertible(name: "Cairo-Regular_Medium", family: "Cairo", path: "Cairo.ttf")
+    public static let semiBold = FontConvertible(name: "Cairo-Regular_SemiBold", family: "Cairo", path: "Cairo.ttf")
+    public static let all: [FontConvertible] = [regular, black, bold, extraBold, extraLight, light, medium, semiBold]
+  }
   public enum Inter {
     public static let regular = FontConvertible(name: "Inter-Regular", family: "Inter", path: "Inter.ttf")
     public static let black = FontConvertible(name: "Inter-Regular_Black", family: "Inter", path: "Inter.ttf")
@@ -32,7 +39,7 @@ public enum FontFamily {
     public static let thin = FontConvertible(name: "Inter-Regular_Thin", family: "Inter", path: "Inter.ttf")
     public static let all: [FontConvertible] = [regular, black, bold, extraBold, extraLight, light, medium, semiBold, thin]
   }
-  public static let allCustomFonts: [FontConvertible] = [Inter.all].flatMap { $0 }
+  public static let allCustomFonts: [FontConvertible] = [Cairo.all, Inter.all].flatMap { $0 }
   public static func registerAllCustomFonts() {
     allCustomFonts.forEach { $0.register() }
   }

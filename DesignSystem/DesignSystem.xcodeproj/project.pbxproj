@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		EE9ED1CB2C99D71D00DFA2F2 /* FoundationExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = EE9ED1CA2C99D71D00DFA2F2 /* FoundationExtensions */; };
+		EEADB4322CA03C5400F928D7 /* CreateAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEADB4312CA03C5400F928D7 /* CreateAttributedString.swift */; };
+		EEADB4342CA0505E00F928D7 /* Cairo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEADB4332CA0505500F928D7 /* Cairo.ttf */; };
+		EEADB4382CA052B700F928D7 /* h1Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEADB4372CA052B700F928D7 /* h1Label.swift */; };
+		EEADB43A2CA0543600F928D7 /* h2Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEADB4392CA0543600F928D7 /* h2Label.swift */; };
 		EED8F65B2C99A3C900B11D2B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED8F65A2C99A3C900B11D2B /* Images.xcassets */; };
 		EED8F65D2C99A3D500B11D2B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED8F65C2C99A3D500B11D2B /* Colors.xcassets */; };
 		EED8F6652C99A51E00B11D2B /* Inter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EED8F6642C99A51E00B11D2B /* Inter.ttf */; };
@@ -20,13 +24,24 @@
 		EED8F6772C99AF8000B11D2B /* swiftgen+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED8F6762C99AF8000B11D2B /* swiftgen+localized.swift */; };
 		EED8F67A2C99B01900B11D2B /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED8F6792C99B01900B11D2B /* Language.swift */; };
 		EED8F67C2C99B0F900B11D2B /* LanguageSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED8F67B2C99B0F900B11D2B /* LanguageSettings.swift */; };
+		EEDD7FE72CA1A1AE00609C4D /* h3Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD7FE62CA1A1AE00609C4D /* h3Label.swift */; };
+		EEDD7FE92CA1ACA500609C4D /* t1Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD7FE82CA1ACA500609C4D /* t1Label.swift */; };
+		EEDD7FEB2CA1ADC200609C4D /* t2Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD7FEA2CA1ADC200609C4D /* t2Label.swift */; };
+		EEDD7FED2CA1AF4200609C4D /* t3Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD7FEC2CA1AF4200609C4D /* t3Label.swift */; };
+		EEDD7FEF2CA1AFFF00609C4D /* s1Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD7FEE2CA1AFFF00609C4D /* s1Label.swift */; };
+		EEDD7FF12CA1B21F00609C4D /* s2Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD7FF02CA1B21F00609C4D /* s2Label.swift */; };
+		EEDD7FF32CA1B28B00609C4D /* s3Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD7FF22CA1B28B00609C4D /* s3Label.swift */; };
 		EEE4298C2C9DD86600D96CD8 /* View+configureLanguageSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4298B2C9DD86600D96CD8 /* View+configureLanguageSettings.swift */; };
 		EEE4298E2C9DD92600D96CD8 /* EnvironmentValues+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4298D2C9DD92600D96CD8 /* EnvironmentValues+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EE9ED1C92C99D71000DFA2F2 /* FoundationExtensions */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FoundationExtensions; sourceTree = "<group>"; };
-		EED8F6222C999D2200B11D2B /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEADB4312CA03C5400F928D7 /* CreateAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAttributedString.swift; sourceTree = "<group>"; };
+		EEADB4332CA0505500F928D7 /* Cairo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cairo.ttf; sourceTree = "<group>"; };
+		EEADB4372CA052B700F928D7 /* h1Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = h1Label.swift; sourceTree = "<group>"; };
+		EEADB4392CA0543600F928D7 /* h2Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = h2Label.swift; sourceTree = "<group>"; };
+		EED8F6222C999D2200B11D2B /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DesignSystem.framework; path = "/Users/ahmed-yamany/Desktop/Transact/DesignSystem/build/Debug-iphoneos/DesignSystem.framework"; sourceTree = "<absolute>"; };
 		EED8F65A2C99A3C900B11D2B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EED8F65C2C99A3D500B11D2B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		EED8F6642C99A51E00B11D2B /* Inter.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inter.ttf; sourceTree = "<group>"; };
@@ -40,6 +55,13 @@
 		EED8F6762C99AF8000B11D2B /* swiftgen+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "swiftgen+localized.swift"; sourceTree = "<group>"; };
 		EED8F6792C99B01900B11D2B /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		EED8F67B2C99B0F900B11D2B /* LanguageSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSettings.swift; sourceTree = "<group>"; };
+		EEDD7FE62CA1A1AE00609C4D /* h3Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = h3Label.swift; sourceTree = "<group>"; };
+		EEDD7FE82CA1ACA500609C4D /* t1Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = t1Label.swift; sourceTree = "<group>"; };
+		EEDD7FEA2CA1ADC200609C4D /* t2Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = t2Label.swift; sourceTree = "<group>"; };
+		EEDD7FEC2CA1AF4200609C4D /* t3Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = t3Label.swift; sourceTree = "<group>"; };
+		EEDD7FEE2CA1AFFF00609C4D /* s1Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = s1Label.swift; sourceTree = "<group>"; };
+		EEDD7FF02CA1B21F00609C4D /* s2Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = s2Label.swift; sourceTree = "<group>"; };
+		EEDD7FF22CA1B28B00609C4D /* s3Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = s3Label.swift; sourceTree = "<group>"; };
 		EEE4298B2C9DD86600D96CD8 /* View+configureLanguageSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+configureLanguageSettings.swift"; sourceTree = "<group>"; };
 		EEE4298D2C9DD92600D96CD8 /* EnvironmentValues+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,23 +86,37 @@
 			path = "Swit Packages";
 			sourceTree = "<group>";
 		};
+		EEADB4352CA0524500F928D7 /* Utilites */ = {
+			isa = PBXGroup;
+			children = (
+				EEADB4362CA0526C00F928D7 /* Labels */,
+			);
+			path = Utilites;
+			sourceTree = "<group>";
+		};
+		EEADB4362CA0526C00F928D7 /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				EEADB4312CA03C5400F928D7 /* CreateAttributedString.swift */,
+				EEADB4372CA052B700F928D7 /* h1Label.swift */,
+				EEADB4392CA0543600F928D7 /* h2Label.swift */,
+				EEDD7FE62CA1A1AE00609C4D /* h3Label.swift */,
+				EEDD7FE82CA1ACA500609C4D /* t1Label.swift */,
+				EEDD7FEA2CA1ADC200609C4D /* t2Label.swift */,
+				EEDD7FEC2CA1AF4200609C4D /* t3Label.swift */,
+				EEDD7FEE2CA1AFFF00609C4D /* s1Label.swift */,
+				EEDD7FF02CA1B21F00609C4D /* s2Label.swift */,
+				EEDD7FF22CA1B28B00609C4D /* s3Label.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
 		EED8F6182C999D2200B11D2B = {
 			isa = PBXGroup;
 			children = (
 				EED8F6662C99A8AB00B11D2B /* swiftgen.yml */,
 				EED8F6242C999D2200B11D2B /* DesignSystem */,
-				EE9ED1C82C99D46500DFA2F2 /* Swit Packages */,
-				EED8F6232C999D2200B11D2B /* Products */,
-				EED8F6822C99B6E600B11D2B /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		EED8F6232C999D2200B11D2B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EED8F6222C999D2200B11D2B /* DesignSystem.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		EED8F6242C999D2200B11D2B /* DesignSystem */ = {
@@ -88,6 +124,8 @@
 			children = (
 				EED8F6782C99B00D00B11D2B /* LanguageSettings */,
 				EED8F62D2C999EC400B11D2B /* Resources */,
+				EEADB4352CA0524500F928D7 /* Utilites */,
+				EE9ED1C82C99D46500DFA2F2 /* Swit Packages */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -116,6 +154,7 @@
 		EED8F6312C999F6900B11D2B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				EEADB4332CA0505500F928D7 /* Cairo.ttf */,
 				EED8F6642C99A51E00B11D2B /* Inter.ttf */,
 			);
 			path = Fonts;
@@ -157,13 +196,6 @@
 				EEE4298B2C9DD86600D96CD8 /* View+configureLanguageSettings.swift */,
 			);
 			path = LanguageSettings;
-			sourceTree = "<group>";
-		};
-		EED8F6822C99B6E600B11D2B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,7 +257,7 @@
 				ar,
 			);
 			mainGroup = EED8F6182C999D2200B11D2B;
-			productRefGroup = EED8F6232C999D2200B11D2B /* Products */;
+			productRefGroup = EED8F6182C999D2200B11D2B;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -244,6 +276,7 @@
 				EED8F65B2C99A3C900B11D2B /* Images.xcassets in Resources */,
 				EED8F65D2C99A3D500B11D2B /* Colors.xcassets in Resources */,
 				EED8F6672C99A8AB00B11D2B /* swiftgen.yml in Resources */,
+				EEADB4342CA0505E00F928D7 /* Cairo.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,14 +288,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEE4298C2C9DD86600D96CD8 /* View+configureLanguageSettings.swift in Sources */,
+				EEDD7FE72CA1A1AE00609C4D /* h3Label.swift in Sources */,
 				EED8F66E2C99AD4300B11D2B /* Files+Generated.swift in Sources */,
+				EEDD7FEF2CA1AFFF00609C4D /* s1Label.swift in Sources */,
 				EED8F66C2C99AD1C00B11D2B /* Fonts+Generated.swift in Sources */,
 				EED8F6752C99AE5D00B11D2B /* Strings+Generated.swift in Sources */,
+				EEADB4322CA03C5400F928D7 /* CreateAttributedString.swift in Sources */,
 				EED8F67A2C99B01900B11D2B /* Language.swift in Sources */,
+				EEDD7FF32CA1B28B00609C4D /* s3Label.swift in Sources */,
+				EEDD7FE92CA1ACA500609C4D /* t1Label.swift in Sources */,
+				EEADB43A2CA0543600F928D7 /* h2Label.swift in Sources */,
+				EEDD7FEB2CA1ADC200609C4D /* t2Label.swift in Sources */,
+				EEDD7FF12CA1B21F00609C4D /* s2Label.swift in Sources */,
 				EEE4298E2C9DD92600D96CD8 /* EnvironmentValues+.swift in Sources */,
 				EED8F67C2C99B0F900B11D2B /* LanguageSettings.swift in Sources */,
 				EED8F6772C99AF8000B11D2B /* swiftgen+localized.swift in Sources */,
+				EEADB4382CA052B700F928D7 /* h1Label.swift in Sources */,
 				EED8F66A2C99ACEF00B11D2B /* Assets+Generated.swift in Sources */,
+				EEDD7FED2CA1AF4200609C4D /* t3Label.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

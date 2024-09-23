@@ -8,7 +8,7 @@
 import SwiftUI
 
 public struct EnvironmentLanguageKey: EnvironmentKey {
-    public static var defaultValue: Language = .en
+    public static var defaultValue: Language = .english
 }
 
 public extension EnvironmentValues {

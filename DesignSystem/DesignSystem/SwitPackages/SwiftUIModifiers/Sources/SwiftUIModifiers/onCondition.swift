@@ -9,7 +9,7 @@ import SwiftUI
 
 public extension View {
     @ViewBuilder
-    func onCondition(_ condition: Bool, _ modifer: (Self) -> some View) -> some View {
+    func onCondition(_ condition: Bool, @ViewBuilder _ modifer: (Self) -> some View) -> some View {
         if condition {
             AnyView(modifer(self))
         } else {

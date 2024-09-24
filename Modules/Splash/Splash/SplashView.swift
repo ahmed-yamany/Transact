@@ -16,14 +16,20 @@ public struct SplashView: View {
     }
     
     public var body: some View {
-        HStack {
-            Text(.h3Label(text: L10n.appName, color: .primary))
-//                .lineSpacing(50)
-            
-            Image(systemName: "house")
+        VStack {
+            VStack(spacing: 8) {
+                Asset.Images.logo.swiftUIImage
+                    .resizable()
+                    .frame(width: 56, height: 56)
+                
+                Text(.h3Label(text: L10n.appName, color: ColorTokens.mobileBG))
+            }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(ColorTokens.background)
-        
+        .background(PrimaryLinearGradient())
+        .task {
+            try? await Task.sleep(for: .seconds(3))
+            coordinator.splashViewEnded()
+        }
     }
 }

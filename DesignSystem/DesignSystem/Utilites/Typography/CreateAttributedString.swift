@@ -16,16 +16,11 @@ extension AttributedString {
         letterSpacing: CGFloat
     ) -> AttributedString {
         var string = AttributedString(text)
-
-        var container = AttributeContainer(
-            [
-                .foregroundColor: foregroundColor,
-                .font: font,
-                .tracking: letterSpacing,
-            ]
-        )
         
-        string.setAttributes(container)
+        string.foregroundColor = foregroundColor
+        string.font = font
+        string.tracking = letterSpacing
+        
         return string
     }
 }

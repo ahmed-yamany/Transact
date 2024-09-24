@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-extension View {
+public extension View {
     @ViewBuilder
-    func border(_ color: Color, lineWidth: CGFloat, radius: CGFloat = 0) -> some View {
+    func border(_ color: Color, lineWidth: CGFloat, radius: CGFloat? = nil) -> some View {
         mask {
-            RoundedRectangle(cornerRadius: radius)
+            RoundedRectangle(cornerRadius: radius ?? 0)
         }
         .background {
-            RoundedRectangle(cornerRadius: radius)
+            RoundedRectangle(cornerRadius: radius ?? 0)
                 .stroke(lineWidth: lineWidth)
                 .fill(color)
         }

@@ -26,8 +26,8 @@ public extension ColorTokens {
         .trSecondaryText
     }
     
-    static var inactiveText: Color {
-        .trInactiveText
+    static var inactive: Color {
+        .trInactive
     }
     
     static var actionAndInfo: Color {
@@ -45,4 +45,9 @@ public extension ColorTokens {
     static var warning: Color {
         .trWarning
     }
+    
+    static var mobileBG: Color {
+        .trMobileBG
+    }
+    
 }

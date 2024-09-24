@@ -26,6 +26,16 @@
 		EED8F6772C99AF8000B11D2B /* swiftgen+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED8F6762C99AF8000B11D2B /* swiftgen+localized.swift */; };
 		EED8F67A2C99B01900B11D2B /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED8F6792C99B01900B11D2B /* Language.swift */; };
 		EED8F67C2C99B0F900B11D2B /* LanguageSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED8F67B2C99B0F900B11D2B /* LanguageSettings.swift */; };
+		EEDC33822CA310F100FCACA1 /* ButtonSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC33812CA310F100FCACA1 /* ButtonSize.swift */; };
+		EEDC33842CA3111F00FCACA1 /* BigButtonSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC33832CA3111F00FCACA1 /* BigButtonSize.swift */; };
+		EEDC33862CA3115800FCACA1 /* SmallButtonSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC33852CA3115800FCACA1 /* SmallButtonSize.swift */; };
+		EEDC33892CA3124900FCACA1 /* ButtonStyleConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC33882CA3124900FCACA1 /* ButtonStyleConfiguration.swift */; };
+		EEDC338B2CA314E700FCACA1 /* PrimaryButtonConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC338A2CA314E700FCACA1 /* PrimaryButtonConfigurations.swift */; };
+		EEDC338E2CA316DF00FCACA1 /* PrimaryLinearGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC338D2CA316DF00FCACA1 /* PrimaryLinearGradient.swift */; };
+		EEDC33912CA3222C00FCACA1 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC33902CA3222C00FCACA1 /* PrimaryButtonStyle.swift */; };
+		EEDC33932CA3253500FCACA1 /* SwiftUIModifiers in Resources */ = {isa = PBXBuildFile; fileRef = EEDC33922CA3253500FCACA1 /* SwiftUIModifiers */; };
+		EEDC33952CA3254100FCACA1 /* SwiftUIModifiers in Frameworks */ = {isa = PBXBuildFile; productRef = EEDC33942CA3254100FCACA1 /* SwiftUIModifiers */; };
+		EEDC33972CA32A6A00FCACA1 /* SecondaryButtonConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC33962CA32A6A00FCACA1 /* SecondaryButtonConfigurations.swift */; };
 		EEDD7FE72CA1A1AE00609C4D /* h3Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD7FE62CA1A1AE00609C4D /* h3Label.swift */; };
 		EEDD7FE92CA1ACA500609C4D /* t1Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD7FE82CA1ACA500609C4D /* t1Label.swift */; };
 		EEDD7FEB2CA1ADC200609C4D /* t2Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD7FEA2CA1ADC200609C4D /* t2Label.swift */; };
@@ -58,6 +68,15 @@
 		EED8F6762C99AF8000B11D2B /* swiftgen+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "swiftgen+localized.swift"; sourceTree = "<group>"; };
 		EED8F6792C99B01900B11D2B /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		EED8F67B2C99B0F900B11D2B /* LanguageSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSettings.swift; sourceTree = "<group>"; };
+		EEDC33812CA310F100FCACA1 /* ButtonSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSize.swift; sourceTree = "<group>"; };
+		EEDC33832CA3111F00FCACA1 /* BigButtonSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButtonSize.swift; sourceTree = "<group>"; };
+		EEDC33852CA3115800FCACA1 /* SmallButtonSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallButtonSize.swift; sourceTree = "<group>"; };
+		EEDC33882CA3124900FCACA1 /* ButtonStyleConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyleConfiguration.swift; sourceTree = "<group>"; };
+		EEDC338A2CA314E700FCACA1 /* PrimaryButtonConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonConfigurations.swift; sourceTree = "<group>"; };
+		EEDC338D2CA316DF00FCACA1 /* PrimaryLinearGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryLinearGradient.swift; sourceTree = "<group>"; };
+		EEDC33902CA3222C00FCACA1 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
+		EEDC33922CA3253500FCACA1 /* SwiftUIModifiers */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftUIModifiers; sourceTree = "<group>"; };
+		EEDC33962CA32A6A00FCACA1 /* SecondaryButtonConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButtonConfigurations.swift; sourceTree = "<group>"; };
 		EEDD7FE62CA1A1AE00609C4D /* h3Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = h3Label.swift; sourceTree = "<group>"; };
 		EEDD7FE82CA1ACA500609C4D /* t1Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = t1Label.swift; sourceTree = "<group>"; };
 		EEDD7FEA2CA1ADC200609C4D /* t2Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = t2Label.swift; sourceTree = "<group>"; };
@@ -78,6 +97,7 @@
 			files = (
 				EECCF13E2CA1BCCA007E38D2 /* UIExtensions in Frameworks */,
 				EE9ED1CB2C99D71D00DFA2F2 /* FoundationExtensions in Frameworks */,
+				EEDC33952CA3254100FCACA1 /* SwiftUIModifiers in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +107,7 @@
 		EE9ED1C82C99D46500DFA2F2 /* SwitPackages */ = {
 			isa = PBXGroup;
 			children = (
+				EEDC33922CA3253500FCACA1 /* SwiftUIModifiers */,
 				EEF3A86A2CA1BC8800C6BC3E /* UIExtensions */,
 				EE9ED1C92C99D71000DFA2F2 /* FoundationExtensions */,
 			);
@@ -98,6 +119,7 @@
 			children = (
 				EEADB4362CA0526C00F928D7 /* Typography */,
 				EEF3A8692CA1BBE900C6BC3E /* Colors */,
+				EEDC337E2CA3101300FCACA1 /* Components */,
 			);
 			path = Utilites;
 			sourceTree = "<group>";
@@ -215,6 +237,61 @@
 			path = LanguageSettings;
 			sourceTree = "<group>";
 		};
+		EEDC337E2CA3101300FCACA1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EEDC338C2CA316CC00FCACA1 /* Gradients */,
+				EEDC337F2CA3105B00FCACA1 /* Buttons */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		EEDC337F2CA3105B00FCACA1 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				EEDC33802CA310E000FCACA1 /* Size */,
+				EEDC33872CA311B700FCACA1 /* StyleConfigurations */,
+				EEDC338F2CA3220100FCACA1 /* Style */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		EEDC33802CA310E000FCACA1 /* Size */ = {
+			isa = PBXGroup;
+			children = (
+				EEDC33812CA310F100FCACA1 /* ButtonSize.swift */,
+				EEDC33832CA3111F00FCACA1 /* BigButtonSize.swift */,
+				EEDC33852CA3115800FCACA1 /* SmallButtonSize.swift */,
+			);
+			path = Size;
+			sourceTree = "<group>";
+		};
+		EEDC33872CA311B700FCACA1 /* StyleConfigurations */ = {
+			isa = PBXGroup;
+			children = (
+				EEDC33882CA3124900FCACA1 /* ButtonStyleConfiguration.swift */,
+				EEDC338A2CA314E700FCACA1 /* PrimaryButtonConfigurations.swift */,
+				EEDC33962CA32A6A00FCACA1 /* SecondaryButtonConfigurations.swift */,
+			);
+			path = StyleConfigurations;
+			sourceTree = "<group>";
+		};
+		EEDC338C2CA316CC00FCACA1 /* Gradients */ = {
+			isa = PBXGroup;
+			children = (
+				EEDC338D2CA316DF00FCACA1 /* PrimaryLinearGradient.swift */,
+			);
+			path = Gradients;
+			sourceTree = "<group>";
+		};
+		EEDC338F2CA3220100FCACA1 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				EEDC33902CA3222C00FCACA1 /* PrimaryButtonStyle.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
 		EEF3A8692CA1BBE900C6BC3E /* Colors */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +330,7 @@
 			packageProductDependencies = (
 				EE9ED1CA2C99D71D00DFA2F2 /* FoundationExtensions */,
 				EECCF13D2CA1BCCA007E38D2 /* UIExtensions */,
+				EEDC33942CA3254100FCACA1 /* SwiftUIModifiers */,
 			);
 			productName = DesignSystem;
 			productReference = EEF3A8562CA1B36100C6BC3E /* DesignSystem.framework */;
@@ -302,6 +380,7 @@
 				EED8F6652C99A51E00B11D2B /* Inter.ttf in Resources */,
 				EED8F65B2C99A3C900B11D2B /* Images.xcassets in Resources */,
 				EED8F65D2C99A3D500B11D2B /* Colors.xcassets in Resources */,
+				EEDC33932CA3253500FCACA1 /* SwiftUIModifiers in Resources */,
 				EED8F6672C99A8AB00B11D2B /* swiftgen.yml in Resources */,
 				EEADB4342CA0505E00F928D7 /* Cairo.ttf in Resources */,
 			);
@@ -319,21 +398,29 @@
 				EED8F66E2C99AD4300B11D2B /* Files+Generated.swift in Sources */,
 				EEDD7FEF2CA1AFFF00609C4D /* s1Label.swift in Sources */,
 				EED8F66C2C99AD1C00B11D2B /* Fonts+Generated.swift in Sources */,
+				EEDC33972CA32A6A00FCACA1 /* SecondaryButtonConfigurations.swift in Sources */,
+				EEDC338B2CA314E700FCACA1 /* PrimaryButtonConfigurations.swift in Sources */,
 				EED8F6752C99AE5D00B11D2B /* Strings+Generated.swift in Sources */,
+				EEDC33892CA3124900FCACA1 /* ButtonStyleConfiguration.swift in Sources */,
+				EEDC33822CA310F100FCACA1 /* ButtonSize.swift in Sources */,
 				EEADB4322CA03C5400F928D7 /* CreateAttributedString.swift in Sources */,
 				EECCF1402CA1C064007E38D2 /* ColorTokens.swift in Sources */,
 				EED8F67A2C99B01900B11D2B /* Language.swift in Sources */,
 				EEDD7FF32CA1B28B00609C4D /* s3Label.swift in Sources */,
 				EEDD7FE92CA1ACA500609C4D /* t1Label.swift in Sources */,
 				EEADB43A2CA0543600F928D7 /* h2Label.swift in Sources */,
+				EEDC338E2CA316DF00FCACA1 /* PrimaryLinearGradient.swift in Sources */,
 				EEDD7FEB2CA1ADC200609C4D /* t2Label.swift in Sources */,
 				EEDD7FF12CA1B21F00609C4D /* s2Label.swift in Sources */,
+				EEDC33912CA3222C00FCACA1 /* PrimaryButtonStyle.swift in Sources */,
 				EEE4298E2C9DD92600D96CD8 /* EnvironmentValues+.swift in Sources */,
 				EED8F67C2C99B0F900B11D2B /* LanguageSettings.swift in Sources */,
 				EED8F6772C99AF8000B11D2B /* swiftgen+localized.swift in Sources */,
 				EEADB4382CA052B700F928D7 /* h1Label.swift in Sources */,
+				EEDC33862CA3115800FCACA1 /* SmallButtonSize.swift in Sources */,
 				EED8F66A2C99ACEF00B11D2B /* Assets+Generated.swift in Sources */,
 				EEDD7FED2CA1AF4200609C4D /* t3Label.swift in Sources */,
+				EEDC33842CA3111F00FCACA1 /* BigButtonSize.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,6 +676,10 @@
 		EECCF13D2CA1BCCA007E38D2 /* UIExtensions */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = UIExtensions;
+		};
+		EEDC33942CA3254100FCACA1 /* SwiftUIModifiers */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftUIModifiers;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

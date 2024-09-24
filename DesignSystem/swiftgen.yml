@@ -11,14 +11,14 @@ strings:
         lookupFunction: localized(forKey:table:fallbackValue:)
         publicAccess: true
 
-fonts:
-  inputs:
-    - Fonts
-  outputs:
-    templateName: swift5
-    output: Fonts+Generated.swift
-    params:
-        publicAccess: true
+#fonts:
+#  inputs:
+#    - Fonts
+#  outputs:
+#    templateName: swift5
+#    output: Fonts+Generated.swift
+#    params:
+#        publicAccess: true
 
 files:
   inputs:

@@ -12,6 +12,8 @@
 		EEADB4342CA0505E00F928D7 /* Cairo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEADB4332CA0505500F928D7 /* Cairo.ttf */; };
 		EEADB4382CA052B700F928D7 /* h1Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEADB4372CA052B700F928D7 /* h1Label.swift */; };
 		EEADB43A2CA0543600F928D7 /* h2Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEADB4392CA0543600F928D7 /* h2Label.swift */; };
+		EECCF13E2CA1BCCA007E38D2 /* UIExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = EECCF13D2CA1BCCA007E38D2 /* UIExtensions */; };
+		EECCF1402CA1C064007E38D2 /* ColorTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECCF13F2CA1C064007E38D2 /* ColorTokens.swift */; };
 		EED8F65B2C99A3C900B11D2B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED8F65A2C99A3C900B11D2B /* Images.xcassets */; };
 		EED8F65D2C99A3D500B11D2B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED8F65C2C99A3D500B11D2B /* Colors.xcassets */; };
 		EED8F6652C99A51E00B11D2B /* Inter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EED8F6642C99A51E00B11D2B /* Inter.ttf */; };
@@ -33,6 +35,7 @@
 		EEDD7FF32CA1B28B00609C4D /* s3Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD7FF22CA1B28B00609C4D /* s3Label.swift */; };
 		EEE4298C2C9DD86600D96CD8 /* View+configureLanguageSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4298B2C9DD86600D96CD8 /* View+configureLanguageSettings.swift */; };
 		EEE4298E2C9DD92600D96CD8 /* EnvironmentValues+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4298D2C9DD92600D96CD8 /* EnvironmentValues+.swift */; };
+		EEF3A86B2CA1BC8800C6BC3E /* UIExtensions in Resources */ = {isa = PBXBuildFile; fileRef = EEF3A86A2CA1BC8800C6BC3E /* UIExtensions */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +44,7 @@
 		EEADB4332CA0505500F928D7 /* Cairo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cairo.ttf; sourceTree = "<group>"; };
 		EEADB4372CA052B700F928D7 /* h1Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = h1Label.swift; sourceTree = "<group>"; };
 		EEADB4392CA0543600F928D7 /* h2Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = h2Label.swift; sourceTree = "<group>"; };
-		EED8F6222C999D2200B11D2B /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DesignSystem.framework; path = "/Users/ahmed-yamany/Desktop/Transact/DesignSystem/build/Debug-iphoneos/DesignSystem.framework"; sourceTree = "<absolute>"; };
+		EECCF13F2CA1C064007E38D2 /* ColorTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTokens.swift; sourceTree = "<group>"; };
 		EED8F65A2C99A3C900B11D2B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EED8F65C2C99A3D500B11D2B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		EED8F6642C99A51E00B11D2B /* Inter.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inter.ttf; sourceTree = "<group>"; };
@@ -64,6 +67,8 @@
 		EEDD7FF22CA1B28B00609C4D /* s3Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = s3Label.swift; sourceTree = "<group>"; };
 		EEE4298B2C9DD86600D96CD8 /* View+configureLanguageSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+configureLanguageSettings.swift"; sourceTree = "<group>"; };
 		EEE4298D2C9DD92600D96CD8 /* EnvironmentValues+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+.swift"; sourceTree = "<group>"; };
+		EEF3A8562CA1B36100C6BC3E /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEF3A86A2CA1BC8800C6BC3E /* UIExtensions */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UIExtensions; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EECCF13E2CA1BCCA007E38D2 /* UIExtensions in Frameworks */,
 				EE9ED1CB2C99D71D00DFA2F2 /* FoundationExtensions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,23 +84,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EE9ED1C82C99D46500DFA2F2 /* Swit Packages */ = {
+		EE9ED1C82C99D46500DFA2F2 /* SwitPackages */ = {
 			isa = PBXGroup;
 			children = (
+				EEF3A86A2CA1BC8800C6BC3E /* UIExtensions */,
 				EE9ED1C92C99D71000DFA2F2 /* FoundationExtensions */,
 			);
-			path = "Swit Packages";
+			path = SwitPackages;
 			sourceTree = "<group>";
 		};
 		EEADB4352CA0524500F928D7 /* Utilites */ = {
 			isa = PBXGroup;
 			children = (
-				EEADB4362CA0526C00F928D7 /* Labels */,
+				EEADB4362CA0526C00F928D7 /* Typography */,
+				EEF3A8692CA1BBE900C6BC3E /* Colors */,
 			);
 			path = Utilites;
 			sourceTree = "<group>";
 		};
-		EEADB4362CA0526C00F928D7 /* Labels */ = {
+		EEADB4362CA0526C00F928D7 /* Typography */ = {
 			isa = PBXGroup;
 			children = (
 				EEADB4312CA03C5400F928D7 /* CreateAttributedString.swift */,
@@ -108,7 +116,14 @@
 				EEDD7FF02CA1B21F00609C4D /* s2Label.swift */,
 				EEDD7FF22CA1B28B00609C4D /* s3Label.swift */,
 			);
-			path = Labels;
+			path = Typography;
+			sourceTree = "<group>";
+		};
+		EECCF13C2CA1BCCA007E38D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		EED8F6182C999D2200B11D2B = {
@@ -116,6 +131,8 @@
 			children = (
 				EED8F6662C99A8AB00B11D2B /* swiftgen.yml */,
 				EED8F6242C999D2200B11D2B /* DesignSystem */,
+				EEF3A8562CA1B36100C6BC3E /* DesignSystem.framework */,
+				EECCF13C2CA1BCCA007E38D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,7 +142,7 @@
 				EED8F6782C99B00D00B11D2B /* LanguageSettings */,
 				EED8F62D2C999EC400B11D2B /* Resources */,
 				EEADB4352CA0524500F928D7 /* Utilites */,
-				EE9ED1C82C99D46500DFA2F2 /* Swit Packages */,
+				EE9ED1C82C99D46500DFA2F2 /* SwitPackages */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -198,6 +215,14 @@
 			path = LanguageSettings;
 			sourceTree = "<group>";
 		};
+		EEF3A8692CA1BBE900C6BC3E /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				EECCF13F2CA1C064007E38D2 /* ColorTokens.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -227,9 +252,10 @@
 			name = DesignSystem;
 			packageProductDependencies = (
 				EE9ED1CA2C99D71D00DFA2F2 /* FoundationExtensions */,
+				EECCF13D2CA1BCCA007E38D2 /* UIExtensions */,
 			);
 			productName = DesignSystem;
-			productReference = EED8F6222C999D2200B11D2B /* DesignSystem.framework */;
+			productReference = EEF3A8562CA1B36100C6BC3E /* DesignSystem.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -271,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEF3A86B2CA1BC8800C6BC3E /* UIExtensions in Resources */,
 				EED8F6722C99AE1A00B11D2B /* Localizable.strings in Resources */,
 				EED8F6652C99A51E00B11D2B /* Inter.ttf in Resources */,
 				EED8F65B2C99A3C900B11D2B /* Images.xcassets in Resources */,
@@ -294,6 +321,7 @@
 				EED8F66C2C99AD1C00B11D2B /* Fonts+Generated.swift in Sources */,
 				EED8F6752C99AE5D00B11D2B /* Strings+Generated.swift in Sources */,
 				EEADB4322CA03C5400F928D7 /* CreateAttributedString.swift in Sources */,
+				EECCF1402CA1C064007E38D2 /* ColorTokens.swift in Sources */,
 				EED8F67A2C99B01900B11D2B /* Language.swift in Sources */,
 				EEDD7FF32CA1B28B00609C4D /* s3Label.swift in Sources */,
 				EEDD7FE92CA1ACA500609C4D /* t1Label.swift in Sources */,
@@ -557,6 +585,10 @@
 		EE9ED1CA2C99D71D00DFA2F2 /* FoundationExtensions */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FoundationExtensions;
+		};
+		EECCF13D2CA1BCCA007E38D2 /* UIExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIExtensions;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

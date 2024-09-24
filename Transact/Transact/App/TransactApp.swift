@@ -23,7 +23,6 @@ struct TransactApp: App {
                 TransactFactoryContainer.appCoordinator.start()
             }
             .configureLanguageSettings(languageSettings)
-            
         }
     }
 }

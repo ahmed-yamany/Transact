@@ -22,5 +22,8 @@ public struct SplashView: View {
             
             Image(systemName: "house")
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(ColorTokens.background)
+        
     }
 }

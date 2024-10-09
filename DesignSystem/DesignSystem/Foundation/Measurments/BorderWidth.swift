@@ -19,3 +19,7 @@ public extension DesignSystem.Foundation.Measurements {
         public static let active: CGFloat = 2.0
     }
 }
+
+internal extension CGFloat {
+    static let borderWidth = DesignSystem.Foundation.Measurements.BorderWidth.self
+}

@@ -10,7 +10,13 @@ import SwiftUI
 public enum Language: String, CaseIterable, Hashable {
     case english = "en"
     case arabic = "ar"
-         
+    
+    var identifier: String {
+        rawValue
+    }
+}
+
+extension Language {
     public var layoutDirection: LayoutDirection {
         switch self {
         case .english:

@@ -7,8 +7,8 @@
 
 import Foundation
 
-public extension DesignSystem.Foundation.Measurements {
-    enum FontSizes {
+public extension DesignSystem.Foundation.Measurements.Font {
+    enum Sizes {
         /// 34
         public static var h1: CGFloat = 34
         /// 28
@@ -26,4 +26,8 @@ public extension DesignSystem.Foundation.Measurements {
         /// 12
         public static var p4: CGFloat = 12
     }
+}
+
+internal extension CGFloat {
+    static let fontSizes = DesignSystem.Foundation.Measurements.Font.Sizes.self
 }

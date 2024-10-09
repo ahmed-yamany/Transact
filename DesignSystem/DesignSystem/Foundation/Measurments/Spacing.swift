@@ -31,3 +31,7 @@ public extension DesignSystem.Foundation.Measurements {
         static var xxxLarge: CGFloat = 60
     }
 }
+
+internal extension CGFloat {
+    static let spacing = DesignSystem.Foundation.Measurements.Spacing.self
+}

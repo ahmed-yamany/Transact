@@ -12,9 +12,9 @@ public extension View {
     @ViewBuilder
     func applyPrimaryDesign() -> some View {
         frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-            .background {
-                ColorTokens.background.ignoresSafeArea()
-            }
+//            .background {
+//                ColorTokens.background.ignoresSafeArea()
+//            }
             .closeKeyboardOnTap()
     }
 }

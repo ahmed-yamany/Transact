@@ -23,6 +23,6 @@ class SplashCoordinator: SplashCoordinatorInterface, Coordinator {
     }
     
     func splashViewEnded() {
-        OnboardingFactoryContainer.coordinator(router).start()
+//        OnboardingFactoryContainer.coordinator(router).start()
     }
 }

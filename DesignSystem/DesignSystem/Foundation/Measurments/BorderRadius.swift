@@ -32,3 +32,7 @@ public extension DesignSystem.Foundation.Measurements {
         }
     }
 }
+
+internal extension CGFloat {
+    static let borderRadius = DesignSystem.Foundation.Measurements.BorderRadius.self
+}

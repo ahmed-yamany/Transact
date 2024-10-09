@@ -48,6 +48,10 @@
 		EE41D10B2CB71BD90043182D /* Inter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE41D0E72CB71BD90043182D /* Inter.ttf */; };
 		EE41D10C2CB71BD90043182D /* FontFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D0E92CB71BD90043182D /* FontFamily.swift */; };
 		EE41D10D2CB71BD90043182D /* Typography+FontConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D0EA2CB71BD90043182D /* Typography+FontConvertible.swift */; };
+		EE41D11D2CB721180043182D /* BigButtonSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D10E2CB721180043182D /* BigButtonSize.swift */; };
+		EE41D11E2CB721180043182D /* ButtonSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D10F2CB721180043182D /* ButtonSize.swift */; };
+		EE41D11F2CB721180043182D /* SmallButtonSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D1102CB721180043182D /* SmallButtonSize.swift */; };
+		EE41D1282CB722790043182D /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D1272CB722790043182D /* PrimaryButtonStyle.swift */; };
 		EE9ED1CB2C99D71D00DFA2F2 /* FoundationExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = EE9ED1CA2C99D71D00DFA2F2 /* FoundationExtensions */; };
 		EECCF13E2CA1BCCA007E38D2 /* UIExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = EECCF13D2CA1BCCA007E38D2 /* UIExtensions */; };
 		EED8F6672C99A8AB00B11D2B /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = EED8F6662C99A8AB00B11D2B /* swiftgen.yml */; };
@@ -96,6 +100,10 @@
 		EE41D0E72CB71BD90043182D /* Inter.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inter.ttf; sourceTree = "<group>"; };
 		EE41D0E92CB71BD90043182D /* FontFamily.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontFamily.swift; sourceTree = "<group>"; };
 		EE41D0EA2CB71BD90043182D /* Typography+FontConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Typography+FontConvertible.swift"; sourceTree = "<group>"; };
+		EE41D10E2CB721180043182D /* BigButtonSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigButtonSize.swift; sourceTree = "<group>"; };
+		EE41D10F2CB721180043182D /* ButtonSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonSize.swift; sourceTree = "<group>"; };
+		EE41D1102CB721180043182D /* SmallButtonSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallButtonSize.swift; sourceTree = "<group>"; };
+		EE41D1272CB722790043182D /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 		EED8F6662C99A8AB00B11D2B /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		EEF3A8562CA1B36100C6BC3E /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -179,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				EE41D0C42CB71BD90043182D /* Text */,
+				EE41D1262CB721FD0043182D /* Button */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -298,6 +307,25 @@
 			path = Foundation;
 			sourceTree = "<group>";
 		};
+		EE41D1112CB721180043182D /* ButtonSize */ = {
+			isa = PBXGroup;
+			children = (
+				EE41D10F2CB721180043182D /* ButtonSize.swift */,
+				EE41D10E2CB721180043182D /* BigButtonSize.swift */,
+				EE41D1102CB721180043182D /* SmallButtonSize.swift */,
+			);
+			path = ButtonSize;
+			sourceTree = "<group>";
+		};
+		EE41D1262CB721FD0043182D /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				EE41D1112CB721180043182D /* ButtonSize */,
+				EE41D1272CB722790043182D /* PrimaryButtonStyle.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
 		EECCF13C2CA1BCCA007E38D2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,6 +346,7 @@
 		EED8F6242C999D2200B11D2B /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				EE018F3A2CB6AAC600235DD9 /* DesignSystem.swift */,
 				EE41D0EC2CB71BD90043182D /* Foundation */,
 				EE41D09F2CB71BC10043182D /* Tokens */,
 				EE41D0C52CB71BD90043182D /* Components */,
@@ -325,7 +354,6 @@
 				EE41D0D72CB71BD90043182D /* Resources */,
 				EE41D0A42CB71BC10043182D /* SwitPackage */,
 				EE41D09D2CB71BC10043182D /* Utilites */,
-				EE018F3A2CB6AAC600235DD9 /* DesignSystem.swift */,
 				EE018F1F2CB6A60D00235DD9 /* SwitPackage */,
 			);
 			path = DesignSystem;
@@ -461,7 +489,9 @@
 				EE41D0ED2CB71BD90043182D /* H1Text.swift in Sources */,
 				EE41D0F52CB71BD90043182D /* EnvironmentValues+.swift in Sources */,
 				EE41D0AE2CB71BC10043182D /* applyPrimaryDesign.swift in Sources */,
+				EE41D11F2CB721180043182D /* SmallButtonSize.swift in Sources */,
 				EE41D0F02CB71BD90043182D /* H4Text.swift in Sources */,
+				EE41D11D2CB721180043182D /* BigButtonSize.swift in Sources */,
 				EE41D0B72CB71BC10043182D /* ColorTokens.swift in Sources */,
 				EE41D1072CB71BD90043182D /* BorderWidth.swift in Sources */,
 				EE41D1042CB71BD90043182D /* FontLetterSpacing.swift in Sources */,
@@ -476,6 +506,8 @@
 				EE41D0EF2CB71BD90043182D /* H3Text.swift in Sources */,
 				EE41D0F62CB71BD90043182D /* Language.swift in Sources */,
 				EE41D0F32CB71BD90043182D /* P3Text.swift in Sources */,
+				EE41D11E2CB721180043182D /* ButtonSize.swift in Sources */,
+				EE41D1282CB722790043182D /* PrimaryButtonStyle.swift in Sources */,
 				EE41D0EE2CB71BD90043182D /* H2Text.swift in Sources */,
 				EE41D0F22CB71BD90043182D /* P2Text.swift in Sources */,
 				EE41D0FB2CB71BD90043182D /* Strings+Generated.swift in Sources */,

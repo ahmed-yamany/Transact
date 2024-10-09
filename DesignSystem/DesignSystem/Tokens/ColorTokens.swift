@@ -58,4 +58,9 @@ extension DesignSystem.Tokens.Colors {
     static var warning: Color {
         DesignSystem.Foundation.Colors.orangeNormal.swiftUIColor
     }
+    
+    static var mobileBG: Color {
+        .white
+    }
+
 }

@@ -19,10 +19,16 @@ public struct SplashView: View {
         VStack {
             VStack(spacing: 8) {
                 H1Text("Hello Ahmed")
+                
+                Button {
+                    
+                } label: {
+                    P1Text("Sign in")
+                }
+                .buttonStyle(PrimaryButtonStyle(size: .big))
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-//        .background(ColorTokens.gradient)
         .task {
             try? await Task.sleep(for: .seconds(3))
             coordinator.splashViewEnded()

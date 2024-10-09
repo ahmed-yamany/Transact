@@ -34,12 +34,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EE018F362CB6A6B100235DD9 /* Modules */ = {
+		EE018F362CB6A6B100235DD9 /* Module */ = {
 			isa = PBXGroup;
 			children = (
 				EE018F352CB6A6B100235DD9 /* NavigationRouter */,
 			);
-			path = Modules;
+			path = Module;
 			sourceTree = "<group>";
 		};
 		EED1C90C2C6EC02B00472518 = {
@@ -63,7 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				EED1C9232C6EC06C00472518 /* Coordinator */,
-				EE018F362CB6A6B100235DD9 /* Modules */,
+				EE018F362CB6A6B100235DD9 /* Module */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";

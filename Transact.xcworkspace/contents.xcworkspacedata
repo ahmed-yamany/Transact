@@ -2,10 +2,16 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Coordinator/Coordinator.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:DesignSystem/DesignSystem.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Coordinator/Coordinator.xcodeproj">
+      location = "group:Modules/Splash/Splash.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Modules/Onboarding/Onboarding.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Transact/Transact.xcodeproj">

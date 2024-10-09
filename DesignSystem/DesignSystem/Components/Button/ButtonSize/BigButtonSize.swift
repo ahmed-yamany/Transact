@@ -9,7 +9,7 @@ import Foundation
 
 public struct BigButtonSize: ButtonSize {
     public var height: CGFloat? = 42
-    public var cornerRadius: CGFloat = 4
+    public var cornerRadius: CGFloat = .borderRadius.xSmall
 }
 
 public extension ButtonSize where Self == BigButtonSize {

@@ -23,6 +23,6 @@ class TransactCoordinator: TransactCoordinatorProtocol {
     }
     
     func start() {
-//        SplashFactoryContainer.coordinator(router).start()
+        SplashFactoryContainer.coordinator(router).start()
     }
 }

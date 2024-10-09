@@ -37,7 +37,7 @@ public struct SecondaryButtonConfigurations: ButtonStyleConfigurations {
     }
     
     public let foreground: ButtonForegroundConfigurations = SecondaryButtonForegroundConfigurations()
-    public let background: ButtonBackgroundConfigurations = SecondaryButtonBackgroundConfigurations()
+    public let background: ButtonBackgroundConfigurations? = SecondaryButtonBackgroundConfigurations()
     public let border: (any ButtonBorderConfigurations)? = SecondaryButtonBorderConfigurations()
     
     public var size: (any ButtonSize)?

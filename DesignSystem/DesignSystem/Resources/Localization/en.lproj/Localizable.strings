@@ -7,3 +7,8 @@
 */
 
 "app-name" = "Transact";
+
+"skip" = "Skip";
+"next" = "Next";
+"back" = "Back";
+

@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE018F372CB6A6B100235DD9 /* NavigationRouter in Resources */ = {isa = PBXBuildFile; fileRef = EE018F352CB6A6B100235DD9 /* NavigationRouter */; };
 		EED1C9262C6EC06C00472518 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED1C9202C6EC06C00472518 /* Coordinator.swift */; };
 		EED1C9272C6EC06C00472518 /* CoordinatorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED1C9212C6EC06C00472518 /* CoordinatorRouter.swift */; };
 		EED1C9282C6EC06C00472518 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED1C9222C6EC06C00472518 /* Router.swift */; };
-		EED1C9292C6EC06C00472518 /* NavigationRouter in Resources */ = {isa = PBXBuildFile; fileRef = EED1C9242C6EC06C00472518 /* NavigationRouter */; };
 		EED1C9302C6EC0AD00472518 /* NavigationRouter in Frameworks */ = {isa = PBXBuildFile; productRef = EED1C92F2C6EC0AD00472518 /* NavigationRouter */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE018F352CB6A6B100235DD9 /* NavigationRouter */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NavigationRouter; sourceTree = "<group>"; };
 		EED1C9162C6EC02B00472518 /* Coordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Coordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EED1C9202C6EC06C00472518 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		EED1C9212C6EC06C00472518 /* CoordinatorRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorRouter.swift; sourceTree = "<group>"; };
 		EED1C9222C6EC06C00472518 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		EED1C9242C6EC06C00472518 /* NavigationRouter */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NavigationRouter; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +34,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE018F362CB6A6B100235DD9 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				EE018F352CB6A6B100235DD9 /* NavigationRouter */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		EED1C90C2C6EC02B00472518 = {
 			isa = PBXGroup;
 			children = (
@@ -55,7 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				EED1C9232C6EC06C00472518 /* Coordinator */,
-				EED1C9252C6EC06C00472518 /* Modules */,
+				EE018F362CB6A6B100235DD9 /* Modules */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -68,14 +76,6 @@
 				EED1C9212C6EC06C00472518 /* CoordinatorRouter.swift */,
 			);
 			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		EED1C9252C6EC06C00472518 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				EED1C9242C6EC06C00472518 /* NavigationRouter */,
-			);
-			path = Modules;
 			sourceTree = "<group>";
 		};
 		EED1C92E2C6EC0AD00472518 /* Frameworks */ = {
@@ -156,7 +156,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EED1C9292C6EC06C00472518 /* NavigationRouter in Resources */,
+				EE018F372CB6A6B100235DD9 /* NavigationRouter in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

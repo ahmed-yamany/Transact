@@ -19,10 +19,10 @@ class SplashCoordinator: SplashCoordinatorInterface, Coordinator {
     }
     
     func start() {
-        router.push(view(self), animated: true, completion: {})
+        router.setView(view(self), animated: false, completion: {})
     }
     
     func splashViewEnded() {
-        
+        OnboardingFactoryContainer.coordinator(router).start()
     }
 }

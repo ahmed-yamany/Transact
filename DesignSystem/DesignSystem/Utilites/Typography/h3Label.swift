@@ -30,7 +30,7 @@ extension AttributedString {
     private static func headingThreeLabelDarkEnglish(text: String, color: Color) -> AttributedString {
         createAttributedString(
             text: text,
-            font: FontFamily.Inter.semiBold.swiftUIFont(fixedSize: 20),
+            font: FontFamily.Inter.semiBold.swiftUIFont(fixedSize: .fontSizes.h3),
             foregroundColor: color,
             letterSpacing: 0.7
         )
@@ -39,7 +39,7 @@ extension AttributedString {
     private static func headingThreeLabelLightEnglish(text: String, color: Color) -> AttributedString {
         createAttributedString(
             text: text,
-            font: FontFamily.Cairo.semiBold.swiftUIFont(fixedSize: 20),
+            font: FontFamily.Cairo.semiBold.swiftUIFont(fixedSize: .fontSizes.h3),
             foregroundColor: color,
             letterSpacing: 0.7
         )
@@ -48,7 +48,7 @@ extension AttributedString {
     private static func headingThreeLabelDarkArabic(text: String, color: Color) -> AttributedString {
         createAttributedString(
             text: text,
-            font: FontFamily.Inter.semiBold.swiftUIFont(fixedSize: 20),
+            font: FontFamily.Inter.semiBold.swiftUIFont(fixedSize: .fontSizes.h3),
             foregroundColor: color,
             letterSpacing: 0.0
         )
@@ -57,7 +57,7 @@ extension AttributedString {
     private static func headingThreeLabelLightArabic(text: String, color: Color) -> AttributedString {
         createAttributedString(
             text: text,
-            font: FontFamily.Cairo.semiBold.swiftUIFont(fixedSize: 20),
+            font: FontFamily.Cairo.semiBold.swiftUIFont(fixedSize: .fontSizes.h3),
             foregroundColor: color,
             letterSpacing: 0.0
         )

@@ -30,7 +30,7 @@ extension AttributedString {
     private static func headingOneLabelDarkEnglish(text: String, color: Color) -> AttributedString {
         createAttributedString(
             text: text,
-            font: FontFamily.Inter.bold.swiftUIFont(fixedSize: 32),
+            font: FontFamily.Inter.bold.swiftUIFont(fixedSize: .fontSizes.h1),
             foregroundColor: color,
             letterSpacing: 0.7
         )
@@ -39,7 +39,7 @@ extension AttributedString {
     private static func headingOneLabelLightEnglish(text: String, color: Color) -> AttributedString {
         createAttributedString(
             text: text,
-            font: FontFamily.Cairo.bold.swiftUIFont(fixedSize: 32),
+            font: FontFamily.Cairo.bold.swiftUIFont(fixedSize: .fontSizes.h1),
             foregroundColor: color,
             letterSpacing: 0.7
         )
@@ -48,7 +48,7 @@ extension AttributedString {
     private static func headingOneLabelDarkArabic(text: String, color: Color) -> AttributedString {
         createAttributedString(
             text: text,
-            font: FontFamily.Inter.bold.swiftUIFont(fixedSize: 32),
+            font: FontFamily.Inter.bold.swiftUIFont(fixedSize: .fontSizes.h1),
             foregroundColor: color,
             letterSpacing: 0.0
         )
@@ -57,7 +57,7 @@ extension AttributedString {
     private static func headingOneLabelLightArabic(text: String, color: Color) -> AttributedString {
         createAttributedString(
             text: text,
-            font: FontFamily.Cairo.bold.swiftUIFont(fixedSize: 32),
+            font: FontFamily.Cairo.bold.swiftUIFont(fixedSize: .fontSizes.h1),
             foregroundColor: color,
             letterSpacing: 0.0
         )

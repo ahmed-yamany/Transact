@@ -13,6 +13,9 @@
       <FileRef
          location = "group:Splash/Splash.xcodeproj">
       </FileRef>
+      <FileRef
+         location = "group:Onboarding/Onboarding.xcodeproj">
+      </FileRef>
    </Group>
    <FileRef
       location = "group:Transact/Transact.xcodeproj">

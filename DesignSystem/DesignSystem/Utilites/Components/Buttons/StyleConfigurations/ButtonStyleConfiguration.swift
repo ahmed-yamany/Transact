@@ -28,7 +28,7 @@ public protocol ButtonForegroundConfigurations {
 public protocol ButtonStyleConfigurations {
     var font: Font { get }
     var foreground: ButtonForegroundConfigurations { get }
-    var background: ButtonBackgroundConfigurations { get }
+    var background: ButtonBackgroundConfigurations? { get }
     var border: ButtonBorderConfigurations? { get }
     var size: ButtonSize? { get }
 }

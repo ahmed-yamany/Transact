@@ -7,19 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE018F202CB6A60D00235DD9 /* FoundationExtensions in Resources */ = {isa = PBXBuildFile; fileRef = EE018F1B2CB6A60D00235DD9 /* FoundationExtensions */; };
+		EE018F212CB6A60D00235DD9 /* orbit-swiftui in Resources */ = {isa = PBXBuildFile; fileRef = EE018F1C2CB6A60D00235DD9 /* orbit-swiftui */; };
+		EE018F222CB6A60D00235DD9 /* SwiftUIModifiers in Resources */ = {isa = PBXBuildFile; fileRef = EE018F1D2CB6A60D00235DD9 /* SwiftUIModifiers */; };
+		EE018F232CB6A60D00235DD9 /* UIExtensions in Resources */ = {isa = PBXBuildFile; fileRef = EE018F1E2CB6A60D00235DD9 /* UIExtensions */; };
+		EE018F252CB6A61600235DD9 /* Orbit in Frameworks */ = {isa = PBXBuildFile; productRef = EE018F242CB6A61600235DD9 /* Orbit */; };
+		EE018F3B2CB6AAC600235DD9 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE018F3A2CB6AAC600235DD9 /* DesignSystem.swift */; };
+		EE018F402CB6CBB600235DD9 /* ContentSizeCategory+FontRatio.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE018F3F2CB6CBB600235DD9 /* ContentSizeCategory+FontRatio.swift */; };
+		EE018F572CB6D9D100235DD9 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE018F562CB6D9D100235DD9 /* Icons.xcassets */; };
+		EE018F592CB6DBE700235DD9 /* FoundationIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE018F582CB6DBE700235DD9 /* FoundationIcons.swift */; };
+		EE018F5B2CB6E1AA00235DD9 /* FontSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE018F5A2CB6E1AA00235DD9 /* FontSizes.swift */; };
+		EE018F5D2CB6E41E00235DD9 /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE018F5C2CB6E41E00235DD9 /* Padding.swift */; };
+		EE7EC40D2CA56F3B00E073C1 /* BorderRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7EC40C2CA56F3B00E073C1 /* BorderRadius.swift */; };
+		EE7EC40F2CA56F8A00E073C1 /* BorderWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7EC40E2CA56F8A00E073C1 /* BorderWidth.swift */; };
+		EE7EC4122CA5700000E073C1 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7EC4112CA5700000E073C1 /* Spacing.swift */; };
+		EE7EC4152CA5732100E073C1 /* FontFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7EC4142CA5732100E073C1 /* FontFamily.swift */; };
+		EE7EC4182CA5742C00E073C1 /* FoundationColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7EC4172CA5742C00E073C1 /* FoundationColors.swift */; };
 		EE9ED1CB2C99D71D00DFA2F2 /* FoundationExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = EE9ED1CA2C99D71D00DFA2F2 /* FoundationExtensions */; };
-		EEADB4322CA03C5400F928D7 /* CreateAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEADB4312CA03C5400F928D7 /* CreateAttributedString.swift */; };
 		EEADB4342CA0505E00F928D7 /* Cairo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEADB4332CA0505500F928D7 /* Cairo.ttf */; };
-		EEADB4382CA052B700F928D7 /* h1Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEADB4372CA052B700F928D7 /* h1Label.swift */; };
-		EEADB43A2CA0543600F928D7 /* h2Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEADB4392CA0543600F928D7 /* h2Label.swift */; };
 		EECCF13E2CA1BCCA007E38D2 /* UIExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = EECCF13D2CA1BCCA007E38D2 /* UIExtensions */; };
 		EECCF1402CA1C064007E38D2 /* ColorTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECCF13F2CA1C064007E38D2 /* ColorTokens.swift */; };
 		EED8F65B2C99A3C900B11D2B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED8F65A2C99A3C900B11D2B /* Images.xcassets */; };
 		EED8F65D2C99A3D500B11D2B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED8F65C2C99A3D500B11D2B /* Colors.xcassets */; };
 		EED8F6652C99A51E00B11D2B /* Inter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EED8F6642C99A51E00B11D2B /* Inter.ttf */; };
 		EED8F6672C99A8AB00B11D2B /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = EED8F6662C99A8AB00B11D2B /* swiftgen.yml */; };
-		EED8F66A2C99ACEF00B11D2B /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED8F6692C99ACEF00B11D2B /* Assets+Generated.swift */; };
-		EED8F66C2C99AD1C00B11D2B /* Fonts+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED8F66B2C99AD1C00B11D2B /* Fonts+Generated.swift */; };
 		EED8F66E2C99AD4300B11D2B /* Files+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED8F66D2C99AD4300B11D2B /* Files+Generated.swift */; };
 		EED8F6722C99AE1A00B11D2B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EED8F6702C99AE1A00B11D2B /* Localizable.strings */; };
 		EED8F6752C99AE5D00B11D2B /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED8F6742C99AE5D00B11D2B /* Strings+Generated.swift */; };
@@ -33,34 +44,36 @@
 		EEDC338B2CA314E700FCACA1 /* PrimaryButtonConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC338A2CA314E700FCACA1 /* PrimaryButtonConfigurations.swift */; };
 		EEDC338E2CA316DF00FCACA1 /* PrimaryLinearGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC338D2CA316DF00FCACA1 /* PrimaryLinearGradient.swift */; };
 		EEDC33912CA3222C00FCACA1 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC33902CA3222C00FCACA1 /* PrimaryButtonStyle.swift */; };
-		EEDC33932CA3253500FCACA1 /* SwiftUIModifiers in Resources */ = {isa = PBXBuildFile; fileRef = EEDC33922CA3253500FCACA1 /* SwiftUIModifiers */; };
 		EEDC33952CA3254100FCACA1 /* SwiftUIModifiers in Frameworks */ = {isa = PBXBuildFile; productRef = EEDC33942CA3254100FCACA1 /* SwiftUIModifiers */; };
 		EEDC33972CA32A6A00FCACA1 /* SecondaryButtonConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC33962CA32A6A00FCACA1 /* SecondaryButtonConfigurations.swift */; };
-		EEDD7FE72CA1A1AE00609C4D /* h3Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD7FE62CA1A1AE00609C4D /* h3Label.swift */; };
-		EEDD7FE92CA1ACA500609C4D /* t1Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD7FE82CA1ACA500609C4D /* t1Label.swift */; };
-		EEDD7FEB2CA1ADC200609C4D /* t2Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD7FEA2CA1ADC200609C4D /* t2Label.swift */; };
-		EEDD7FED2CA1AF4200609C4D /* t3Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD7FEC2CA1AF4200609C4D /* t3Label.swift */; };
-		EEDD7FEF2CA1AFFF00609C4D /* s1Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD7FEE2CA1AFFF00609C4D /* s1Label.swift */; };
-		EEDD7FF12CA1B21F00609C4D /* s2Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD7FF02CA1B21F00609C4D /* s2Label.swift */; };
-		EEDD7FF32CA1B28B00609C4D /* s3Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDD7FF22CA1B28B00609C4D /* s3Label.swift */; };
 		EEE4298C2C9DD86600D96CD8 /* View+configureLanguageSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4298B2C9DD86600D96CD8 /* View+configureLanguageSettings.swift */; };
 		EEE4298E2C9DD92600D96CD8 /* EnvironmentValues+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4298D2C9DD92600D96CD8 /* EnvironmentValues+.swift */; };
-		EEF3A86B2CA1BC8800C6BC3E /* UIExtensions in Resources */ = {isa = PBXBuildFile; fileRef = EEF3A86A2CA1BC8800C6BC3E /* UIExtensions */; };
+		EEE4A9232CA42C4400C65298 /* LabelButtonConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4A9222CA42C4400C65298 /* LabelButtonConfigurations.swift */; };
+		EEE4A92A2CA430C900C65298 /* applyPrimaryDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4A9292CA430C900C65298 /* applyPrimaryDesign.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EE9ED1C92C99D71000DFA2F2 /* FoundationExtensions */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FoundationExtensions; sourceTree = "<group>"; };
-		EEADB4312CA03C5400F928D7 /* CreateAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAttributedString.swift; sourceTree = "<group>"; };
+		EE018F1B2CB6A60D00235DD9 /* FoundationExtensions */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FoundationExtensions; sourceTree = "<group>"; };
+		EE018F1C2CB6A60D00235DD9 /* orbit-swiftui */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "orbit-swiftui"; sourceTree = "<group>"; };
+		EE018F1D2CB6A60D00235DD9 /* SwiftUIModifiers */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftUIModifiers; sourceTree = "<group>"; };
+		EE018F1E2CB6A60D00235DD9 /* UIExtensions */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UIExtensions; sourceTree = "<group>"; };
+		EE018F3A2CB6AAC600235DD9 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		EE018F3F2CB6CBB600235DD9 /* ContentSizeCategory+FontRatio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentSizeCategory+FontRatio.swift"; sourceTree = "<group>"; };
+		EE018F562CB6D9D100235DD9 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		EE018F582CB6DBE700235DD9 /* FoundationIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationIcons.swift; sourceTree = "<group>"; };
+		EE018F5A2CB6E1AA00235DD9 /* FontSizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizes.swift; sourceTree = "<group>"; };
+		EE018F5C2CB6E41E00235DD9 /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
+		EE7EC40C2CA56F3B00E073C1 /* BorderRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderRadius.swift; sourceTree = "<group>"; };
+		EE7EC40E2CA56F8A00E073C1 /* BorderWidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderWidth.swift; sourceTree = "<group>"; };
+		EE7EC4112CA5700000E073C1 /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
+		EE7EC4142CA5732100E073C1 /* FontFamily.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontFamily.swift; sourceTree = "<group>"; };
+		EE7EC4172CA5742C00E073C1 /* FoundationColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationColors.swift; sourceTree = "<group>"; };
 		EEADB4332CA0505500F928D7 /* Cairo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cairo.ttf; sourceTree = "<group>"; };
-		EEADB4372CA052B700F928D7 /* h1Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = h1Label.swift; sourceTree = "<group>"; };
-		EEADB4392CA0543600F928D7 /* h2Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = h2Label.swift; sourceTree = "<group>"; };
 		EECCF13F2CA1C064007E38D2 /* ColorTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTokens.swift; sourceTree = "<group>"; };
 		EED8F65A2C99A3C900B11D2B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EED8F65C2C99A3D500B11D2B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		EED8F6642C99A51E00B11D2B /* Inter.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Inter.ttf; sourceTree = "<group>"; };
 		EED8F6662C99A8AB00B11D2B /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
-		EED8F6692C99ACEF00B11D2B /* Assets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Assets+Generated.swift"; sourceTree = "<group>"; };
-		EED8F66B2C99AD1C00B11D2B /* Fonts+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Fonts+Generated.swift"; sourceTree = "<group>"; };
 		EED8F66D2C99AD4300B11D2B /* Files+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Files+Generated.swift"; sourceTree = "<group>"; };
 		EED8F6712C99AE1A00B11D2B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EED8F6732C99AE3600B11D2B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -75,19 +88,12 @@
 		EEDC338A2CA314E700FCACA1 /* PrimaryButtonConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonConfigurations.swift; sourceTree = "<group>"; };
 		EEDC338D2CA316DF00FCACA1 /* PrimaryLinearGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryLinearGradient.swift; sourceTree = "<group>"; };
 		EEDC33902CA3222C00FCACA1 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
-		EEDC33922CA3253500FCACA1 /* SwiftUIModifiers */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftUIModifiers; sourceTree = "<group>"; };
 		EEDC33962CA32A6A00FCACA1 /* SecondaryButtonConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButtonConfigurations.swift; sourceTree = "<group>"; };
-		EEDD7FE62CA1A1AE00609C4D /* h3Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = h3Label.swift; sourceTree = "<group>"; };
-		EEDD7FE82CA1ACA500609C4D /* t1Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = t1Label.swift; sourceTree = "<group>"; };
-		EEDD7FEA2CA1ADC200609C4D /* t2Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = t2Label.swift; sourceTree = "<group>"; };
-		EEDD7FEC2CA1AF4200609C4D /* t3Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = t3Label.swift; sourceTree = "<group>"; };
-		EEDD7FEE2CA1AFFF00609C4D /* s1Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = s1Label.swift; sourceTree = "<group>"; };
-		EEDD7FF02CA1B21F00609C4D /* s2Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = s2Label.swift; sourceTree = "<group>"; };
-		EEDD7FF22CA1B28B00609C4D /* s3Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = s3Label.swift; sourceTree = "<group>"; };
 		EEE4298B2C9DD86600D96CD8 /* View+configureLanguageSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+configureLanguageSettings.swift"; sourceTree = "<group>"; };
 		EEE4298D2C9DD92600D96CD8 /* EnvironmentValues+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+.swift"; sourceTree = "<group>"; };
+		EEE4A9222CA42C4400C65298 /* LabelButtonConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelButtonConfigurations.swift; sourceTree = "<group>"; };
+		EEE4A9292CA430C900C65298 /* applyPrimaryDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = applyPrimaryDesign.swift; sourceTree = "<group>"; };
 		EEF3A8562CA1B36100C6BC3E /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EEF3A86A2CA1BC8800C6BC3E /* UIExtensions */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UIExtensions; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EECCF13E2CA1BCCA007E38D2 /* UIExtensions in Frameworks */,
+				EE018F252CB6A61600235DD9 /* Orbit in Frameworks */,
 				EE9ED1CB2C99D71D00DFA2F2 /* FoundationExtensions in Frameworks */,
 				EEDC33952CA3254100FCACA1 /* SwiftUIModifiers in Frameworks */,
 			);
@@ -104,41 +111,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EE9ED1C82C99D46500DFA2F2 /* SwitPackages */ = {
+		EE018F1F2CB6A60D00235DD9 /* SwitPackage */ = {
 			isa = PBXGroup;
 			children = (
-				EEDC33922CA3253500FCACA1 /* SwiftUIModifiers */,
-				EEF3A86A2CA1BC8800C6BC3E /* UIExtensions */,
-				EE9ED1C92C99D71000DFA2F2 /* FoundationExtensions */,
+				EE018F1B2CB6A60D00235DD9 /* FoundationExtensions */,
+				EE018F1C2CB6A60D00235DD9 /* orbit-swiftui */,
+				EE018F1D2CB6A60D00235DD9 /* SwiftUIModifiers */,
+				EE018F1E2CB6A60D00235DD9 /* UIExtensions */,
 			);
-			path = SwitPackages;
+			path = SwitPackage;
+			sourceTree = "<group>";
+		};
+		EE018F5E2CB6E89000235DD9 /* Tokens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tokens;
+			sourceTree = "<group>";
+		};
+		EE5EEF262CA5837600D5E2F0 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				EE018F582CB6DBE700235DD9 /* FoundationIcons.swift */,
+				EE018F562CB6D9D100235DD9 /* Icons.xcassets */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		EE5EEF272CA5844F00D5E2F0 /* Measurments */ = {
+			isa = PBXGroup;
+			children = (
+				EE018F5A2CB6E1AA00235DD9 /* FontSizes.swift */,
+				EE7EC40E2CA56F8A00E073C1 /* BorderWidth.swift */,
+				EE7EC40C2CA56F3B00E073C1 /* BorderRadius.swift */,
+				EE7EC4112CA5700000E073C1 /* Spacing.swift */,
+				EE018F5C2CB6E41E00235DD9 /* Padding.swift */,
+			);
+			path = Measurments;
+			sourceTree = "<group>";
+		};
+		EE7EC40A2CA56EF200E073C1 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				EE7EC4162CA5738E00E073C1 /* Colors */,
+				EE7EC4132CA572C500E073C1 /* Typography */,
+				EE5EEF262CA5837600D5E2F0 /* Icons */,
+				EE5EEF272CA5844F00D5E2F0 /* Measurments */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		EE7EC4132CA572C500E073C1 /* Typography */ = {
+			isa = PBXGroup;
+			children = (
+				EED8F6312C999F6900B11D2B /* Fonts */,
+				EE7EC4142CA5732100E073C1 /* FontFamily.swift */,
+				EE018F3F2CB6CBB600235DD9 /* ContentSizeCategory+FontRatio.swift */,
+			);
+			path = Typography;
+			sourceTree = "<group>";
+		};
+		EE7EC4162CA5738E00E073C1 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				EED8F65C2C99A3D500B11D2B /* Colors.xcassets */,
+				EE7EC4172CA5742C00E073C1 /* FoundationColors.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 		EEADB4352CA0524500F928D7 /* Utilites */ = {
 			isa = PBXGroup;
 			children = (
-				EEADB4362CA0526C00F928D7 /* Typography */,
 				EEF3A8692CA1BBE900C6BC3E /* Colors */,
 				EEDC337E2CA3101300FCACA1 /* Components */,
+				EEE4A9282CA4307E00C65298 /* Modifiers */,
 			);
 			path = Utilites;
-			sourceTree = "<group>";
-		};
-		EEADB4362CA0526C00F928D7 /* Typography */ = {
-			isa = PBXGroup;
-			children = (
-				EEADB4312CA03C5400F928D7 /* CreateAttributedString.swift */,
-				EEADB4372CA052B700F928D7 /* h1Label.swift */,
-				EEADB4392CA0543600F928D7 /* h2Label.swift */,
-				EEDD7FE62CA1A1AE00609C4D /* h3Label.swift */,
-				EEDD7FE82CA1ACA500609C4D /* t1Label.swift */,
-				EEDD7FEA2CA1ADC200609C4D /* t2Label.swift */,
-				EEDD7FEC2CA1AF4200609C4D /* t3Label.swift */,
-				EEDD7FEE2CA1AFFF00609C4D /* s1Label.swift */,
-				EEDD7FF02CA1B21F00609C4D /* s2Label.swift */,
-				EEDD7FF22CA1B28B00609C4D /* s3Label.swift */,
-			);
-			path = Typography;
 			sourceTree = "<group>";
 		};
 		EECCF13C2CA1BCCA007E38D2 /* Frameworks */ = {
@@ -161,10 +210,13 @@
 		EED8F6242C999D2200B11D2B /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				EE018F3A2CB6AAC600235DD9 /* DesignSystem.swift */,
+				EE7EC40A2CA56EF200E073C1 /* Foundation */,
+				EE018F5E2CB6E89000235DD9 /* Tokens */,
 				EED8F6782C99B00D00B11D2B /* LanguageSettings */,
 				EED8F62D2C999EC400B11D2B /* Resources */,
 				EEADB4352CA0524500F928D7 /* Utilites */,
-				EE9ED1C82C99D46500DFA2F2 /* SwitPackages */,
+				EE018F1F2CB6A60D00235DD9 /* SwitPackage */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -174,7 +226,6 @@
 			children = (
 				EED8F6302C999F6000B11D2B /* Assets */,
 				EED8F6322C999F6E00B11D2B /* Files */,
-				EED8F6312C999F6900B11D2B /* Fonts */,
 				EED8F66F2C99ADFB00B11D2B /* Localization */,
 				EED8F6332C999F7500B11D2B /* Generated */,
 			);
@@ -185,7 +236,6 @@
 			isa = PBXGroup;
 			children = (
 				EED8F65A2C99A3C900B11D2B /* Images.xcassets */,
-				EED8F65C2C99A3D500B11D2B /* Colors.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -211,8 +261,6 @@
 			children = (
 				EED8F6742C99AE5D00B11D2B /* Strings+Generated.swift */,
 				EED8F66D2C99AD4300B11D2B /* Files+Generated.swift */,
-				EED8F66B2C99AD1C00B11D2B /* Fonts+Generated.swift */,
-				EED8F6692C99ACEF00B11D2B /* Assets+Generated.swift */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -272,6 +320,7 @@
 				EEDC33882CA3124900FCACA1 /* ButtonStyleConfiguration.swift */,
 				EEDC338A2CA314E700FCACA1 /* PrimaryButtonConfigurations.swift */,
 				EEDC33962CA32A6A00FCACA1 /* SecondaryButtonConfigurations.swift */,
+				EEE4A9222CA42C4400C65298 /* LabelButtonConfigurations.swift */,
 			);
 			path = StyleConfigurations;
 			sourceTree = "<group>";
@@ -290,6 +339,14 @@
 				EEDC33902CA3222C00FCACA1 /* PrimaryButtonStyle.swift */,
 			);
 			path = Style;
+			sourceTree = "<group>";
+		};
+		EEE4A9282CA4307E00C65298 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				EEE4A9292CA430C900C65298 /* applyPrimaryDesign.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 		EEF3A8692CA1BBE900C6BC3E /* Colors */ = {
@@ -317,6 +374,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EED8F6292C999D2200B11D2B /* Build configuration list for PBXNativeTarget "DesignSystem" */;
 			buildPhases = (
+				EE018F3C2CB6ADB800235DD9 /* swiftgen */,
 				EED8F61D2C999D2200B11D2B /* Headers */,
 				EED8F61E2C999D2200B11D2B /* Sources */,
 				EED8F61F2C999D2200B11D2B /* Frameworks */,
@@ -331,6 +389,7 @@
 				EE9ED1CA2C99D71D00DFA2F2 /* FoundationExtensions */,
 				EECCF13D2CA1BCCA007E38D2 /* UIExtensions */,
 				EEDC33942CA3254100FCACA1 /* SwiftUIModifiers */,
+				EE018F242CB6A61600235DD9 /* Orbit */,
 			);
 			productName = DesignSystem;
 			productReference = EEF3A8562CA1B36100C6BC3E /* DesignSystem.framework */;
@@ -375,18 +434,42 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEF3A86B2CA1BC8800C6BC3E /* UIExtensions in Resources */,
+				EE018F202CB6A60D00235DD9 /* FoundationExtensions in Resources */,
 				EED8F6722C99AE1A00B11D2B /* Localizable.strings in Resources */,
 				EED8F6652C99A51E00B11D2B /* Inter.ttf in Resources */,
 				EED8F65B2C99A3C900B11D2B /* Images.xcassets in Resources */,
 				EED8F65D2C99A3D500B11D2B /* Colors.xcassets in Resources */,
-				EEDC33932CA3253500FCACA1 /* SwiftUIModifiers in Resources */,
+				EE018F222CB6A60D00235DD9 /* SwiftUIModifiers in Resources */,
+				EE018F232CB6A60D00235DD9 /* UIExtensions in Resources */,
+				EE018F212CB6A60D00235DD9 /* orbit-swiftui in Resources */,
 				EED8F6672C99A8AB00B11D2B /* swiftgen.yml in Resources */,
 				EEADB4342CA0505E00F928D7 /* Cairo.ttf in Resources */,
+				EE018F572CB6D9D100235DD9 /* Icons.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EE018F3C2CB6ADB800235DD9 /* swiftgen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = swiftgen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftgen >/dev/null; then\n  swiftgen\nelse\n  echo \"swiftgen not installed\"\nfi \n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EED8F61E2C999D2200B11D2B /* Sources */ = {
@@ -394,32 +477,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEE4298C2C9DD86600D96CD8 /* View+configureLanguageSettings.swift in Sources */,
-				EEDD7FE72CA1A1AE00609C4D /* h3Label.swift in Sources */,
 				EED8F66E2C99AD4300B11D2B /* Files+Generated.swift in Sources */,
-				EEDD7FEF2CA1AFFF00609C4D /* s1Label.swift in Sources */,
-				EED8F66C2C99AD1C00B11D2B /* Fonts+Generated.swift in Sources */,
 				EEDC33972CA32A6A00FCACA1 /* SecondaryButtonConfigurations.swift in Sources */,
 				EEDC338B2CA314E700FCACA1 /* PrimaryButtonConfigurations.swift in Sources */,
 				EED8F6752C99AE5D00B11D2B /* Strings+Generated.swift in Sources */,
 				EEDC33892CA3124900FCACA1 /* ButtonStyleConfiguration.swift in Sources */,
 				EEDC33822CA310F100FCACA1 /* ButtonSize.swift in Sources */,
-				EEADB4322CA03C5400F928D7 /* CreateAttributedString.swift in Sources */,
+				EEE4A9232CA42C4400C65298 /* LabelButtonConfigurations.swift in Sources */,
+				EE018F3B2CB6AAC600235DD9 /* DesignSystem.swift in Sources */,
 				EECCF1402CA1C064007E38D2 /* ColorTokens.swift in Sources */,
+				EEE4A92A2CA430C900C65298 /* applyPrimaryDesign.swift in Sources */,
 				EED8F67A2C99B01900B11D2B /* Language.swift in Sources */,
-				EEDD7FF32CA1B28B00609C4D /* s3Label.swift in Sources */,
-				EEDD7FE92CA1ACA500609C4D /* t1Label.swift in Sources */,
-				EEADB43A2CA0543600F928D7 /* h2Label.swift in Sources */,
+				EE018F402CB6CBB600235DD9 /* ContentSizeCategory+FontRatio.swift in Sources */,
+				EE018F5B2CB6E1AA00235DD9 /* FontSizes.swift in Sources */,
 				EEDC338E2CA316DF00FCACA1 /* PrimaryLinearGradient.swift in Sources */,
-				EEDD7FEB2CA1ADC200609C4D /* t2Label.swift in Sources */,
-				EEDD7FF12CA1B21F00609C4D /* s2Label.swift in Sources */,
+				EE7EC40D2CA56F3B00E073C1 /* BorderRadius.swift in Sources */,
+				EE7EC4122CA5700000E073C1 /* Spacing.swift in Sources */,
 				EEDC33912CA3222C00FCACA1 /* PrimaryButtonStyle.swift in Sources */,
+				EE018F592CB6DBE700235DD9 /* FoundationIcons.swift in Sources */,
 				EEE4298E2C9DD92600D96CD8 /* EnvironmentValues+.swift in Sources */,
 				EED8F67C2C99B0F900B11D2B /* LanguageSettings.swift in Sources */,
 				EED8F6772C99AF8000B11D2B /* swiftgen+localized.swift in Sources */,
-				EEADB4382CA052B700F928D7 /* h1Label.swift in Sources */,
+				EE7EC4182CA5742C00E073C1 /* FoundationColors.swift in Sources */,
+				EE018F5D2CB6E41E00235DD9 /* Padding.swift in Sources */,
+				EE7EC4152CA5732100E073C1 /* FontFamily.swift in Sources */,
 				EEDC33862CA3115800FCACA1 /* SmallButtonSize.swift in Sources */,
-				EED8F66A2C99ACEF00B11D2B /* Assets+Generated.swift in Sources */,
-				EEDD7FED2CA1AF4200609C4D /* t3Label.swift in Sources */,
+				EE7EC40F2CA56F8A00E073C1 /* BorderWidth.swift in Sources */,
 				EEDC33842CA3111F00FCACA1 /* BigButtonSize.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,7 +561,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -545,7 +628,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -573,7 +656,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 4U8DMJ33ZN;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -613,7 +696,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 4U8DMJ33ZN;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -669,6 +752,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		EE018F242CB6A61600235DD9 /* Orbit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Orbit;
+		};
 		EE9ED1CA2C99D71D00DFA2F2 /* FoundationExtensions */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FoundationExtensions;

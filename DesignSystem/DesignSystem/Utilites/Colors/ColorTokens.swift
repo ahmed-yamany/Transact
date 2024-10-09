@@ -10,44 +10,48 @@ import SwiftUI
 public struct ColorTokens { }
 
 public extension ColorTokens {
+    static var gradient: LinearGradient {
+        PrimaryLinearGradient()
+    }
+    
     static var background: Color {
-        .trBackground
+        .red
     }
     
     static var offBackground: Color {
-        .trOffBackground
+        .red
     }
     
     static var primaryText: Color {
-        .trPrimaryText
+        .red
     }
     
     static var secondaryText: Color {
-        .trSecondaryText
+        .red
     }
     
     static var inactive: Color {
-        .trInactive
+        .red
     }
     
     static var actionAndInfo: Color {
-        .trActionAndInfo
+        .red
     }
     
     static var danger: Color {
-        .trDanger
+        .red
     }
     
     static var success: Color {
-        .trSuccess
+        .red
     }
     
     static var warning: Color {
-        .trWarning
+        .red
     }
     
     static var mobileBG: Color {
-        .trMobileBG
+        .red
     }
     
 }

@@ -14,7 +14,13 @@ public enum L10n {
   ///   DesignSystem
   /// 
   ///   Created by Ahmed Yamany on 17/09/2024.
-  public static var appName: String { return L10n.tr("Localizable", "app-name", fallback: "Hello There How Are you\nI hope you are doing well") }
+  public static var appName: String { return L10n.tr("Localizable", "app-name", fallback: "Transact") }
+  /// Back
+  public static var back: String { return L10n.tr("Localizable", "back", fallback: "Back") }
+  /// Next
+  public static var next: String { return L10n.tr("Localizable", "next", fallback: "Next") }
+  /// Skip
+  public static var skip: String { return L10n.tr("Localizable", "skip", fallback: "Skip") }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

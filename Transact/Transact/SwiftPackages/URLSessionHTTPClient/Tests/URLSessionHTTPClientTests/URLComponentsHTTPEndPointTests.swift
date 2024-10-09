@@ -76,4 +76,3 @@ struct HTTPEndPointMultiPartWithQueryTaskDummy: HTTPEndPoint {
     var task: HTTPEndPointTask = .multipartWithQuery(([], ["name": "Ahmed"]))
     var headers: Headers? = ["content-type": "json"]
 }
-

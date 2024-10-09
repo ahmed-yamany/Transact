@@ -18,15 +18,15 @@ public struct SplashView: View {
     public var body: some View {
         VStack {
             VStack(spacing: 8) {
-                Asset.Images.logo.swiftUIImage
-                    .resizable()
-                    .frame(width: 56, height: 56)
+//                Asset.Images.logo.swiftUIImage
+//                    .resizable()
+//                    .frame(width: 56, height: 56)
                 
-                Text(.h3Label(text: L10n.appName, color: ColorTokens.mobileBG))
+//                Text(.h3Label(text: L10n.appName, color: ColorTokens.mobileBG))
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(PrimaryLinearGradient())
+        .background(ColorTokens.gradient)
         .task {
             try? await Task.sleep(for: .seconds(3))
             coordinator.splashViewEnded()

@@ -16,15 +16,20 @@ public struct MultiPartAuthenticatedHTTPEndPointDecorator: HTTPEndPoint {
     
     let endPoint: HTTPEndPoint
     
-    public init(endPoint: HTTPEndPoint, boundary: String, tokenProvider: @escaping () -> String, languageProvider: @escaping () -> String) {
+    public init(
+        endPoint: HTTPEndPoint,
+        boundary: String,
+        tokenProvider: @escaping () -> String,
+        languageProvider: @escaping () -> String
+    ) {
         self.endPoint = endPoint
-        
+        let language = languageProvider()
         headers = [
             "Accept": "application/json",
             "Content-Type": "multipart/form-data; boundary=\(boundary)",
             "Authorization": "Bearer \(tokenProvider())",
-            "Accept-Language": languageProvider(),
-            "Lang": languageProvider()
+            "Accept-Language": language,
+            "Lang": language
         ].merging(endPoint.headers ?? [:]) { (_, new) in new }
     }
 }

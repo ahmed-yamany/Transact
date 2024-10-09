@@ -1,42 +1,54 @@
-input_dir: DesignSystem/Resources/
-output_dir: DesignSystem/Resources/Generated/
+input_dir: DesignSystem/
+output_dir: DesignSystem/
 
-strings:
-   inputs:
-     - Localization/en.lproj
-   outputs:
-     - templateName: structured-swift5
-       output: Strings+Generated.swift
-       params:
-        lookupFunction: localized(forKey:table:fallbackValue:)
-        publicAccess: true
+#strings:
+#   inputs:
+#     - Localization/en.lproj
+#   outputs:
+#     - templateName: structured-swift5
+#       output: Strings+Generated.swift
+#       params:
+#        lookupFunction: localized(forKey:table:fallbackValue:)
+#        publicAccess: true
 
 #fonts:
 #  inputs:
-#    - Fonts
+#    - Foundation/Typography/Fonts
 #  outputs:
 #    templateName: swift5
-#    output: Fonts+Generated.swift
+#    output: Foundation/Typography/FontFamily.swift
 #    params:
 #        publicAccess: true
 
-files:
+#files:
+#  inputs:
+#    - Files
+##  filter: .+\.mp4$
+#  outputs:
+#    templateName: structured-swift5
+#    output: Files+Generated.swift
+#    params:
+#        publicAccess: true
+#
+
+xcassets:
   inputs:
-    - Files
-#  filter: .+\.mp4$
+    - Foundation/Colors/Colors.xcassets
+    
   outputs:
-    templateName: structured-swift5
-    output: Files+Generated.swift
-    params:
+    - templateName: swift5
+      output: Foundation/Colors/FoundationColors.swift
+      params:
+        enumName: FoundationColors
         publicAccess: true
 
 xcassets:
   inputs:
-    - Assets/Images.xcassets
-    - Assets/Colors.xcassets
+    - Foundation/Icons/Icons.xcassets
     
   outputs:
     - templateName: swift5
-      output: Assets+Generated.swift
+      output: Foundation/Icons/FoundationIcons.swift
       params:
+        enumName: FoundationIcons
         publicAccess: true

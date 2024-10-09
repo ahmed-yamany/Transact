@@ -10,7 +10,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "URLSessionHTTPClient",
-            targets: ["URLSessionHTTPClient"]),
+            targets: ["URLSessionHTTPClient"])
     ],
     dependencies: [
         .package(path: "./HTTPClient")
@@ -22,6 +22,6 @@ let package = Package(
             name: "URLSessionHTTPClient", dependencies: ["HTTPClient"]),
         .testTarget(
             name: "URLSessionHTTPClientTests",
-            dependencies: ["URLSessionHTTPClient"]),
+            dependencies: ["URLSessionHTTPClient"])
     ]
 )

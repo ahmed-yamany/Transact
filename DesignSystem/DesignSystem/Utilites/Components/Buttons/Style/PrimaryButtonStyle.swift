@@ -17,10 +17,10 @@ public struct PrimaryButtonStyle<StyleConfiguration: ButtonStyleConfigurations>:
             .foregroundStyle(foregroundColor(configuration))
             .font(styleConfiguration.font)
             .onCondition(styleConfiguration.size != nil) {
-                if let size = styleConfiguration.size  {
+                if let size = styleConfiguration.size, let backgroundConfiguration = styleConfiguration.background  {
                     $0.frame(maxWidth: .infinity)
                         .frame(height: size.height)
-                        .background(backgroundColor(configuration))
+                        .background(backgroundColor(backgroundConfiguration, configuration: configuration))
                         .clipShape(RoundedRectangle(cornerRadius: size.cornerRadius))
                 } else { $0 }
             }
@@ -32,13 +32,13 @@ public struct PrimaryButtonStyle<StyleConfiguration: ButtonStyleConfigurations>:
     }
     
     @ViewBuilder
-    func backgroundColor(_ configuration: Configuration) -> some View {
+    func backgroundColor(_ backgroundConfiguration: ButtonBackgroundConfigurations, configuration: Configuration) -> some View {
         if configuration.isPressed {
-            styleConfiguration.background.isPressedBackground
+            backgroundConfiguration.isPressedBackground
         } else if !isEnabled {
-            styleConfiguration.background.disabledBackground
+            backgroundConfiguration.disabledBackground
         } else {
-            styleConfiguration.background.background
+            backgroundConfiguration.background
         }
     }
 

@@ -30,7 +30,7 @@ extension AttributedString {
     private static func smallTreeLabelDarkEnglish(text: String, color: Color) -> AttributedString {
         createAttributedString(
             text: text,
-            font: FontFamily.Inter.regular.swiftUIFont(fixedSize: 8),
+            font: FontFamily.Inter.regular.swiftUIFont(fixedSize: .fontSizes.s3),
             foregroundColor: color,
             letterSpacing: 0.7
         )
@@ -39,7 +39,7 @@ extension AttributedString {
     private static func smallThreeLabelLightEnglish(text: String, color: Color) -> AttributedString {
         createAttributedString(
             text: text,
-            font: FontFamily.Cairo.regular.swiftUIFont(fixedSize: 8),
+            font: FontFamily.Cairo.regular.swiftUIFont(fixedSize: .fontSizes.s3),
             foregroundColor: color,
             letterSpacing: 0.7
         )
@@ -48,7 +48,7 @@ extension AttributedString {
     private static func smallThreeLabelDarkArabic(text: String, color: Color) -> AttributedString {
         createAttributedString(
             text: text,
-            font: FontFamily.Inter.regular.swiftUIFont(fixedSize: 8),
+            font: FontFamily.Inter.regular.swiftUIFont(fixedSize: .fontSizes.s3),
             foregroundColor: color,
             letterSpacing: 0.0
         )
@@ -57,7 +57,7 @@ extension AttributedString {
     private static func smallThreeLabelLightArabic(text: String, color: Color) -> AttributedString {
         createAttributedString(
             text: text,
-            font: FontFamily.Cairo.regular.swiftUIFont(fixedSize: 8),
+            font: FontFamily.Cairo.regular.swiftUIFont(fixedSize: .fontSizes.s3),
             foregroundColor: color,
             letterSpacing: 0.0
         )

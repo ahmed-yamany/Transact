@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PrimaryButtonBackgroundConfigurations: ButtonBackgroundConfigurations {
-    var background: LinearGradient = PrimaryLinearGradient()
+    var background: LinearGradient = ColorTokens.gradient
     var isPressedBackground: Color = ColorTokens.inactive
     var disabledBackground: Color = ColorTokens.inactive
 }
@@ -31,7 +31,7 @@ public struct PrimaryButtonConfigurations: ButtonStyleConfigurations {
     }
     
     public let foreground: ButtonForegroundConfigurations = PrimaryButtonForegroundConfigurations()
-    public let background: ButtonBackgroundConfigurations = PrimaryButtonBackgroundConfigurations()
+    public let background: ButtonBackgroundConfigurations? = PrimaryButtonBackgroundConfigurations()
     public let border: (any ButtonBorderConfigurations)? = nil
     
     public var size: (any ButtonSize)?

@@ -44,8 +44,8 @@ final class URLRequestHTTPEndPointTests: XCTestCase {
     func test_URLRequestHTTPEndPoint_Headers() {
         let endpoint = HTTPEndPointMultiPartWithQueryTaskDummy()
         let sut = URLRequest(endpoint: endpoint)
-        XCTAssertEqual(sut.allHTTPHeaderFields?.keys.map{$0.lowercased()}, ["content-type"])
-        XCTAssertEqual(sut.allHTTPHeaderFields?.values.map{$0.lowercased()}, ["json"])
+        XCTAssertEqual(sut.allHTTPHeaderFields?.keys.map { $0.lowercased() }, ["content-type"])
+        XCTAssertEqual(sut.allHTTPHeaderFields?.values.map { $0.lowercased() }, ["json"])
     }
     
     func test_URLRequestHTTPEndPoint_Body() {

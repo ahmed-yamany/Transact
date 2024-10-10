@@ -17,7 +17,7 @@ struct SplashFactoryContainer {
     }
     
     @MainActor
-    static func coordinator(_ router: Router) -> Coordinator {
-        SplashCoordinator(router: router, view: Self.view)
+    static func coordinator() -> SplashCoordinatorInterface {
+        SplashCoordinator(view: Self.view)
     }
 }

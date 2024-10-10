@@ -6,23 +6,15 @@
 //
 
 import SwiftUI
-import Coordinator
 import SwiftUIViews
 import DesignSystem
 
-protocol TransactCoordinatorProtocol: Coordinator {
+protocol TransactCoordinatorProtocol {
     
 }
 
 class TransactCoordinator: TransactCoordinatorProtocol {
 
-    let router: Router
-    
-    init(router: Router) {
-        self.router = router
-    }
-    
     func start() {
-        SplashFactoryContainer.coordinator(router).start()
     }
 }

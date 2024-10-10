@@ -31,8 +31,6 @@
 		EE41D0F72CB71BD90043182D /* LanguageSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D0C82CB71BD90043182D /* LanguageSettings.swift */; };
 		EE41D0F82CB71BD90043182D /* View+configureLanguageSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D0C92CB71BD90043182D /* View+configureLanguageSettings.swift */; };
 		EE41D0F92CB71BD90043182D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE41D0CB2CB71BD90043182D /* Images.xcassets */; };
-		EE41D0FA2CB71BD90043182D /* Files+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D0CD2CB71BD90043182D /* Files+Generated.swift */; };
-		EE41D0FB2CB71BD90043182D /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D0CE2CB71BD90043182D /* Strings+Generated.swift */; };
 		EE41D0FF2CB71BD90043182D /* swiftgen+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D0D52CB71BD90043182D /* swiftgen+localized.swift */; };
 		EE41D1002CB71BD90043182D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE41D0D82CB71BD90043182D /* Colors.xcassets */; };
 		EE41D1012CB71BD90043182D /* FoundationColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D0D92CB71BD90043182D /* FoundationColors.swift */; };
@@ -57,6 +55,16 @@
 		EED8F6672C99A8AB00B11D2B /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = EED8F6662C99A8AB00B11D2B /* swiftgen.yml */; };
 		EEDC33952CA3254100FCACA1 /* SwiftUIModifiers in Frameworks */ = {isa = PBXBuildFile; productRef = EEDC33942CA3254100FCACA1 /* SwiftUIModifiers */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE46AE812CB8092B00C5F23B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE46AE7D2CB8092B00C5F23B /* Coordinator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EED1C9162C6EC02B00472518;
+			remoteInfo = Coordinator;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		EE018F1B2CB6A60D00235DD9 /* FoundationExtensions */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FoundationExtensions; sourceTree = "<group>"; };
@@ -83,8 +91,6 @@
 		EE41D0C82CB71BD90043182D /* LanguageSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageSettings.swift; sourceTree = "<group>"; };
 		EE41D0C92CB71BD90043182D /* View+configureLanguageSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+configureLanguageSettings.swift"; sourceTree = "<group>"; };
 		EE41D0CB2CB71BD90043182D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		EE41D0CD2CB71BD90043182D /* Files+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Files+Generated.swift"; sourceTree = "<group>"; };
-		EE41D0CE2CB71BD90043182D /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		EE41D0D52CB71BD90043182D /* swiftgen+localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "swiftgen+localized.swift"; sourceTree = "<group>"; };
 		EE41D0D82CB71BD90043182D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		EE41D0D92CB71BD90043182D /* FoundationColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationColors.swift; sourceTree = "<group>"; };
@@ -104,6 +110,7 @@
 		EE41D10F2CB721180043182D /* ButtonSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonSize.swift; sourceTree = "<group>"; };
 		EE41D1102CB721180043182D /* SmallButtonSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallButtonSize.swift; sourceTree = "<group>"; };
 		EE41D1272CB722790043182D /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
+		EE46AE7D2CB8092B00C5F23B /* Coordinator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Coordinator.xcodeproj; path = ../Coordinator/Coordinator.xcodeproj; sourceTree = "<group>"; };
 		EED8F6662C99A8AB00B11D2B /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		EEF3A8562CA1B36100C6BC3E /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -211,15 +218,6 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		EE41D0CF2CB71BD90043182D /* Generated */ = {
-			isa = PBXGroup;
-			children = (
-				EE41D0CD2CB71BD90043182D /* Files+Generated.swift */,
-				EE41D0CE2CB71BD90043182D /* Strings+Generated.swift */,
-			);
-			path = Generated;
-			sourceTree = "<group>";
-		};
 		EE41D0D62CB71BD90043182D /* Localization */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,8 +229,6 @@
 		EE41D0D72CB71BD90043182D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EE41D0CC2CB71BD90043182D /* Assets */,
-				EE41D0CF2CB71BD90043182D /* Generated */,
 				EE41D0D62CB71BD90043182D /* Localization */,
 			);
 			path = Resources;
@@ -299,6 +295,7 @@
 		EE41D0EC2CB71BD90043182D /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				EE41D0CC2CB71BD90043182D /* Assets */,
 				EE41D0DA2CB71BD90043182D /* Colors */,
 				EE41D0EB2CB71BD90043182D /* Typography */,
 				EE41D0DD2CB71BD90043182D /* Icons */,
@@ -326,6 +323,14 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
+		EE46AE7E2CB8092B00C5F23B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE46AE822CB8092B00C5F23B /* Coordinator.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		EECCF13C2CA1BCCA007E38D2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,6 +341,7 @@
 		EED8F6182C999D2200B11D2B = {
 			isa = PBXGroup;
 			children = (
+				EE46AE7D2CB8092B00C5F23B /* Coordinator.xcodeproj */,
 				EED8F6662C99A8AB00B11D2B /* swiftgen.yml */,
 				EED8F6242C999D2200B11D2B /* DesignSystem */,
 				EEF3A8562CA1B36100C6BC3E /* DesignSystem.framework */,
@@ -423,12 +429,28 @@
 			mainGroup = EED8F6182C999D2200B11D2B;
 			productRefGroup = EED8F6182C999D2200B11D2B;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EE46AE7E2CB8092B00C5F23B /* Products */;
+					ProjectRef = EE46AE7D2CB8092B00C5F23B /* Coordinator.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				EED8F6212C999D2200B11D2B /* DesignSystem */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		EE46AE822CB8092B00C5F23B /* Coordinator.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Coordinator.framework;
+			remoteRef = EE46AE812CB8092B00C5F23B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		EED8F6202C999D2200B11D2B /* Resources */ = {
@@ -481,7 +503,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE41D0FA2CB71BD90043182D /* Files+Generated.swift in Sources */,
 				EE41D0F42CB71BD90043182D /* P4Text.swift in Sources */,
 				EE41D1092CB71BD90043182D /* Spacing.swift in Sources */,
 				EE41D1062CB71BD90043182D /* BorderRadius.swift in Sources */,
@@ -510,7 +531,6 @@
 				EE41D1282CB722790043182D /* PrimaryButtonStyle.swift in Sources */,
 				EE41D0EE2CB71BD90043182D /* H2Text.swift in Sources */,
 				EE41D0F22CB71BD90043182D /* P2Text.swift in Sources */,
-				EE41D0FB2CB71BD90043182D /* Strings+Generated.swift in Sources */,
 				EE41D0F82CB71BD90043182D /* View+configureLanguageSettings.swift in Sources */,
 				EE41D1052CB71BD90043182D /* FontSizes.swift in Sources */,
 			);

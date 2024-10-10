@@ -6,20 +6,21 @@
 //
 
 import SwiftUI
-import Coordinator
 import Splash
 
-class SplashCoordinator: SplashCoordinatorInterface, Coordinator {
-    var router: Router
+struct SplashCoordinator: SplashCoordinatorInterface, View {
     let view: (SplashCoordinatorInterface) -> AnyView
     
-    init(router: Router, view: @escaping (SplashCoordinatorInterface) -> AnyView) {
-        self.router = router
+    init(view: @escaping (SplashCoordinatorInterface) -> AnyView) {
         self.view = view
     }
     
+    var body: some View {
+        view(self)
+    }
+    
     func start() {
-        router.setView(view(self), animated: false, completion: {})
+        
     }
     
     func splashViewEnded() {

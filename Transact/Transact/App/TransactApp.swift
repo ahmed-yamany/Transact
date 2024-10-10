@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftUIViews
 import DesignSystem
+import Splash
 
 @main
 struct TransactApp: App {
@@ -16,13 +17,14 @@ struct TransactApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationControllerView(
-                navigationController: TransactFactoryContainer.refreshAppCoordinator().router.navigationController
-            )
-            .viewDidLoad {
-                TransactFactoryContainer.appCoordinator.start()
-            }
-            .configureLanguageSettings(languageSettings)
+            SplashView(coordinator: SplashFactoryContainer.coordinator())
+//            NavigationControllerView(
+//                navigationController: TransactFactoryContainer.refreshAppCoordinator().router.navigationController
+//            )
+//            .viewDidLoad {
+//                TransactFactoryContainer.appCoordinator.start()
+//            }
+//            .configureLanguageSettings(languageSettings)
         }
     }
 }

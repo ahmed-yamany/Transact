@@ -62,5 +62,4 @@ extension DesignSystem.Tokens.Colors {
     static var mobileBG: Color {
         .white
     }
-
 }

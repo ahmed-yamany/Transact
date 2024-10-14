@@ -9,22 +9,26 @@ import SwiftUI
 import SwiftUIViews
 import DesignSystem
 import Splash
+import Coordinator
+
+enum TestEnum: Hashable, View {
+    case a, b
+    var body: some View {
+        Text("Hello Ahmed")
+    }
+}
+
+class TestClass: ObservableObject {
+    @Published var stack: [TestEnum] = []
+}
 
 @main
 struct TransactApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
-    @ObservedObject var languageSettings = LanguageSettings.shared
     
     var body: some Scene {
         WindowGroup {
-            SplashView(coordinator: SplashFactoryContainer.coordinator())
-//            NavigationControllerView(
-//                navigationController: TransactFactoryContainer.refreshAppCoordinator().router.navigationController
-//            )
-//            .viewDidLoad {
-//                TransactFactoryContainer.appCoordinator.start()
-//            }
-//            .configureLanguageSettings(languageSettings)
+            TransactCoordinator()
         }
     }
 }

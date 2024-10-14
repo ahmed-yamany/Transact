@@ -6,18 +6,18 @@
 //
 
 import SwiftUI
-import Coordinator
 import Splash
 import SwiftUIModifiers
+import Coordinator
 
 struct SplashFactoryContainer {
-    
+    @MainActor
     static func view(_ coordinator: SplashCoordinatorInterface) -> AnyView {
         SplashView(coordinator: coordinator).eraseToAnyView()
     }
     
     @MainActor
-    static func coordinator() -> SplashCoordinatorInterface {
-        SplashCoordinator(view: Self.view)
+    static func coordinator(router: Router) -> Coordinator {
+        SplashCoordinator(router: router, view: Self.view)
     }
 }

@@ -1,15 +1,15 @@
 input_dir: DesignSystem/
 output_dir: DesignSystem/
 
-#strings:
-#   inputs:
-#     - Localization/en.lproj
-#   outputs:
-#     - templateName: structured-swift5
-#       output: Strings+Generated.swift
-#       params:
-#        lookupFunction: localized(forKey:table:fallbackValue:)
-#        publicAccess: true
+strings:
+   inputs:
+     - Resources/Localization/en.lproj
+   outputs:
+     - templateName: structured-swift5
+       output: Resources/Localization/Strings+Generated.swift
+       params:
+        lookupFunction: localized(forKey:table:fallbackValue:)
+        publicAccess: true
 
 #fonts:
 #  inputs:
@@ -52,3 +52,14 @@ xcassets:
       params:
         enumName: FoundationIcons
         publicAccess: true
+        
+#xcassets:
+#  inputs:
+#    - Foundation/Assets/Assets.xcassets
+#    
+#  outputs:
+#    - templateName: swift5
+#      output: Foundation/Assets/FoundationAssets.swift
+#      params:
+#        enumName: FoundationAssets
+#        publicAccess: true

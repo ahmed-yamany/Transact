@@ -18,10 +18,10 @@ public struct SplashView: View {
     public var body: some View {
         VStack {
             VStack(spacing: 8) {
-                H1Text("Hello Ahmed")
+                H1Text(L10n.name)
                 
                 Button {
-                    
+                    coordinator.splashViewEnded()
                 } label: {
                     P1Text("Sign in")
                 }
@@ -29,10 +29,7 @@ public struct SplashView: View {
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .task {
-            try? await Task.sleep(for: .seconds(3))
-            coordinator.splashViewEnded()
-        }
+        .padding(.horizontal, DesignSystem.Foundation.Measurements.Padding.left)
     }
 }
 

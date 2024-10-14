@@ -16,6 +16,7 @@ public extension DesignSystem.Foundation {
     static let Colors = FoundationColors.self
     enum Typography { }
     static let Icons = FoundationIcons.self
+    static let Assets = FoundationAssets.self
     enum Measurements {}
 }
 

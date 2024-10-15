@@ -7,29 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE75AF382CBD961200B1D849 /* Coordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED1C9162C6EC02B00472518 /* Coordinator.framework */; platformFilter = ios; };
+		EE75AF402CBD97A400B1D849 /* NavigationStackRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75AF3F2CBD97A400B1D849 /* NavigationStackRouterTests.swift */; };
 		EE776A102CBBC5250021E942 /* NavigationRouter in Frameworks */ = {isa = PBXBuildFile; productRef = EE776A0F2CBBC5250021E942 /* NavigationRouter */; };
+		EEA402302CBEDAAD001867DE /* View+LifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA4022F2CBEDAAD001867DE /* View+LifeCycle.swift */; };
 		EED1C9262C6EC06C00472518 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED1C9202C6EC06C00472518 /* Coordinator.swift */; };
 		EED1C9272C6EC06C00472518 /* NavigationControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED1C9212C6EC06C00472518 /* NavigationControllerRouter.swift */; };
 		EED1C9282C6EC06C00472518 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED1C9222C6EC06C00472518 /* Router.swift */; };
 		EED75A832CBBA9BD00F0F206 /* NavigationStackRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED75A822CBBA9BD00F0F206 /* NavigationStackRouter.swift */; };
-		EEEA40B22CBD02A20013CB02 /* RoutableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEA40B12CBD02A20013CB02 /* RoutableView.swift */; };
-		EEEA40B42CBD03040013CB02 /* AnyRoutableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEA40B32CBD03040013CB02 /* AnyRoutableView.swift */; };
+		EEEA40B42CBD03040013CB02 /* AnyHashableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEA40B32CBD03040013CB02 /* AnyHashableView.swift */; };
 		EEFBB0C02CBD5F2100AC4A7B /* RoutableNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFBB0BF2CBD5F2100AC4A7B /* RoutableNavigationStack.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		EE75AF392CBD961200B1D849 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EED1C90D2C6EC02B00472518 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EED1C9152C6EC02B00472518;
+			remoteInfo = Coordinator;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		EE46AE842CB8093A00C5F23B /* NavigationRouter */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NavigationRouter; sourceTree = "<group>"; };
+		EE75AF342CBD961200B1D849 /* CoordinatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoordinatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE75AF3F2CBD97A400B1D849 /* NavigationStackRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackRouterTests.swift; sourceTree = "<group>"; };
+		EEA4022F2CBEDAAD001867DE /* View+LifeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+LifeCycle.swift"; sourceTree = "<group>"; };
 		EED1C9162C6EC02B00472518 /* Coordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Coordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EED1C9202C6EC06C00472518 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		EED1C9212C6EC06C00472518 /* NavigationControllerRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerRouter.swift; sourceTree = "<group>"; };
 		EED1C9222C6EC06C00472518 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		EED75A822CBBA9BD00F0F206 /* NavigationStackRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackRouter.swift; sourceTree = "<group>"; };
-		EEEA40B12CBD02A20013CB02 /* RoutableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutableView.swift; sourceTree = "<group>"; };
-		EEEA40B32CBD03040013CB02 /* AnyRoutableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyRoutableView.swift; sourceTree = "<group>"; };
+		EEEA40B32CBD03040013CB02 /* AnyHashableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyHashableView.swift; sourceTree = "<group>"; };
 		EEFBB0BF2CBD5F2100AC4A7B /* RoutableNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutableNavigationStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EE75AF312CBD961200B1D849 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE75AF382CBD961200B1D849 /* Coordinator.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EED1C9132C6EC02B00472518 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -41,11 +63,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE75AF352CBD961200B1D849 /* CoordinatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE75AF3E2CBD979800B1D849 /* Router */,
+			);
+			path = CoordinatorTests;
+			sourceTree = "<group>";
+		};
+		EE75AF3E2CBD979800B1D849 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				EE75AF3F2CBD97A400B1D849 /* NavigationStackRouterTests.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EEA4022E2CBEDA9C001867DE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EEA4022F2CBEDAAD001867DE /* View+LifeCycle.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		EED1C90C2C6EC02B00472518 = {
 			isa = PBXGroup;
 			children = (
 				EE46AE842CB8093A00C5F23B /* NavigationRouter */,
 				EED1C9182C6EC02B00472518 /* Coordinator */,
+				EE75AF352CBD961200B1D849 /* CoordinatorTests */,
 				EED1C9172C6EC02B00472518 /* Products */,
 				EED1C92E2C6EC0AD00472518 /* Frameworks */,
 			);
@@ -55,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				EED1C9162C6EC02B00472518 /* Coordinator.framework */,
+				EE75AF342CBD961200B1D849 /* CoordinatorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,6 +110,7 @@
 		EED1C9182C6EC02B00472518 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				EEA4022E2CBEDA9C001867DE /* Extensions */,
 				EED1C9232C6EC06C00472518 /* Coordinator */,
 			);
 			path = Coordinator;
@@ -70,10 +119,10 @@
 		EED1C9232C6EC06C00472518 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				EEFBB0C22CBD5FA700AC4A7B /* Router */,
-				EEFBB0C12CBD5F9200AC4A7B /* RoutableView */,
+				EED1C9222C6EC06C00472518 /* Router.swift */,
 				EED1C9202C6EC06C00472518 /* Coordinator.swift */,
-				EEFBB0BF2CBD5F2100AC4A7B /* RoutableNavigationStack.swift */,
+				EEFBB0C12CBD5F9200AC4A7B /* NavigationStackRouter */,
+				EEFBB0C22CBD5FA700AC4A7B /* NavigationControllerRouter */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -85,23 +134,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EEFBB0C12CBD5F9200AC4A7B /* RoutableView */ = {
+		EEFBB0C12CBD5F9200AC4A7B /* NavigationStackRouter */ = {
 			isa = PBXGroup;
 			children = (
-				EEEA40B12CBD02A20013CB02 /* RoutableView.swift */,
-				EEEA40B32CBD03040013CB02 /* AnyRoutableView.swift */,
+				EEEA40B32CBD03040013CB02 /* AnyHashableView.swift */,
+				EED75A822CBBA9BD00F0F206 /* NavigationStackRouter.swift */,
+				EEFBB0BF2CBD5F2100AC4A7B /* RoutableNavigationStack.swift */,
 			);
-			path = RoutableView;
+			path = NavigationStackRouter;
 			sourceTree = "<group>";
 		};
-		EEFBB0C22CBD5FA700AC4A7B /* Router */ = {
+		EEFBB0C22CBD5FA700AC4A7B /* NavigationControllerRouter */ = {
 			isa = PBXGroup;
 			children = (
-				EED1C9222C6EC06C00472518 /* Router.swift */,
 				EED1C9212C6EC06C00472518 /* NavigationControllerRouter.swift */,
-				EED75A822CBBA9BD00F0F206 /* NavigationStackRouter.swift */,
 			);
-			path = Router;
+			path = NavigationControllerRouter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,6 +165,26 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		EE75AF332CBD961200B1D849 /* CoordinatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE75AF3D2CBD961200B1D849 /* Build configuration list for PBXNativeTarget "CoordinatorTests" */;
+			buildPhases = (
+				EE75AF302CBD961200B1D849 /* Sources */,
+				EE75AF312CBD961200B1D849 /* Frameworks */,
+				EE75AF322CBD961200B1D849 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE75AF3A2CBD961200B1D849 /* PBXTargetDependency */,
+			);
+			name = CoordinatorTests;
+			packageProductDependencies = (
+			);
+			productName = CoordinatorTests;
+			productReference = EE75AF342CBD961200B1D849 /* CoordinatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		EED1C9152C6EC02B00472518 /* Coordinator */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EED1C91D2C6EC02B00472518 /* Build configuration list for PBXNativeTarget "Coordinator" */;
@@ -145,8 +213,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
+					EE75AF332CBD961200B1D849 = {
+						CreatedOnToolsVersion = 15.4;
+					};
 					EED1C9152C6EC02B00472518 = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -161,16 +233,26 @@
 				Base,
 			);
 			mainGroup = EED1C90C2C6EC02B00472518;
+			packageReferences = (
+			);
 			productRefGroup = EED1C9172C6EC02B00472518 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				EED1C9152C6EC02B00472518 /* Coordinator */,
+				EE75AF332CBD961200B1D849 /* CoordinatorTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EE75AF322CBD961200B1D849 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EED1C9142C6EC02B00472518 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -181,15 +263,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EE75AF302CBD961200B1D849 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE75AF402CBD97A400B1D849 /* NavigationStackRouterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EED1C9122C6EC02B00472518 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EED1C9262C6EC06C00472518 /* Coordinator.swift in Sources */,
 				EED75A832CBBA9BD00F0F206 /* NavigationStackRouter.swift in Sources */,
-				EEEA40B22CBD02A20013CB02 /* RoutableView.swift in Sources */,
 				EEFBB0C02CBD5F2100AC4A7B /* RoutableNavigationStack.swift in Sources */,
-				EEEA40B42CBD03040013CB02 /* AnyRoutableView.swift in Sources */,
+				EEA402302CBEDAAD001867DE /* View+LifeCycle.swift in Sources */,
+				EEEA40B42CBD03040013CB02 /* AnyHashableView.swift in Sources */,
 				EED1C9282C6EC06C00472518 /* Router.swift in Sources */,
 				EED1C9272C6EC06C00472518 /* NavigationControllerRouter.swift in Sources */,
 			);
@@ -197,7 +287,50 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		EE75AF3A2CBD961200B1D849 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = EED1C9152C6EC02B00472518 /* Coordinator */;
+			targetProxy = EE75AF392CBD961200B1D849 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		EE75AF3B2CBD961200B1D849 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4U8DMJ33ZN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yamany.CoordinatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE75AF3C2CBD961200B1D849 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4U8DMJ33ZN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yamany.CoordinatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		EED1C91B2C6EC02B00472518 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -251,7 +384,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -311,7 +444,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -338,7 +471,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,7 +509,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -402,6 +535,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EE75AF3D2CBD961200B1D849 /* Build configuration list for PBXNativeTarget "CoordinatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE75AF3B2CBD961200B1D849 /* Debug */,
+				EE75AF3C2CBD961200B1D849 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EED1C9102C6EC02B00472518 /* Build configuration list for PBXProject "Coordinator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -6,21 +6,6 @@
 //
 
 import SwiftUI
-import SwiftUIViews
-import DesignSystem
-import Splash
-import Coordinator
-
-enum TestEnum: Hashable, View {
-    case a, b
-    var body: some View {
-        Text("Hello Ahmed")
-    }
-}
-
-class TestClass: ObservableObject {
-    @Published var stack: [TestEnum] = []
-}
 
 @main
 struct TransactApp: App {

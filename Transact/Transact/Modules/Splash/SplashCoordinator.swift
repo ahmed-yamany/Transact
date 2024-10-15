@@ -9,7 +9,7 @@ import SwiftUI
 import Splash
 import Coordinator
 
-struct SplashCoordinator: SplashCoordinatorInterface, RoutableView, Coordinator {
+struct SplashCoordinator: SplashCoordinatorInterface, Coordinator {
     let id = UUID()
     
     let view: (SplashCoordinatorInterface) -> AnyView
@@ -20,20 +20,11 @@ struct SplashCoordinator: SplashCoordinatorInterface, RoutableView, Coordinator 
         self.router = router
     }
     
-    var body: some View {
-        view(self)
-    }
-    
     func start() {
-//        router.present(self, animated: true, presentationStyle: .automatic, transitionStyle: .coverVertical, completion: {})
-        router.push(self, animated: true, completion: {})
+        router.push(view(self), animated: true, completion: nil)
     }
     
     func splashViewEnded() {
         SplashFactoryContainer.coordinator(router: router).start()
-    }
-    
-    static func == (lhs: SplashCoordinator, rhs: SplashCoordinator) -> Bool {
-        lhs.id == rhs.id
     }
 }

@@ -19,24 +19,11 @@ struct TransactCoordinator: View {
     @StateObject var router = TransactFactoryContainer.router()
     
     var body: some View {
-        RoutableNavigationStack(router: router) {
-            Text("")
-                .toolbar(.visible, for: .navigationBar)
-        }
-        .tint(.blue)
-        .configureLanguageSettings(languageSettings)
-        .task {
-            try? await Task.sleep(for: .seconds(5))
-            SplashFactoryContainer.coordinator(router: router).start()
-        }
-        .task {
-            try? await Task.sleep(for: .seconds(15))
-            if languageSettings.language == .arabic {
-                languageSettings.language = .english
-            } else {
-                languageSettings.language = .arabic
+        RoutableNavigationStack(router: router)
+            .tint(.blue)
+            .onAppear {
+                SplashFactoryContainer.coordinator(router: router).start()
             }
-        }
     }
 
     func start() {

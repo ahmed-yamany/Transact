@@ -25,26 +25,26 @@ public final class NavigationControllerRouter: Router {
         self.presentationRouter = presentationRouter
     }
     
-    public func push(_ view: some RoutableView, animated: Bool, completion: @escaping () -> Void) {
+    public func push(_ view: some View, animated: Bool, completion: (() -> Void)?) {
         let viewController = UIHostingController(rootView: view)
-        navigationRouter.push(viewController, animated: animated, completion: completion)
+        navigationRouter.push(viewController, animated: animated, completion: completion ?? {})
     }
     
-    public func setView(_ view: some RoutableView, animated: Bool, completion: @escaping () -> Void) {
-        setViews([view], animated: animated, completion: completion)
+    public func setView(_ view: some View, animated: Bool, completion: (() -> Void)?) {
+        setViews([view], animated: animated, completion: completion ?? {})
     }
     
-    public func setViews(_ views: [some RoutableView], animated: Bool, completion: @escaping () -> Void) {
+    public func setViews(_ views: [some View], animated: Bool, completion: (() -> Void)?) {
         let viewControllers = views.map { UIHostingController(rootView: $0) }
-        navigationRouter.setViewControllers(viewControllers, animated: animated, completion: completion)
+        navigationRouter.setViewControllers(viewControllers, animated: animated, completion: completion ?? {})
     }
     
     public func present(
-        _ view: some RoutableView,
+        _ view: some View,
         animated: Bool,
         presentationStyle: UIModalPresentationStyle,
         transitionStyle: UIModalTransitionStyle,
-        completion: @escaping () -> Void
+        completion: (() -> Void)?
     ) {
         let viewController = UIHostingController(rootView: view)
         presentationRouter.present(
@@ -52,7 +52,7 @@ public final class NavigationControllerRouter: Router {
             animated: animated,
             presentationStyle: presentationStyle,
             transitionStyle: transitionStyle,
-            completion: completion
+            completion: completion ?? {}
         )
     }
 }

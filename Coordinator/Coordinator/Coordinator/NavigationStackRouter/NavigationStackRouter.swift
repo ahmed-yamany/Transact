@@ -16,7 +16,6 @@ public protocol NavigationStackRouterInterface: Router, ObservableObject {
 public class NavigationStackRouter: NavigationStackRouterInterface {
     @Published public var rootView: AnyHashableView?
     @Published public var stack: [AnyHashableView] = []
-    
     @Published public var modal: AnyHashableView?
     
     var transaction = Transaction()
@@ -42,16 +41,26 @@ public class NavigationStackRouter: NavigationStackRouterInterface {
     }
     
     public func setViews(_ views: [some View], animated: Bool, completion: (() -> Void)?) {
-        var transaction = Transaction()
         transaction.disablesAnimations = !animated
 
         withTransaction(transaction) {
-            rootView = if let firstView = views.first {
-                AnyHashableView(firstView)
-            } else { nil }
+            guard let firstView = views.first else {
+                rootView = nil
+                stack = []
+                return
+            }
             
-            let lastView = AnyHashableView(views.last.lifecycle(onDidLoad: completion))
-            stack = views.removedFirst().removedLast().map { AnyHashableView($0) } + [lastView]
+            rootView = AnyHashableView(firstView)
+            
+            if views.count > 1 {
+                let intermediateViews = views.dropFirst().dropLast()
+                let lastView = views.last
+                
+                stack = intermediateViews.map { AnyHashableView($0) }
+                stack.append(AnyHashableView(lastView.lifecycle(onDidLoad: completion)))
+            } else {
+                stack = []
+            }
         }
     }
     
@@ -62,6 +71,6 @@ public class NavigationStackRouter: NavigationStackRouterInterface {
         transitionStyle: UIModalTransitionStyle,
         completion: (() -> Void)?
     ) {
-        modal = AnyHashableView(view)
+//        modal = AnyHashableView(view)
     }
 }

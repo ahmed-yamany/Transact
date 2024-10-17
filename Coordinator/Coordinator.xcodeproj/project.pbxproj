@@ -31,7 +31,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EE46AE842CB8093A00C5F23B /* NavigationRouter */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NavigationRouter; sourceTree = "<group>"; };
 		EE75AF342CBD961200B1D849 /* CoordinatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoordinatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE75AF3F2CBD97A400B1D849 /* NavigationStackRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackRouterTests.swift; sourceTree = "<group>"; };
 		EEA4022F2CBEDAAD001867DE /* View+LifeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+LifeCycle.swift"; sourceTree = "<group>"; };
@@ -42,6 +41,7 @@
 		EED1C9222C6EC06C00472518 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		EED75A822CBBA9BD00F0F206 /* NavigationStackRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackRouter.swift; sourceTree = "<group>"; };
 		EEEA40B32CBD03040013CB02 /* AnyHashableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyHashableView.swift; sourceTree = "<group>"; };
+		EEF25F252CC1363A00407E09 /* NavigationRouter */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = NavigationRouter; path = Coordinator/NavigationRouter; sourceTree = "<group>"; };
 		EEFBB0BF2CBD5F2100AC4A7B /* RoutableNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutableNavigationStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,7 +93,7 @@
 		EED1C90C2C6EC02B00472518 = {
 			isa = PBXGroup;
 			children = (
-				EE46AE842CB8093A00C5F23B /* NavigationRouter */,
+				EEF25F252CC1363A00407E09 /* NavigationRouter */,
 				EED1C9182C6EC02B00472518 /* Coordinator */,
 				EE75AF352CBD961200B1D849 /* CoordinatorTests */,
 				EED1C9172C6EC02B00472518 /* Products */,

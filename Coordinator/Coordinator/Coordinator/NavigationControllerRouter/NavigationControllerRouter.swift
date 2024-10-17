@@ -89,6 +89,6 @@ public final class NavigationControllerRouter: Router {
     }
     
     public func dismiss(animated: Bool, completion: (() -> Void)?) {
-        presentationRouter.dismiss(animated: animated, completion: completion)
+        presentationRouter.dismiss(animated: animated, completion: completion ?? {})
     }
 }

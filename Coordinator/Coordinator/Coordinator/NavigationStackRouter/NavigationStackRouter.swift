@@ -56,8 +56,11 @@ public class NavigationStackRouter: NavigationStackRouterInterface {
                 navigationStack = []
                 return
             }
-            
-            rootView = AnyHashableView(firstView)
+            if views.count == 1 {
+                rootView = AnyHashableView(firstView.lifecycle(onDidLoad: completion))
+            } else {
+                rootView = AnyHashableView(firstView)
+            }
             
             if views.count > 1 {
                 let intermediateViews = views.dropFirst().dropLast()

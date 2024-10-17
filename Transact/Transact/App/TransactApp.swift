@@ -10,10 +10,11 @@ import SwiftUI
 @main
 struct TransactApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @StateObject var viewModel = TransactFactoryContainer.viewModel()
     
     var body: some Scene {
         WindowGroup {
-            TransactCoordinator()
+            TransactCoordinator(viewModel: viewModel)
         }
     }
 }

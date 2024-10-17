@@ -36,6 +36,8 @@
 		EE41D11E2CB721180043182D /* ButtonSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D10F2CB721180043182D /* ButtonSize.swift */; };
 		EE41D11F2CB721180043182D /* SmallButtonSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D1102CB721180043182D /* SmallButtonSize.swift */; };
 		EE41D1282CB722790043182D /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D1272CB722790043182D /* PrimaryButtonStyle.swift */; };
+		EEC1750E2CC15DCA005966B1 /* ApplyPrimaryDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC1750D2CC15DCA005966B1 /* ApplyPrimaryDesign.swift */; };
+		EEC175112CC17D12005966B1 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC175102CC17D12005966B1 /* LogoView.swift */; };
 		EED8F6672C99A8AB00B11D2B /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = EED8F6662C99A8AB00B11D2B /* swiftgen.yml */; };
 		EEF25F692CC14DCC00407E09 /* Localization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF25F682CC14DCC00407E09 /* Localization.framework */; };
 		EEF25F6A2CC14DCC00407E09 /* Localization.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEF25F682CC14DCC00407E09 /* Localization.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -86,6 +88,8 @@
 		EE41D10F2CB721180043182D /* ButtonSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonSize.swift; sourceTree = "<group>"; };
 		EE41D1102CB721180043182D /* SmallButtonSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallButtonSize.swift; sourceTree = "<group>"; };
 		EE41D1272CB722790043182D /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
+		EEC1750D2CC15DCA005966B1 /* ApplyPrimaryDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyPrimaryDesign.swift; sourceTree = "<group>"; };
+		EEC175102CC17D12005966B1 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		EED8F6662C99A8AB00B11D2B /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		EEF25F682CC14DCC00407E09 /* Localization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Localization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF3A8562CA1B36100C6BC3E /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +136,8 @@
 			children = (
 				EE41D0C42CB71BD90043182D /* Text */,
 				EE41D1262CB721FD0043182D /* Button */,
+				EEC1750F2CC17937005966B1 /* View */,
+				EEC1750C2CC15DA1005966B1 /* Modifiers */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -232,6 +238,22 @@
 				EE41D1272CB722790043182D /* PrimaryButtonStyle.swift */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		EEC1750C2CC15DA1005966B1 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				EEC1750D2CC15DCA005966B1 /* ApplyPrimaryDesign.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		EEC1750F2CC17937005966B1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EEC175102CC17D12005966B1 /* LogoView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		EECCF13C2CA1BCCA007E38D2 /* Frameworks */ = {
@@ -376,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE41D0F42CB71BD90043182D /* P4Text.swift in Sources */,
+				EEC175112CC17D12005966B1 /* LogoView.swift in Sources */,
 				EE41D1092CB71BD90043182D /* Spacing.swift in Sources */,
 				EE41D1062CB71BD90043182D /* BorderRadius.swift in Sources */,
 				EE41D0ED2CB71BD90043182D /* H1Text.swift in Sources */,
@@ -390,6 +413,7 @@
 				EE41D1082CB71BD90043182D /* Padding.swift in Sources */,
 				EE41D1022CB71BD90043182D /* FoundationIcons.swift in Sources */,
 				EE018F3B2CB6AAC600235DD9 /* DesignSystem.swift in Sources */,
+				EEC1750E2CC15DCA005966B1 /* ApplyPrimaryDesign.swift in Sources */,
 				EE41D10D2CB71BD90043182D /* Typography+FontConvertible.swift in Sources */,
 				EE41D1012CB71BD90043182D /* FoundationColors.swift in Sources */,
 				EE41D0EF2CB71BD90043182D /* H3Text.swift in Sources */,

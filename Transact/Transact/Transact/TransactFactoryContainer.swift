@@ -9,6 +9,12 @@ import Foundation
 import Coordinator
 
 struct TransactFactoryContainer {
+    
+    @MainActor
+    static func viewModel() -> TransactViewModel {
+        TransactViewModel()
+    }
+    
     @MainActor
     static func router() -> NavigationStackRouter {
         NavigationStackRouter()

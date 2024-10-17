@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-extension DesignSystem.Tokens {
+public extension DesignSystem.Tokens {
     enum Colors { }
 }
 
-extension DesignSystem.Tokens.Colors {
+public extension DesignSystem.Tokens.Colors {
     static var gradient: LinearGradient {
         LinearGradient(
             colors: [
@@ -21,6 +21,10 @@ extension DesignSystem.Tokens.Colors {
             startPoint: .bottomLeading,
             endPoint: .topTrailing
         )
+    }
+    
+    static var tint: Color {
+        DesignSystem.Foundation.Colors.blueDark.swiftUIColor
     }
     
     static var background: Color {

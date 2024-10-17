@@ -33,16 +33,16 @@ xcassets:
         enumName: FoundationColors
         publicAccess: true
 
-xcassets:
-  inputs:
-    - Foundation/Icons/Icons.xcassets
-    
-  outputs:
-    - templateName: swift5
-      output: Foundation/Icons/FoundationIcons.swift
-      params:
-        enumName: FoundationIcons
-        publicAccess: true
+#xcassets:
+#  inputs:
+#    - Foundation/Icons/Icons.xcassets
+#    
+#  outputs:
+#    - templateName: swift5
+#      output: Foundation/Icons/FoundationIcons.swift
+#      params:
+#        enumName: FoundationIcons
+#        publicAccess: true
         
 #xcassets:
 #  inputs:

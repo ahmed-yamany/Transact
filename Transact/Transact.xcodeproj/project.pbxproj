@@ -17,6 +17,10 @@
 		EE7958AA2C9C687D00C61658 /* HTTPClient in Frameworks */ = {isa = PBXBuildFile; productRef = EE7958A92C9C687D00C61658 /* HTTPClient */; };
 		EE7958AE2C9C688800C61658 /* SwiftUIViews in Frameworks */ = {isa = PBXBuildFile; productRef = EE7958AD2C9C688700C61658 /* SwiftUIViews */; };
 		EE7958B02C9C688C00C61658 /* URLSessionHTTPClient in Frameworks */ = {isa = PBXBuildFile; productRef = EE7958AF2C9C688C00C61658 /* URLSessionHTTPClient */; };
+		EEC175022CC15702005966B1 /* TransactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC175012CC15702005966B1 /* TransactViewModel.swift */; };
+		EEC175042CC157A4005966B1 /* TransactFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC175032CC157A4005966B1 /* TransactFlow.swift */; };
+		EEC175072CC157E5005966B1 /* AuthenticationFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC175062CC157E5005966B1 /* AuthenticationFlowCoordinator.swift */; };
+		EEC1750A2CC15812005966B1 /* TabBarFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC175092CC15812005966B1 /* TabBarFlowCoordinator.swift */; };
 		EED75A852CBBB0BE00F0F206 /* Coordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED75A842CBBB0BE00F0F206 /* Coordinator.framework */; };
 		EED75A862CBBB0BE00F0F206 /* Coordinator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EED75A842CBBB0BE00F0F206 /* Coordinator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EED8F5F02C9995A100B11D2B /* TransactApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED8F5EF2C9995A100B11D2B /* TransactApp.swift */; };
@@ -54,6 +58,10 @@
 		EE46AE612CB7285300C5F23B /* Splash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Splash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE46AE672CB7289200C5F23B /* SplashCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
 		EE46AE682CB7289200C5F23B /* SplashFactoryContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashFactoryContainer.swift; sourceTree = "<group>"; };
+		EEC175012CC15702005966B1 /* TransactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactViewModel.swift; sourceTree = "<group>"; };
+		EEC175032CC157A4005966B1 /* TransactFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactFlow.swift; sourceTree = "<group>"; };
+		EEC175062CC157E5005966B1 /* AuthenticationFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlowCoordinator.swift; sourceTree = "<group>"; };
+		EEC175092CC15812005966B1 /* TabBarFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarFlowCoordinator.swift; sourceTree = "<group>"; };
 		EED75A842CBBB0BE00F0F206 /* Coordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Coordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EED8F5EF2C9995A100B11D2B /* TransactApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactApp.swift; sourceTree = "<group>"; };
 		EED8F5FE2C9996C900B11D2B /* TransactCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactCoordinator.swift; sourceTree = "<group>"; };
@@ -91,8 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				EE018F2D2CB6A68800235DD9 /* HTTPClient */,
-				EE018F2E2CB6A68800235DD9 /* SwiftUIViews */,
 				EE018F2F2CB6A68800235DD9 /* URLSessionHTTPClient */,
+				EE018F2E2CB6A68800235DD9 /* SwiftUIViews */,
 			);
 			path = SwiftPackages;
 			sourceTree = "<group>";
@@ -109,9 +117,38 @@
 		EE46AE6A2CB7289200C5F23B /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				EE46AE692CB7289200C5F23B /* Splash */,
+				EEC175052CC157DE005966B1 /* Authentication */,
+				EEC175082CC15805005966B1 /* TabBar */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		EEC175052CC157DE005966B1 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				EEC175062CC157E5005966B1 /* AuthenticationFlowCoordinator.swift */,
+				EE46AE692CB7289200C5F23B /* Splash */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		EEC175082CC15805005966B1 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				EEC175092CC15812005966B1 /* TabBarFlowCoordinator.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		EEC1750B2CC1582C005966B1 /* Transact */ = {
+			isa = PBXGroup;
+			children = (
+				EEC175032CC157A4005966B1 /* TransactFlow.swift */,
+				EEC175012CC15702005966B1 /* TransactViewModel.swift */,
+				EED8F5FE2C9996C900B11D2B /* TransactCoordinator.swift */,
+				EEFBB0BD2CBD58CC00AC4A7B /* TransactFactoryContainer.swift */,
+			);
+			path = Transact;
 			sourceTree = "<group>";
 		};
 		EED8F5E32C9995A100B11D2B = {
@@ -128,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				EED8F5FD2C9996A100B11D2B /* App */,
+				EEC1750B2CC1582C005966B1 /* Transact */,
 				EE46AE6A2CB7289200C5F23B /* Modules */,
 				EED8F65E2C99A3DA00B11D2B /* Resources */,
 				EE018F302CB6A68800235DD9 /* SwiftPackages */,
@@ -140,8 +178,6 @@
 			children = (
 				EED8F60E2C999B1000B11D2B /* AppDelegate.swift */,
 				EED8F5EF2C9995A100B11D2B /* TransactApp.swift */,
-				EED8F5FE2C9996C900B11D2B /* TransactCoordinator.swift */,
-				EEFBB0BD2CBD58CC00AC4A7B /* TransactFactoryContainer.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -273,7 +309,11 @@
 				EED8F5FF2C9996C900B11D2B /* TransactCoordinator.swift in Sources */,
 				EE46AE6D2CB7289200C5F23B /* SplashCoordinator.swift in Sources */,
 				EE46AE6E2CB7289200C5F23B /* SplashFactoryContainer.swift in Sources */,
+				EEC175022CC15702005966B1 /* TransactViewModel.swift in Sources */,
+				EEC175042CC157A4005966B1 /* TransactFlow.swift in Sources */,
+				EEC175072CC157E5005966B1 /* AuthenticationFlowCoordinator.swift in Sources */,
 				EEFBB0BE2CBD58CC00AC4A7B /* TransactFactoryContainer.swift in Sources */,
+				EEC1750A2CC15812005966B1 /* TabBarFlowCoordinator.swift in Sources */,
 				EED8F5F02C9995A100B11D2B /* TransactApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

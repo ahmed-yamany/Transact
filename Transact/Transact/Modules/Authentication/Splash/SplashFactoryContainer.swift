@@ -16,7 +16,7 @@ struct SplashFactoryContainer {
     }
     
     @MainActor
-    static func coordinator(router: Router) -> Coordinator {
-        SplashCoordinator(router: router, view: Self.view)
+    static func coordinator(splashEnded: @escaping () -> Void) -> SplashCoordinator {
+        SplashCoordinator(splashEnded: splashEnded, view: Self.view)
     }
 }

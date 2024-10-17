@@ -16,23 +16,14 @@ public struct SplashView: View {
     }
     
     public var body: some View {
-        ScrollView {
-            VStack {
-                VStack(spacing: 8) {
-//                    H1Text(L10n.name)
-                    
-                    Button {
-                        coordinator.splashViewEnded()
-                    } label: {
-                        P1Text("Sign in")
-                    }
-                    .buttonStyle(PrimaryButtonStyle(size: .big))
-                }
+        DesignSystem.Tokens.Colors.gradient.ignoresSafeArea()
+            .overlay {
+                LogoView()
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .padding(.horizontal, DesignSystem.Foundation.Measurements.Padding.left)
-        }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .task {
+                try? await Task.sleep(for: .seconds(5))
+                coordinator.splashViewEnded()
+            }
     }
 }
 

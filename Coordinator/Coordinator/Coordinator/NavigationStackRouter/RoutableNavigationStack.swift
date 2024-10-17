@@ -16,14 +16,16 @@ public struct RoutableNavigationStack<NavigationRouter: NavigationStackRouterInt
     }
     
     public var body: some View {
-        NavigationStack(path: $router.stack) {
-            Group{
+        NavigationStack(path: $router.navigationStack) {
+            Group {
                 router.rootView
             }
             .toolbar(.visible, for: .navigationBar)
             .navigationDestination(for: AnyHashableView.self) { view in
                 view
             }
+            .fullScreenCover(item: $router.fullScreenCoverView) { $0 }
+            .sheet(item: $router.sheetView) { $0 }
         }
     }
 }

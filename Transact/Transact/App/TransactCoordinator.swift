@@ -21,8 +21,28 @@ struct TransactCoordinator: View {
     var body: some View {
         RoutableNavigationStack(router: router)
             .tint(.blue)
+            .configureLanguageSettings(languageSettings)
             .onAppear {
                 SplashFactoryContainer.coordinator(router: router).start()
+            }
+            .task {
+                try? await Task.sleep(for: .seconds(3))
+                router.present(
+                    Text("Hello"),
+                    animated: false,
+                    presentationStyle: .formSheet,
+                    transitionStyle: .coverVertical,
+                    completion: nil
+                )
+                
+                try? await Task.sleep(for: .seconds(3))
+                router.present(
+                    Text("Ahmed Yamany"),
+                    animated: true,
+                    presentationStyle: .formSheet,
+                    transitionStyle: .coverVertical,
+                    completion: nil
+                )
             }
     }
 

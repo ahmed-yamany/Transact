@@ -28,7 +28,7 @@ final class NavigationStackRouterTests: XCTestCase {
         XCTAssertNil(sut.rootView)
         sut.push(Text(""), animated: true, completion: nil)
         XCTAssertNotNil(sut.rootView, "NavigationStackRouter RootView is Nil When Pushing One View")
-        XCTAssertTrue(sut.stack.isEmpty, "NavigationStackRouter Stack is Not Empty When Pushing One View")
+        XCTAssertTrue(sut.navigationStack.isEmpty, "NavigationStackRouter Stack is Not Empty When Pushing One View")
     }
     
     @MainActor
@@ -36,19 +36,8 @@ final class NavigationStackRouterTests: XCTestCase {
         sut.push(Text(""), animated: true, completion: nil)
         sut.push(Text(""), animated: true, completion: nil)
         XCTAssertNotNil(sut.rootView, "Root view should be set")
-        XCTAssertFalse(sut.stack.isEmpty, "NavigationStackRouter Stack is Empty When Pushing More Than One View")
-        XCTAssertEqual(sut.stack.count, 1, "NavigationStackRouter Stack Count is not 1 when pushing two views")
-    }
-    
-    @MainActor
-    func test_NavigationStackRouter_SetView_shouldReplaceRootView() {
-        let firstView = Text("First View")
-        let secondView = Text("Second View")
-        
-        sut.setView(firstView, animated: false, completion: nil)
-        sut.setView(secondView, animated: false, completion: nil)
-        
-        XCTAssertTrue(sut.stack.isEmpty, "Stack should remain empty when using setView")
+        XCTAssertFalse(sut.navigationStack.isEmpty, "NavigationStackRouter Stack is Empty When Pushing More Than One View")
+        XCTAssertEqual(sut.navigationStack.count, 1, "NavigationStackRouter Stack Count is not 1 when pushing two views")
     }
     
     @MainActor
@@ -64,6 +53,36 @@ final class NavigationStackRouterTests: XCTestCase {
     }
     
     @MainActor
+    func test_NavigationStackRouter_SetSingleViewAsRoot_StackShouldBeEmptyAndRootViewNotNil() {
+        let view = Text("")
+        sut.setView(view, animated: false, completion: nil)
+        
+        XCTAssertNotNil(sut.rootView, "rootView should not be nil when setting single view")
+        XCTAssertTrue(sut.navigationStack.isEmpty, "navigationStack must be empty when setting single view")
+    }
+    
+    @MainActor
+    func test_NavigationStackRouter_SetViewMultibleTimes_StackShouldBeEmptyAndRootViewNotNil() {
+        sut.setView(Text(""), animated: false, completion: nil)
+        sut.setView(Text(""), animated: false, completion: nil)
+        sut.setView(Text(""), animated: false, completion: nil)
+        
+        XCTAssertNotNil(sut.rootView, "rootView should not be nil when setting multiple views")
+        XCTAssertTrue(sut.navigationStack.isEmpty, "navigationStack must be empty when setting multiple views")
+    }
+    
+    @MainActor
+    func test_NavigationStackRouter_SetView_shouldReplaceRootView() {
+        let firstView = Text("First View")
+        let secondView = Text("Second View")
+        
+        sut.setView(firstView, animated: false, completion: nil)
+        sut.setView(secondView, animated: false, completion: nil)
+        
+        XCTAssertTrue(sut.navigationStack.isEmpty, "Stack should remain empty when using setView")
+    }
+    
+    @MainActor
     func test_NavigationStackRouter_WhenSettingEmptyViews_RootViewShouldBeNil() {
         let views: [AnyView] = []
         sut.setViews(views, animated: true, completion: nil)
@@ -75,14 +94,14 @@ final class NavigationStackRouterTests: XCTestCase {
         sut.setViews([Text(""), Text(""), Text("")], animated: true, completion: nil)
         sut.setViews([Text("")], animated: true, completion: nil)
         XCTAssertNotNil(sut.rootView, "rootView should not be nil when setting one view")
-        XCTAssertTrue(sut.stack.isEmpty, "stack must be empty when settings one view")
+        XCTAssertTrue(sut.navigationStack.isEmpty, "stack must be empty when settings one view")
     }
     
     @MainActor
     func test_NavigationStackRouter_WhenSettingTwoViews_StackCountShouldBeOne() {
         sut.setViews([Text(""), Text("")], animated: true, completion: nil)
         XCTAssertNotNil(sut.rootView, "rootView should not be nil when setting two views")
-        XCTAssertEqual(sut.stack.count, 1, "stack count must be one when setting two views")
+        XCTAssertEqual(sut.navigationStack.count, 1, "stack count must be one when setting two views")
     }
     
     @MainActor
@@ -90,7 +109,7 @@ final class NavigationStackRouterTests: XCTestCase {
         sut.setViews([Text(""), Text(""), Text(""), Text("")], animated: true, completion: nil)        
         sut.setViews([Text(""), Text("")], animated: true, completion: nil)
         XCTAssertNotNil(sut.rootView, "rootView should not be nil when setting two views")
-        XCTAssertEqual(sut.stack.count, 1, "stack count must be one when setting two views")
+        XCTAssertEqual(sut.navigationStack.count, 1, "stack count must be one when setting two views")
     }
     
     @MainActor
@@ -99,6 +118,7 @@ final class NavigationStackRouterTests: XCTestCase {
         let views: [AnyView] = []
         sut.setViews(views, animated: true, completion: nil)
         XCTAssertNil(sut.rootView, "rootView should be nil when reseting views")
-        XCTAssertTrue(sut.stack.isEmpty, "stack should be empty when reseting views")
+        XCTAssertTrue(sut.navigationStack.isEmpty, "stack should be empty when reseting views")
     }
+    
 }

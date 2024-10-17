@@ -17,12 +17,7 @@
 		EE41D0F22CB71BD90043182D /* P2Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D0C12CB71BD90043182D /* P2Text.swift */; };
 		EE41D0F32CB71BD90043182D /* P3Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D0C22CB71BD90043182D /* P3Text.swift */; };
 		EE41D0F42CB71BD90043182D /* P4Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D0C32CB71BD90043182D /* P4Text.swift */; };
-		EE41D0F52CB71BD90043182D /* EnvironmentValues+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D0C62CB71BD90043182D /* EnvironmentValues+.swift */; };
-		EE41D0F62CB71BD90043182D /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D0C72CB71BD90043182D /* Language.swift */; };
-		EE41D0F72CB71BD90043182D /* LanguageSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D0C82CB71BD90043182D /* LanguageSettings.swift */; };
-		EE41D0F82CB71BD90043182D /* View+configureLanguageSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D0C92CB71BD90043182D /* View+configureLanguageSettings.swift */; };
 		EE41D0F92CB71BD90043182D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE41D0CB2CB71BD90043182D /* Assets.xcassets */; };
-		EE41D0FF2CB71BD90043182D /* swiftgen+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D0D52CB71BD90043182D /* swiftgen+localized.swift */; };
 		EE41D1002CB71BD90043182D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE41D0D82CB71BD90043182D /* Colors.xcassets */; };
 		EE41D1012CB71BD90043182D /* FoundationColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D0D92CB71BD90043182D /* FoundationColors.swift */; };
 		EE41D1022CB71BD90043182D /* FoundationIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D0DB2CB71BD90043182D /* FoundationIcons.swift */; };
@@ -41,18 +36,25 @@
 		EE41D11E2CB721180043182D /* ButtonSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D10F2CB721180043182D /* ButtonSize.swift */; };
 		EE41D11F2CB721180043182D /* SmallButtonSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D1102CB721180043182D /* SmallButtonSize.swift */; };
 		EE41D1282CB722790043182D /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D1272CB722790043182D /* PrimaryButtonStyle.swift */; };
-		EE9ED1CB2C99D71D00DFA2F2 /* FoundationExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = EE9ED1CA2C99D71D00DFA2F2 /* FoundationExtensions */; };
-		EECCF13E2CA1BCCA007E38D2 /* UIExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = EECCF13D2CA1BCCA007E38D2 /* UIExtensions */; };
 		EED8F6672C99A8AB00B11D2B /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = EED8F6662C99A8AB00B11D2B /* swiftgen.yml */; };
-		EEDC33952CA3254100FCACA1 /* SwiftUIModifiers in Frameworks */ = {isa = PBXBuildFile; productRef = EEDC33942CA3254100FCACA1 /* SwiftUIModifiers */; };
-		EEFBB0C82CBD7C0400AC4A7B /* FoundationExtensions in Resources */ = {isa = PBXBuildFile; fileRef = EEFBB0C32CBD7C0400AC4A7B /* FoundationExtensions */; };
-		EEFBB0C92CBD7C0400AC4A7B /* orbit-swiftui in Resources */ = {isa = PBXBuildFile; fileRef = EEFBB0C42CBD7C0400AC4A7B /* orbit-swiftui */; };
-		EEFBB0CA2CBD7C0400AC4A7B /* SwiftUIModifiers in Resources */ = {isa = PBXBuildFile; fileRef = EEFBB0C52CBD7C0400AC4A7B /* SwiftUIModifiers */; };
-		EEFBB0CB2CBD7C0400AC4A7B /* UIExtensions in Resources */ = {isa = PBXBuildFile; fileRef = EEFBB0C62CBD7C0400AC4A7B /* UIExtensions */; };
+		EEF25F692CC14DCC00407E09 /* Localization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF25F682CC14DCC00407E09 /* Localization.framework */; };
+		EEF25F6A2CC14DCC00407E09 /* Localization.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEF25F682CC14DCC00407E09 /* Localization.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EEFBB0CD2CBD7CD500AC4A7B /* FoundationAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFBB0CC2CBD7CD500AC4A7B /* FoundationAssets.swift */; };
-		EEFBB0D02CBD7E9A00AC4A7B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EEFBB0CE2CBD7E9A00AC4A7B /* Localizable.strings */; };
-		EEFBB0D32CBD7F7D00AC4A7B /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFBB0D22CBD7F7D00AC4A7B /* Strings+Generated.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EEF25F6B2CC14DCC00407E09 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EEF25F6A2CC14DCC00407E09 /* Localization.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EE018F3A2CB6AAC600235DD9 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
@@ -65,12 +67,7 @@
 		EE41D0C12CB71BD90043182D /* P2Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = P2Text.swift; sourceTree = "<group>"; };
 		EE41D0C22CB71BD90043182D /* P3Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = P3Text.swift; sourceTree = "<group>"; };
 		EE41D0C32CB71BD90043182D /* P4Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = P4Text.swift; sourceTree = "<group>"; };
-		EE41D0C62CB71BD90043182D /* EnvironmentValues+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+.swift"; sourceTree = "<group>"; };
-		EE41D0C72CB71BD90043182D /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
-		EE41D0C82CB71BD90043182D /* LanguageSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageSettings.swift; sourceTree = "<group>"; };
-		EE41D0C92CB71BD90043182D /* View+configureLanguageSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+configureLanguageSettings.swift"; sourceTree = "<group>"; };
 		EE41D0CB2CB71BD90043182D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EE41D0D52CB71BD90043182D /* swiftgen+localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "swiftgen+localized.swift"; sourceTree = "<group>"; };
 		EE41D0D82CB71BD90043182D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		EE41D0D92CB71BD90043182D /* FoundationColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationColors.swift; sourceTree = "<group>"; };
 		EE41D0DB2CB71BD90043182D /* FoundationIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationIcons.swift; sourceTree = "<group>"; };
@@ -90,15 +87,9 @@
 		EE41D1102CB721180043182D /* SmallButtonSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallButtonSize.swift; sourceTree = "<group>"; };
 		EE41D1272CB722790043182D /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 		EED8F6662C99A8AB00B11D2B /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		EEF25F682CC14DCC00407E09 /* Localization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Localization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF3A8562CA1B36100C6BC3E /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EEFBB0C32CBD7C0400AC4A7B /* FoundationExtensions */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FoundationExtensions; sourceTree = "<group>"; };
-		EEFBB0C42CBD7C0400AC4A7B /* orbit-swiftui */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "orbit-swiftui"; sourceTree = "<group>"; };
-		EEFBB0C52CBD7C0400AC4A7B /* SwiftUIModifiers */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftUIModifiers; sourceTree = "<group>"; };
-		EEFBB0C62CBD7C0400AC4A7B /* UIExtensions */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = UIExtensions; sourceTree = "<group>"; };
 		EEFBB0CC2CBD7CD500AC4A7B /* FoundationAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationAssets.swift; sourceTree = "<group>"; };
-		EEFBB0CF2CBD7E9A00AC4A7B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		EEFBB0D12CBD7E9D00AC4A7B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
-		EEFBB0D22CBD7F7D00AC4A7B /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,9 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EECCF13E2CA1BCCA007E38D2 /* UIExtensions in Frameworks */,
-				EE9ED1CB2C99D71D00DFA2F2 /* FoundationExtensions in Frameworks */,
-				EEDC33952CA3254100FCACA1 /* SwiftUIModifiers in Frameworks */,
+				EEF25F692CC14DCC00407E09 /* Localization.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,17 +136,6 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		EE41D0CA2CB71BD90043182D /* LanguageSettings */ = {
-			isa = PBXGroup;
-			children = (
-				EE41D0C62CB71BD90043182D /* EnvironmentValues+.swift */,
-				EE41D0C72CB71BD90043182D /* Language.swift */,
-				EE41D0C82CB71BD90043182D /* LanguageSettings.swift */,
-				EE41D0C92CB71BD90043182D /* View+configureLanguageSettings.swift */,
-			);
-			path = LanguageSettings;
-			sourceTree = "<group>";
-		};
 		EE41D0CC2CB71BD90043182D /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,24 +143,6 @@
 				EEFBB0CC2CBD7CD500AC4A7B /* FoundationAssets.swift */,
 			);
 			path = Assets;
-			sourceTree = "<group>";
-		};
-		EE41D0D62CB71BD90043182D /* Localization */ = {
-			isa = PBXGroup;
-			children = (
-				EEFBB0D22CBD7F7D00AC4A7B /* Strings+Generated.swift */,
-				EE41D0D52CB71BD90043182D /* swiftgen+localized.swift */,
-				EEFBB0CE2CBD7E9A00AC4A7B /* Localizable.strings */,
-			);
-			path = Localization;
-			sourceTree = "<group>";
-		};
-		EE41D0D72CB71BD90043182D /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				EE41D0D62CB71BD90043182D /* Localization */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		EE41D0DA2CB71BD90043182D /* Colors */ = {
@@ -248,8 +208,8 @@
 			children = (
 				EE41D0CC2CB71BD90043182D /* Assets */,
 				EE41D0DA2CB71BD90043182D /* Colors */,
-				EE41D0EB2CB71BD90043182D /* Typography */,
 				EE41D0DD2CB71BD90043182D /* Icons */,
+				EE41D0EB2CB71BD90043182D /* Typography */,
 				EE41D0E52CB71BD90043182D /* Measurments */,
 			);
 			path = Foundation;
@@ -277,6 +237,7 @@
 		EECCF13C2CA1BCCA007E38D2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EEF25F682CC14DCC00407E09 /* Localization.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -298,22 +259,8 @@
 				EE41D0EC2CB71BD90043182D /* Foundation */,
 				EE41D09F2CB71BC10043182D /* Tokens */,
 				EE41D0C52CB71BD90043182D /* Components */,
-				EE41D0CA2CB71BD90043182D /* LanguageSettings */,
-				EE41D0D72CB71BD90043182D /* Resources */,
-				EEFBB0C72CBD7C0400AC4A7B /* SwiftPackage */,
 			);
 			path = DesignSystem;
-			sourceTree = "<group>";
-		};
-		EEFBB0C72CBD7C0400AC4A7B /* SwiftPackage */ = {
-			isa = PBXGroup;
-			children = (
-				EEFBB0C32CBD7C0400AC4A7B /* FoundationExtensions */,
-				EEFBB0C42CBD7C0400AC4A7B /* orbit-swiftui */,
-				EEFBB0C52CBD7C0400AC4A7B /* SwiftUIModifiers */,
-				EEFBB0C62CBD7C0400AC4A7B /* UIExtensions */,
-			);
-			path = SwiftPackage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +285,7 @@
 				EED8F61E2C999D2200B11D2B /* Sources */,
 				EED8F61F2C999D2200B11D2B /* Frameworks */,
 				EED8F6202C999D2200B11D2B /* Resources */,
+				EEF25F6B2CC14DCC00407E09 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -345,9 +293,6 @@
 			);
 			name = DesignSystem;
 			packageProductDependencies = (
-				EE9ED1CA2C99D71D00DFA2F2 /* FoundationExtensions */,
-				EECCF13D2CA1BCCA007E38D2 /* UIExtensions */,
-				EEDC33942CA3254100FCACA1 /* SwiftUIModifiers */,
 			);
 			productName = DesignSystem;
 			productReference = EEF3A8562CA1B36100C6BC3E /* DesignSystem.framework */;
@@ -392,15 +337,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEFBB0C82CBD7C0400AC4A7B /* FoundationExtensions in Resources */,
 				EE41D0F92CB71BD90043182D /* Assets.xcassets in Resources */,
-				EEFBB0D02CBD7E9A00AC4A7B /* Localizable.strings in Resources */,
 				EE41D10A2CB71BD90043182D /* Cairo.ttf in Resources */,
 				EE41D1032CB71BD90043182D /* Icons.xcassets in Resources */,
 				EED8F6672C99A8AB00B11D2B /* swiftgen.yml in Resources */,
-				EEFBB0CA2CBD7C0400AC4A7B /* SwiftUIModifiers in Resources */,
-				EEFBB0CB2CBD7C0400AC4A7B /* UIExtensions in Resources */,
-				EEFBB0C92CBD7C0400AC4A7B /* orbit-swiftui in Resources */,
 				EE41D10B2CB71BD90043182D /* Inter.ttf in Resources */,
 				EE41D1002CB71BD90043182D /* Colors.xcassets in Resources */,
 			);
@@ -438,19 +378,15 @@
 				EE41D0F42CB71BD90043182D /* P4Text.swift in Sources */,
 				EE41D1092CB71BD90043182D /* Spacing.swift in Sources */,
 				EE41D1062CB71BD90043182D /* BorderRadius.swift in Sources */,
-				EE41D0FF2CB71BD90043182D /* swiftgen+localized.swift in Sources */,
 				EE41D0ED2CB71BD90043182D /* H1Text.swift in Sources */,
-				EE41D0F52CB71BD90043182D /* EnvironmentValues+.swift in Sources */,
 				EE41D11F2CB721180043182D /* SmallButtonSize.swift in Sources */,
 				EE41D0F02CB71BD90043182D /* H4Text.swift in Sources */,
 				EE41D11D2CB721180043182D /* BigButtonSize.swift in Sources */,
-				EEFBB0D32CBD7F7D00AC4A7B /* Strings+Generated.swift in Sources */,
 				EE41D0B72CB71BC10043182D /* ColorTokens.swift in Sources */,
 				EE41D1072CB71BD90043182D /* BorderWidth.swift in Sources */,
 				EE41D1042CB71BD90043182D /* FontLetterSpacing.swift in Sources */,
 				EE41D10C2CB71BD90043182D /* FontFamily.swift in Sources */,
 				EE41D0F12CB71BD90043182D /* P1Text.swift in Sources */,
-				EE41D0F72CB71BD90043182D /* LanguageSettings.swift in Sources */,
 				EE41D1082CB71BD90043182D /* Padding.swift in Sources */,
 				EE41D1022CB71BD90043182D /* FoundationIcons.swift in Sources */,
 				EE018F3B2CB6AAC600235DD9 /* DesignSystem.swift in Sources */,
@@ -458,30 +394,16 @@
 				EE41D1012CB71BD90043182D /* FoundationColors.swift in Sources */,
 				EE41D0EF2CB71BD90043182D /* H3Text.swift in Sources */,
 				EEFBB0CD2CBD7CD500AC4A7B /* FoundationAssets.swift in Sources */,
-				EE41D0F62CB71BD90043182D /* Language.swift in Sources */,
 				EE41D0F32CB71BD90043182D /* P3Text.swift in Sources */,
 				EE41D11E2CB721180043182D /* ButtonSize.swift in Sources */,
 				EE41D1282CB722790043182D /* PrimaryButtonStyle.swift in Sources */,
 				EE41D0EE2CB71BD90043182D /* H2Text.swift in Sources */,
 				EE41D0F22CB71BD90043182D /* P2Text.swift in Sources */,
-				EE41D0F82CB71BD90043182D /* View+configureLanguageSettings.swift in Sources */,
 				EE41D1052CB71BD90043182D /* FontSizes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		EEFBB0CE2CBD7E9A00AC4A7B /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EEFBB0CF2CBD7E9A00AC4A7B /* en */,
-				EEFBB0D12CBD7E9D00AC4A7B /* ar */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EED8F6272C999D2200B11D2B /* Debug */ = {
@@ -712,21 +634,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		EE9ED1CA2C99D71D00DFA2F2 /* FoundationExtensions */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = FoundationExtensions;
-		};
-		EECCF13D2CA1BCCA007E38D2 /* UIExtensions */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = UIExtensions;
-		};
-		EEDC33942CA3254100FCACA1 /* SwiftUIModifiers */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = SwiftUIModifiers;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EED8F6192C999D2200B11D2B /* Project object */;
 }

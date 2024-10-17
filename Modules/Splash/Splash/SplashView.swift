@@ -19,7 +19,7 @@ public struct SplashView: View {
         ScrollView {
             VStack {
                 VStack(spacing: 8) {
-                    H1Text(L10n.name)
+//                    H1Text(L10n.name)
                     
                     Button {
                         coordinator.splashViewEnded()

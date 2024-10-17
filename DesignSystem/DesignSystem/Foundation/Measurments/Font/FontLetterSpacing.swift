@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import Localization
 
 public extension DesignSystem.Foundation.Measurements.Font {
     static var letterSpacing: CGFloat {
-        switch LanguageSettings.shared.language {
+        switch LocalizationSettings.shared.language {
             case .english:
                 0.7
             case .arabic:

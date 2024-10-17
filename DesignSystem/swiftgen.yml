@@ -1,15 +1,6 @@
 input_dir: DesignSystem/
 output_dir: DesignSystem/
 
-strings:
-   inputs:
-     - Resources/Localization/en.lproj
-   outputs:
-     - templateName: structured-swift5
-       output: Resources/Localization/Strings+Generated.swift
-       params:
-        lookupFunction: localized(forKey:table:fallbackValue:)
-        publicAccess: true
 
 #fonts:
 #  inputs:

@@ -7,13 +7,12 @@
 
 import SwiftUI
 import Splash
-import SwiftUIModifiers
 import Coordinator
 
 struct SplashFactoryContainer {
     @MainActor
     static func view(_ coordinator: SplashCoordinatorInterface) -> AnyView {
-        SplashView(coordinator: coordinator).eraseToAnyView()
+        AnyView(SplashView(coordinator: coordinator))
     }
     
     @MainActor

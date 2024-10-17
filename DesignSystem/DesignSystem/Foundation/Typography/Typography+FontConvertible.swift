@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import Localization
 
 public extension DesignSystem.Foundation.Typography {
     static var regular: FontConvertible {
-        switch LanguageSettings.shared.language {
+        switch LocalizationSettings.shared.language {
         case .english:
             FontFamily.Inter.regular
         case .arabic:
@@ -18,7 +19,7 @@ public extension DesignSystem.Foundation.Typography {
     }
 
     static var black: FontConvertible {
-        switch LanguageSettings.shared.language {
+        switch LocalizationSettings.shared.language {
         case .english:
             FontFamily.Inter.black
         case .arabic:
@@ -27,7 +28,7 @@ public extension DesignSystem.Foundation.Typography {
     }
 
     static var bold: FontConvertible {
-        switch LanguageSettings.shared.language {
+        switch LocalizationSettings.shared.language {
         case .english:
             FontFamily.Inter.bold
         case .arabic:
@@ -36,7 +37,7 @@ public extension DesignSystem.Foundation.Typography {
     }
 
     static var extraBold: FontConvertible {
-        switch LanguageSettings.shared.language {
+        switch LocalizationSettings.shared.language {
         case .english:
             FontFamily.Inter.extraBold
         case .arabic:
@@ -45,7 +46,7 @@ public extension DesignSystem.Foundation.Typography {
     }
 
     static var extraLight: FontConvertible {
-        switch LanguageSettings.shared.language {
+        switch LocalizationSettings.shared.language {
         case .english:
             FontFamily.Inter.extraLight
         case .arabic:
@@ -54,7 +55,7 @@ public extension DesignSystem.Foundation.Typography {
     }
 
     static var light: FontConvertible {
-        switch LanguageSettings.shared.language {
+        switch LocalizationSettings.shared.language {
         case .english:
             FontFamily.Inter.light
         case .arabic:
@@ -63,7 +64,7 @@ public extension DesignSystem.Foundation.Typography {
     }
 
     static var medium: FontConvertible {
-        switch LanguageSettings.shared.language {
+        switch LocalizationSettings.shared.language {
         case .english:
             FontFamily.Inter.medium
         case .arabic:
@@ -72,7 +73,7 @@ public extension DesignSystem.Foundation.Typography {
     }
 
     static var semiBold: FontConvertible {
-        switch LanguageSettings.shared.language {
+        switch LocalizationSettings.shared.language {
         case .english:
             FontFamily.Inter.semiBold
         case .arabic:

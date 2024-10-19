@@ -19,6 +19,6 @@ final class TransactViewModel: TransactViewModelInterface {
     @Published var flow: TransactFlow = .splash
     
     func checkAuthentication() {
-        flow = .authentication
+        flow = .onboarding
     }
 }

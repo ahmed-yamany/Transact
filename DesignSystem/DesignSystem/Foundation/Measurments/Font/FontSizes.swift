@@ -9,22 +9,48 @@ import Foundation
 
 public extension DesignSystem.Foundation.Measurements.Font {
     enum Sizes {
-        /// 34
-        public static var h1: CGFloat = 34
-        /// 28
-        public static var h2: CGFloat = 28
-        /// 22
-        public static var h3: CGFloat = 22
-        /// 20
-        public static var h4: CGFloat = 20
-        /// 18
-        public static var p1: CGFloat = 18
-        /// 16
-        public static var p2: CGFloat = 16
-        /// 14
-        public static var p3: CGFloat = 14
-        /// 12
-        public static var p4: CGFloat = 12
+        case h1
+        case h2
+        case h3
+        case h4
+        case p1
+        case p2
+        case p3
+        case p4
+
+        var size: CGFloat {
+            switch self {
+            case .h1: 34
+            case .h2: 28
+            case .h3: 22
+            case .h4: 20
+            case .p1: 18
+            case .p2: 16
+            case .p3: 14
+            case .p4: 12
+            }
+        }
+
+        var lineSpacing: CGFloat {
+            switch self {
+            case .h1:
+                10
+            case .h2:
+                10
+            case .h3:
+                10
+            case .h4:
+                10
+            case .p1:
+                -15
+            case .p2:
+                -15
+            case .p3:
+                -15
+            case .p4:
+                -15
+            }
+        }
     }
 }
 

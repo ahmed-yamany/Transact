@@ -17,8 +17,4 @@ public extension DesignSystem.Foundation.Measurements.Font {
                 0
         }
     }
-    
-    static var lineSpacing: CGFloat {
-        24
-    }
 }

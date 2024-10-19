@@ -17,8 +17,8 @@ public struct P1Text: View {
     
     public var body: some View {
         Text(text)
-            .font(DesignSystem.Foundation.Typography.medium.swiftUIFont(size: .fontSizes.p1))
+            .font(DesignSystem.Foundation.Typography.medium.swiftUIFont(size: .fontSizes.p1.size))
             .tracking(DesignSystem.Foundation.Measurements.Font.letterSpacing)
-            .lineSpacing(DesignSystem.Foundation.Measurements.Font.lineSpacing)
+            .lineSpacing(.fontSizes.p1.lineSpacing)
     }
 }

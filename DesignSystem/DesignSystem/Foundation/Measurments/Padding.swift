@@ -8,7 +8,7 @@
 import SwiftUI
 
 public extension DesignSystem.Foundation.Measurements {
-    static var Padding: UIEdgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+    static var Padding: EdgeInsets = EdgeInsets(top: 24, leading: 24, bottom: 24, trailing: 24)
 }
 internal extension CGFloat {
     static let padding = DesignSystem.Foundation.Measurements.Padding.self

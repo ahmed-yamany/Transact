@@ -10,7 +10,7 @@ import SwiftUI
 public extension View {
     @ViewBuilder
     func applyPrimaryDesign() -> some View {
-        frame(maxWidth: .infinity, maxHeight: .infinity)
+        frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .tint(DesignSystem.Tokens.Colors.tint)
             .foregroundStyle(DesignSystem.Tokens.Colors.primaryText)
             .background(DesignSystem.Tokens.Colors.background)

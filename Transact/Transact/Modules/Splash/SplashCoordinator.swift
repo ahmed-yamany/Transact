@@ -10,7 +10,6 @@ import Splash
 import Coordinator
 
 struct SplashCoordinator: SplashCoordinatorInterface, View {
-    let id = UUID()
     
     let view: (SplashCoordinatorInterface) -> AnyView
     let splashEnded: () -> Void

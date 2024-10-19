@@ -23,6 +23,10 @@ public extension DesignSystem.Tokens.Colors {
         )
     }
     
+    static var primary: Color {
+        DesignSystem.Foundation.Colors.blueNormal.swiftUIColor
+    }
+    
     static var tint: Color {
         DesignSystem.Foundation.Colors.blueDark.swiftUIColor
     }

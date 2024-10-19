@@ -25,6 +25,8 @@ struct TransactCoordinator<ViewModel: TransactViewModelInterface>: View {
                 SplashFactoryContainer.coordinator {
                     viewModel.checkAuthentication()
                 }
+            case .onboarding:
+                OnboardingFactoryContainer.coordinator()
             case .authentication:
                 AuthenticationFlowCoordinator()
             case .tabBar:

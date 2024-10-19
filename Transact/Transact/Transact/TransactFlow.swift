@@ -9,6 +9,7 @@ import Foundation
 
 enum TransactFlow {
     case splash
+    case onboarding
     case authentication
     case tabBar
 }

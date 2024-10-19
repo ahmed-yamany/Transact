@@ -14,6 +14,8 @@
 		EE46AE632CB7285300C5F23B /* Splash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE46AE612CB7285300C5F23B /* Splash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EE46AE6D2CB7289200C5F23B /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE46AE672CB7289200C5F23B /* SplashCoordinator.swift */; };
 		EE46AE6E2CB7289200C5F23B /* SplashFactoryContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE46AE682CB7289200C5F23B /* SplashFactoryContainer.swift */; };
+		EE6EA45C2CC3E4FF00BBC748 /* OnboardingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EA45B2CC3E4FF00BBC748 /* OnboardingService.swift */; };
+		EE6EA45E2CC3E70C00BBC748 /* onboarding.json in Resources */ = {isa = PBXBuildFile; fileRef = EE6EA45D2CC3E70C00BBC748 /* onboarding.json */; };
 		EE7958AA2C9C687D00C61658 /* HTTPClient in Frameworks */ = {isa = PBXBuildFile; productRef = EE7958A92C9C687D00C61658 /* HTTPClient */; };
 		EE7958AE2C9C688800C61658 /* SwiftUIViews in Frameworks */ = {isa = PBXBuildFile; productRef = EE7958AD2C9C688700C61658 /* SwiftUIViews */; };
 		EE7958B02C9C688C00C61658 /* URLSessionHTTPClient in Frameworks */ = {isa = PBXBuildFile; productRef = EE7958AF2C9C688C00C61658 /* URLSessionHTTPClient */; };
@@ -21,6 +23,10 @@
 		EEC175042CC157A4005966B1 /* TransactFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC175032CC157A4005966B1 /* TransactFlow.swift */; };
 		EEC175072CC157E5005966B1 /* AuthenticationFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC175062CC157E5005966B1 /* AuthenticationFlowCoordinator.swift */; };
 		EEC1750A2CC15812005966B1 /* TabBarFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC175092CC15812005966B1 /* TabBarFlowCoordinator.swift */; };
+		EEC1752F2CC18A05005966B1 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC1752E2CC18A05005966B1 /* OnboardingCoordinator.swift */; };
+		EEC175312CC18A12005966B1 /* Onboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC175302CC18A12005966B1 /* Onboarding.framework */; };
+		EEC175322CC18A12005966B1 /* Onboarding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEC175302CC18A12005966B1 /* Onboarding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EEC175342CC18B1C005966B1 /* OnboardingFactoryContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC175332CC18B1C005966B1 /* OnboardingFactoryContainer.swift */; };
 		EED75A852CBBB0BE00F0F206 /* Coordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED75A842CBBB0BE00F0F206 /* Coordinator.framework */; };
 		EED75A862CBBB0BE00F0F206 /* Coordinator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EED75A842CBBB0BE00F0F206 /* Coordinator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EED8F5F02C9995A100B11D2B /* TransactApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED8F5EF2C9995A100B11D2B /* TransactApp.swift */; };
@@ -42,6 +48,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				EE46AE632CB7285300C5F23B /* Splash.framework in Embed Frameworks */,
+				EEC175322CC18A12005966B1 /* Onboarding.framework in Embed Frameworks */,
 				EED75A862CBBB0BE00F0F206 /* Coordinator.framework in Embed Frameworks */,
 				EEF3A85C2CA1B37100C6BC3E /* DesignSystem.framework in Embed Frameworks */,
 				EEF25F6E2CC14E4A00407E09 /* Localization.framework in Embed Frameworks */,
@@ -58,10 +65,15 @@
 		EE46AE612CB7285300C5F23B /* Splash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Splash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE46AE672CB7289200C5F23B /* SplashCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
 		EE46AE682CB7289200C5F23B /* SplashFactoryContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashFactoryContainer.swift; sourceTree = "<group>"; };
+		EE6EA45B2CC3E4FF00BBC748 /* OnboardingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingService.swift; sourceTree = "<group>"; };
+		EE6EA45D2CC3E70C00BBC748 /* onboarding.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = onboarding.json; sourceTree = "<group>"; };
 		EEC175012CC15702005966B1 /* TransactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactViewModel.swift; sourceTree = "<group>"; };
 		EEC175032CC157A4005966B1 /* TransactFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactFlow.swift; sourceTree = "<group>"; };
 		EEC175062CC157E5005966B1 /* AuthenticationFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlowCoordinator.swift; sourceTree = "<group>"; };
 		EEC175092CC15812005966B1 /* TabBarFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarFlowCoordinator.swift; sourceTree = "<group>"; };
+		EEC1752E2CC18A05005966B1 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
+		EEC175302CC18A12005966B1 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEC175332CC18B1C005966B1 /* OnboardingFactoryContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFactoryContainer.swift; sourceTree = "<group>"; };
 		EED75A842CBBB0BE00F0F206 /* Coordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Coordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EED8F5EF2C9995A100B11D2B /* TransactApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactApp.swift; sourceTree = "<group>"; };
 		EED8F5FE2C9996C900B11D2B /* TransactCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactCoordinator.swift; sourceTree = "<group>"; };
@@ -85,6 +97,7 @@
 				EE7958AA2C9C687D00C61658 /* HTTPClient in Frameworks */,
 				EEF25F6D2CC14E4A00407E09 /* Localization.framework in Frameworks */,
 				EED75A852CBBB0BE00F0F206 /* Coordinator.framework in Frameworks */,
+				EEC175312CC18A12005966B1 /* Onboarding.framework in Frameworks */,
 				EE7958B02C9C688C00C61658 /* URLSessionHTTPClient in Frameworks */,
 				EE46AE622CB7285300C5F23B /* Splash.framework in Frameworks */,
 				EEF3A85B2CA1B37100C6BC3E /* DesignSystem.framework in Frameworks */,
@@ -117,6 +130,8 @@
 		EE46AE6A2CB7289200C5F23B /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EE46AE692CB7289200C5F23B /* Splash */,
+				EEC1752D2CC189EE005966B1 /* Onboarding */,
 				EEC175052CC157DE005966B1 /* Authentication */,
 				EEC175082CC15805005966B1 /* TabBar */,
 			);
@@ -127,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				EEC175062CC157E5005966B1 /* AuthenticationFlowCoordinator.swift */,
-				EE46AE692CB7289200C5F23B /* Splash */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -149,6 +163,18 @@
 				EEFBB0BD2CBD58CC00AC4A7B /* TransactFactoryContainer.swift */,
 			);
 			path = Transact;
+			sourceTree = "<group>";
+		};
+		EEC1752D2CC189EE005966B1 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				EE6EA45D2CC3E70C00BBC748 /* onboarding.json */,
+				EE6EA45B2CC3E4FF00BBC748 /* OnboardingService.swift */,
+				EEC1752E2CC18A05005966B1 /* OnboardingCoordinator.swift */,
+				EEC175332CC18B1C005966B1 /* OnboardingFactoryContainer.swift */,
+			);
+			name = Onboarding;
+			path = Authentication/Onboarding;
 			sourceTree = "<group>";
 		};
 		EED8F5E32C9995A100B11D2B = {
@@ -193,6 +219,7 @@
 		EEF3A8592CA1B37100C6BC3E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EEC175302CC18A12005966B1 /* Onboarding.framework */,
 				EEF25F6C2CC14E4A00407E09 /* Localization.framework */,
 				EED75A842CBBB0BE00F0F206 /* Coordinator.framework */,
 				EE46AE612CB7285300C5F23B /* Splash.framework */,
@@ -273,6 +300,7 @@
 				EED8F6602C99A3E600B11D2B /* Assets.xcassets in Resources */,
 				EE018F332CB6A68800235DD9 /* SwiftUIViews in Resources */,
 				EE018F322CB6A68800235DD9 /* HTTPClient in Resources */,
+				EE6EA45E2CC3E70C00BBC748 /* onboarding.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,8 +339,11 @@
 				EE46AE6E2CB7289200C5F23B /* SplashFactoryContainer.swift in Sources */,
 				EEC175022CC15702005966B1 /* TransactViewModel.swift in Sources */,
 				EEC175042CC157A4005966B1 /* TransactFlow.swift in Sources */,
+				EEC175342CC18B1C005966B1 /* OnboardingFactoryContainer.swift in Sources */,
+				EE6EA45C2CC3E4FF00BBC748 /* OnboardingService.swift in Sources */,
 				EEC175072CC157E5005966B1 /* AuthenticationFlowCoordinator.swift in Sources */,
 				EEFBB0BE2CBD58CC00AC4A7B /* TransactFactoryContainer.swift in Sources */,
+				EEC1752F2CC18A05005966B1 /* OnboardingCoordinator.swift in Sources */,
 				EEC1750A2CC15812005966B1 /* TabBarFlowCoordinator.swift in Sources */,
 				EED8F5F02C9995A100B11D2B /* TransactApp.swift in Sources */,
 			);

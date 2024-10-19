@@ -21,9 +21,7 @@ public struct RoutableNavigationStack<NavigationRouter: NavigationStackRouterInt
                 router.rootView
             }
             .toolbar(.visible, for: .navigationBar)
-            .navigationDestination(for: AnyHashableView.self) { view in
-                view
-            }
+            .navigationDestination(for: AnyHashableView.self) { $0 }
             .fullScreenCover(item: $router.fullScreenCoverView) { $0 }
             .sheet(item: $router.sheetView) { $0 }
         }

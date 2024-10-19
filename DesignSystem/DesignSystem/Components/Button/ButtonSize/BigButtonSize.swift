@@ -17,3 +17,10 @@ public extension ButtonSize where Self == BigButtonSize {
         BigButtonSize()
     }
 }
+
+public extension DesignSystem.Foundation.Measurements {
+    enum ButtonSize {
+        public static var big = BigButtonSize()
+        public static var small = SmallButtonSize()
+    }
+}

@@ -15,7 +15,6 @@ public struct CapsulePaginationStyle: PaginationStyle {
         RoundedRectangle(cornerRadius: 5)
             .fill(configurations.currentIndex == configurations.selectedIndex ? selectedTint : tint)
             .frame(width: configurations.currentIndex == configurations.selectedIndex ? 30 : 10, height: 10)
-            .animation(.spring, value: configurations.selectedIndex)
     }
 }
 

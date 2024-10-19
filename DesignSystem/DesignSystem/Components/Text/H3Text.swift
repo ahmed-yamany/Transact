@@ -17,8 +17,8 @@ public struct H3Text: View {
     
     public var body: some View {
         Text(text)
-            .font(DesignSystem.Foundation.Typography.semiBold.swiftUIFont(size: .fontSizes.h3))
+            .font(DesignSystem.Foundation.Typography.semiBold.swiftUIFont(size: .fontSizes.h3.size))
             .tracking(DesignSystem.Foundation.Measurements.Font.letterSpacing)
-            .lineSpacing(DesignSystem.Foundation.Measurements.Font.lineSpacing)
+            .lineSpacing(.fontSizes.h3.lineSpacing)
     }
 }

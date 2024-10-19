@@ -7,3 +7,9 @@
 */
 
 "app-name" = "Transact";
+
+"skip" = "Skip";
+"back" = "Back";
+"next" = "Next";
+"restart" = "Restart";
+"get-started" = "Get Started";

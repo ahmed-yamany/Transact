@@ -8,7 +8,7 @@
 import SwiftUI
 import Localization
 
-public struct LogoView: View {
+public struct WhiteLogoView: View {
     
     public init() {}
     

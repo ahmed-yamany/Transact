@@ -18,7 +18,7 @@ public struct SplashView: View {
     public var body: some View {
         DesignSystem.Tokens.Colors.gradient.ignoresSafeArea()
             .overlay {
-                LogoView()
+                WhiteLogoView()
             }
             .task {
                 try? await Task.sleep(for: .seconds(5))

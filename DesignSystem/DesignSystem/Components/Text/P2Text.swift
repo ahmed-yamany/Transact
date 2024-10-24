@@ -8,15 +8,18 @@
 import SwiftUI
 
 public struct P2Text: View {
-    
-    private let text: String
-    
+    private let attributedString: AttributedString
+
     public init(_ text: String) {
-        self.text = text
+        attributedString = AttributedString(text)
     }
-    
+
+    public init(_ attributedString: AttributedString) {
+        self.attributedString = attributedString
+    }
+
     public var body: some View {
-        Text(text)
+        Text(attributedString)
             .font(DesignSystem.Foundation.Typography.medium.swiftUIFont(size: .fontSizes.p2.size))
             .tracking(DesignSystem.Foundation.Measurements.Font.letterSpacing)
             .lineSpacing(.fontSizes.p2.lineSpacing)

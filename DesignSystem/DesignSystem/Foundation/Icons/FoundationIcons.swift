@@ -51,6 +51,7 @@ public enum FoundationIcons {
   public static let upOutline = ImageAsset(name: "up-outline")
   public static let upFill = ImageAsset(name: "up.fill")
   public static let userAccount = ImageAsset(name: "user-account")
+  public static let xCircleFill = ImageAsset(name: "x-circle-fill")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

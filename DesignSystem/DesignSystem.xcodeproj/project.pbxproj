@@ -40,12 +40,16 @@
 		EE6EA44D2CC3DADC00BBC748 /* CirclePaginationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EA4472CC3DADC00BBC748 /* CirclePaginationStyle.swift */; };
 		EE6EA44E2CC3DADC00BBC748 /* PaginationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EA4492CC3DADC00BBC748 /* PaginationStyle.swift */; };
 		EE6EA44F2CC3DADC00BBC748 /* PaginationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EA44A2CC3DADC00BBC748 /* PaginationView.swift */; };
+		EE849F742CC4295B00A7B18E /* BlueLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE849F732CC4295B00A7B18E /* BlueLogoView.swift */; };
+		EE849F7A2CC42BE500A7B18E /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE849F792CC42BE500A7B18E /* AuthenticationView.swift */; };
 		EEC1750E2CC15DCA005966B1 /* ApplyPrimaryDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC1750D2CC15DCA005966B1 /* ApplyPrimaryDesign.swift */; };
-		EEC175112CC17D12005966B1 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC175102CC17D12005966B1 /* LogoView.swift */; };
+		EEC175112CC17D12005966B1 /* WhiteLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC175102CC17D12005966B1 /* WhiteLogoView.swift */; };
 		EEC1753B2CC19E10005966B1 /* TextButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC1753A2CC19E10005966B1 /* TextButtonStyle.swift */; };
 		EED8F6672C99A8AB00B11D2B /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = EED8F6662C99A8AB00B11D2B /* swiftgen.yml */; };
 		EEF25F692CC14DCC00407E09 /* Localization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF25F682CC14DCC00407E09 /* Localization.framework */; };
 		EEF25F6A2CC14DCC00407E09 /* Localization.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEF25F682CC14DCC00407E09 /* Localization.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EEF413D02CC586A800F21A13 /* TermsConditionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF413CF2CC586A800F21A13 /* TermsConditionsView.swift */; };
+		EEF413D32CC596B600F21A13 /* PrimaryTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF413D22CC596B600F21A13 /* PrimaryTextFieldStyle.swift */; };
 		EEFBB0CD2CBD7CD500AC4A7B /* FoundationAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFBB0CC2CBD7CD500AC4A7B /* FoundationAssets.swift */; };
 /* End PBXBuildFile section */
 
@@ -97,12 +101,16 @@
 		EE6EA4472CC3DADC00BBC748 /* CirclePaginationStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirclePaginationStyle.swift; sourceTree = "<group>"; };
 		EE6EA4492CC3DADC00BBC748 /* PaginationStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginationStyle.swift; sourceTree = "<group>"; };
 		EE6EA44A2CC3DADC00BBC748 /* PaginationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginationView.swift; sourceTree = "<group>"; };
+		EE849F732CC4295B00A7B18E /* BlueLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueLogoView.swift; sourceTree = "<group>"; };
+		EE849F792CC42BE500A7B18E /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		EEC1750D2CC15DCA005966B1 /* ApplyPrimaryDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyPrimaryDesign.swift; sourceTree = "<group>"; };
-		EEC175102CC17D12005966B1 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		EEC175102CC17D12005966B1 /* WhiteLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteLogoView.swift; sourceTree = "<group>"; };
 		EEC1753A2CC19E10005966B1 /* TextButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButtonStyle.swift; sourceTree = "<group>"; };
 		EED8F6662C99A8AB00B11D2B /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		EEF25F682CC14DCC00407E09 /* Localization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Localization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF3A8562CA1B36100C6BC3E /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEF413CF2CC586A800F21A13 /* TermsConditionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsConditionsView.swift; sourceTree = "<group>"; };
+		EEF413D22CC596B600F21A13 /* PrimaryTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTextFieldStyle.swift; sourceTree = "<group>"; };
 		EEFBB0CC2CBD7CD500AC4A7B /* FoundationAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationAssets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,6 +154,7 @@
 			children = (
 				EE41D0C42CB71BD90043182D /* Text */,
 				EE41D1262CB721FD0043182D /* Button */,
+				EEF413D12CC5968000F21A13 /* TextField */,
 				EEC1750F2CC17937005966B1 /* Custom Views */,
 				EE6EA44B2CC3DADC00BBC748 /* PaginationView */,
 			);
@@ -281,7 +290,10 @@
 		EEC1750F2CC17937005966B1 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
-				EEC175102CC17D12005966B1 /* LogoView.swift */,
+				EEC175102CC17D12005966B1 /* WhiteLogoView.swift */,
+				EE849F732CC4295B00A7B18E /* BlueLogoView.swift */,
+				EE849F792CC42BE500A7B18E /* AuthenticationView.swift */,
+				EEF413CF2CC586A800F21A13 /* TermsConditionsView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -314,6 +326,14 @@
 				EEC1750C2CC15DA1005966B1 /* Modifiers */,
 			);
 			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		EEF413D12CC5968000F21A13 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				EEF413D22CC596B600F21A13 /* PrimaryTextFieldStyle.swift */,
+			);
+			path = TextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,7 +449,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE41D0F42CB71BD90043182D /* P4Text.swift in Sources */,
-				EEC175112CC17D12005966B1 /* LogoView.swift in Sources */,
+				EEC175112CC17D12005966B1 /* WhiteLogoView.swift in Sources */,
 				EE41D1092CB71BD90043182D /* Spacing.swift in Sources */,
 				EE41D1062CB71BD90043182D /* BorderRadius.swift in Sources */,
 				EE41D0ED2CB71BD90043182D /* H1Text.swift in Sources */,
@@ -450,6 +470,7 @@
 				EE41D10D2CB71BD90043182D /* Typography+FontConvertible.swift in Sources */,
 				EE6EA44F2CC3DADC00BBC748 /* PaginationView.swift in Sources */,
 				EEC1753B2CC19E10005966B1 /* TextButtonStyle.swift in Sources */,
+				EEF413D02CC586A800F21A13 /* TermsConditionsView.swift in Sources */,
 				EE41D1012CB71BD90043182D /* FoundationColors.swift in Sources */,
 				EE41D0EF2CB71BD90043182D /* H3Text.swift in Sources */,
 				EEFBB0CD2CBD7CD500AC4A7B /* FoundationAssets.swift in Sources */,
@@ -458,8 +479,11 @@
 				EE41D1282CB722790043182D /* PrimaryButtonStyle.swift in Sources */,
 				EE6EA44C2CC3DADC00BBC748 /* CapsulePaginationStyle.swift in Sources */,
 				EE41D0EE2CB71BD90043182D /* H2Text.swift in Sources */,
+				EE849F7A2CC42BE500A7B18E /* AuthenticationView.swift in Sources */,
 				EE41D0F22CB71BD90043182D /* P2Text.swift in Sources */,
+				EEF413D32CC596B600F21A13 /* PrimaryTextFieldStyle.swift in Sources */,
 				EE41D1052CB71BD90043182D /* FontSizes.swift in Sources */,
+				EE849F742CC4295B00A7B18E /* BlueLogoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,7 +544,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -581,7 +605,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -609,7 +633,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -649,7 +673,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

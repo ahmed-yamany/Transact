@@ -8,15 +8,18 @@
 import SwiftUI
 
 public struct H3Text: View {
-    
-    private let text: String
-    
+    private let attributedString: AttributedString
+
     public init(_ text: String) {
-        self.text = text
+        attributedString = AttributedString(text)
     }
-    
+
+    public init(_ attributedString: AttributedString) {
+        self.attributedString = attributedString
+    }
+
     public var body: some View {
-        Text(text)
+        Text(attributedString)
             .font(DesignSystem.Foundation.Typography.semiBold.swiftUIFont(size: .fontSizes.h3.size))
             .tracking(DesignSystem.Foundation.Measurements.Font.letterSpacing)
             .lineSpacing(.fontSizes.h3.lineSpacing)

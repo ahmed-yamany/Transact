@@ -13,5 +13,8 @@ struct AuthenticationFlowCoordinator: View {
 
     var body: some View {
         RoutableNavigationStack(router: router)
+            .onAppear {
+                LoginFactoryContainer.coordinator(router).start()
+            }
     }
 }

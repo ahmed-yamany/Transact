@@ -17,6 +17,9 @@
       location = "group:Modules/Onboarding/Onboarding.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Modules/Login/Login.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Transact/Transact.xcodeproj">
    </FileRef>
 </Workspace>

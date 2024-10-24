@@ -9,14 +9,6 @@ import DesignSystem
 import Localization
 import SwiftUI
 
-extension CGFloat {
-    static var measurements = DesignSystem.Foundation.Measurements.self
-}
-
-extension Color {
-    static var colors = DesignSystem.Tokens.Colors.self
-}
-
 public struct OnboardingView<ViewModel: OnboardingViewModelInterface>: View {
     @ObservedObject var viewModel: ViewModel
 
@@ -84,7 +76,7 @@ public struct OnboardingView<ViewModel: OnboardingViewModelInterface>: View {
 
                     P2Text(model.description)
                         .multilineTextAlignment(.center)
-                        .foregroundStyle(DesignSystem.Tokens.Colors.primaryText)
+                        .foregroundStyle(Color.colors.primaryText)
                 }
                 .padding(.horizontal, .measurements.Padding.leading)
             }
@@ -96,7 +88,7 @@ public struct OnboardingView<ViewModel: OnboardingViewModelInterface>: View {
     private var paginationView: some View {
         PaginationView(count: viewModel.models.count, selectedIndex: viewModel.selectedIndex)
             .paginationStyle(.capsule(width: 40, height: 12))
-            .paginationSelectFill(DesignSystem.Tokens.Colors.gradient)
+            .paginationSelectFill(Color.colors.gradient)
     }
 
     private var nextButton: some View {
@@ -120,7 +112,7 @@ public struct OnboardingView<ViewModel: OnboardingViewModelInterface>: View {
 
     private var getStartedButton: some View {
         Button {
-            viewModel.backButtonTapped()
+            viewModel.getStartedButtonTapped()
         } label: {
             P3Text(L10n.getStarted)
         }

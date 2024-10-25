@@ -21,7 +21,7 @@ struct OnboardingCoordinator: OnboardingCoordinatorInterface, View {
     var body: some View {
         view(self)
     }
-    
+
     func skipOnboarding() {
         transactViewModel.flow = .authentication
     }

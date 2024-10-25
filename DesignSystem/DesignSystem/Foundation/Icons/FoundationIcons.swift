@@ -32,6 +32,7 @@ public enum FoundationIcons {
   public static let union2 = ImageAsset(name: "Union-2")
   public static let back = ImageAsset(name: "back")
   public static let cancel = ImageAsset(name: "cancel")
+  public static let checkmarkOn = ImageAsset(name: "checkmark-on")
   public static let downFill = ImageAsset(name: "down-fill")
   public static let downOutline = ImageAsset(name: "down-outline")
   public static let eye = ImageAsset(name: "eye")

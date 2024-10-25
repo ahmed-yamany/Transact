@@ -11,11 +11,13 @@ public struct PrimaryTextField: View {
     let placeholder: String
     let title: String
     @Binding var text: String
+    let secured: Bool
 
-    public init(_ placeholder: String, title: String, text: Binding<String>) {
+    public init(_ placeholder: String, title: String, text: Binding<String>, secured: Bool = false) {
         self.placeholder = placeholder
         self.title = title
         _text = text
+        self.secured = secured
     }
 
     public var body: some View {
@@ -23,12 +25,18 @@ public struct PrimaryTextField: View {
             P3Text(title)
 
             Group {
-                TextField(placeholder, text: $text)
-                    .overlay(alignment: .trailing) {
-                        if !text.isEmpty {
-                            xButton
-                        }
+                Group {
+                    if secured {
+                        SecureField(placeholder, text: $text)
+                    } else {
+                        TextField(placeholder, text: $text)
                     }
+                }
+                .overlay(alignment: .trailing) {
+                    if !text.isEmpty {
+                        xButton
+                    }
+                }
             }
             .font(DesignSystem.Foundation.Typography.regular.swiftUIFont(size: .fontSizes.p2.size))
             .foregroundStyle(DesignSystem.Tokens.Colors.primaryText)

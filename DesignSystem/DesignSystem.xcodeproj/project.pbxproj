@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -114,6 +114,10 @@
 		EEFBB0CC2CBD7CD500AC4A7B /* FoundationAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationAssets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		7302A6002CCBE0CF0078D08C /* Toggle */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Toggle; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		EED8F61F2C999D2200B11D2B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -154,6 +158,7 @@
 			children = (
 				EE41D0C42CB71BD90043182D /* Text */,
 				EE41D1262CB721FD0043182D /* Button */,
+				7302A6002CCBE0CF0078D08C /* Toggle */,
 				EEF413D12CC5968000F21A13 /* TextField */,
 				EEC1750F2CC17937005966B1 /* Custom Views */,
 				EE6EA44B2CC3DADC00BBC748 /* PaginationView */,
@@ -363,6 +368,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				7302A6002CCBE0CF0078D08C /* Toggle */,
 			);
 			name = DesignSystem;
 			packageProductDependencies = (

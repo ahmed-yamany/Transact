@@ -10,11 +10,11 @@ import SwiftUI
 @available(iOS 16.0, *)
 public struct RoutableNavigationStack<NavigationRouter: NavigationStackRouterInterface>: View {
     @ObservedObject private var router: NavigationRouter
-    
+
     public init(router: NavigationRouter) {
         self.router = router
     }
-    
+
     public var body: some View {
         NavigationStack(path: $router.navigationStack) {
             Group {

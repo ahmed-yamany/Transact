@@ -13,7 +13,7 @@ extension View {
         _ elements: Binding<[T]>,
         modifierBuilder: @escaping (T?) -> Modifier
     ) -> some View {
-        self.modifier(RecursiveModifierApplier(elements, modifierBuilder: modifierBuilder))
+        modifier(RecursiveModifierApplier(elements, modifierBuilder: modifierBuilder))
     }
 }
 
@@ -41,7 +41,7 @@ struct RecursiveModifierApplier<Modifier: ViewModifier, T: Hashable>: ViewModifi
         if currentElement == nil {
             return elements.first
         }
-        
+
         if let currentElement = currentElement {
             return elements.nextElement(to: currentElement)
         }

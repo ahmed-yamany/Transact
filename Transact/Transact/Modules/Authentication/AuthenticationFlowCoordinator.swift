@@ -5,16 +5,36 @@
 //  Created by Ahmed Yamany on 17/10/2024.
 //
 
-import SwiftUI
 import Coordinator
+import SwiftUI
 
-struct AuthenticationFlowCoordinator: View {
+protocol AuthenticationFlowCoordinatorInterface {
+    func navigateToLogin()
+    func navigateToSignup()
+    func navigateToForgotPassword()
+    func navigateToTabBar()
+}
+
+struct AuthenticationFlowCoordinator: AuthenticationFlowCoordinatorInterface, View {
     @StateObject var router = TransactFactoryContainer.router()
 
     var body: some View {
         RoutableNavigationStack(router: router)
             .onAppear {
-                LoginFactoryContainer.coordinator(router).start()
+                navigateToLogin()
             }
+    }
+
+    func navigateToLogin() {
+        LoginFactoryContainer.coordinator(router, authenticationFlow: self).start()
+    }
+
+    func navigateToSignup() {
+    }
+
+    func navigateToForgotPassword() {
+    }
+
+    func navigateToTabBar() {
     }
 }

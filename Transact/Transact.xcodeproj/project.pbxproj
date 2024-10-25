@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7302A6132CCBF0680078D08C /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7302A6122CCBF0680078D08C /* LoginService.swift */; };
 		EE018F322CB6A68800235DD9 /* HTTPClient in Resources */ = {isa = PBXBuildFile; fileRef = EE018F2D2CB6A68800235DD9 /* HTTPClient */; };
 		EE018F332CB6A68800235DD9 /* SwiftUIViews in Resources */ = {isa = PBXBuildFile; fileRef = EE018F2E2CB6A68800235DD9 /* SwiftUIViews */; };
 		EE018F342CB6A68800235DD9 /* URLSessionHTTPClient in Resources */ = {isa = PBXBuildFile; fileRef = EE018F2F2CB6A68800235DD9 /* URLSessionHTTPClient */; };
@@ -64,6 +65,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7302A6122CCBF0680078D08C /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		EE018F2D2CB6A68800235DD9 /* HTTPClient */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = HTTPClient; sourceTree = "<group>"; };
 		EE018F2E2CB6A68800235DD9 /* SwiftUIViews */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftUIViews; sourceTree = "<group>"; };
 		EE018F2F2CB6A68800235DD9 /* URLSessionHTTPClient */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = URLSessionHTTPClient; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 		EE849F632CC424E600A7B18E /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				7302A6122CCBF0680078D08C /* LoginService.swift */,
 				EE849F662CC4250600A7B18E /* LoginCoordinator.swift */,
 				EE849F642CC424F200A7B18E /* LoginFactoryContainer.swift */,
 			);
@@ -360,6 +363,7 @@
 				EE46AE6E2CB7289200C5F23B /* SplashFactoryContainer.swift in Sources */,
 				EEC175022CC15702005966B1 /* TransactViewModel.swift in Sources */,
 				EEC175042CC157A4005966B1 /* TransactFlow.swift in Sources */,
+				7302A6132CCBF0680078D08C /* LoginService.swift in Sources */,
 				EEC175342CC18B1C005966B1 /* OnboardingFactoryContainer.swift in Sources */,
 				EE6EA45C2CC3E4FF00BBC748 /* OnboardingService.swift in Sources */,
 				EEC175072CC157E5005966B1 /* AuthenticationFlowCoordinator.swift in Sources */,

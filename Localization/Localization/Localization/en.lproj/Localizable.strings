@@ -22,6 +22,12 @@
 "privacy-policy" = "Privacy Policy";
 "and" = "and";
 "terms-condition-description" = "By clicking on ‘Next’ you’ve agreed to the";
+"phoneNumber" = "Phone Number";
+"enter-phoneNumber" = "Enter PhoneNumber";
+"password" = "Password";
+"enter-password" = "Enter Password";
+"remember-me" = "Remember me";
 
 // MARK: - Login
 "login.subtitle" = "Login to easily save, recieve and send money using just your phone number";
+

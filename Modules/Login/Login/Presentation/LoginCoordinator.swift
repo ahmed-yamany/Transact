@@ -8,5 +8,7 @@
 import Foundation
 
 public protocol LoginCoordinatorInterface {
-    
+    func navigateToForgotPassword()
+    func navigateToSignUp()
+    func authenticationCompleted()
 }

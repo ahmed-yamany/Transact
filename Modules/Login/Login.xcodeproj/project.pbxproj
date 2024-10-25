@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -42,6 +42,11 @@
 		EE849F772CC42A3B00A7B18E /* DesignSystemTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemTokens.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		7302A6082CCBE8310078D08C /* Domain */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Domain; sourceTree = "<group>"; };
+		7302A60C2CCBECE50078D08C /* Data */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Data; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		EE849F4E2CC423EA00A7B18E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -75,7 +80,8 @@
 		EE849F532CC423EA00A7B18E /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				EE849F5C2CC4240600A7B18E /* Domain */,
+				7302A60C2CCBECE50078D08C /* Data */,
+				7302A6082CCBE8310078D08C /* Domain */,
 				EE849F5B2CC423FF00A7B18E /* Presentation */,
 			);
 			path = Login;
@@ -90,13 +96,6 @@
 				EE849F612CC4242100A7B18E /* LoginCoordinator.swift */,
 			);
 			path = Presentation;
-			sourceTree = "<group>";
-		};
-		EE849F5C2CC4240600A7B18E /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Domain;
 			sourceTree = "<group>";
 		};
 		EE849F6B2CC4274C00A7B18E /* Frameworks */ = {
@@ -134,6 +133,10 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				7302A6082CCBE8310078D08C /* Domain */,
+				7302A60C2CCBECE50078D08C /* Data */,
 			);
 			name = Login;
 			productName = Login;

@@ -8,6 +8,6 @@
 @MainActor
 public protocol Coordinator {
     var router: Router { get }
-    
+
     func start()
 }

@@ -21,6 +21,10 @@ public enum L10n {
   public static var back: String { return L10n.tr("Localizable", "back", fallback: "Back") }
   /// Don’t have an account ?
   public static var dontHaveAccount: String { return L10n.tr("Localizable", "dont-have-account", fallback: "Don’t have an account ?") }
+  /// Enter Password
+  public static var enterPassword: String { return L10n.tr("Localizable", "enter-password", fallback: "Enter Password") }
+  /// Enter PhoneNumber
+  public static var enterPhoneNumber: String { return L10n.tr("Localizable", "enter-phoneNumber", fallback: "Enter PhoneNumber") }
   /// Forgot Password
   public static var forgotPassword: String { return L10n.tr("Localizable", "forgot-password", fallback: "Forgot Password") }
   /// Get Started
@@ -29,8 +33,14 @@ public enum L10n {
   public static var login: String { return L10n.tr("Localizable", "login", fallback: "Login") }
   /// Next
   public static var next: String { return L10n.tr("Localizable", "next", fallback: "Next") }
+  /// Password
+  public static var password: String { return L10n.tr("Localizable", "password", fallback: "Password") }
+  /// Phone Number
+  public static var phoneNumber: String { return L10n.tr("Localizable", "phoneNumber", fallback: "Phone Number") }
   /// Privacy Policy
   public static var privacyPolicy: String { return L10n.tr("Localizable", "privacy-policy", fallback: "Privacy Policy") }
+  /// Remember me
+  public static var rememberMe: String { return L10n.tr("Localizable", "remember-me", fallback: "Remember me") }
   /// Restart
   public static var restart: String { return L10n.tr("Localizable", "restart", fallback: "Restart") }
   /// Sign Up

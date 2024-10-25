@@ -36,7 +36,6 @@ private struct LifecycleHandlerView: UIViewControllerRepresentable {
 }
 
 private class LifecycleHandlerViewController: UIViewController {
-
     var onDidLoad: (() -> Void)?
 
     override func viewDidLoad() {

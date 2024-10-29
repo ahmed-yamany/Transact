@@ -10,6 +10,8 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 public enum L10n {
+  /// Already have an account ?
+  public static var alreadyHaveAccount: String { return L10n.tr("Localizable", "already-have-account", fallback: "Already have an account ?") }
   /// and
   public static var and: String { return L10n.tr("Localizable", "and", fallback: "and") }
   /// Localizable.strings
@@ -19,14 +21,20 @@ public enum L10n {
   public static var appName: String { return L10n.tr("Localizable", "app-name", fallback: "Transact") }
   /// Back
   public static var back: String { return L10n.tr("Localizable", "back", fallback: "Back") }
+  /// Change Password
+  public static var changePassword: String { return L10n.tr("Localizable", "change-password", fallback: "Change Password") }
   /// Don’t have an account ?
   public static var dontHaveAccount: String { return L10n.tr("Localizable", "dont-have-account", fallback: "Don’t have an account ?") }
   /// Enter Password
   public static var enterPassword: String { return L10n.tr("Localizable", "enter-password", fallback: "Enter Password") }
   /// Enter PhoneNumber
   public static var enterPhoneNumber: String { return L10n.tr("Localizable", "enter-phoneNumber", fallback: "Enter PhoneNumber") }
+  /// Enter Your Full Name
+  public static var enterYourFullName: String { return L10n.tr("Localizable", "enter-your-full-name", fallback: "Enter Your Full Name") }
   /// Forgot Password
   public static var forgotPassword: String { return L10n.tr("Localizable", "forgot-password", fallback: "Forgot Password") }
+  /// Full Name
+  public static var fullName: String { return L10n.tr("Localizable", "full-name", fallback: "Full Name") }
   /// Get Started
   public static var getStarted: String { return L10n.tr("Localizable", "get-started", fallback: "Get Started") }
   /// Login
@@ -53,9 +61,19 @@ public enum L10n {
   public static var termsOfUse: String { return L10n.tr("Localizable", "terms-of-use", fallback: "Terms of Use") }
   /// Welcome Back
   public static var welcomeBack: String { return L10n.tr("Localizable", "welcome-back", fallback: "Welcome Back") }
+  /// Welcome To Transact
+  public static var welcomeToTransact: String { return L10n.tr("Localizable", "welcome-to-transact", fallback: "Welcome To Transact") }
+  public enum ForgotPassword {
+    /// Please provide your phone number and change a new password
+    public static var subtitle: String { return L10n.tr("Localizable", "forgotPassword.subtitle", fallback: "Please provide your phone number and change a new password") }
+  }
   public enum Login {
     /// Login to easily save, recieve and send money using just your phone number
     public static var subtitle: String { return L10n.tr("Localizable", "login.subtitle", fallback: "Login to easily save, recieve and send money using just your phone number") }
+  }
+  public enum Signup {
+    /// Register to easily save, recieve and send money using just your phone number
+    public static var subtitle: String { return L10n.tr("Localizable", "signup.subtitle", fallback: "Register to easily save, recieve and send money using just your phone number") }
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

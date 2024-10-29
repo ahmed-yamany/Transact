@@ -29,6 +29,7 @@ struct AuthenticationFlowCoordinator: AuthenticationFlowCoordinatorInterface, Vi
             .onAppear {
                 navigateToLogin()
             }
+            .animation(.easeInOut(duration: 1), value: router.rootView)
     }
 
     func navigateToLogin() {

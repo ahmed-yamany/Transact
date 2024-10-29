@@ -5,6 +5,8 @@
 //  Created by Ahmed Yamany on 29/10/2024.
 //
 
+import DesignSystem
+import Localization
 import SwiftUI
 
 public struct ForgotPasswordView<ViewModel: ForgotPasswordViewModelInterface>: View {
@@ -15,6 +17,38 @@ public struct ForgotPasswordView<ViewModel: ForgotPasswordViewModelInterface>: V
     }
 
     public var body: some View {
-        Text("Forgot Password View")
+        ScrollView {
+            VStack(spacing: .measurements.Spacing.xxxLarge) {
+                AuthenticationView(title: L10n.forgotPassword, subtitle: L10n.ForgotPassword.subtitle)
+
+                phoneNumberTextField
+
+                VStack(spacing: .measurements.Spacing.large) {
+                    forgotPasswordButton
+
+                    TermsConditionsView()
+                }
+            }
+            .frame(maxWidth: .infinity)
+            .padding(CGFloat.measurements.Padding)
+        }
+        .applyPrimaryDesign()
+    }
+
+    private var phoneNumberTextField: some View {
+        PrimaryTextField(
+            L10n.enterPhoneNumber,
+            title: L10n.phoneNumber,
+            text: $viewModel.phoneNumber
+        )
+        .keyboardType(.numberPad)
+        .autocapitalization(.none)
+    }
+
+    private var forgotPasswordButton: some View {
+        Button(L10n.changePassword) {
+            viewModel.changePasswordButtonTapped()
+        }
+        .buttonStyle(.primary())
     }
 }

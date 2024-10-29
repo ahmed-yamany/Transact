@@ -11,7 +11,27 @@
 		73ECBA422CD15A8400715062 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ECBA412CD15A8400715062 /* ForgotPasswordViewModel.swift */; };
 		73ECBA442CD15A8900715062 /* ForgotPasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ECBA432CD15A8900715062 /* ForgotPasswordCoordinator.swift */; };
 		73ECBA462CD15A9000715062 /* ForgotPasswordUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ECBA452CD15A9000715062 /* ForgotPasswordUseCase.swift */; };
+		73ECBA5B2CD1657400715062 /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73ECBA5A2CD1657400715062 /* DesignSystem.framework */; };
+		73ECBA5C2CD1657400715062 /* DesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73ECBA5A2CD1657400715062 /* DesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		73ECBA5F2CD1657900715062 /* Localization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73ECBA5E2CD1657900715062 /* Localization.framework */; };
+		73ECBA602CD1657900715062 /* Localization.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73ECBA5E2CD1657900715062 /* Localization.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		73ECBA622CD1658E00715062 /* DesignSystemTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ECBA612CD1658E00715062 /* DesignSystemTokens.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		73ECBA5D2CD1657400715062 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				73ECBA5C2CD1657400715062 /* DesignSystem.framework in Embed Frameworks */,
+				73ECBA602CD1657900715062 /* Localization.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		73D954B42CD159FE002928CF /* ForgotPassword.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ForgotPassword.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,6 +39,9 @@
 		73ECBA412CD15A8400715062 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		73ECBA432CD15A8900715062 /* ForgotPasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordCoordinator.swift; sourceTree = "<group>"; };
 		73ECBA452CD15A9000715062 /* ForgotPasswordUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordUseCase.swift; sourceTree = "<group>"; };
+		73ECBA5A2CD1657400715062 /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73ECBA5E2CD1657900715062 /* Localization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Localization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73ECBA612CD1658E00715062 /* DesignSystemTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemTokens.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73ECBA5B2CD1657400715062 /* DesignSystem.framework in Frameworks */,
+				73ECBA5F2CD1657900715062 /* Localization.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				73D954B62CD159FE002928CF /* ForgotPassword */,
+				73ECBA592CD1657400715062 /* Frameworks */,
 				73D954B52CD159FE002928CF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +87,7 @@
 		73ECBA3C2CD15A6000715062 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				73ECBA612CD1658E00715062 /* DesignSystemTokens.swift */,
 				73ECBA3F2CD15A7D00715062 /* ForgotPasswordView.swift */,
 				73ECBA412CD15A8400715062 /* ForgotPasswordViewModel.swift */,
 				73ECBA432CD15A8900715062 /* ForgotPasswordCoordinator.swift */,
@@ -81,6 +108,15 @@
 			children = (
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		73ECBA592CD1657400715062 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73ECBA5E2CD1657900715062 /* Localization.framework */,
+				73ECBA5A2CD1657400715062 /* DesignSystem.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,6 +140,7 @@
 				73D954B02CD159FE002928CF /* Sources */,
 				73D954B12CD159FE002928CF /* Frameworks */,
 				73D954B22CD159FE002928CF /* Resources */,
+				73ECBA5D2CD1657400715062 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -121,7 +158,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					73D954B32CD159FE002928CF = {
 						CreatedOnToolsVersion = 15.4;
@@ -163,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73ECBA422CD15A8400715062 /* ForgotPasswordViewModel.swift in Sources */,
+				73ECBA622CD1658E00715062 /* DesignSystemTokens.swift in Sources */,
 				73ECBA402CD15A7E00715062 /* ForgotPasswordView.swift in Sources */,
 				73ECBA442CD15A8900715062 /* ForgotPasswordCoordinator.swift in Sources */,
 				73ECBA462CD15A9000715062 /* ForgotPasswordUseCase.swift in Sources */,
@@ -296,11 +334,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 4U8DMJ33ZN;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -309,7 +347,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
@@ -339,11 +377,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 4U8DMJ33ZN;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -352,7 +390,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",

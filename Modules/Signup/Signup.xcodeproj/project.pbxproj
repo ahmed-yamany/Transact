@@ -11,7 +11,27 @@
 		73ECBA292CD154BB00715062 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ECBA282CD154BB00715062 /* SignupViewModel.swift */; };
 		73ECBA2B2CD154C400715062 /* SignupCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ECBA2A2CD154C400715062 /* SignupCoordinator.swift */; };
 		73ECBA302CD154E600715062 /* SignupUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ECBA2F2CD154E600715062 /* SignupUseCase.swift */; };
+		73ECBA512CD15F5800715062 /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73ECBA502CD15F5800715062 /* DesignSystem.framework */; };
+		73ECBA522CD15F5800715062 /* DesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73ECBA502CD15F5800715062 /* DesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		73ECBA552CD15F5D00715062 /* Localization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73ECBA542CD15F5D00715062 /* Localization.framework */; };
+		73ECBA562CD15F5D00715062 /* Localization.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73ECBA542CD15F5D00715062 /* Localization.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		73ECBA582CD15F9800715062 /* DesignSystemTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ECBA572CD15F9800715062 /* DesignSystemTokens.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		73ECBA532CD15F5800715062 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				73ECBA522CD15F5800715062 /* DesignSystem.framework in Embed Frameworks */,
+				73ECBA562CD15F5D00715062 /* Localization.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7304FDBE2CD15461006C7337 /* Signup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Signup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,6 +39,9 @@
 		73ECBA282CD154BB00715062 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		73ECBA2A2CD154C400715062 /* SignupCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupCoordinator.swift; sourceTree = "<group>"; };
 		73ECBA2F2CD154E600715062 /* SignupUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupUseCase.swift; sourceTree = "<group>"; };
+		73ECBA502CD15F5800715062 /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73ECBA542CD15F5D00715062 /* Localization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Localization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73ECBA572CD15F9800715062 /* DesignSystemTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemTokens.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73ECBA512CD15F5800715062 /* DesignSystem.framework in Frameworks */,
+				73ECBA552CD15F5D00715062 /* Localization.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				7304FDC02CD15461006C7337 /* Signup */,
+				73ECBA4F2CD15F5800715062 /* Frameworks */,
 				7304FDBF2CD15461006C7337 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +87,7 @@
 		73ECBA252CD154A600715062 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				73ECBA572CD15F9800715062 /* DesignSystemTokens.swift */,
 				73ECBA262CD154B200715062 /* SignupView.swift */,
 				73ECBA282CD154BB00715062 /* SignupViewModel.swift */,
 				73ECBA2A2CD154C400715062 /* SignupCoordinator.swift */,
@@ -81,6 +108,15 @@
 			children = (
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		73ECBA4F2CD15F5800715062 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73ECBA542CD15F5D00715062 /* Localization.framework */,
+				73ECBA502CD15F5800715062 /* DesignSystem.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,6 +140,7 @@
 				7304FDBA2CD15460006C7337 /* Sources */,
 				7304FDBB2CD15460006C7337 /* Frameworks */,
 				7304FDBC2CD15460006C7337 /* Resources */,
+				73ECBA532CD15F5800715062 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -121,7 +158,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					7304FDBD2CD15460006C7337 = {
 						CreatedOnToolsVersion = 15.4;
@@ -163,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73ECBA292CD154BB00715062 /* SignupViewModel.swift in Sources */,
+				73ECBA582CD15F9800715062 /* DesignSystemTokens.swift in Sources */,
 				73ECBA302CD154E600715062 /* SignupUseCase.swift in Sources */,
 				73ECBA2B2CD154C400715062 /* SignupCoordinator.swift in Sources */,
 				73ECBA272CD154B200715062 /* SignupView.swift in Sources */,
@@ -296,11 +334,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 4U8DMJ33ZN;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -339,11 +377,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 4U8DMJ33ZN;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

@@ -27,4 +27,12 @@ final class SignupCoordinator: Coordinator, SignupCoordinatorInterface {
     func start() {
         router.setView(view(self), animated: true, completion: nil)
     }
+
+    func navigateToSignin() {
+        authenticationFlow.navigateToLogin()
+    }
+
+    func navigateToForgtPassword() {
+        authenticationFlow.navigateToForgotPassword()
+    }
 }

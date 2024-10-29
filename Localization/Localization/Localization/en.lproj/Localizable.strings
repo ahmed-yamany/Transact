@@ -16,7 +16,9 @@
 "login" = "Login";
 "forgot-password" = "Forgot Password";
 "welcome-back" = "Welcome Back";
+"welcome-to-transact" = "Welcome To Transact";
 "dont-have-account" = "Don’t have an account ?";
+"already-have-account" = "Already have an account ?";
 "signup" = "Sign Up";
 "terms-of-use" = "Terms of Use";
 "privacy-policy" = "Privacy Policy";
@@ -27,7 +29,15 @@
 "password" = "Password";
 "enter-password" = "Enter Password";
 "remember-me" = "Remember me";
+"full-name" = "Full Name";
+"enter-your-full-name" = "Enter Your Full Name";
+"change-password" = "Change Password";
 
 // MARK: - Login
 "login.subtitle" = "Login to easily save, recieve and send money using just your phone number";
 
+// MARK: - Signup
+"signup.subtitle" = "Register to easily save, recieve and send money using just your phone number";
+
+// MARK: - Forgot Password
+"forgotPassword.subtitle" = "Please provide your phone number and change a new password";

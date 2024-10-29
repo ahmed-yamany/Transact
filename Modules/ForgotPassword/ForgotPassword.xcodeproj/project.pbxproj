@@ -7,136 +7,86 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		73DA36C32CCFF1BD00483A30 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA36C02CCFF1BD00483A30 /* LoginModel.swift */; };
-		73DA36C42CCFF1BD00483A30 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA36C22CCFF1BD00483A30 /* LoginService.swift */; };
-		73DA36C62CCFF1BD00483A30 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA36C52CCFF1BD00483A30 /* LoginUseCase.swift */; };
-		EE849F5E2CC4241200A7B18E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE849F5D2CC4241200A7B18E /* LoginView.swift */; };
-		EE849F602CC4241800A7B18E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE849F5F2CC4241800A7B18E /* LoginViewModel.swift */; };
-		EE849F622CC4242100A7B18E /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE849F612CC4242100A7B18E /* LoginCoordinator.swift */; };
-		EE849F6D2CC4274C00A7B18E /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE849F6C2CC4274C00A7B18E /* DesignSystem.framework */; };
-		EE849F6E2CC4274C00A7B18E /* DesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE849F6C2CC4274C00A7B18E /* DesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EE849F712CC4275400A7B18E /* Localization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE849F702CC4275400A7B18E /* Localization.framework */; };
-		EE849F722CC4275400A7B18E /* Localization.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE849F702CC4275400A7B18E /* Localization.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EE849F782CC42A3B00A7B18E /* DesignSystemTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE849F772CC42A3B00A7B18E /* DesignSystemTokens.swift */; };
+		73ECBA402CD15A7E00715062 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ECBA3F2CD15A7D00715062 /* ForgotPasswordView.swift */; };
+		73ECBA422CD15A8400715062 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ECBA412CD15A8400715062 /* ForgotPasswordViewModel.swift */; };
+		73ECBA442CD15A8900715062 /* ForgotPasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ECBA432CD15A8900715062 /* ForgotPasswordCoordinator.swift */; };
+		73ECBA462CD15A9000715062 /* ForgotPasswordUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ECBA452CD15A9000715062 /* ForgotPasswordUseCase.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		EE849F6F2CC4274C00A7B18E /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				EE849F6E2CC4274C00A7B18E /* DesignSystem.framework in Embed Frameworks */,
-				EE849F722CC4275400A7B18E /* Localization.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		73DA36C02CCFF1BD00483A30 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
-		73DA36C22CCFF1BD00483A30 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
-		73DA36C52CCFF1BD00483A30 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
-		EE849F512CC423EA00A7B18E /* Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE849F5D2CC4241200A7B18E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		EE849F5F2CC4241800A7B18E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		EE849F612CC4242100A7B18E /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
-		EE849F6C2CC4274C00A7B18E /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE849F702CC4275400A7B18E /* Localization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Localization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE849F772CC42A3B00A7B18E /* DesignSystemTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemTokens.swift; sourceTree = "<group>"; };
+		73D954B42CD159FE002928CF /* ForgotPassword.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ForgotPassword.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73ECBA3F2CD15A7D00715062 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		73ECBA412CD15A8400715062 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
+		73ECBA432CD15A8900715062 /* ForgotPasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordCoordinator.swift; sourceTree = "<group>"; };
+		73ECBA452CD15A9000715062 /* ForgotPasswordUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EE849F4E2CC423EA00A7B18E /* Frameworks */ = {
+		73D954B12CD159FE002928CF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE849F6D2CC4274C00A7B18E /* DesignSystem.framework in Frameworks */,
-				EE849F712CC4275400A7B18E /* Localization.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		73DA36CC2CCFF25B00483A30 /* Data */ = {
+		73D954AA2CD159FE002928CF = {
 			isa = PBXGroup;
 			children = (
-				73DA36CD2CCFF26300483A30 /* Model */,
-				73DA36C22CCFF1BD00483A30 /* LoginService.swift */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		73DA36CD2CCFF26300483A30 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				73DA36C02CCFF1BD00483A30 /* LoginModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		73DA36CF2CCFF28F00483A30 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				73DA36C52CCFF1BD00483A30 /* LoginUseCase.swift */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		EE849F472CC423EA00A7B18E = {
-			isa = PBXGroup;
-			children = (
-				EE849F532CC423EA00A7B18E /* Login */,
-				EE849F522CC423EA00A7B18E /* Products */,
-				EE849F6B2CC4274C00A7B18E /* Frameworks */,
+				73D954B62CD159FE002928CF /* ForgotPassword */,
+				73D954B52CD159FE002928CF /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		EE849F522CC423EA00A7B18E /* Products */ = {
+		73D954B52CD159FE002928CF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EE849F512CC423EA00A7B18E /* Login.framework */,
+				73D954B42CD159FE002928CF /* ForgotPassword.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EE849F532CC423EA00A7B18E /* Login */ = {
+		73D954B62CD159FE002928CF /* ForgotPassword */ = {
 			isa = PBXGroup;
 			children = (
-				73DA36CC2CCFF25B00483A30 /* Data */,
-				73DA36CF2CCFF28F00483A30 /* Domain */,
-				EE849F5B2CC423FF00A7B18E /* Presentation */,
+				73ECBA3E2CD15A6B00715062 /* Data */,
+				73ECBA3D2CD15A6400715062 /* Domain */,
+				73ECBA3C2CD15A6000715062 /* Presentation */,
 			);
-			path = Login;
+			path = ForgotPassword;
 			sourceTree = "<group>";
 		};
-		EE849F5B2CC423FF00A7B18E /* Presentation */ = {
+		73ECBA3C2CD15A6000715062 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				EE849F772CC42A3B00A7B18E /* DesignSystemTokens.swift */,
-				EE849F5D2CC4241200A7B18E /* LoginView.swift */,
-				EE849F5F2CC4241800A7B18E /* LoginViewModel.swift */,
-				EE849F612CC4242100A7B18E /* LoginCoordinator.swift */,
+				73ECBA3F2CD15A7D00715062 /* ForgotPasswordView.swift */,
+				73ECBA412CD15A8400715062 /* ForgotPasswordViewModel.swift */,
+				73ECBA432CD15A8900715062 /* ForgotPasswordCoordinator.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		EE849F6B2CC4274C00A7B18E /* Frameworks */ = {
+		73ECBA3D2CD15A6400715062 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				EE849F702CC4275400A7B18E /* Localization.framework */,
-				EE849F6C2CC4274C00A7B18E /* DesignSystem.framework */,
+				73ECBA452CD15A9000715062 /* ForgotPasswordUseCase.swift */,
 			);
-			name = Frameworks;
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		73ECBA3E2CD15A6B00715062 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		EE849F4C2CC423EA00A7B18E /* Headers */ = {
+		73D954AF2CD159FE002928CF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -146,41 +96,40 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		EE849F502CC423EA00A7B18E /* Login */ = {
+		73D954B32CD159FE002928CF /* ForgotPassword */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EE849F582CC423EA00A7B18E /* Build configuration list for PBXNativeTarget "Login" */;
+			buildConfigurationList = 73D954BB2CD159FE002928CF /* Build configuration list for PBXNativeTarget "ForgotPassword" */;
 			buildPhases = (
-				EE849F4C2CC423EA00A7B18E /* Headers */,
-				EE849F4D2CC423EA00A7B18E /* Sources */,
-				EE849F4E2CC423EA00A7B18E /* Frameworks */,
-				EE849F4F2CC423EA00A7B18E /* Resources */,
-				EE849F6F2CC4274C00A7B18E /* Embed Frameworks */,
+				73D954AF2CD159FE002928CF /* Headers */,
+				73D954B02CD159FE002928CF /* Sources */,
+				73D954B12CD159FE002928CF /* Frameworks */,
+				73D954B22CD159FE002928CF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Login;
-			productName = Login;
-			productReference = EE849F512CC423EA00A7B18E /* Login.framework */;
+			name = ForgotPassword;
+			productName = ForgotPassword;
+			productReference = 73D954B42CD159FE002928CF /* ForgotPassword.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		EE849F482CC423EA00A7B18E /* Project object */ = {
+		73D954AB2CD159FE002928CF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1600;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
-					EE849F502CC423EA00A7B18E = {
+					73D954B32CD159FE002928CF = {
 						CreatedOnToolsVersion = 15.4;
-						LastSwiftMigration = 1540;
+						LastSwiftMigration = 1600;
 					};
 				};
 			};
-			buildConfigurationList = EE849F4B2CC423EA00A7B18E /* Build configuration list for PBXProject "Login" */;
+			buildConfigurationList = 73D954AE2CD159FE002928CF /* Build configuration list for PBXProject "ForgotPassword" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -188,18 +137,18 @@
 				en,
 				Base,
 			);
-			mainGroup = EE849F472CC423EA00A7B18E;
-			productRefGroup = EE849F522CC423EA00A7B18E /* Products */;
+			mainGroup = 73D954AA2CD159FE002928CF;
+			productRefGroup = 73D954B52CD159FE002928CF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EE849F502CC423EA00A7B18E /* Login */,
+				73D954B32CD159FE002928CF /* ForgotPassword */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		EE849F4F2CC423EA00A7B18E /* Resources */ = {
+		73D954B22CD159FE002928CF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -209,24 +158,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EE849F4D2CC423EA00A7B18E /* Sources */ = {
+		73D954B02CD159FE002928CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73DA36C32CCFF1BD00483A30 /* LoginModel.swift in Sources */,
-				73DA36C42CCFF1BD00483A30 /* LoginService.swift in Sources */,
-				EE849F622CC4242100A7B18E /* LoginCoordinator.swift in Sources */,
-				EE849F602CC4241800A7B18E /* LoginViewModel.swift in Sources */,
-				73DA36C62CCFF1BD00483A30 /* LoginUseCase.swift in Sources */,
-				EE849F782CC42A3B00A7B18E /* DesignSystemTokens.swift in Sources */,
-				EE849F5E2CC4241200A7B18E /* LoginView.swift in Sources */,
+				73ECBA422CD15A8400715062 /* ForgotPasswordViewModel.swift in Sources */,
+				73ECBA402CD15A7E00715062 /* ForgotPasswordView.swift in Sources */,
+				73ECBA442CD15A8900715062 /* ForgotPasswordCoordinator.swift in Sources */,
+				73ECBA462CD15A9000715062 /* ForgotPasswordUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		EE849F562CC423EA00A7B18E /* Debug */ = {
+		73D954B92CD159FE002928CF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -279,12 +225,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -292,7 +236,7 @@
 			};
 			name = Debug;
 		};
-		EE849F572CC423EA00A7B18E /* Release */ = {
+		73D954BA2CD159FE002928CF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -339,22 +283,20 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		EE849F592CC423EA00A7B18E /* Debug */ = {
+		73D954BC2CD159FE002928CF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -367,18 +309,24 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yamany.Login;
+				PRODUCT_BUNDLE_IDENTIFIER = yamany.ForgotPassword;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = auto;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -387,10 +335,11 @@
 			};
 			name = Debug;
 		};
-		EE849F5A2CC423EA00A7B18E /* Release */ = {
+		73D954BD2CD159FE002928CF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -403,18 +352,24 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yamany.Login;
+				PRODUCT_BUNDLE_IDENTIFIER = yamany.ForgotPassword;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = auto;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 5.0;
@@ -425,25 +380,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EE849F4B2CC423EA00A7B18E /* Build configuration list for PBXProject "Login" */ = {
+		73D954AE2CD159FE002928CF /* Build configuration list for PBXProject "ForgotPassword" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EE849F562CC423EA00A7B18E /* Debug */,
-				EE849F572CC423EA00A7B18E /* Release */,
+				73D954B92CD159FE002928CF /* Debug */,
+				73D954BA2CD159FE002928CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EE849F582CC423EA00A7B18E /* Build configuration list for PBXNativeTarget "Login" */ = {
+		73D954BB2CD159FE002928CF /* Build configuration list for PBXNativeTarget "ForgotPassword" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EE849F592CC423EA00A7B18E /* Debug */,
-				EE849F5A2CC423EA00A7B18E /* Release */,
+				73D954BC2CD159FE002928CF /* Debug */,
+				73D954BD2CD159FE002928CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = EE849F482CC423EA00A7B18E /* Project object */;
+	rootObject = 73D954AB2CD159FE002928CF /* Project object */;
 }

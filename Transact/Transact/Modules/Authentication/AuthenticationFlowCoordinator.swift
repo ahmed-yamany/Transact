@@ -18,6 +18,12 @@ protocol AuthenticationFlowCoordinatorInterface {
 struct AuthenticationFlowCoordinator: AuthenticationFlowCoordinatorInterface, View {
     @StateObject var router = TransactFactoryContainer.router()
 
+    let transactCoordinator: TransactCoordinatorInterface
+
+    init(transactCoordinator: TransactCoordinatorInterface) {
+        self.transactCoordinator = transactCoordinator
+    }
+
     var body: some View {
         RoutableNavigationStack(router: router)
             .onAppear {
@@ -30,11 +36,14 @@ struct AuthenticationFlowCoordinator: AuthenticationFlowCoordinatorInterface, Vi
     }
 
     func navigateToSignup() {
+        SignupFactoryContainer.coordinator(router, authenticationFlow: self).start()
     }
 
     func navigateToForgotPassword() {
+        ForgotPasswordFactoryContainer.coordinator(router, authenticationFlow: self).start()
     }
 
     func navigateToTabBar() {
+        transactCoordinator.checkAuthentication()
     }
 }

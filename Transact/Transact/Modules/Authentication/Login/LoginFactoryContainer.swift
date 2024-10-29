@@ -8,10 +8,17 @@
 import Coordinator
 import Login
 import SwiftUI
+import URLSessionHTTPClient
 
 struct LoginFactoryContainer {
+    static func service() -> LoginServiceInterface {
+        let client = URLSessionHTTPClient(session: .shared, enableLogger: true)
+
+        return LoginService(client: client)
+    }
+
     static func useCase() -> LoginUseCaseInterface {
-        LoginUseCase(service: LoginService())
+        LoginUseCase(service: Self.service())
     }
 
     @MainActor

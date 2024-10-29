@@ -10,7 +10,11 @@ import DesignSystem
 import Localization
 import SwiftUI
 
-struct TransactCoordinator<ViewModel: TransactViewModelInterface>: View {
+protocol TransactCoordinatorInterface {
+    func checkAuthentication()
+}
+
+struct TransactCoordinator<ViewModel: TransactViewModelInterface>: TransactCoordinatorInterface, View {
     @ObservedObject var languageSettings = LocalizationSettings.shared
     @ObservedObject var viewModel: ViewModel
 
@@ -28,7 +32,7 @@ struct TransactCoordinator<ViewModel: TransactViewModelInterface>: View {
             case .onboarding:
                 OnboardingFactoryContainer.coordinator()
             case .authentication:
-                AuthenticationFlowCoordinator()
+                AuthenticationFlowCoordinator(transactCoordinator: self)
             case .tabBar:
                 TabBarFlowCoordinator()
             }
@@ -36,5 +40,10 @@ struct TransactCoordinator<ViewModel: TransactViewModelInterface>: View {
         .tint(DesignSystem.Tokens.Colors.tint)
         .configureLanguageSettings(languageSettings)
         .environmentObject(viewModel)
+    }
+    
+    func checkAuthentication() {
+//        viewModel.checkAuthentication()
+        viewModel.flow = .tabBar
     }
 }

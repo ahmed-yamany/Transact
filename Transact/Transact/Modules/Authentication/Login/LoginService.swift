@@ -6,10 +6,16 @@
 //
 
 import Foundation
+import HTTPClient
 import Login
 
 class LoginService: LoginServiceInterface {
+    let client: HTTPClient
+
+    init(client: HTTPClient) {
+        self.client = client
+    }
+
     func login(_ model: LoginModel) async throws {
-        
     }
 }

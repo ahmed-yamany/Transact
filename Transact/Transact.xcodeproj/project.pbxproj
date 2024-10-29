@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		7302A6132CCBF0680078D08C /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7302A6122CCBF0680078D08C /* LoginService.swift */; };
+		73ECBA342CD1565900715062 /* SignupCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ECBA332CD1565900715062 /* SignupCoordinator.swift */; };
+		73ECBA362CD1566400715062 /* Signup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73ECBA352CD1566400715062 /* Signup.framework */; };
+		73ECBA372CD1566400715062 /* Signup.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73ECBA352CD1566400715062 /* Signup.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		73ECBA392CD1571100715062 /* SignupFactoryContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ECBA382CD1571100715062 /* SignupFactoryContainer.swift */; };
+		73ECBA492CD15BA800715062 /* ForgotPasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ECBA482CD15BA800715062 /* ForgotPasswordCoordinator.swift */; };
+		73ECBA4B2CD15BB000715062 /* ForgotPassword.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73ECBA4A2CD15BB000715062 /* ForgotPassword.framework */; };
+		73ECBA4C2CD15BB000715062 /* ForgotPassword.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73ECBA4A2CD15BB000715062 /* ForgotPassword.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		73ECBA4E2CD15C7500715062 /* ForgotPasswordFactoryContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ECBA4D2CD15C7500715062 /* ForgotPasswordFactoryContainer.swift */; };
 		EE018F322CB6A68800235DD9 /* HTTPClient in Resources */ = {isa = PBXBuildFile; fileRef = EE018F2D2CB6A68800235DD9 /* HTTPClient */; };
 		EE018F332CB6A68800235DD9 /* SwiftUIViews in Resources */ = {isa = PBXBuildFile; fileRef = EE018F2E2CB6A68800235DD9 /* SwiftUIViews */; };
 		EE018F342CB6A68800235DD9 /* URLSessionHTTPClient in Resources */ = {isa = PBXBuildFile; fileRef = EE018F2F2CB6A68800235DD9 /* URLSessionHTTPClient */; };
@@ -52,9 +60,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				73ECBA4C2CD15BB000715062 /* ForgotPassword.framework in Embed Frameworks */,
 				EE46AE632CB7285300C5F23B /* Splash.framework in Embed Frameworks */,
 				EEC175322CC18A12005966B1 /* Onboarding.framework in Embed Frameworks */,
 				EED75A862CBBB0BE00F0F206 /* Coordinator.framework in Embed Frameworks */,
+				73ECBA372CD1566400715062 /* Signup.framework in Embed Frameworks */,
 				EEF3A85C2CA1B37100C6BC3E /* DesignSystem.framework in Embed Frameworks */,
 				EE849F6A2CC4250F00A7B18E /* Login.framework in Embed Frameworks */,
 				EEF25F6E2CC14E4A00407E09 /* Localization.framework in Embed Frameworks */,
@@ -66,6 +76,12 @@
 
 /* Begin PBXFileReference section */
 		7302A6122CCBF0680078D08C /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		73ECBA332CD1565900715062 /* SignupCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupCoordinator.swift; sourceTree = "<group>"; };
+		73ECBA352CD1566400715062 /* Signup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Signup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73ECBA382CD1571100715062 /* SignupFactoryContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFactoryContainer.swift; sourceTree = "<group>"; };
+		73ECBA482CD15BA800715062 /* ForgotPasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordCoordinator.swift; sourceTree = "<group>"; };
+		73ECBA4A2CD15BB000715062 /* ForgotPassword.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ForgotPassword.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73ECBA4D2CD15C7500715062 /* ForgotPasswordFactoryContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordFactoryContainer.swift; sourceTree = "<group>"; };
 		EE018F2D2CB6A68800235DD9 /* HTTPClient */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = HTTPClient; sourceTree = "<group>"; };
 		EE018F2E2CB6A68800235DD9 /* SwiftUIViews */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftUIViews; sourceTree = "<group>"; };
 		EE018F2F2CB6A68800235DD9 /* URLSessionHTTPClient */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = URLSessionHTTPClient; sourceTree = "<group>"; };
@@ -108,7 +124,9 @@
 				EEF25F6D2CC14E4A00407E09 /* Localization.framework in Frameworks */,
 				EED75A852CBBB0BE00F0F206 /* Coordinator.framework in Frameworks */,
 				EEC175312CC18A12005966B1 /* Onboarding.framework in Frameworks */,
+				73ECBA362CD1566400715062 /* Signup.framework in Frameworks */,
 				EE7958B02C9C688C00C61658 /* URLSessionHTTPClient in Frameworks */,
+				73ECBA4B2CD15BB000715062 /* ForgotPassword.framework in Frameworks */,
 				EE46AE622CB7285300C5F23B /* Splash.framework in Frameworks */,
 				EEF3A85B2CA1B37100C6BC3E /* DesignSystem.framework in Frameworks */,
 				EE849F692CC4250F00A7B18E /* Login.framework in Frameworks */,
@@ -119,6 +137,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73ECBA322CD1562500715062 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				73ECBA332CD1565900715062 /* SignupCoordinator.swift */,
+				73ECBA382CD1571100715062 /* SignupFactoryContainer.swift */,
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		73ECBA472CD15B8E00715062 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				73ECBA482CD15BA800715062 /* ForgotPasswordCoordinator.swift */,
+				73ECBA4D2CD15C7500715062 /* ForgotPasswordFactoryContainer.swift */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
 		EE018F302CB6A68800235DD9 /* SwiftPackages */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +200,8 @@
 			children = (
 				EEC175062CC157E5005966B1 /* AuthenticationFlowCoordinator.swift */,
 				EE849F632CC424E600A7B18E /* Login */,
+				73ECBA322CD1562500715062 /* Signup */,
+				73ECBA472CD15B8E00715062 /* ForgotPassword */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -241,6 +279,8 @@
 		EEF3A8592CA1B37100C6BC3E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				73ECBA4A2CD15BB000715062 /* ForgotPassword.framework */,
+				73ECBA352CD1566400715062 /* Signup.framework */,
 				EE849F682CC4250F00A7B18E /* Login.framework */,
 				EEC175302CC18A12005966B1 /* Onboarding.framework */,
 				EEF25F6C2CC14E4A00407E09 /* Localization.framework */,
@@ -360,10 +400,13 @@
 				EED8F60F2C999B1000B11D2B /* AppDelegate.swift in Sources */,
 				EED8F5FF2C9996C900B11D2B /* TransactCoordinator.swift in Sources */,
 				EE46AE6D2CB7289200C5F23B /* SplashCoordinator.swift in Sources */,
+				73ECBA392CD1571100715062 /* SignupFactoryContainer.swift in Sources */,
 				EE46AE6E2CB7289200C5F23B /* SplashFactoryContainer.swift in Sources */,
 				EEC175022CC15702005966B1 /* TransactViewModel.swift in Sources */,
 				EEC175042CC157A4005966B1 /* TransactFlow.swift in Sources */,
 				7302A6132CCBF0680078D08C /* LoginService.swift in Sources */,
+				73ECBA342CD1565900715062 /* SignupCoordinator.swift in Sources */,
+				73ECBA4E2CD15C7500715062 /* ForgotPasswordFactoryContainer.swift in Sources */,
 				EEC175342CC18B1C005966B1 /* OnboardingFactoryContainer.swift in Sources */,
 				EE6EA45C2CC3E4FF00BBC748 /* OnboardingService.swift in Sources */,
 				EEC175072CC157E5005966B1 /* AuthenticationFlowCoordinator.swift in Sources */,
@@ -371,6 +414,7 @@
 				EEC1752F2CC18A05005966B1 /* OnboardingCoordinator.swift in Sources */,
 				EE849F672CC4250600A7B18E /* LoginCoordinator.swift in Sources */,
 				EEC1750A2CC15812005966B1 /* TabBarFlowCoordinator.swift in Sources */,
+				73ECBA492CD15BA800715062 /* ForgotPasswordCoordinator.swift in Sources */,
 				EED8F5F02C9995A100B11D2B /* TransactApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

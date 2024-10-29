@@ -7,136 +7,86 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		73DA36C32CCFF1BD00483A30 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA36C02CCFF1BD00483A30 /* LoginModel.swift */; };
-		73DA36C42CCFF1BD00483A30 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA36C22CCFF1BD00483A30 /* LoginService.swift */; };
-		73DA36C62CCFF1BD00483A30 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA36C52CCFF1BD00483A30 /* LoginUseCase.swift */; };
-		EE849F5E2CC4241200A7B18E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE849F5D2CC4241200A7B18E /* LoginView.swift */; };
-		EE849F602CC4241800A7B18E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE849F5F2CC4241800A7B18E /* LoginViewModel.swift */; };
-		EE849F622CC4242100A7B18E /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE849F612CC4242100A7B18E /* LoginCoordinator.swift */; };
-		EE849F6D2CC4274C00A7B18E /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE849F6C2CC4274C00A7B18E /* DesignSystem.framework */; };
-		EE849F6E2CC4274C00A7B18E /* DesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE849F6C2CC4274C00A7B18E /* DesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EE849F712CC4275400A7B18E /* Localization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE849F702CC4275400A7B18E /* Localization.framework */; };
-		EE849F722CC4275400A7B18E /* Localization.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE849F702CC4275400A7B18E /* Localization.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EE849F782CC42A3B00A7B18E /* DesignSystemTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE849F772CC42A3B00A7B18E /* DesignSystemTokens.swift */; };
+		73ECBA272CD154B200715062 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ECBA262CD154B200715062 /* SignupView.swift */; };
+		73ECBA292CD154BB00715062 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ECBA282CD154BB00715062 /* SignupViewModel.swift */; };
+		73ECBA2B2CD154C400715062 /* SignupCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ECBA2A2CD154C400715062 /* SignupCoordinator.swift */; };
+		73ECBA302CD154E600715062 /* SignupUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ECBA2F2CD154E600715062 /* SignupUseCase.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		EE849F6F2CC4274C00A7B18E /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				EE849F6E2CC4274C00A7B18E /* DesignSystem.framework in Embed Frameworks */,
-				EE849F722CC4275400A7B18E /* Localization.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		73DA36C02CCFF1BD00483A30 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
-		73DA36C22CCFF1BD00483A30 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
-		73DA36C52CCFF1BD00483A30 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
-		EE849F512CC423EA00A7B18E /* Login.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Login.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE849F5D2CC4241200A7B18E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		EE849F5F2CC4241800A7B18E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		EE849F612CC4242100A7B18E /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
-		EE849F6C2CC4274C00A7B18E /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE849F702CC4275400A7B18E /* Localization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Localization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE849F772CC42A3B00A7B18E /* DesignSystemTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemTokens.swift; sourceTree = "<group>"; };
+		7304FDBE2CD15461006C7337 /* Signup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Signup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73ECBA262CD154B200715062 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		73ECBA282CD154BB00715062 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		73ECBA2A2CD154C400715062 /* SignupCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupCoordinator.swift; sourceTree = "<group>"; };
+		73ECBA2F2CD154E600715062 /* SignupUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EE849F4E2CC423EA00A7B18E /* Frameworks */ = {
+		7304FDBB2CD15460006C7337 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE849F6D2CC4274C00A7B18E /* DesignSystem.framework in Frameworks */,
-				EE849F712CC4275400A7B18E /* Localization.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		73DA36CC2CCFF25B00483A30 /* Data */ = {
+		7304FDB42CD15460006C7337 = {
 			isa = PBXGroup;
 			children = (
-				73DA36CD2CCFF26300483A30 /* Model */,
-				73DA36C22CCFF1BD00483A30 /* LoginService.swift */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		73DA36CD2CCFF26300483A30 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				73DA36C02CCFF1BD00483A30 /* LoginModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		73DA36CF2CCFF28F00483A30 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				73DA36C52CCFF1BD00483A30 /* LoginUseCase.swift */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		EE849F472CC423EA00A7B18E = {
-			isa = PBXGroup;
-			children = (
-				EE849F532CC423EA00A7B18E /* Login */,
-				EE849F522CC423EA00A7B18E /* Products */,
-				EE849F6B2CC4274C00A7B18E /* Frameworks */,
+				7304FDC02CD15461006C7337 /* Signup */,
+				7304FDBF2CD15461006C7337 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		EE849F522CC423EA00A7B18E /* Products */ = {
+		7304FDBF2CD15461006C7337 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EE849F512CC423EA00A7B18E /* Login.framework */,
+				7304FDBE2CD15461006C7337 /* Signup.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EE849F532CC423EA00A7B18E /* Login */ = {
+		7304FDC02CD15461006C7337 /* Signup */ = {
 			isa = PBXGroup;
 			children = (
-				73DA36CC2CCFF25B00483A30 /* Data */,
-				73DA36CF2CCFF28F00483A30 /* Domain */,
-				EE849F5B2CC423FF00A7B18E /* Presentation */,
+				73ECBA2E2CD154DC00715062 /* Data */,
+				73ECBA2D2CD154D700715062 /* Domain */,
+				73ECBA252CD154A600715062 /* Presentation */,
 			);
-			path = Login;
+			path = Signup;
 			sourceTree = "<group>";
 		};
-		EE849F5B2CC423FF00A7B18E /* Presentation */ = {
+		73ECBA252CD154A600715062 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				EE849F772CC42A3B00A7B18E /* DesignSystemTokens.swift */,
-				EE849F5D2CC4241200A7B18E /* LoginView.swift */,
-				EE849F5F2CC4241800A7B18E /* LoginViewModel.swift */,
-				EE849F612CC4242100A7B18E /* LoginCoordinator.swift */,
+				73ECBA262CD154B200715062 /* SignupView.swift */,
+				73ECBA282CD154BB00715062 /* SignupViewModel.swift */,
+				73ECBA2A2CD154C400715062 /* SignupCoordinator.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		EE849F6B2CC4274C00A7B18E /* Frameworks */ = {
+		73ECBA2D2CD154D700715062 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				EE849F702CC4275400A7B18E /* Localization.framework */,
-				EE849F6C2CC4274C00A7B18E /* DesignSystem.framework */,
+				73ECBA2F2CD154E600715062 /* SignupUseCase.swift */,
 			);
-			name = Frameworks;
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		73ECBA2E2CD154DC00715062 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		EE849F4C2CC423EA00A7B18E /* Headers */ = {
+		7304FDB92CD15460006C7337 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -146,41 +96,40 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		EE849F502CC423EA00A7B18E /* Login */ = {
+		7304FDBD2CD15460006C7337 /* Signup */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EE849F582CC423EA00A7B18E /* Build configuration list for PBXNativeTarget "Login" */;
+			buildConfigurationList = 7304FDC52CD15461006C7337 /* Build configuration list for PBXNativeTarget "Signup" */;
 			buildPhases = (
-				EE849F4C2CC423EA00A7B18E /* Headers */,
-				EE849F4D2CC423EA00A7B18E /* Sources */,
-				EE849F4E2CC423EA00A7B18E /* Frameworks */,
-				EE849F4F2CC423EA00A7B18E /* Resources */,
-				EE849F6F2CC4274C00A7B18E /* Embed Frameworks */,
+				7304FDB92CD15460006C7337 /* Headers */,
+				7304FDBA2CD15460006C7337 /* Sources */,
+				7304FDBB2CD15460006C7337 /* Frameworks */,
+				7304FDBC2CD15460006C7337 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Login;
-			productName = Login;
-			productReference = EE849F512CC423EA00A7B18E /* Login.framework */;
+			name = Signup;
+			productName = Signup;
+			productReference = 7304FDBE2CD15461006C7337 /* Signup.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		EE849F482CC423EA00A7B18E /* Project object */ = {
+		7304FDB52CD15460006C7337 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1600;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
-					EE849F502CC423EA00A7B18E = {
+					7304FDBD2CD15460006C7337 = {
 						CreatedOnToolsVersion = 15.4;
-						LastSwiftMigration = 1540;
+						LastSwiftMigration = 1600;
 					};
 				};
 			};
-			buildConfigurationList = EE849F4B2CC423EA00A7B18E /* Build configuration list for PBXProject "Login" */;
+			buildConfigurationList = 7304FDB82CD15460006C7337 /* Build configuration list for PBXProject "Signup" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -188,18 +137,18 @@
 				en,
 				Base,
 			);
-			mainGroup = EE849F472CC423EA00A7B18E;
-			productRefGroup = EE849F522CC423EA00A7B18E /* Products */;
+			mainGroup = 7304FDB42CD15460006C7337;
+			productRefGroup = 7304FDBF2CD15461006C7337 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EE849F502CC423EA00A7B18E /* Login */,
+				7304FDBD2CD15460006C7337 /* Signup */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		EE849F4F2CC423EA00A7B18E /* Resources */ = {
+		7304FDBC2CD15460006C7337 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -209,24 +158,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EE849F4D2CC423EA00A7B18E /* Sources */ = {
+		7304FDBA2CD15460006C7337 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73DA36C32CCFF1BD00483A30 /* LoginModel.swift in Sources */,
-				73DA36C42CCFF1BD00483A30 /* LoginService.swift in Sources */,
-				EE849F622CC4242100A7B18E /* LoginCoordinator.swift in Sources */,
-				EE849F602CC4241800A7B18E /* LoginViewModel.swift in Sources */,
-				73DA36C62CCFF1BD00483A30 /* LoginUseCase.swift in Sources */,
-				EE849F782CC42A3B00A7B18E /* DesignSystemTokens.swift in Sources */,
-				EE849F5E2CC4241200A7B18E /* LoginView.swift in Sources */,
+				73ECBA292CD154BB00715062 /* SignupViewModel.swift in Sources */,
+				73ECBA302CD154E600715062 /* SignupUseCase.swift in Sources */,
+				73ECBA2B2CD154C400715062 /* SignupCoordinator.swift in Sources */,
+				73ECBA272CD154B200715062 /* SignupView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		EE849F562CC423EA00A7B18E /* Debug */ = {
+		7304FDC32CD15461006C7337 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -279,12 +225,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -292,7 +236,7 @@
 			};
 			name = Debug;
 		};
-		EE849F572CC423EA00A7B18E /* Release */ = {
+		7304FDC42CD15461006C7337 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -339,22 +283,20 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		EE849F592CC423EA00A7B18E /* Debug */ = {
+		7304FDC62CD15461006C7337 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -367,18 +309,24 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yamany.Login;
+				PRODUCT_BUNDLE_IDENTIFIER = yamany.Signup;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = auto;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -387,10 +335,11 @@
 			};
 			name = Debug;
 		};
-		EE849F5A2CC423EA00A7B18E /* Release */ = {
+		7304FDC72CD15461006C7337 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -403,18 +352,24 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yamany.Login;
+				PRODUCT_BUNDLE_IDENTIFIER = yamany.Signup;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = auto;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_VERSION = 5.0;
@@ -425,25 +380,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EE849F4B2CC423EA00A7B18E /* Build configuration list for PBXProject "Login" */ = {
+		7304FDB82CD15460006C7337 /* Build configuration list for PBXProject "Signup" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EE849F562CC423EA00A7B18E /* Debug */,
-				EE849F572CC423EA00A7B18E /* Release */,
+				7304FDC32CD15461006C7337 /* Debug */,
+				7304FDC42CD15461006C7337 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EE849F582CC423EA00A7B18E /* Build configuration list for PBXNativeTarget "Login" */ = {
+		7304FDC52CD15461006C7337 /* Build configuration list for PBXNativeTarget "Signup" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EE849F592CC423EA00A7B18E /* Debug */,
-				EE849F5A2CC423EA00A7B18E /* Release */,
+				7304FDC62CD15461006C7337 /* Debug */,
+				7304FDC72CD15461006C7337 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = EE849F482CC423EA00A7B18E /* Project object */;
+	rootObject = 7304FDB52CD15460006C7337 /* Project object */;
 }

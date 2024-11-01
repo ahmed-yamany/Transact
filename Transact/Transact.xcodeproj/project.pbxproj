@@ -16,6 +16,10 @@
 		735BEBCA2CD3B44C00AA4FA3 /* SignupPasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735BEBC82CD3B44C00AA4FA3 /* SignupPasswordCoordinator.swift */; };
 		735BEBCB2CD3B44C00AA4FA3 /* SignupPasswordFactoryContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735BEBC92CD3B44C00AA4FA3 /* SignupPasswordFactoryContainer.swift */; };
 		735BEBCC2CD3B44C00AA4FA3 /* SignupPasswordContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735BEBC72CD3B44C00AA4FA3 /* SignupPasswordContent.swift */; };
+		73DA17372CD4FE300002DDD2 /* SignupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA17362CD4FE300002DDD2 /* SignupService.swift */; };
+		73E92D352CD507F500A4A640 /* OTPViewModelEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E92D342CD507F500A4A640 /* OTPViewModelEntityMapper.swift */; };
+		73E92D532CD5234B00A4A640 /* SignupVerifyOtpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E92D522CD5234B00A4A640 /* SignupVerifyOtpService.swift */; };
+		73E92D572CD526C000A4A640 /* SignupResendOtpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E92D562CD526C000A4A640 /* SignupResendOtpService.swift */; };
 		73ECBA342CD1565900715062 /* SignupCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ECBA332CD1565900715062 /* SignupCoordinator.swift */; };
 		73ECBA362CD1566400715062 /* Signup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73ECBA352CD1566400715062 /* Signup.framework */; };
 		73ECBA372CD1566400715062 /* Signup.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73ECBA352CD1566400715062 /* Signup.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -94,6 +98,10 @@
 		735BEBC72CD3B44C00AA4FA3 /* SignupPasswordContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPasswordContent.swift; sourceTree = "<group>"; };
 		735BEBC82CD3B44C00AA4FA3 /* SignupPasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPasswordCoordinator.swift; sourceTree = "<group>"; };
 		735BEBC92CD3B44C00AA4FA3 /* SignupPasswordFactoryContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPasswordFactoryContainer.swift; sourceTree = "<group>"; };
+		73DA17362CD4FE300002DDD2 /* SignupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupService.swift; sourceTree = "<group>"; };
+		73E92D342CD507F500A4A640 /* OTPViewModelEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewModelEntityMapper.swift; sourceTree = "<group>"; };
+		73E92D522CD5234B00A4A640 /* SignupVerifyOtpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVerifyOtpService.swift; sourceTree = "<group>"; };
+		73E92D562CD526C000A4A640 /* SignupResendOtpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupResendOtpService.swift; sourceTree = "<group>"; };
 		73ECBA332CD1565900715062 /* SignupCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupCoordinator.swift; sourceTree = "<group>"; };
 		73ECBA352CD1566400715062 /* Signup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Signup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73ECBA382CD1571100715062 /* SignupFactoryContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupFactoryContainer.swift; sourceTree = "<group>"; };
@@ -160,6 +168,8 @@
 		73199EA72CD2BF0C00C96DBD /* Signup */ = {
 			isa = PBXGroup;
 			children = (
+				73E92D332CD507F200A4A640 /* Mapper */,
+				73DA17362CD4FE300002DDD2 /* SignupService.swift */,
 				73ECBA332CD1565900715062 /* SignupCoordinator.swift */,
 				73ECBA382CD1571100715062 /* SignupFactoryContainer.swift */,
 			);
@@ -169,6 +179,8 @@
 		73199EA82CD2BF1600C96DBD /* OTP */ = {
 			isa = PBXGroup;
 			children = (
+				73E92D562CD526C000A4A640 /* SignupResendOtpService.swift */,
+				73E92D522CD5234B00A4A640 /* SignupVerifyOtpService.swift */,
 				73370F6A2CD3AAA300501AE0 /* SignupOTPContent.swift */,
 				73199EAA2CD2BF2700C96DBD /* SignupOTPCoordinator.swift */,
 				73199EAF2CD2BF5000C96DBD /* SignupOTPFactoryContainer.swift */,
@@ -184,6 +196,14 @@
 				735BEBC92CD3B44C00AA4FA3 /* SignupPasswordFactoryContainer.swift */,
 			);
 			path = Password;
+			sourceTree = "<group>";
+		};
+		73E92D332CD507F200A4A640 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				73E92D342CD507F500A4A640 /* OTPViewModelEntityMapper.swift */,
+			);
+			path = Mapper;
 			sourceTree = "<group>";
 		};
 		73ECBA322CD1562500715062 /* Signup */ = {
@@ -457,8 +477,12 @@
 				EEC175072CC157E5005966B1 /* AuthenticationFlow.swift in Sources */,
 				EEFBB0BE2CBD58CC00AC4A7B /* TransactFactoryContainer.swift in Sources */,
 				EEC1752F2CC18A05005966B1 /* OnboardingCoordinator.swift in Sources */,
+				73E92D352CD507F500A4A640 /* OTPViewModelEntityMapper.swift in Sources */,
+				73E92D572CD526C000A4A640 /* SignupResendOtpService.swift in Sources */,
+				73E92D532CD5234B00A4A640 /* SignupVerifyOtpService.swift in Sources */,
 				EE849F672CC4250600A7B18E /* LoginCoordinator.swift in Sources */,
 				EEC1750A2CC15812005966B1 /* TabBarFlow.swift in Sources */,
+				73DA17372CD4FE300002DDD2 /* SignupService.swift in Sources */,
 				735BEBCA2CD3B44C00AA4FA3 /* SignupPasswordCoordinator.swift in Sources */,
 				735BEBCB2CD3B44C00AA4FA3 /* SignupPasswordFactoryContainer.swift in Sources */,
 				735BEBCC2CD3B44C00AA4FA3 /* SignupPasswordContent.swift in Sources */,

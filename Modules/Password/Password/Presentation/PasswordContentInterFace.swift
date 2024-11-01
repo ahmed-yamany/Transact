@@ -9,6 +9,4 @@ import Foundation
 
 public protocol PasswordContentInterFace {
     var header: String { get }
-    var title: String { get }
-    var subtitle: String { get }
 }

@@ -50,6 +50,8 @@ public final class SignupViewModel: SignupViewModelInterface {
     private var fullNameValidationCancellable: Cancellable?
     private var fullNameValidatorTask: Task<Void, Never>?
 
+    private var signupTask: Task<Void, Never>?
+
     private let useCase: SignupUseCaseInterface
     private let coordinator: SignupCoordinatorInterface
 
@@ -67,7 +69,14 @@ public final class SignupViewModel: SignupViewModelInterface {
     }
 
     public func signupButtonTapped() {
-        coordinator.navigateToConfirmSignup()
+        signupTask?.cancel()
+        signupTask = Task {
+            do {
+                let response: SignupResponseEntity = try await useCase.signupNewUser(phoneNumber: phoneNumber, fullName: fullName)
+                coordinator.navigateToConfirmSignup(response)
+            } catch {
+            }
+        }
     }
 
     private func bindPhoneNumberValidation() {

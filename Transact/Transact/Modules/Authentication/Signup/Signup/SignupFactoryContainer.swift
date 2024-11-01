@@ -8,10 +8,16 @@
 import Coordinator
 import Signup
 import SwiftUI
+import URLSessionHTTPClient
 
 struct SignupFactoryContainer {
+    static func service() -> SignupServiceInterface {
+        let client = URLSessionHTTPClient(session: .shared, enableLogger: true)
+        return SignupService(client: client)
+    }
+
     static func useCase() -> SignupUseCaseInterface {
-        SignupUseCase()
+        SignupUseCase(service: Self.service())
     }
 
     @MainActor

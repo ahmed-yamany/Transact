@@ -17,6 +17,8 @@
 		73DA17262CD425D60002DDD2 /* PhoneNumberLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA17252CD425D60002DDD2 /* PhoneNumberLengthValidator.swift */; };
 		73DA17282CD4338B0002DDD2 /* PhoneNumberInvalidCharachterValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA17272CD4338B0002DDD2 /* PhoneNumberInvalidCharachterValidator.swift */; };
 		73DA172C2CD435AD0002DDD2 /* FullNameLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA172B2CD435AD0002DDD2 /* FullNameLengthValidator.swift */; };
+		73E92D392CD5182C00A4A640 /* OTPLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E92D382CD5182C00A4A640 /* OTPLengthValidator.swift */; };
+		73E92D3E2CD5196300A4A640 /* OTPInvalidCharactersValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E92D3D2CD5196300A4A640 /* OTPInvalidCharactersValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +46,8 @@
 		73DA17252CD425D60002DDD2 /* PhoneNumberLengthValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberLengthValidator.swift; sourceTree = "<group>"; };
 		73DA17272CD4338B0002DDD2 /* PhoneNumberInvalidCharachterValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberInvalidCharachterValidator.swift; sourceTree = "<group>"; };
 		73DA172B2CD435AD0002DDD2 /* FullNameLengthValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullNameLengthValidator.swift; sourceTree = "<group>"; };
+		73E92D382CD5182C00A4A640 /* OTPLengthValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPLengthValidator.swift; sourceTree = "<group>"; };
+		73E92D3D2CD5196300A4A640 /* OTPInvalidCharactersValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPInvalidCharactersValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 		73DA171A2CD4247A0002DDD2 /* Validators */ = {
 			isa = PBXGroup;
 			children = (
+				73E92D372CD517DF00A4A640 /* OTPValidators */,
 				73DA172A2CD4358D0002DDD2 /* FullNameValidators */,
 				73DA17292CD4357F0002DDD2 /* PhoneNumberValidators */,
 			);
@@ -128,6 +133,15 @@
 				73DA172B2CD435AD0002DDD2 /* FullNameLengthValidator.swift */,
 			);
 			path = FullNameValidators;
+			sourceTree = "<group>";
+		};
+		73E92D372CD517DF00A4A640 /* OTPValidators */ = {
+			isa = PBXGroup;
+			children = (
+				73E92D382CD5182C00A4A640 /* OTPLengthValidator.swift */,
+				73E92D3D2CD5196300A4A640 /* OTPInvalidCharactersValidator.swift */,
+			);
+			path = OTPValidators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +235,8 @@
 				73DA171C2CD424860002DDD2 /* EmptyPhoneNumberValidator.swift in Sources */,
 				73DA17282CD4338B0002DDD2 /* PhoneNumberInvalidCharachterValidator.swift in Sources */,
 				73DA17192CD424240002DDD2 /* AnyValidator.swift in Sources */,
+				73E92D3E2CD5196300A4A640 /* OTPInvalidCharactersValidator.swift in Sources */,
+				73E92D392CD5182C00A4A640 /* OTPLengthValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

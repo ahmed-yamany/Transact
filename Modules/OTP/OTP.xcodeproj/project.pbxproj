@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,12 @@
 		73D7E4CC2CD2BB23001B2DAF /* OTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7E4CB2CD2BB23001B2DAF /* OTPViewModel.swift */; };
 		73D7E4CE2CD2BB2C001B2DAF /* OTPCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7E4CD2CD2BB2C001B2DAF /* OTPCoordinator.swift */; };
 		73D7E4D02CD2BB39001B2DAF /* OTPUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7E4CF2CD2BB39001B2DAF /* OTPUseCase.swift */; };
+		73E92D322CD5069900A4A640 /* OTPViewModelEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E92D312CD5069900A4A640 /* OTPViewModelEntity.swift */; };
+		73E92D3B2CD5191600A4A640 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E92D3A2CD5191600A4A640 /* Shared.framework */; };
+		73E92D3C2CD5191600A4A640 /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73E92D3A2CD5191600A4A640 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		73E92D4F2CD5221600A4A640 /* OTPRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E92D4E2CD5221600A4A640 /* OTPRepository.swift */; };
+		73E92D512CD5228E00A4A640 /* VerifyOTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E92D502CD5228E00A4A640 /* VerifyOTPService.swift */; };
+		73E92D552CD5267800A4A640 /* ResendOTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E92D542CD5267800A4A640 /* ResendOTPService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +33,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				73370F612CD3A84200501AE0 /* DesignSystem.framework in Embed Frameworks */,
+				73E92D3C2CD5191600A4A640 /* Shared.framework in Embed Frameworks */,
 				73370F652CD3A84800501AE0 /* Localization.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -44,6 +51,11 @@
 		73D7E4CB2CD2BB23001B2DAF /* OTPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewModel.swift; sourceTree = "<group>"; };
 		73D7E4CD2CD2BB2C001B2DAF /* OTPCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCoordinator.swift; sourceTree = "<group>"; };
 		73D7E4CF2CD2BB39001B2DAF /* OTPUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPUseCase.swift; sourceTree = "<group>"; };
+		73E92D312CD5069900A4A640 /* OTPViewModelEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewModelEntity.swift; sourceTree = "<group>"; };
+		73E92D3A2CD5191600A4A640 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73E92D4E2CD5221600A4A640 /* OTPRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPRepository.swift; sourceTree = "<group>"; };
+		73E92D502CD5228E00A4A640 /* VerifyOTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOTPService.swift; sourceTree = "<group>"; };
+		73E92D542CD5267800A4A640 /* ResendOTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResendOTPService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73370F602CD3A84200501AE0 /* DesignSystem.framework in Frameworks */,
+				73E92D3B2CD5191600A4A640 /* Shared.framework in Frameworks */,
 				73370F642CD3A84800501AE0 /* Localization.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +75,7 @@
 		73370F5E2CD3A84200501AE0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				73E92D3A2CD5191600A4A640 /* Shared.framework */,
 				73370F632CD3A84800501AE0 /* Localization.framework */,
 				73370F5F2CD3A84200501AE0 /* DesignSystem.framework */,
 			);
@@ -110,6 +124,8 @@
 		73D7E4C72CD2BAFF001B2DAF /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				73E92D302CD5069300A4A640 /* Entities */,
+				73E92D4E2CD5221600A4A640 /* OTPRepository.swift */,
 				73D7E4CF2CD2BB39001B2DAF /* OTPUseCase.swift */,
 			);
 			path = Domain;
@@ -118,8 +134,18 @@
 		73D7E4C82CD2BB03001B2DAF /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				73E92D502CD5228E00A4A640 /* VerifyOTPService.swift */,
+				73E92D542CD5267800A4A640 /* ResendOTPService.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		73E92D302CD5069300A4A640 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				73E92D312CD5069900A4A640 /* OTPViewModelEntity.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,10 +232,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				73D7E4CC2CD2BB23001B2DAF /* OTPViewModel.swift in Sources */,
+				73E92D512CD5228E00A4A640 /* VerifyOTPService.swift in Sources */,
+				73E92D4F2CD5221600A4A640 /* OTPRepository.swift in Sources */,
 				73370F672CD3A87300501AE0 /* DesignSystemTokens.swift in Sources */,
 				73D7E4CE2CD2BB2C001B2DAF /* OTPCoordinator.swift in Sources */,
 				73D7E4CA2CD2BB1D001B2DAF /* OTPView.swift in Sources */,
+				73E92D552CD5267800A4A640 /* ResendOTPService.swift in Sources */,
 				73D7E4D02CD2BB39001B2DAF /* OTPUseCase.swift in Sources */,
+				73E92D322CD5069900A4A640 /* OTPViewModelEntity.swift in Sources */,
 				73370F692CD3AA3A00501AE0 /* OTPContentInterFace.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

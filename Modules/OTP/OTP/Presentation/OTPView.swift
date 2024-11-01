@@ -21,7 +21,13 @@ public struct OTPView<ViewModel: OTPViewModelInterface>: View {
     public var body: some View {
         ScrollView {
             VStack(spacing: .measurements.Spacing.xxxLarge) {
-                AuthenticationView(title: content.title, subtitle: content.subtitle)
+                AuthenticationView(
+                    title: L10n.Otp.title,
+                    subtitle: L10n.Otp.subtitle(
+                        viewModel.phonenumber,
+                        viewModel.otpCodeExpiresIn
+                    )
+                )
 
                 PrimaryOTPTextField(otp: $viewModel.otp, otpLength: viewModel.otpLength)
 
@@ -53,6 +59,7 @@ public struct OTPView<ViewModel: OTPViewModelInterface>: View {
             }
         }
         .buttonStyle(.text())
+        .disabled(viewModel.disableResendButton)
     }
 
     private var verifyButton: some View {
@@ -60,5 +67,6 @@ public struct OTPView<ViewModel: OTPViewModelInterface>: View {
             viewModel.verifyButtonTapped()
         }
         .buttonStyle(.primary())
+        .disabled(viewModel.disableVerifyButton)
     }
 }

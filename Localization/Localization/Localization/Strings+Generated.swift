@@ -72,6 +72,12 @@ public enum L10n {
     public static var emptyPhoneNumber: String { return L10n.tr("Localizable", "error.empty-phoneNumber", fallback: "Phone Number shouldn't be empty") }
     /// Full Name length shouldn't be less than 3 chrachters
     public static var fullNameLength: String { return L10n.tr("Localizable", "error.fullName-length", fallback: "Full Name length shouldn't be less than 3 chrachters") }
+    /// otp contains invalid charachers
+    public static var otpInvalidCharacters: String { return L10n.tr("Localizable", "error.otp-invalid-characters", fallback: "otp contains invalid charachers") }
+    /// The OTP code length shouldn't be less than %s
+    public static func otpLength(_ p1: UnsafePointer<CChar>) -> String {
+      return L10n.tr("Localizable", "error.otp-length", p1, fallback: "The OTP code length shouldn't be less than %s")
+    }
     /// Phone Number shouldn't contain invalid charachters
     public static var phoneNumberInvalidCharachters: String { return L10n.tr("Localizable", "error.phoneNumber-invalid-charachters", fallback: "Phone Number shouldn't contain invalid charachters") }
     /// Phone Number length shouldn't be empty less than 11
@@ -85,17 +91,17 @@ public enum L10n {
     /// Login to easily save, recieve and send money using just your phone number
     public static var subtitle: String { return L10n.tr("Localizable", "login.subtitle", fallback: "Login to easily save, recieve and send money using just your phone number") }
   }
+  public enum Otp {
+    /// OTP has been Sent to your phone number %s.  The code expires in %s
+    public static func subtitle(_ p1: UnsafePointer<CChar>, _ p2: UnsafePointer<CChar>) -> String {
+      return L10n.tr("Localizable", "otp.subtitle", p1, p2, fallback: "OTP has been Sent to your phone number %s.  The code expires in %s")
+    }
+    /// Please verify your Phone Number
+    public static var title: String { return L10n.tr("Localizable", "otp.title", fallback: "Please verify your Phone Number") }
+  }
   public enum Signup {
     /// Register to easily save, recieve and send money using just your phone number
     public static var subtitle: String { return L10n.tr("Localizable", "signup.subtitle", fallback: "Register to easily save, recieve and send money using just your phone number") }
-    public enum Otp {
-      /// OTP has been Sent to your phone number %s.  The code expires in %s
-      public static func subtitle(_ p1: UnsafePointer<CChar>, _ p2: UnsafePointer<CChar>) -> String {
-        return L10n.tr("Localizable", "signup.otp.subtitle", p1, p2, fallback: "OTP has been Sent to your phone number %s.  The code expires in %s")
-      }
-      /// Please verify your Phone Number
-      public static var title: String { return L10n.tr("Localizable", "signup.otp.title", fallback: "Please verify your Phone Number") }
-    }
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

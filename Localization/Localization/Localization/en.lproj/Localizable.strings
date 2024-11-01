@@ -40,14 +40,17 @@
 
 // MARK: - Signup
 "signup.subtitle" = "Register to easily save, recieve and send money using just your phone number";
-"signup.otp.title" = "Please verify your Phone Number";
-"signup.otp.subtitle" = "OTP has been Sent to your phone number %s.  The code expires in %s";
 
 // MARK: - Forgot Password
 "forgotPassword.subtitle" = "Please provide your phone number and change a new password";
 
+// MARK: - OTP
+"otp.title" = "Please verify your Phone Number";
+"otp.subtitle" = "OTP has been Sent to your phone number %s.  The code expires in %s";
 // MARK: - Error
 "error.empty-phoneNumber" = "Phone Number shouldn't be empty";
 "error.phoneNumber-length" = "Phone Number length shouldn't be empty less than 11";
 "error.phoneNumber-invalid-charachters" = "Phone Number shouldn't contain invalid charachters";
 "error.fullName-length" = "Full Name length shouldn't be less than 3 chrachters";
+"error.otp-length" = "The OTP code length shouldn't be less than %s";
+"error.otp-invalid-characters" = "otp contains invalid charachers";

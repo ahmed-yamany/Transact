@@ -33,6 +33,7 @@ public struct PrimaryOTPTextField: View {
                             .fill(DesignSystem.Tokens.Colors.secondaryText)
                     }
             }
+            .keyboardType(.numberPad)
     }
 
     private var roundedRectangle: some Shape {

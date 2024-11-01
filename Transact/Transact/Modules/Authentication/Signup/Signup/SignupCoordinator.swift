@@ -6,6 +6,7 @@
 //
 
 import Coordinator
+import OTP
 import Signup
 import SwiftUI
 
@@ -32,8 +33,9 @@ struct SignupCoordinator: Coordinator, SignupCoordinatorInterface, SignupFlowInt
         router.setView(view(self), animated: true, completion: nil)
     }
 
-    func navigateToConfirmSignup() {
-        SignupOTPFactoryContainer.coordinator(router, signupFlow: self).start()
+    func navigateToConfirmSignup(_ entity: SignupResponseEntity) {
+        let otpEntity = OTPViewModelEntity(signup: entity)
+        SignupOTPFactoryContainer.coordinator(router, signupFlow: self, entity: otpEntity).start()
     }
 
     func navigateToUpdatePassword() {

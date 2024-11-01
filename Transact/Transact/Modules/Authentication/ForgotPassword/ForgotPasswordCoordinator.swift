@@ -12,12 +12,12 @@ import SwiftUI
 final class ForgotPasswordCoordinator: Coordinator, ForgotPasswordCoordinatorInterface {
     let router: Router
     let view: (ForgotPasswordCoordinatorInterface) -> AnyView
-    let authenticationFlow: AuthenticationFlowCoordinatorInterface
+    let authenticationFlow: AuthenticationFlowInterface
 
     init(
         router: Router,
         view: @escaping (ForgotPasswordCoordinatorInterface) -> AnyView,
-        authenticationFlow: AuthenticationFlowCoordinatorInterface
+        authenticationFlow: AuthenticationFlowInterface
     ) {
         self.router = router
         self.view = view

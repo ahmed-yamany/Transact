@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Optional: @retroactive CustomStringConvertible where Wrapped == String {
+extension Optional: CustomStringConvertible where Wrapped == String {
     public var description: String {
         return self ?? ""
     }

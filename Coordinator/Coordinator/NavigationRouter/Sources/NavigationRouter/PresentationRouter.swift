@@ -30,13 +30,12 @@ public protocol PresentationRouterDelegate: AnyObject {
 /// A class responsible for managing the presentation and dismissal of view controllers.
 @MainActor
 open class PresentationRouter {
-    
     /// The root view controller from which other view controllers will be presented.
     public let rootViewController: UIViewController
-    
+
     /// A delegate to notify about presentation events and errors.
     public weak var delegate: PresentationRouterDelegate?
-    
+
     /// Initializes a new `PresentationRouter`.
     ///
     /// - Parameters:
@@ -46,11 +45,11 @@ open class PresentationRouter {
         self.rootViewController = rootViewController
         self.delegate = delegate
     }
-    
+
     /// The stack of currently presented view controllers.
     open var viewControllers: [UIViewController] {
         var stack: [UIViewController] = []
-        
+
         if var currentViewController = rootViewController.presentedViewController {
             stack.append(currentViewController)
             while let nextViewController = currentViewController.presentedViewController {
@@ -60,22 +59,22 @@ open class PresentationRouter {
         }
         return stack
     }
-    
+
     /// The top-most presented view controller.
     public var presentedViewController: UIViewController {
         guard let presentedViewController = viewControllers.last else {
             return rootViewController
         }
-        
+
         return presentedViewController
     }
-    
+
     /// The sheet presentation controller of the top-most presented view controller.
     @available(iOS 15.0, *)
     public var sheetPresentationController: UISheetPresentationController? {
         presentedViewController.sheetPresentationController
     }
-    
+
     /// Presents a view controller.
     ///
     /// - Parameters:
@@ -93,10 +92,10 @@ open class PresentationRouter {
     ) {
         viewController.modalPresentationStyle = presentationStyle
         viewController.modalTransitionStyle = transitionStyle
-        
+
         present(viewController, on: presentedViewController, animated: animated, completion: completion)
     }
-    
+
     private func present(
         _ viewController: UIViewController,
         on presentingViewController: UIViewController,
@@ -109,7 +108,7 @@ open class PresentationRouter {
             completion()
         }
     }
-    
+
     public func present(
         contentsOf viewControllersToPresent: [UIViewController],
         animated: Bool = true,
@@ -136,8 +135,7 @@ open class PresentationRouter {
             )
         }
     }
-    
-    
+
     /// Dismisses the top-most presented view controller.
     ///
     /// - Parameters:
@@ -150,14 +148,14 @@ open class PresentationRouter {
             }
             return
         }
-        
+
         lastPresentingViewController.dismiss(animated: animated) { [weak self] in
             guard let self else { return }
             delegate?.didDismissViewController(lastPresentingViewController)
             completion()
         }
     }
-    
+
     /// Dismisses all presented view controllers back to the root view controller.
     ///
     /// - Parameters:
@@ -167,13 +165,13 @@ open class PresentationRouter {
         guard presentedViewController.presentingViewController != nil else {
             return completion()
         }
-        
+
         dismiss(animated: animated) { [weak self] in
             guard let self else { return }
             dismissToRoot(animated: animated, completion: completion)
         }
     }
-    
+
     /// Replaces the last presented view controller with a new one.
     ///
     /// - Parameters:
@@ -200,7 +198,7 @@ open class PresentationRouter {
             )
         }
     }
-    
+
     /// Replaces the first presented view controller with a new one.
     ///
     /// - Parameters:
@@ -217,7 +215,7 @@ open class PresentationRouter {
         completion: @escaping () -> Void = {}
     ) {
         let viewControllers: [UIViewController] = [viewController] + self.viewControllers.removedFirst()
-        
+
         dismissToRoot(animated: false) { [weak self] in
             guard let self else { return }
             setPresentedViewControllers(
@@ -229,7 +227,7 @@ open class PresentationRouter {
             )
         }
     }
-    
+
     /// Inserts a view controller at a specific position in the stack of presented view controllers.
     ///
     /// - Parameters:
@@ -257,7 +255,7 @@ open class PresentationRouter {
             )
         }
     }
-    
+
     /// Presents an array of view controllers sequentially.
     ///
     /// - Parameters:
@@ -284,7 +282,7 @@ open class PresentationRouter {
             )
         }
     }
-    
+
     /// Presents a view controller with specified sheet presentation options.
     ///
     /// - Parameters:
@@ -324,7 +322,7 @@ open class PresentationRouter {
             completion: completion
         )
     }
-    
+
     /// Sets the selected detent for the sheet presentation controller.
     ///
     /// - Parameters:
@@ -335,7 +333,7 @@ open class PresentationRouter {
         guard let sheet = sheetPresentationController else {
             return logError("Failed to get sheetPresentationController for the presented View Controller")
         }
-        
+
         if animated {
             sheet.animateChanges {
                 sheet.selectedDetentIdentifier = identifier
@@ -344,7 +342,7 @@ open class PresentationRouter {
             sheet.selectedDetentIdentifier = identifier
         }
     }
-    
+
     /// Sets the detents for the sheet presentation controller.
     ///
     /// - Parameters:
@@ -363,7 +361,7 @@ open class PresentationRouter {
             sheet.detents = detents
         }
     }
-    
+
     /// Sets whether the grabber is visible for the sheet presentation controller.
     ///
     /// - Parameter visible: Whether the grabber is visible. Default is `true`.
@@ -372,10 +370,10 @@ open class PresentationRouter {
         guard let sheet = sheetPresentationController else {
             return logError("Failed to get sheetPresentationController for the presented View Controller")
         }
-        
+
         sheet.prefersGrabberVisible = visible
     }
-    
+
     /// Sets the corner radius for the sheet presentation controller.
     ///
     /// - Parameters:
@@ -386,7 +384,7 @@ open class PresentationRouter {
         guard let sheet = sheetPresentationController else {
             return logError("Failed to get sheetPresentationController for the presented View Controller")
         }
-        
+
         if animated {
             sheet.animateChanges {
                 sheet.preferredCornerRadius = cornerRadius
@@ -395,7 +393,7 @@ open class PresentationRouter {
             sheet.preferredCornerRadius = cornerRadius
         }
     }
-    
+
     /// Sets whether scrolling expands the sheet to the edge for the sheet presentation controller.
     ///
     /// - Parameter preferred: Whether scrolling expands the sheet to the edge. Default is `true`.
@@ -404,10 +402,10 @@ open class PresentationRouter {
         guard let sheet = sheetPresentationController else {
             return logError("Failed to get sheetPresentationController for the presented View Controller")
         }
-        
+
         sheet.prefersScrollingExpandsWhenScrolledToEdge = preferred
     }
-    
+
     /// Sets the largest undimmed detent identifier for the sheet presentation controller.
     ///
     /// - Parameter identifier: The identifier of the largest undimmed detent. Default is `nil`.
@@ -416,16 +414,16 @@ open class PresentationRouter {
         guard let sheet = sheetPresentationController else {
             return logError("Failed to get sheetPresentationController for the presented View Controller")
         }
-        
+
         sheet.largestUndimmedDetentIdentifier = identifier
     }
-    
+
     @available(iOS 14.0, *)
     private func logError(_ message: String) {
         Logger(subsystem: "Coordinator.PresentationRouter", category: "Presentation").error("\(message)")
         delegate?.didEncounterError(NSError(domain: "PresentationRouter", code: 1, userInfo: [NSLocalizedDescriptionKey: message]))
     }
-    
+
     /// Presents a view controller as a popover from a specified source view.
     ///
     /// - Parameters:
@@ -447,11 +445,11 @@ open class PresentationRouter {
     ) {
         viewController.modalPresentationStyle = .popover
         viewController.preferredContentSize = contentSize
-        
+
         if alwaysPopUp, let presentationController = viewController.presentationController {
             presentationController.delegate = presentedViewController
         }
-        
+
         presentedViewController.present(viewController, animated: animated, completion: completion)
         if let pop = viewController.popoverPresentationController {
             pop.sourceView = sourceView
@@ -461,8 +459,8 @@ open class PresentationRouter {
     }
 }
 
-extension UIViewController: @retroactive UIAdaptivePresentationControllerDelegate {}
-extension UIViewController: @retroactive UIPopoverPresentationControllerDelegate {
+// extension UIViewController: @retroactive UIAdaptivePresentationControllerDelegate {}
+extension UIViewController: UIPopoverPresentationControllerDelegate {
     public func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
         return .none
     }

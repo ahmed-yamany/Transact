@@ -49,6 +49,8 @@ public enum L10n {
   public static var privacyPolicy: String { return L10n.tr("Localizable", "privacy-policy", fallback: "Privacy Policy") }
   /// Remember me
   public static var rememberMe: String { return L10n.tr("Localizable", "remember-me", fallback: "Remember me") }
+  /// Resend Code
+  public static var resendCode: String { return L10n.tr("Localizable", "resend-code", fallback: "Resend Code") }
   /// Restart
   public static var restart: String { return L10n.tr("Localizable", "restart", fallback: "Restart") }
   /// Sign Up
@@ -59,10 +61,22 @@ public enum L10n {
   public static var termsConditionDescription: String { return L10n.tr("Localizable", "terms-condition-description", fallback: "By clicking on ‘Next’ you’ve agreed to the") }
   /// Terms of Use
   public static var termsOfUse: String { return L10n.tr("Localizable", "terms-of-use", fallback: "Terms of Use") }
+  /// Verify
+  public static var verify: String { return L10n.tr("Localizable", "verify", fallback: "Verify") }
   /// Welcome Back
   public static var welcomeBack: String { return L10n.tr("Localizable", "welcome-back", fallback: "Welcome Back") }
   /// Welcome To Transact
   public static var welcomeToTransact: String { return L10n.tr("Localizable", "welcome-to-transact", fallback: "Welcome To Transact") }
+  public enum Error {
+    /// Phone Number shouldn't be empty
+    public static var emptyPhoneNumber: String { return L10n.tr("Localizable", "error.empty-phoneNumber", fallback: "Phone Number shouldn't be empty") }
+    /// Full Name length shouldn't be less than 3 chrachters
+    public static var fullNameLength: String { return L10n.tr("Localizable", "error.fullName-length", fallback: "Full Name length shouldn't be less than 3 chrachters") }
+    /// Phone Number shouldn't contain invalid charachters
+    public static var phoneNumberInvalidCharachters: String { return L10n.tr("Localizable", "error.phoneNumber-invalid-charachters", fallback: "Phone Number shouldn't contain invalid charachters") }
+    /// Phone Number length shouldn't be empty less than 11
+    public static var phoneNumberLength: String { return L10n.tr("Localizable", "error.phoneNumber-length", fallback: "Phone Number length shouldn't be empty less than 11") }
+  }
   public enum ForgotPassword {
     /// Please provide your phone number and change a new password
     public static var subtitle: String { return L10n.tr("Localizable", "forgotPassword.subtitle", fallback: "Please provide your phone number and change a new password") }
@@ -74,6 +88,14 @@ public enum L10n {
   public enum Signup {
     /// Register to easily save, recieve and send money using just your phone number
     public static var subtitle: String { return L10n.tr("Localizable", "signup.subtitle", fallback: "Register to easily save, recieve and send money using just your phone number") }
+    public enum Otp {
+      /// OTP has been Sent to your phone number %s.  The code expires in %s
+      public static func subtitle(_ p1: UnsafePointer<CChar>, _ p2: UnsafePointer<CChar>) -> String {
+        return L10n.tr("Localizable", "signup.otp.subtitle", p1, p2, fallback: "OTP has been Sent to your phone number %s.  The code expires in %s")
+      }
+      /// Please verify your Phone Number
+      public static var title: String { return L10n.tr("Localizable", "signup.otp.title", fallback: "Please verify your Phone Number") }
+    }
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

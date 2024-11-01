@@ -25,7 +25,6 @@ public struct SignupView<ViewModel: SignupViewModelInterface>: View {
                     phoneNumberTextField
 
                     fullNameTextField
-
                 }
 
                 VStack(spacing: .measurements.Spacing.large) {
@@ -50,7 +49,8 @@ public struct SignupView<ViewModel: SignupViewModelInterface>: View {
         PrimaryTextField(
             L10n.enterPhoneNumber,
             title: L10n.phoneNumber,
-            text: $viewModel.phoneNumber
+            text: $viewModel.phoneNumber,
+            error: viewModel.phoneNumberError
         )
         .keyboardType(.numberPad)
         .autocapitalization(.none)
@@ -60,18 +60,18 @@ public struct SignupView<ViewModel: SignupViewModelInterface>: View {
         PrimaryTextField(
             L10n.enterYourFullName,
             title: L10n.fullName,
-            text: $viewModel.fullName
+            text: $viewModel.fullName,
+            error: viewModel.fullNameError
         )
         .autocapitalization(.none)
     }
-
-
 
     private var signupButton: some View {
         Button(L10n.signup) {
             viewModel.signupButtonTapped()
         }
         .buttonStyle(.primary())
+        .disabled(viewModel.shouldDisableSignupButton())
     }
 
     private var forgotPasswordButton: some View {

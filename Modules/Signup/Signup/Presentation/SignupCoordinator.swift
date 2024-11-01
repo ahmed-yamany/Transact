@@ -8,6 +8,7 @@
 import Foundation
 
 public protocol SignupCoordinatorInterface {
+    func navigateToConfirmSignup()
     func navigateToSignin()
     func navigateToForgtPassword()
 }

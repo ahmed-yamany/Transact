@@ -32,9 +32,9 @@ struct TransactCoordinator<ViewModel: TransactViewModelInterface>: TransactCoord
             case .onboarding:
                 OnboardingFactoryContainer.coordinator()
             case .authentication:
-                AuthenticationFlowCoordinator(transactCoordinator: self)
+                AuthenticationFlow(transactCoordinator: self)
             case .tabBar:
-                TabBarFlowCoordinator()
+                TabBarFlow()
             }
         }
         .tint(DesignSystem.Tokens.Colors.tint)

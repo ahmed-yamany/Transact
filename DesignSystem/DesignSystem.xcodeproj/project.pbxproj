@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73D7E4AA2CD2B9AB001B2DAF /* PrimaryToggleTyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7E4A92CD2B9AB001B2DAF /* PrimaryToggleTyle.swift */; };
+		73DA16F02CD3E6360002DDD2 /* SwiftUIViews in Resources */ = {isa = PBXBuildFile; fileRef = 73DA16EE2CD3E6360002DDD2 /* SwiftUIViews */; };
+		73DA16F52CD3E7F30002DDD2 /* PrimaryOTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA16F42CD3E7F30002DDD2 /* PrimaryOTPTextField.swift */; };
+		73DA16F72CD3E8610002DDD2 /* SwiftUIViews in Frameworks */ = {isa = PBXBuildFile; productRef = 73DA16F62CD3E8610002DDD2 /* SwiftUIViews */; };
+		73DA16FA2CD3F5570002DDD2 /* PrimaryTextFieldError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA16F92CD3F5570002DDD2 /* PrimaryTextFieldError.swift */; };
 		EE018F3B2CB6AAC600235DD9 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE018F3A2CB6AAC600235DD9 /* DesignSystem.swift */; };
 		EE41D0B72CB71BC10043182D /* ColorTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D09E2CB71BC10043182D /* ColorTokens.swift */; };
 		EE41D0ED2CB71BD90043182D /* H1Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D0BC2CB71BD90043182D /* H1Text.swift */; };
@@ -49,7 +54,7 @@
 		EEF25F692CC14DCC00407E09 /* Localization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF25F682CC14DCC00407E09 /* Localization.framework */; };
 		EEF25F6A2CC14DCC00407E09 /* Localization.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EEF25F682CC14DCC00407E09 /* Localization.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EEF413D02CC586A800F21A13 /* TermsConditionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF413CF2CC586A800F21A13 /* TermsConditionsView.swift */; };
-		EEF413D32CC596B600F21A13 /* PrimaryTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF413D22CC596B600F21A13 /* PrimaryTextFieldStyle.swift */; };
+		EEF413D32CC596B600F21A13 /* PrimaryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF413D22CC596B600F21A13 /* PrimaryTextField.swift */; };
 		EEFBB0CD2CBD7CD500AC4A7B /* FoundationAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFBB0CC2CBD7CD500AC4A7B /* FoundationAssets.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +73,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		73D7E4A92CD2B9AB001B2DAF /* PrimaryToggleTyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryToggleTyle.swift; sourceTree = "<group>"; };
+		73DA16EE2CD3E6360002DDD2 /* SwiftUIViews */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftUIViews; sourceTree = "<group>"; };
+		73DA16F42CD3E7F30002DDD2 /* PrimaryOTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryOTPTextField.swift; sourceTree = "<group>"; };
+		73DA16F92CD3F5570002DDD2 /* PrimaryTextFieldError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTextFieldError.swift; sourceTree = "<group>"; };
 		EE018F3A2CB6AAC600235DD9 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
 		EE41D09E2CB71BC10043182D /* ColorTokens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTokens.swift; sourceTree = "<group>"; };
 		EE41D0BC2CB71BD90043182D /* H1Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = H1Text.swift; sourceTree = "<group>"; };
@@ -110,13 +119,9 @@
 		EEF25F682CC14DCC00407E09 /* Localization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Localization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF3A8562CA1B36100C6BC3E /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF413CF2CC586A800F21A13 /* TermsConditionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsConditionsView.swift; sourceTree = "<group>"; };
-		EEF413D22CC596B600F21A13 /* PrimaryTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTextFieldStyle.swift; sourceTree = "<group>"; };
+		EEF413D22CC596B600F21A13 /* PrimaryTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTextField.swift; sourceTree = "<group>"; };
 		EEFBB0CC2CBD7CD500AC4A7B /* FoundationAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationAssets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		7302A6002CCBE0CF0078D08C /* Toggle */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Toggle; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EED8F61F2C999D2200B11D2B /* Frameworks */ = {
@@ -124,12 +129,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEF25F692CC14DCC00407E09 /* Localization.framework in Frameworks */,
+				73DA16F72CD3E8610002DDD2 /* SwiftUIViews in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73D7E4EA2CD2BCAF001B2DAF /* Toggle */ = {
+			isa = PBXGroup;
+			children = (
+				73D7E4A92CD2B9AB001B2DAF /* PrimaryToggleTyle.swift */,
+			);
+			path = Toggle;
+			sourceTree = "<group>";
+		};
+		73DA16EF2CD3E6360002DDD2 /* SwitPackages */ = {
+			isa = PBXGroup;
+			children = (
+				73DA16EE2CD3E6360002DDD2 /* SwiftUIViews */,
+			);
+			path = SwitPackages;
+			sourceTree = "<group>";
+		};
+		73DA16F82CD3F4D00002DDD2 /* PrimaryTextFieldStyle */ = {
+			isa = PBXGroup;
+			children = (
+				EEF413D22CC596B600F21A13 /* PrimaryTextField.swift */,
+				73DA16F92CD3F5570002DDD2 /* PrimaryTextFieldError.swift */,
+			);
+			path = PrimaryTextFieldStyle;
+			sourceTree = "<group>";
+		};
 		EE41D09F2CB71BC10043182D /* Tokens */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,7 +189,7 @@
 			children = (
 				EE41D0C42CB71BD90043182D /* Text */,
 				EE41D1262CB721FD0043182D /* Button */,
-				7302A6002CCBE0CF0078D08C /* Toggle */,
+				73D7E4EA2CD2BCAF001B2DAF /* Toggle */,
 				EEF413D12CC5968000F21A13 /* TextField */,
 				EEC1750F2CC17937005966B1 /* Custom Views */,
 				EE6EA44B2CC3DADC00BBC748 /* PaginationView */,
@@ -329,6 +360,7 @@
 				EE41D09F2CB71BC10043182D /* Tokens */,
 				EE41D0C52CB71BD90043182D /* Components */,
 				EEC1750C2CC15DA1005966B1 /* Modifiers */,
+				73DA16EF2CD3E6360002DDD2 /* SwitPackages */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -336,7 +368,8 @@
 		EEF413D12CC5968000F21A13 /* TextField */ = {
 			isa = PBXGroup;
 			children = (
-				EEF413D22CC596B600F21A13 /* PrimaryTextFieldStyle.swift */,
+				73DA16F82CD3F4D00002DDD2 /* PrimaryTextFieldStyle */,
+				73DA16F42CD3E7F30002DDD2 /* PrimaryOTPTextField.swift */,
 			);
 			path = TextField;
 			sourceTree = "<group>";
@@ -369,11 +402,9 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				7302A6002CCBE0CF0078D08C /* Toggle */,
-			);
 			name = DesignSystem;
 			packageProductDependencies = (
+				73DA16F62CD3E8610002DDD2 /* SwiftUIViews */,
 			);
 			productName = DesignSystem;
 			productReference = EEF3A8562CA1B36100C6BC3E /* DesignSystem.framework */;
@@ -386,7 +417,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					EED8F6212C999D2200B11D2B = {
 						CreatedOnToolsVersion = 15.4;
@@ -420,6 +451,7 @@
 			files = (
 				EE41D0F92CB71BD90043182D /* Assets.xcassets in Resources */,
 				EE41D10A2CB71BD90043182D /* Cairo.ttf in Resources */,
+				73DA16F02CD3E6360002DDD2 /* SwiftUIViews in Resources */,
 				EE41D1032CB71BD90043182D /* Icons.xcassets in Resources */,
 				EED8F6672C99A8AB00B11D2B /* swiftgen.yml in Resources */,
 				EE41D10B2CB71BD90043182D /* Inter.ttf in Resources */,
@@ -480,7 +512,9 @@
 				EEC1753B2CC19E10005966B1 /* TextButtonStyle.swift in Sources */,
 				EEF413D02CC586A800F21A13 /* TermsConditionsView.swift in Sources */,
 				EE41D1012CB71BD90043182D /* FoundationColors.swift in Sources */,
+				73D7E4AA2CD2B9AB001B2DAF /* PrimaryToggleTyle.swift in Sources */,
 				EE41D0EF2CB71BD90043182D /* H3Text.swift in Sources */,
+				73DA16FA2CD3F5570002DDD2 /* PrimaryTextFieldError.swift in Sources */,
 				EEFBB0CD2CBD7CD500AC4A7B /* FoundationAssets.swift in Sources */,
 				EE41D0F32CB71BD90043182D /* P3Text.swift in Sources */,
 				EE41D11E2CB721180043182D /* ButtonSize.swift in Sources */,
@@ -489,7 +523,8 @@
 				EE41D0EE2CB71BD90043182D /* H2Text.swift in Sources */,
 				EE849F7A2CC42BE500A7B18E /* AuthenticationView.swift in Sources */,
 				EE41D0F22CB71BD90043182D /* P2Text.swift in Sources */,
-				EEF413D32CC596B600F21A13 /* PrimaryTextFieldStyle.swift in Sources */,
+				73DA16F52CD3E7F30002DDD2 /* PrimaryOTPTextField.swift in Sources */,
+				EEF413D32CC596B600F21A13 /* PrimaryTextField.swift in Sources */,
 				EE41D1052CB71BD90043182D /* FontSizes.swift in Sources */,
 				EE849F742CC4295B00A7B18E /* BlueLogoView.swift in Sources */,
 			);
@@ -638,6 +673,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -678,6 +714,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -726,6 +763,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		73DA16F62CD3E8610002DDD2 /* SwiftUIViews */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftUIViews;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EED8F6192C999D2200B11D2B /* Project object */;
 }

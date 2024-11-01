@@ -12,12 +12,12 @@ import SwiftUI
 struct LoginCoordinator: LoginCoordinatorInterface, Coordinator {
     let router: Router
     let view: (LoginCoordinatorInterface) -> AnyView
-    let authenticationFlow: AuthenticationFlowCoordinatorInterface
+    let authenticationFlow: AuthenticationFlowInterface
     
     init(
         router: Router,
         view: @escaping (LoginCoordinatorInterface) -> AnyView,
-        authenticationFlow: AuthenticationFlowCoordinatorInterface
+        authenticationFlow: AuthenticationFlowInterface
     ) {
         self.router = router
         self.view = view

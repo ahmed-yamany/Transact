@@ -25,7 +25,7 @@ struct ForgotPasswordFactoryContainer {
     }
 
     @MainActor
-    static func coordinator(_ router: Router, authenticationFlow: AuthenticationFlowCoordinatorInterface) -> Coordinator {
+    static func coordinator(_ router: Router, authenticationFlow: AuthenticationFlowInterface) -> Coordinator {
         ForgotPasswordCoordinator(router: router, view: Self.view, authenticationFlow: authenticationFlow)
     }
 }

@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Shared/Shared.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Localization/Localization.xcodeproj">
    </FileRef>
    <FileRef
@@ -24,6 +27,12 @@
    </FileRef>
    <FileRef
       location = "group:Modules/ForgotPassword/ForgotPassword.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Modules/OTP/OTP.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Modules/Password/Password.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Transact/Transact.xcodeproj">

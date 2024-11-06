@@ -21,7 +21,6 @@
 		73ECBA522CD15F5800715062 /* DesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73ECBA502CD15F5800715062 /* DesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		73ECBA552CD15F5D00715062 /* Localization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73ECBA542CD15F5D00715062 /* Localization.framework */; };
 		73ECBA562CD15F5D00715062 /* Localization.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73ECBA542CD15F5D00715062 /* Localization.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		73ECBA582CD15F9800715062 /* DesignSystemTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ECBA572CD15F9800715062 /* DesignSystemTokens.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,7 +52,6 @@
 		73ECBA2F2CD154E600715062 /* SignupUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupUseCase.swift; sourceTree = "<group>"; };
 		73ECBA502CD15F5800715062 /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73ECBA542CD15F5D00715062 /* Localization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Localization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		73ECBA572CD15F9800715062 /* DesignSystemTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemTokens.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +115,6 @@
 		73ECBA252CD154A600715062 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				73ECBA572CD15F9800715062 /* DesignSystemTokens.swift */,
 				73ECBA262CD154B200715062 /* SignupView.swift */,
 				73ECBA282CD154BB00715062 /* SignupViewModel.swift */,
 				73ECBA2A2CD154C400715062 /* SignupCoordinator.swift */,
@@ -236,7 +233,6 @@
 				73ECBA292CD154BB00715062 /* SignupViewModel.swift in Sources */,
 				73DA173B2CD4FF430002DDD2 /* SignupResponseEntity.swift in Sources */,
 				73DA17302CD4FAC30002DDD2 /* SignupResponseModel.swift in Sources */,
-				73ECBA582CD15F9800715062 /* DesignSystemTokens.swift in Sources */,
 				73ECBA302CD154E600715062 /* SignupUseCase.swift in Sources */,
 				73DA172E2CD4FABA0002DDD2 /* SignupRequestModel.swift in Sources */,
 				73ECBA2B2CD154C400715062 /* SignupCoordinator.swift in Sources */,

@@ -16,19 +16,15 @@ public protocol SignupUseCaseInterface {
 
 public final actor SignupUseCase: SignupUseCaseInterface {
     private let service: SignupServiceInterface
+    private let phoneNumberValidator: AnyValidator<String>
 
-    public init(service: SignupServiceInterface) {
+    public init(service: SignupServiceInterface, phoneNumberValidator: AnyValidator<String>) {
         self.service = service
+        self.phoneNumberValidator = phoneNumberValidator
     }
 
     public func validatePhoneNumber(_ phoneNumber: String) async throws {
-        let validator = ValidatorChainBuilder<String>()
-            .add(EmptyPhoneNumberValidator())
-            .add(PhoneNumberInvalidCharachterValidator())
-            .add(PhoneNumberLengthValidator())
-            .build()
-
-        try validator.validate(phoneNumber)
+        try phoneNumberValidator.validate(phoneNumber)
     }
 
     public func validateFullName(_ fullName: String) async throws {

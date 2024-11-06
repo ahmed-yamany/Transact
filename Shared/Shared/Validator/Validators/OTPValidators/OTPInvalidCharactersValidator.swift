@@ -18,7 +18,7 @@ public struct OTPInvalidCharactersValidator: Validator {
     }
 }
 
-struct OTPInvalidCharactersError: Error, LocalizedError {
+private struct OTPInvalidCharactersError: Error, LocalizedError {
     var errorDescription: String? {
         L10n.Error.otpInvalidCharacters
     }

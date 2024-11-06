@@ -8,4 +8,5 @@
 import Foundation
 
 public protocol ForgotPasswordCoordinatorInterface {
+    func navigateToConfirmForgotPassword(_ entity: ForgotPasswordResponseEntity)
 }

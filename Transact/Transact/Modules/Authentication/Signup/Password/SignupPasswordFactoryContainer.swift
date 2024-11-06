@@ -7,11 +7,21 @@
 
 import Coordinator
 import Password
+import Shared
 import SwiftUI
 
 struct SignupPasswordFactoryContainer {
     static func useCase() -> PasswordUseCaseInterface {
-        PasswordUseCase()
+        let passwordValidator = AnyValidator(PasswordValidators())
+        let confirmPasswordValidator = AnyValidator(ConfirmPasswordValidators())
+        let client = TransactFactoryContainer.client()
+        let passwordService = SignupPasswordService(client: client)
+        
+        return PasswordUseCase(
+            passwordValidator: passwordValidator,
+            confirmPasswordValidator: confirmPasswordValidator,
+            passwordService: passwordService
+        )
     }
 
     @MainActor

@@ -39,7 +39,8 @@ public struct ForgotPasswordView<ViewModel: ForgotPasswordViewModelInterface>: V
         PrimaryTextField(
             L10n.enterPhoneNumber,
             title: L10n.phoneNumber,
-            text: $viewModel.phoneNumber
+            text: $viewModel.phoneNumber,
+            error: viewModel.phoneNumberError
         )
         .keyboardType(.numberPad)
         .autocapitalization(.none)
@@ -50,5 +51,6 @@ public struct ForgotPasswordView<ViewModel: ForgotPasswordViewModelInterface>: V
             viewModel.changePasswordButtonTapped()
         }
         .buttonStyle(.primary())
+        .disabled(viewModel.shouldDisableSignupButton())
     }
 }

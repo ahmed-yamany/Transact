@@ -6,18 +6,23 @@
 //
 
 import Coordinator
+import Shared
 import Signup
 import SwiftUI
 import URLSessionHTTPClient
 
 struct SignupFactoryContainer {
     static func service() -> SignupServiceInterface {
-        let client = URLSessionHTTPClient(session: .shared, enableLogger: true)
+        let client = TransactFactoryContainer.client()
         return SignupService(client: client)
     }
 
     static func useCase() -> SignupUseCaseInterface {
-        SignupUseCase(service: Self.service())
+        let phoneNumberValidator = AnyValidator(PhoneNumberValidator())
+        return SignupUseCase(
+            service: Self.service(),
+            phoneNumberValidator: phoneNumberValidator
+        )
     }
 
     @MainActor

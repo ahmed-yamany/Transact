@@ -1,17 +1,16 @@
 //
 //  DesignSystemTokens.swift
-//  Onboarding
+//  Signup
 //
-//  Created by Ahmed Yamany on 19/10/2024.
+//  Created by Ahmed Yamany on 29/10/2024.
 //
 
-import DesignSystem
 import SwiftUI
 
-extension CGFloat {
+public extension CGFloat {
     static var measurements = DesignSystem.Foundation.Measurements.self
 }
 
-extension Color {
+public extension Color {
     static var colors = DesignSystem.Tokens.Colors.self
 }

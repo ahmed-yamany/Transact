@@ -12,15 +12,17 @@ public struct SignupResponseModel: Decodable {
     public let otpCodeExpiresSeconds: Int
     public let otpLenght: Int
 
-    public init(phoneNumber: String, otpCodeExpiresSeconds: Int, otpLenght: Int) {
-        self.phoneNumber = phoneNumber
-        self.otpCodeExpiresSeconds = otpCodeExpiresSeconds
-        self.otpLenght = otpLenght
-    }
-
     enum CodingKeys: String, CodingKey {
         case phoneNumber = "phone_number"
         case otpCodeExpiresSeconds = "otp_code_expires_seconds"
         case otpLenght = "otp_lenght"
+    }
+}
+
+public extension SignupResponseModel {
+    init(phoneNumber: String, otpCodeExpires: Int, otpLenght: Int) {
+        self.phoneNumber = phoneNumber
+        self.otpCodeExpiresSeconds = otpCodeExpires
+        self.otpLenght = otpLenght
     }
 }

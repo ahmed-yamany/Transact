@@ -12,13 +12,13 @@ public struct PhoneNumberLengthValidator: Validator {
     public init() {}
 
     public func validate(_ value: String) throws {
-        if value.count < 11 {
+        if value.count != 11 {
             throw PhoneNumberLengthError()
         }
     }
 }
 
-struct PhoneNumberLengthError: Error, LocalizedError {
+private struct PhoneNumberLengthError: Error, LocalizedError {
     var errorDescription: String? {
         L10n.Error.phoneNumberLength
     }

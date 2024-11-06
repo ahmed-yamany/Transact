@@ -15,7 +15,7 @@ struct SignupService: SignupServiceInterface {
     func signup(_ request: SignupRequestModel) async throws -> SignupResponseModel {
         SignupResponseModel(
             phoneNumber: request.phoneNumber,
-            otpCodeExpiresSeconds: 180,
+            otpCodeExpires: 180,
             otpLenght: 4
         )
     }

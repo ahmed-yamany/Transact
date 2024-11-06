@@ -12,8 +12,7 @@ import URLSessionHTTPClient
 
 struct LoginFactoryContainer {
     static func service() -> LoginServiceInterface {
-        let client = URLSessionHTTPClient(session: .shared, enableLogger: true)
-
+        let client = TransactFactoryContainer.client()
         return LoginService(client: client)
     }
 

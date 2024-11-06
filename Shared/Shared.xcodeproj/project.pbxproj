@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		734332352CDB7C230020F554 /* PasswordMatchValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734332342CDB7C230020F554 /* PasswordMatchValidator.swift */; };
+		734332372CDB7C530020F554 /* ConfirmPasswordValidators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734332362CDB7C530020F554 /* ConfirmPasswordValidators.swift */; };
+		734E42F32CDAF13B0001AA92 /* PasswordValidators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734E42EE2CDAF13B0001AA92 /* PasswordValidators.swift */; };
+		734E42F82CDAF25F0001AA92 /* PasswordLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734E42F72CDAF25F0001AA92 /* PasswordLengthValidator.swift */; };
+		734E42FA2CDAF32E0001AA92 /* PasswordLetterValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734E42F92CDAF32E0001AA92 /* PasswordLetterValidator.swift */; };
+		734E42FC2CDAF3EC0001AA92 /* PasswordNumberValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734E42FB2CDAF3EC0001AA92 /* PasswordNumberValidator.swift */; };
+		734E42FE2CDAF4480001AA92 /* PasswordSpecialCharacterValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 734E42FD2CDAF4480001AA92 /* PasswordSpecialCharacterValidator.swift */; };
 		73DA17132CD423DC0002DDD2 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA17122CD423DC0002DDD2 /* Validator.swift */; };
 		73DA17152CD423F50002DDD2 /* ValidatorChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA17142CD423F50002DDD2 /* ValidatorChain.swift */; };
 		73DA17172CD424140002DDD2 /* ValidatorChainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA17162CD424140002DDD2 /* ValidatorChainBuilder.swift */; };
@@ -19,6 +26,7 @@
 		73DA172C2CD435AD0002DDD2 /* FullNameLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA172B2CD435AD0002DDD2 /* FullNameLengthValidator.swift */; };
 		73E92D392CD5182C00A4A640 /* OTPLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E92D382CD5182C00A4A640 /* OTPLengthValidator.swift */; };
 		73E92D3E2CD5196300A4A640 /* OTPInvalidCharactersValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E92D3D2CD5196300A4A640 /* OTPInvalidCharactersValidator.swift */; };
+		73E92D652CD5594C00A4A640 /* PhoneNumberValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E92D642CD5594C00A4A640 /* PhoneNumberValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +44,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		734332342CDB7C230020F554 /* PasswordMatchValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordMatchValidator.swift; sourceTree = "<group>"; };
+		734332362CDB7C530020F554 /* ConfirmPasswordValidators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPasswordValidators.swift; sourceTree = "<group>"; };
+		734E42EE2CDAF13B0001AA92 /* PasswordValidators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidators.swift; sourceTree = "<group>"; };
+		734E42F72CDAF25F0001AA92 /* PasswordLengthValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordLengthValidator.swift; sourceTree = "<group>"; };
+		734E42F92CDAF32E0001AA92 /* PasswordLetterValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordLetterValidator.swift; sourceTree = "<group>"; };
+		734E42FB2CDAF3EC0001AA92 /* PasswordNumberValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordNumberValidator.swift; sourceTree = "<group>"; };
+		734E42FD2CDAF4480001AA92 /* PasswordSpecialCharacterValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordSpecialCharacterValidator.swift; sourceTree = "<group>"; };
 		73DA17052CD423670002DDD2 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73DA17122CD423DC0002DDD2 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		73DA17142CD423F50002DDD2 /* ValidatorChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatorChain.swift; sourceTree = "<group>"; };
@@ -48,6 +63,7 @@
 		73DA172B2CD435AD0002DDD2 /* FullNameLengthValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullNameLengthValidator.swift; sourceTree = "<group>"; };
 		73E92D382CD5182C00A4A640 /* OTPLengthValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPLengthValidator.swift; sourceTree = "<group>"; };
 		73E92D3D2CD5196300A4A640 /* OTPInvalidCharactersValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPInvalidCharactersValidator.swift; sourceTree = "<group>"; };
+		73E92D642CD5594C00A4A640 /* PhoneNumberValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +78,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		734332332CDB7BDA0020F554 /* ConfirmPasswordValidator */ = {
+			isa = PBXGroup;
+			children = (
+				734332362CDB7C530020F554 /* ConfirmPasswordValidators.swift */,
+				734332342CDB7C230020F554 /* PasswordMatchValidator.swift */,
+			);
+			path = ConfirmPasswordValidator;
+			sourceTree = "<group>";
+		};
+		734E42F22CDAF13B0001AA92 /* PasswordValidators */ = {
+			isa = PBXGroup;
+			children = (
+				734E42EE2CDAF13B0001AA92 /* PasswordValidators.swift */,
+				734E42F72CDAF25F0001AA92 /* PasswordLengthValidator.swift */,
+				734E42F92CDAF32E0001AA92 /* PasswordLetterValidator.swift */,
+				734E42FB2CDAF3EC0001AA92 /* PasswordNumberValidator.swift */,
+				734E42FD2CDAF4480001AA92 /* PasswordSpecialCharacterValidator.swift */,
+			);
+			path = PasswordValidators;
+			sourceTree = "<group>";
+		};
 		73DA16FB2CD423660002DDD2 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +142,8 @@
 				73E92D372CD517DF00A4A640 /* OTPValidators */,
 				73DA172A2CD4358D0002DDD2 /* FullNameValidators */,
 				73DA17292CD4357F0002DDD2 /* PhoneNumberValidators */,
+				734E42F22CDAF13B0001AA92 /* PasswordValidators */,
+				734332332CDB7BDA0020F554 /* ConfirmPasswordValidator */,
 			);
 			path = Validators;
 			sourceTree = "<group>";
@@ -120,6 +159,7 @@
 		73DA17292CD4357F0002DDD2 /* PhoneNumberValidators */ = {
 			isa = PBXGroup;
 			children = (
+				73E92D642CD5594C00A4A640 /* PhoneNumberValidator.swift */,
 				73DA171B2CD424860002DDD2 /* EmptyPhoneNumberValidator.swift */,
 				73DA17252CD425D60002DDD2 /* PhoneNumberLengthValidator.swift */,
 				73DA17272CD4338B0002DDD2 /* PhoneNumberInvalidCharachterValidator.swift */,
@@ -227,15 +267,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				734332352CDB7C230020F554 /* PasswordMatchValidator.swift in Sources */,
+				73E92D652CD5594C00A4A640 /* PhoneNumberValidator.swift in Sources */,
 				73DA17152CD423F50002DDD2 /* ValidatorChain.swift in Sources */,
+				734E42F82CDAF25F0001AA92 /* PasswordLengthValidator.swift in Sources */,
+				734E42FC2CDAF3EC0001AA92 /* PasswordNumberValidator.swift in Sources */,
 				73DA17132CD423DC0002DDD2 /* Validator.swift in Sources */,
 				73DA17262CD425D60002DDD2 /* PhoneNumberLengthValidator.swift in Sources */,
 				73DA17172CD424140002DDD2 /* ValidatorChainBuilder.swift in Sources */,
 				73DA172C2CD435AD0002DDD2 /* FullNameLengthValidator.swift in Sources */,
+				734E42F32CDAF13B0001AA92 /* PasswordValidators.swift in Sources */,
+				734332372CDB7C530020F554 /* ConfirmPasswordValidators.swift in Sources */,
 				73DA171C2CD424860002DDD2 /* EmptyPhoneNumberValidator.swift in Sources */,
+				734E42FA2CDAF32E0001AA92 /* PasswordLetterValidator.swift in Sources */,
 				73DA17282CD4338B0002DDD2 /* PhoneNumberInvalidCharachterValidator.swift in Sources */,
 				73DA17192CD424240002DDD2 /* AnyValidator.swift in Sources */,
 				73E92D3E2CD5196300A4A640 /* OTPInvalidCharactersValidator.swift in Sources */,
+				734E42FE2CDAF4480001AA92 /* PasswordSpecialCharacterValidator.swift in Sources */,
 				73E92D392CD5182C00A4A640 /* OTPLengthValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

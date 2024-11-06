@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		735BEBBF2CD3B39F00AA4FA3 /* DesignSystemTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735BEBBE2CD3B39F00AA4FA3 /* DesignSystemTokens.swift */; };
+		7308DF752CDC3511009476D3 /* PasswordServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7308DF742CDC3511009476D3 /* PasswordServiceInterface.swift */; };
+		734E43002CDAF5280001AA92 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 734E42FF2CDAF5280001AA92 /* Shared.framework */; };
+		734E43012CDAF5280001AA92 /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 734E42FF2CDAF5280001AA92 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		735BEBC22CD3B3CE00AA4FA3 /* PasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735BEBC02CD3B3CE00AA4FA3 /* PasswordCoordinator.swift */; };
 		735BEBC32CD3B3CE00AA4FA3 /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735BEBC12CD3B3CE00AA4FA3 /* PasswordViewModel.swift */; };
 		735BEBC42CD3B3E200AA4FA3 /* PasswordUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735BEBBD2CD3B34300AA4FA3 /* PasswordUseCase.swift */; };
@@ -27,6 +29,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				73FFC1742CD3B0DE0035A4BA /* DesignSystem.framework in Embed Frameworks */,
+				734E43012CDAF5280001AA92 /* Shared.framework in Embed Frameworks */,
 				73FFC1782CD3B0E30035A4BA /* Localization.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -35,8 +38,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7308DF742CDC3511009476D3 /* PasswordServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordServiceInterface.swift; sourceTree = "<group>"; };
+		734E42FF2CDAF5280001AA92 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		735BEBBD2CD3B34300AA4FA3 /* PasswordUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordUseCase.swift; sourceTree = "<group>"; };
-		735BEBBE2CD3B39F00AA4FA3 /* DesignSystemTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemTokens.swift; sourceTree = "<group>"; };
 		735BEBC02CD3B3CE00AA4FA3 /* PasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCoordinator.swift; sourceTree = "<group>"; };
 		735BEBC12CD3B3CE00AA4FA3 /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
 		73D7E4DB2CD2BBB3001B2DAF /* Password.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Password.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +56,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73FFC1732CD3B0DE0035A4BA /* DesignSystem.framework in Frameworks */,
+				734E43002CDAF5280001AA92 /* Shared.framework in Frameworks */,
 				73FFC1772CD3B0E30035A4BA /* Localization.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,7 +94,6 @@
 		73D7E4E72CD2BC01001B2DAF /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				735BEBBE2CD3B39F00AA4FA3 /* DesignSystemTokens.swift */,
 				73FB32C02CD3B1EA005AD46C /* PasswordContentInterFace.swift */,
 				73FFC16F2CD3B0AC0035A4BA /* PasswordView.swift */,
 				735BEBC12CD3B3CE00AA4FA3 /* PasswordViewModel.swift */,
@@ -109,6 +113,7 @@
 		73D7E4E92CD2BC0E001B2DAF /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				7308DF742CDC3511009476D3 /* PasswordServiceInterface.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -116,6 +121,7 @@
 		73FFC1712CD3B0DE0035A4BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				734E42FF2CDAF5280001AA92 /* Shared.framework */,
 				73FFC1762CD3B0E30035A4BA /* Localization.framework */,
 				73FFC1722CD3B0DE0035A4BA /* DesignSystem.framework */,
 			);
@@ -209,8 +215,8 @@
 				735BEBC32CD3B3CE00AA4FA3 /* PasswordViewModel.swift in Sources */,
 				73FB32C12CD3B1EB005AD46C /* PasswordContentInterFace.swift in Sources */,
 				73FFC1702CD3B0AC0035A4BA /* PasswordView.swift in Sources */,
+				7308DF752CDC3511009476D3 /* PasswordServiceInterface.swift in Sources */,
 				735BEBC42CD3B3E200AA4FA3 /* PasswordUseCase.swift in Sources */,
-				735BEBBF2CD3B39F00AA4FA3 /* DesignSystemTokens.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +231,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 4U8DMJ33ZN;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -269,7 +275,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 4U8DMJ33ZN;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

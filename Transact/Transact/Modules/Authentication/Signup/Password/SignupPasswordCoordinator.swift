@@ -23,4 +23,8 @@ struct SignupPasswordCoordinator: Coordinator, PasswordCoordinatorInterface {
     func start() {
         router.push(view(self), animated: true, completion: nil)
     }
+
+    func navigateToSignin() {
+        signupFlow.navigateToSignin()
+    }
 }

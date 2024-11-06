@@ -9,4 +9,12 @@ import Foundation
 
 public protocol PasswordContentInterFace {
     var header: String { get }
+    var title: String { get }
+    var subtitle: String { get }
+
+    var passwordTitle: String { get }
+    var passwordPlaceholder: String { get }
+    var confirmPasswordTitle: String { get }
+    var confirmPasswordPlaceholder: String { get }
+    var passwordTip: String? { get }
 }

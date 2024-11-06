@@ -13,7 +13,7 @@ import URLSessionHTTPClient
 
 struct SignupOTPFactoryContainer {
     static func client() -> HTTPClient {
-        URLSessionHTTPClient(session: .shared, enableLogger: true)
+        TransactFactoryContainer.client()
     }
 
     static func repository() -> OTPRepositoryInterFace {

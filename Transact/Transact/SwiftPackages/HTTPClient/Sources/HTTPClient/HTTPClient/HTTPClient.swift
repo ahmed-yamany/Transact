@@ -2,8 +2,9 @@ import Combine
 import Foundation
 
 public protocol HTTPClient {
-    typealias Result = Swift.Result<(Data, HTTPURLResponse), Error>
-    typealias PublisherResult = AnyPublisher<(Data, HTTPURLResponse), Error>
+    typealias Response = (Data, HTTPURLResponse)
+    typealias Result = Swift.Result<Response, Error>
+    typealias PublisherResult = AnyPublisher<Response, Error>
 
     @discardableResult
     func perform(urlRequest: URLRequest, completion: @escaping (HTTPClient.Result) -> Void) -> HTTPClientTask
@@ -16,37 +17,51 @@ public extension HTTPClient {
         Future { promise in
             perform(urlRequest: urlRequest) { result in
                 switch result {
-                    case let .success(response):
-                        promise(.success(response))
-                    case let .failure(error):
-                        promise(.failure(error))
+                case let .success(response):
+                    promise(.success(response))
+                case let .failure(error):
+                    promise(.failure(error))
                 }
             }
         }.eraseToAnyPublisher()
     }
-    
+
     func perform(endpoint: HTTPEndPoint) -> HTTPClient.PublisherResult {
         Future { promise in
             perform(endpoint: endpoint) { result in
                 switch result {
-                    case let .success(response):
-                        promise(.success(response))
-                    case let .failure(error):
-                        promise(.failure(error))
+                case let .success(response):
+                    promise(.success(response))
+                case let .failure(error):
+                    promise(.failure(error))
                 }
             }
         }.eraseToAnyPublisher()
     }
-    
-    func perform(urlRequest: URLRequest) async throws -> HTTPClient.Result {
+
+    func perform(urlRequest: URLRequest) async throws -> Response {
         return try await withCheckedThrowingContinuation { continuation in
-            perform(urlRequest: urlRequest, completion: continuation.resume(returning:))
+            perform(urlRequest: urlRequest, completion: { result in
+                switch result {
+                case let .success(response):
+                    continuation.resume(returning: response)
+                case let .failure(error):
+                    continuation.resume(throwing: error)
+                }
+            })
         }
     }
 
-    func perform(endpoint: HTTPEndPoint) async throws -> HTTPClient.Result {
+    func perform(endpoint: HTTPEndPoint) async throws -> Response {
         return try await withCheckedThrowingContinuation { continuation in
-            perform(endpoint: endpoint, completion: continuation.resume(returning:))
+            perform(endpoint: endpoint, completion: { result in
+                switch result {
+                case let .success(response):
+                    continuation.resume(returning: response)
+                case let .failure(error):
+                    continuation.resume(throwing: error)
+                }
+            })
         }
     }
 }

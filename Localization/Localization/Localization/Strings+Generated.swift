@@ -15,14 +15,16 @@ public enum L10n {
   /// and
   public static var and: String { return L10n.tr("Localizable", "and", fallback: "and") }
   /// Localizable.strings
-  ///   Localization
+  ///    Localization
   /// 
-  ///   Created by Ahmed Yamany on 17/10/2024.
+  ///    Created by Ahmed Yamany on 17/10/2024.
   public static var appName: String { return L10n.tr("Localizable", "app-name", fallback: "Transact") }
   /// Back
   public static var back: String { return L10n.tr("Localizable", "back", fallback: "Back") }
   /// Change Password
   public static var changePassword: String { return L10n.tr("Localizable", "change-password", fallback: "Change Password") }
+  /// Complete
+  public static var complete: String { return L10n.tr("Localizable", "complete", fallback: "Complete") }
   /// Don’t have an account ?
   public static var dontHaveAccount: String { return L10n.tr("Localizable", "dont-have-account", fallback: "Don’t have an account ?") }
   /// Enter Password
@@ -43,12 +45,16 @@ public enum L10n {
   public static var next: String { return L10n.tr("Localizable", "next", fallback: "Next") }
   /// Password
   public static var password: String { return L10n.tr("Localizable", "password", fallback: "Password") }
+  /// Password must be at least 8 characters long and include at least a letter, number and special character.
+  public static var passwordTip: String { return L10n.tr("Localizable", "password-tip", fallback: "Password must be at least 8 characters long and include at least a letter, number and special character.") }
   /// Phone Number
   public static var phoneNumber: String { return L10n.tr("Localizable", "phoneNumber", fallback: "Phone Number") }
   /// Privacy Policy
   public static var privacyPolicy: String { return L10n.tr("Localizable", "privacy-policy", fallback: "Privacy Policy") }
   /// Remember me
   public static var rememberMe: String { return L10n.tr("Localizable", "remember-me", fallback: "Remember me") }
+  /// Repeat Password
+  public static var repeatPassword: String { return L10n.tr("Localizable", "repeat-password", fallback: "Repeat Password") }
   /// Resend Code
   public static var resendCode: String { return L10n.tr("Localizable", "resend-code", fallback: "Resend Code") }
   /// Restart
@@ -57,6 +63,8 @@ public enum L10n {
   public static var signup: String { return L10n.tr("Localizable", "signup", fallback: "Sign Up") }
   /// Skip
   public static var skip: String { return L10n.tr("Localizable", "skip", fallback: "Skip") }
+  /// Strong Password
+  public static var strongPassword: String { return L10n.tr("Localizable", "strong-password", fallback: "Strong Password") }
   /// By clicking on ‘Next’ you’ve agreed to the
   public static var termsConditionDescription: String { return L10n.tr("Localizable", "terms-condition-description", fallback: "By clicking on ‘Next’ you’ve agreed to the") }
   /// Terms of Use
@@ -78,6 +86,14 @@ public enum L10n {
     public static func otpLength(_ p1: UnsafePointer<CChar>) -> String {
       return L10n.tr("Localizable", "error.otp-length", p1, fallback: "The OTP code length shouldn't be less than %s")
     }
+    /// Password must be at least 8 characters long
+    public static var passwordLength: String { return L10n.tr("Localizable", "error.password-length", fallback: "Password must be at least 8 characters long") }
+    /// Password must include at least a letter
+    public static var passwordLetter: String { return L10n.tr("Localizable", "error.password-letter", fallback: "Password must include at least a letter") }
+    /// Passwords doesn't match
+    public static var passwordMatch: String { return L10n.tr("Localizable", "error.password-match", fallback: "Passwords doesn't match") }
+    /// Password must must include at least a special charcter
+    public static var passwordSpecialCharacter: String { return L10n.tr("Localizable", "error.password-special-character", fallback: "Password must must include at least a special charcter") }
     /// Phone Number shouldn't contain invalid charachters
     public static var phoneNumberInvalidCharachters: String { return L10n.tr("Localizable", "error.phoneNumber-invalid-charachters", fallback: "Phone Number shouldn't contain invalid charachters") }
     /// Phone Number length shouldn't be empty less than 11
@@ -102,6 +118,12 @@ public enum L10n {
   public enum Signup {
     /// Register to easily save, recieve and send money using just your phone number
     public static var subtitle: String { return L10n.tr("Localizable", "signup.subtitle", fallback: "Register to easily save, recieve and send money using just your phone number") }
+    public enum Password {
+      /// Enter a password that will be easy for you to remember, and hard for others to guess
+      public static var subtitle: String { return L10n.tr("Localizable", "signup.password.subtitle", fallback: "Enter a password that will be easy for you to remember, and hard for others to guess") }
+      /// Create a Strong Password
+      public static var title: String { return L10n.tr("Localizable", "signup.password.title", fallback: "Create a Strong Password") }
+    }
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

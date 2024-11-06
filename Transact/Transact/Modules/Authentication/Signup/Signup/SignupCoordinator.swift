@@ -12,6 +12,7 @@ import SwiftUI
 
 protocol SignupFlowInterFace {
     func navigateToUpdatePassword()
+    func navigateToSignin()
 }
 
 struct SignupCoordinator: Coordinator, SignupCoordinatorInterface, SignupFlowInterFace {

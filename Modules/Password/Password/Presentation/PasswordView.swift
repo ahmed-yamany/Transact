@@ -22,10 +22,15 @@ public struct PasswordView<ViewModel: PasswordViewModelInterface>: View {
         ScrollView {
             VStack(spacing: .measurements.Spacing.xxxLarge) {
                 AuthenticationView(title: content.title, subtitle: content.subtitle)
-                
-                VStack(spacing: .measurements.Spacing.xxxLarge) {
-                    
 
+                VStack(spacing: .measurements.Spacing.xMedium) {
+                    passworedTextField
+                    confirmPassworedTextField
+                }
+
+                completeButton
+
+                VStack(spacing: .measurements.Spacing.xxxLarge) {
                     TermsConditionsView()
                 }
                 .padding(.bottom, .measurements.Spacing.xxxLarge)
@@ -37,4 +42,35 @@ public struct PasswordView<ViewModel: PasswordViewModelInterface>: View {
         .applyPrimaryDesign()
     }
 
+    private var passworedTextField: some View {
+        PrimaryTextField(
+            L10n.enterPassword,
+            title: L10n.password,
+            text: $viewModel.password,
+            error: viewModel.passwordError, secured: true,
+            tip: content.passwordTip
+        )
+        .autocapitalization(.none)
+        .keyboardType(.default)
+    }
+
+    private var confirmPassworedTextField: some View {
+        PrimaryTextField(
+            L10n.enterPassword,
+            title: L10n.password,
+            text: $viewModel.confirmPassword,
+            error: viewModel.confirmPasswordError,
+            secured: true
+        )
+        .autocapitalization(.none)
+        .keyboardType(.default)
+    }
+
+    private var completeButton: some View {
+        Button(L10n.complete) {
+            viewModel.completeButtonTapped()
+        }
+        .buttonStyle(.primary())
+        .disabled(viewModel.shouldDisableSignupButton())
+    }
 }

@@ -11,7 +11,6 @@
 		73370F612CD3A84200501AE0 /* DesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73370F5F2CD3A84200501AE0 /* DesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		73370F642CD3A84800501AE0 /* Localization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73370F632CD3A84800501AE0 /* Localization.framework */; };
 		73370F652CD3A84800501AE0 /* Localization.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73370F632CD3A84800501AE0 /* Localization.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		73370F672CD3A87300501AE0 /* DesignSystemTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73370F662CD3A87300501AE0 /* DesignSystemTokens.swift */; };
 		73370F692CD3AA3A00501AE0 /* OTPContentInterFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73370F682CD3AA3A00501AE0 /* OTPContentInterFace.swift */; };
 		73D7E4CA2CD2BB1D001B2DAF /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7E4C92CD2BB1D001B2DAF /* OTPView.swift */; };
 		73D7E4CC2CD2BB23001B2DAF /* OTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7E4CB2CD2BB23001B2DAF /* OTPViewModel.swift */; };
@@ -44,7 +43,6 @@
 /* Begin PBXFileReference section */
 		73370F5F2CD3A84200501AE0 /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73370F632CD3A84800501AE0 /* Localization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Localization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		73370F662CD3A87300501AE0 /* DesignSystemTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemTokens.swift; sourceTree = "<group>"; };
 		73370F682CD3AA3A00501AE0 /* OTPContentInterFace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPContentInterFace.swift; sourceTree = "<group>"; };
 		73D7E4B92CD2BA73001B2DAF /* OTP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OTP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73D7E4C92CD2BB1D001B2DAF /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 		73D7E4C62CD2BAFA001B2DAF /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				73370F662CD3A87300501AE0 /* DesignSystemTokens.swift */,
 				73370F682CD3AA3A00501AE0 /* OTPContentInterFace.swift */,
 				73D7E4C92CD2BB1D001B2DAF /* OTPView.swift */,
 				73D7E4CB2CD2BB23001B2DAF /* OTPViewModel.swift */,
@@ -234,7 +231,6 @@
 				73D7E4CC2CD2BB23001B2DAF /* OTPViewModel.swift in Sources */,
 				73E92D512CD5228E00A4A640 /* VerifyOTPService.swift in Sources */,
 				73E92D4F2CD5221600A4A640 /* OTPRepository.swift in Sources */,
-				73370F672CD3A87300501AE0 /* DesignSystemTokens.swift in Sources */,
 				73D7E4CE2CD2BB2C001B2DAF /* OTPCoordinator.swift in Sources */,
 				73D7E4CA2CD2BB1D001B2DAF /* OTPView.swift in Sources */,
 				73E92D552CD5267800A4A640 /* ResendOTPService.swift in Sources */,
@@ -255,7 +251,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 4U8DMJ33ZN;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -299,7 +295,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 4U8DMJ33ZN;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

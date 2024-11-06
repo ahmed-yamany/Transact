@@ -17,7 +17,6 @@
 		EE849F6E2CC4274C00A7B18E /* DesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE849F6C2CC4274C00A7B18E /* DesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EE849F712CC4275400A7B18E /* Localization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE849F702CC4275400A7B18E /* Localization.framework */; };
 		EE849F722CC4275400A7B18E /* Localization.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE849F702CC4275400A7B18E /* Localization.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EE849F782CC42A3B00A7B18E /* DesignSystemTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE849F772CC42A3B00A7B18E /* DesignSystemTokens.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,7 +44,6 @@
 		EE849F612CC4242100A7B18E /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		EE849F6C2CC4274C00A7B18E /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE849F702CC4275400A7B18E /* Localization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Localization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE849F772CC42A3B00A7B18E /* DesignSystemTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemTokens.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +114,6 @@
 		EE849F5B2CC423FF00A7B18E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				EE849F772CC42A3B00A7B18E /* DesignSystemTokens.swift */,
 				EE849F5D2CC4241200A7B18E /* LoginView.swift */,
 				EE849F5F2CC4241800A7B18E /* LoginViewModel.swift */,
 				EE849F612CC4242100A7B18E /* LoginCoordinator.swift */,
@@ -218,7 +215,6 @@
 				EE849F622CC4242100A7B18E /* LoginCoordinator.swift in Sources */,
 				EE849F602CC4241800A7B18E /* LoginViewModel.swift in Sources */,
 				73DA36C62CCFF1BD00483A30 /* LoginUseCase.swift in Sources */,
-				EE849F782CC42A3B00A7B18E /* DesignSystemTokens.swift in Sources */,
 				EE849F5E2CC4241200A7B18E /* LoginView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

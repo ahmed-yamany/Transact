@@ -7,11 +7,15 @@
 
 import Coordinator
 import ForgotPassword
+import Shared
 import SwiftUI
 
 struct ForgotPasswordFactoryContainer {
     static func useCase() -> ForgotPasswordUseCaseInterface {
-        ForgotPasswordUseCase()
+        let client = TransactFactoryContainer.client()
+        let service = ForgotPasswordService(client: client)
+        let phoneNumberValidator = AnyValidator(PhoneNumberValidator())
+        return ForgotPasswordUseCase(service: service, phoneNumberValidator: phoneNumberValidator)
     }
 
     @MainActor

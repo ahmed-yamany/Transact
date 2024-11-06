@@ -12,6 +12,7 @@
 		73DA16F52CD3E7F30002DDD2 /* PrimaryOTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA16F42CD3E7F30002DDD2 /* PrimaryOTPTextField.swift */; };
 		73DA16F72CD3E8610002DDD2 /* SwiftUIViews in Frameworks */ = {isa = PBXBuildFile; productRef = 73DA16F62CD3E8610002DDD2 /* SwiftUIViews */; };
 		73DA16FA2CD3F5570002DDD2 /* PrimaryTextFieldError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA16F92CD3F5570002DDD2 /* PrimaryTextFieldError.swift */; };
+		73E92D832CD569F400A4A640 /* DesignSystemTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E92D822CD569F400A4A640 /* DesignSystemTokens.swift */; };
 		EE018F3B2CB6AAC600235DD9 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE018F3A2CB6AAC600235DD9 /* DesignSystem.swift */; };
 		EE41D0B72CB71BC10043182D /* ColorTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D09E2CB71BC10043182D /* ColorTokens.swift */; };
 		EE41D0ED2CB71BD90043182D /* H1Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE41D0BC2CB71BD90043182D /* H1Text.swift */; };
@@ -77,6 +78,7 @@
 		73DA16EE2CD3E6360002DDD2 /* SwiftUIViews */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = SwiftUIViews; sourceTree = "<group>"; };
 		73DA16F42CD3E7F30002DDD2 /* PrimaryOTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryOTPTextField.swift; sourceTree = "<group>"; };
 		73DA16F92CD3F5570002DDD2 /* PrimaryTextFieldError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTextFieldError.swift; sourceTree = "<group>"; };
+		73E92D822CD569F400A4A640 /* DesignSystemTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemTokens.swift; sourceTree = "<group>"; };
 		EE018F3A2CB6AAC600235DD9 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
 		EE41D09E2CB71BC10043182D /* ColorTokens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTokens.swift; sourceTree = "<group>"; };
 		EE41D0BC2CB71BD90043182D /* H1Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = H1Text.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 		EE41D09F2CB71BC10043182D /* Tokens */ = {
 			isa = PBXGroup;
 			children = (
+				73E92D822CD569F400A4A640 /* DesignSystemTokens.swift */,
 				EE41D09E2CB71BC10043182D /* ColorTokens.swift */,
 			);
 			path = Tokens;
@@ -494,6 +497,7 @@
 				EE41D1062CB71BD90043182D /* BorderRadius.swift in Sources */,
 				EE41D0ED2CB71BD90043182D /* H1Text.swift in Sources */,
 				EE41D11F2CB721180043182D /* SmallButtonSize.swift in Sources */,
+				73E92D832CD569F400A4A640 /* DesignSystemTokens.swift in Sources */,
 				EE41D0F02CB71BD90043182D /* H4Text.swift in Sources */,
 				EE6EA44D2CC3DADC00BBC748 /* CirclePaginationStyle.swift in Sources */,
 				EE41D11D2CB721180043182D /* BigButtonSize.swift in Sources */,

@@ -18,7 +18,7 @@ public struct PhoneNumberInvalidCharachterValidator: Validator {
     }
 }
 
-struct PhoneNumberInvalidCharachterError: Error, LocalizedError {
+private struct PhoneNumberInvalidCharachterError: Error, LocalizedError {
     var errorDescription: String? {
         L10n.Error.phoneNumberInvalidCharachters
     }

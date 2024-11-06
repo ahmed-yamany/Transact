@@ -7,8 +7,14 @@
 
 import Coordinator
 import Foundation
+import HTTPClient
+import URLSessionHTTPClient
 
 struct TransactFactoryContainer {
+    static func client() -> HTTPClient {
+        URLSessionHTTPClient(session: .shared, enableLogger: true)
+    }
+
     @MainActor
     static func viewModel() -> TransactViewModel {
         TransactViewModel()

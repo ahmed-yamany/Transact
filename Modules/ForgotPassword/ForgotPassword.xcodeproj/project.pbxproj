@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73E92D6A2CD55CC400A4A640 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E92D692CD55CC400A4A640 /* Shared.framework */; };
+		73E92D6B2CD55CC400A4A640 /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73E92D692CD55CC400A4A640 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		73E92D6E2CD55F1700A4A640 /* ForgotPasswordResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E92D6D2CD55F1700A4A640 /* ForgotPasswordResponseModel.swift */; };
+		73E92D702CD55F2B00A4A640 /* ForgotPasswordRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E92D6F2CD55F2B00A4A640 /* ForgotPasswordRequestModel.swift */; };
+		73E92D722CD55FFB00A4A640 /* ForgotPasswordServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E92D712CD55FFB00A4A640 /* ForgotPasswordServiceInterface.swift */; };
+		73E92D772CD561F700A4A640 /* ForgotPasswordResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E92D762CD561F700A4A640 /* ForgotPasswordResponseEntity.swift */; };
 		73ECBA402CD15A7E00715062 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ECBA3F2CD15A7D00715062 /* ForgotPasswordView.swift */; };
 		73ECBA422CD15A8400715062 /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ECBA412CD15A8400715062 /* ForgotPasswordViewModel.swift */; };
 		73ECBA442CD15A8900715062 /* ForgotPasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ECBA432CD15A8900715062 /* ForgotPasswordCoordinator.swift */; };
@@ -15,7 +21,6 @@
 		73ECBA5C2CD1657400715062 /* DesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73ECBA5A2CD1657400715062 /* DesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		73ECBA5F2CD1657900715062 /* Localization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73ECBA5E2CD1657900715062 /* Localization.framework */; };
 		73ECBA602CD1657900715062 /* Localization.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73ECBA5E2CD1657900715062 /* Localization.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		73ECBA622CD1658E00715062 /* DesignSystemTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73ECBA612CD1658E00715062 /* DesignSystemTokens.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +31,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				73ECBA5C2CD1657400715062 /* DesignSystem.framework in Embed Frameworks */,
+				73E92D6B2CD55CC400A4A640 /* Shared.framework in Embed Frameworks */,
 				73ECBA602CD1657900715062 /* Localization.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -35,13 +41,17 @@
 
 /* Begin PBXFileReference section */
 		73D954B42CD159FE002928CF /* ForgotPassword.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ForgotPassword.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73E92D692CD55CC400A4A640 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73E92D6D2CD55F1700A4A640 /* ForgotPasswordResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordResponseModel.swift; sourceTree = "<group>"; };
+		73E92D6F2CD55F2B00A4A640 /* ForgotPasswordRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordRequestModel.swift; sourceTree = "<group>"; };
+		73E92D712CD55FFB00A4A640 /* ForgotPasswordServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordServiceInterface.swift; sourceTree = "<group>"; };
+		73E92D762CD561F700A4A640 /* ForgotPasswordResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordResponseEntity.swift; sourceTree = "<group>"; };
 		73ECBA3F2CD15A7D00715062 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		73ECBA412CD15A8400715062 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		73ECBA432CD15A8900715062 /* ForgotPasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordCoordinator.swift; sourceTree = "<group>"; };
 		73ECBA452CD15A9000715062 /* ForgotPasswordUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordUseCase.swift; sourceTree = "<group>"; };
 		73ECBA5A2CD1657400715062 /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73ECBA5E2CD1657900715062 /* Localization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Localization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		73ECBA612CD1658E00715062 /* DesignSystemTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemTokens.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73ECBA5B2CD1657400715062 /* DesignSystem.framework in Frameworks */,
+				73E92D6A2CD55CC400A4A640 /* Shared.framework in Frameworks */,
 				73ECBA5F2CD1657900715062 /* Localization.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,10 +95,26 @@
 			path = ForgotPassword;
 			sourceTree = "<group>";
 		};
+		73E92D6C2CD55F0600A4A640 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				73E92D6F2CD55F2B00A4A640 /* ForgotPasswordRequestModel.swift */,
+				73E92D6D2CD55F1700A4A640 /* ForgotPasswordResponseModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		73E92D752CD561D400A4A640 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				73E92D762CD561F700A4A640 /* ForgotPasswordResponseEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		73ECBA3C2CD15A6000715062 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				73ECBA612CD1658E00715062 /* DesignSystemTokens.swift */,
 				73ECBA3F2CD15A7D00715062 /* ForgotPasswordView.swift */,
 				73ECBA412CD15A8400715062 /* ForgotPasswordViewModel.swift */,
 				73ECBA432CD15A8900715062 /* ForgotPasswordCoordinator.swift */,
@@ -98,6 +125,7 @@
 		73ECBA3D2CD15A6400715062 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				73E92D752CD561D400A4A640 /* Entities */,
 				73ECBA452CD15A9000715062 /* ForgotPasswordUseCase.swift */,
 			);
 			path = Domain;
@@ -106,6 +134,8 @@
 		73ECBA3E2CD15A6B00715062 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				73E92D6C2CD55F0600A4A640 /* Models */,
+				73E92D712CD55FFB00A4A640 /* ForgotPasswordServiceInterface.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -113,6 +143,7 @@
 		73ECBA592CD1657400715062 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				73E92D692CD55CC400A4A640 /* Shared.framework */,
 				73ECBA5E2CD1657900715062 /* Localization.framework */,
 				73ECBA5A2CD1657400715062 /* DesignSystem.framework */,
 			);
@@ -200,9 +231,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				73ECBA422CD15A8400715062 /* ForgotPasswordViewModel.swift in Sources */,
-				73ECBA622CD1658E00715062 /* DesignSystemTokens.swift in Sources */,
 				73ECBA402CD15A7E00715062 /* ForgotPasswordView.swift in Sources */,
+				73E92D772CD561F700A4A640 /* ForgotPasswordResponseEntity.swift in Sources */,
 				73ECBA442CD15A8900715062 /* ForgotPasswordCoordinator.swift in Sources */,
+				73E92D702CD55F2B00A4A640 /* ForgotPasswordRequestModel.swift in Sources */,
+				73E92D722CD55FFB00A4A640 /* ForgotPasswordServiceInterface.swift in Sources */,
+				73E92D6E2CD55F1700A4A640 /* ForgotPasswordResponseModel.swift in Sources */,
 				73ECBA462CD15A9000715062 /* ForgotPasswordUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

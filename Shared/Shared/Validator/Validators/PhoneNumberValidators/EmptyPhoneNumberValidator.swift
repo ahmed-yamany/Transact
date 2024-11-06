@@ -18,7 +18,7 @@ public struct EmptyPhoneNumberValidator: Validator {
     }
 }
 
-struct EmptyPhoneNumberError: Error, LocalizedError {
+private struct EmptyPhoneNumberError: Error, LocalizedError {
     var errorDescription: String? {
         L10n.Error.emptyPhoneNumber
     }

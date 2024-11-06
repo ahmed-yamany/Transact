@@ -18,7 +18,7 @@ public struct FullNameLengthValidator: Validator {
     }
 }
 
-struct FullNameLengthError: Error, LocalizedError {
+private struct FullNameLengthError: Error, LocalizedError {
     var errorDescription: String? {
         L10n.Error.fullNameLength
     }

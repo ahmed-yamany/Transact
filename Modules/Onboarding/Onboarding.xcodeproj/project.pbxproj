@@ -12,7 +12,6 @@
 		EE6EA4542CC3E36600BBC748 /* OnboardingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EA4532CC3E36600BBC748 /* OnboardingService.swift */; };
 		EE6EA4562CC3E38400BBC748 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EA4552CC3E38400BBC748 /* OnboardingModel.swift */; };
 		EE6EA45A2CC3E46A00BBC748 /* OnboardingEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EA4592CC3E46A00BBC748 /* OnboardingEntityMapper.swift */; };
-		EE849F762CC429BF00A7B18E /* DesignSystemTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE849F752CC429BF00A7B18E /* DesignSystemTokens.swift */; };
 		EEC175282CC1882B005966B1 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC175272CC1882B005966B1 /* OnboardingView.swift */; };
 		EEC1752A2CC18833005966B1 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC175292CC18833005966B1 /* OnboardingViewModel.swift */; };
 		EEC1752C2CC1883A005966B1 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC1752B2CC1883A005966B1 /* OnboardingCoordinator.swift */; };
@@ -43,7 +42,6 @@
 		EE6EA4532CC3E36600BBC748 /* OnboardingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingService.swift; sourceTree = "<group>"; };
 		EE6EA4552CC3E38400BBC748 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		EE6EA4592CC3E46A00BBC748 /* OnboardingEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingEntityMapper.swift; sourceTree = "<group>"; };
-		EE849F752CC429BF00A7B18E /* DesignSystemTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemTokens.swift; sourceTree = "<group>"; };
 		EEC1751C2CC18533005966B1 /* Onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEC175272CC1882B005966B1 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		EEC175292CC18833005966B1 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
@@ -138,7 +136,6 @@
 		EEC175262CC187F2005966B1 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				EE849F752CC429BF00A7B18E /* DesignSystemTokens.swift */,
 				EEC175272CC1882B005966B1 /* OnboardingView.swift */,
 				EEC175292CC18833005966B1 /* OnboardingViewModel.swift */,
 				EEC1752B2CC1883A005966B1 /* OnboardingCoordinator.swift */,
@@ -243,7 +240,6 @@
 				EE6EA4562CC3E38400BBC748 /* OnboardingModel.swift in Sources */,
 				EEC1752C2CC1883A005966B1 /* OnboardingCoordinator.swift in Sources */,
 				EEC1752A2CC18833005966B1 /* OnboardingViewModel.swift in Sources */,
-				EE849F762CC429BF00A7B18E /* DesignSystemTokens.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

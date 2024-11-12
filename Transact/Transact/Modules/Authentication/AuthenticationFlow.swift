@@ -6,6 +6,7 @@
 //
 
 import Coordinator
+import DesignSystem
 import SwiftUI
 
 protocol AuthenticationFlowInterface {
@@ -17,6 +18,7 @@ protocol AuthenticationFlowInterface {
 
 struct AuthenticationFlow: AuthenticationFlowInterface, View {
     @StateObject var router = TransactFactoryContainer.router()
+    @EnvironmentObject var alertPresenter: AlertPresenterController
 
     let transactCoordinator: TransactCoordinatorInterface
 
@@ -33,7 +35,7 @@ struct AuthenticationFlow: AuthenticationFlowInterface, View {
     }
 
     func navigateToLogin() {
-        LoginFactoryContainer.coordinator(router, authenticationFlow: self).start()
+        LoginFactoryContainer.coordinator(router, authenticationFlow: self, alertPresenter: alertPresenter).start()
     }
 
     func navigateToSignup() {

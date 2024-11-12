@@ -81,6 +81,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		739EBBA02CE3E88F00FA3D5E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EED8F6042C9996D900B11D2B /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -443,6 +453,7 @@
 				EED8F5E92C9995A100B11D2B /* Frameworks */,
 				EED8F5EA2C9995A100B11D2B /* Resources */,
 				EED8F6042C9996D900B11D2B /* Embed Frameworks */,
+				739EBBA02CE3E88F00FA3D5E /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -465,7 +476,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1540;
+				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					EED8F5EB2C9995A100B11D2B = {

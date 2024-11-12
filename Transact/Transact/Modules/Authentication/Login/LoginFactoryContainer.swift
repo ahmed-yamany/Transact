@@ -6,6 +6,7 @@
 //
 
 import Coordinator
+import DesignSystem
 import Login
 import SwiftUI
 import URLSessionHTTPClient
@@ -21,17 +22,21 @@ struct LoginFactoryContainer {
     }
 
     @MainActor
-    static func viewModel(_ coordinator: LoginCoordinatorInterface) -> LoginViewModel {
-        LoginViewModel(coordinator: coordinator, useCase: Self.useCase())
+    static func viewModel(_ coordinator: LoginCoordinatorInterface, alertPresenter: any AlertPresenter) -> LoginViewModel {
+        LoginViewModel(coordinator: coordinator, useCase: Self.useCase(), alertPresenter: alertPresenter)
     }
 
     @MainActor
-    static func view(_ coordinator: LoginCoordinatorInterface) -> AnyView {
-        AnyView(LoginView(viewModel: Self.viewModel(coordinator)))
+    static func view(_ coordinator: LoginCoordinatorInterface, _ alertPresenter: any AlertPresenter) -> AnyView {
+        AnyView(LoginView(viewModel: Self.viewModel(coordinator, alertPresenter: alertPresenter)))
     }
 
     @MainActor
-    static func coordinator(_ router: Router, authenticationFlow: AuthenticationFlowInterface) -> Coordinator {
-        LoginCoordinator(router: router, view: Self.view, authenticationFlow: authenticationFlow)
+    static func coordinator(
+        _ router: Router,
+        authenticationFlow: AuthenticationFlowInterface,
+        alertPresenter: any AlertPresenter
+    ) -> Coordinator {
+        LoginCoordinator(router: router, view: Self.view, authenticationFlow: authenticationFlow, alertPresenter: alertPresenter)
     }
 }

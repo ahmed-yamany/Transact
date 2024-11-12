@@ -6,6 +6,7 @@
 //
 
 import Combine
+import DesignSystem
 import SwiftUI
 
 @MainActor
@@ -27,22 +28,40 @@ public final class LoginViewModel: LoginViewModelInterface {
 
     public let coordinator: LoginCoordinatorInterface
     private let useCase: LoginUseCaseInterface
+    let alertPresenter: any AlertPresenter
 
-    public init(coordinator: LoginCoordinatorInterface, useCase: LoginUseCaseInterface) {
+    public init(
+        coordinator: LoginCoordinatorInterface,
+        useCase: LoginUseCaseInterface,
+        alertPresenter: any AlertPresenter
+    ) {
         self.coordinator = coordinator
         self.useCase = useCase
+        self.alertPresenter = alertPresenter
     }
 
     public func loginButtonTapped() {
-        Task {
-            do {
-                let model = LoginModel(phoneNumber: phoneNumber, password: password)
-                try await useCase.login(model)
-                coordinator.authenticationCompleted()
-            } catch {
-                
-            }
-        }
+        
+        alertPresenter.presentAlert(.toast(.error(title: Text("Hello"), message: Text("Error Occured"))))
+//        
+//        Task {
+//            try? await Task.sleep(for: .seconds(1))
+//            let item = ToastAlertItem(title: Text("Ahemd"))
+//            alertPresenter.presentAlert(.toast(item))
+//        }
+        
+//        Task {
+//            do {
+//                let model = LoginModel(phoneNumber: phoneNumber, password: password)
+//                try await useCase.login(model)
+//                coordinator.authenticationCompleted()
+//            } catch {
+//                let alert = AlertItem(title: Text(""), primaryButton: { [weak self] in
+//                    self?.alertPresenter.dissmisAlert()
+//                })
+//                alertPresenter.presentAlert(alert)
+//            }
+//        }
     }
 
     public func signupButtonTapped() {
@@ -53,3 +72,4 @@ public final class LoginViewModel: LoginViewModelInterface {
         coordinator.navigateToForgotPassword()
     }
 }
+

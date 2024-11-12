@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73B3C3B42CDD4FFA00703D7B /* LoginAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B3C3B32CDD4FFA00703D7B /* LoginAlertPresenter.swift */; };
 		73DA36C32CCFF1BD00483A30 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA36C02CCFF1BD00483A30 /* LoginModel.swift */; };
 		73DA36C42CCFF1BD00483A30 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA36C22CCFF1BD00483A30 /* LoginService.swift */; };
 		73DA36C62CCFF1BD00483A30 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA36C52CCFF1BD00483A30 /* LoginUseCase.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		73B3C3B32CDD4FFA00703D7B /* LoginAlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAlertPresenter.swift; sourceTree = "<group>"; };
 		73DA36C02CCFF1BD00483A30 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		73DA36C22CCFF1BD00483A30 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		73DA36C52CCFF1BD00483A30 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			children = (
 				EE849F5D2CC4241200A7B18E /* LoginView.swift */,
 				EE849F5F2CC4241800A7B18E /* LoginViewModel.swift */,
+				73B3C3B32CDD4FFA00703D7B /* LoginAlertPresenter.swift */,
 				EE849F612CC4242100A7B18E /* LoginCoordinator.swift */,
 			);
 			path = Presentation;
@@ -213,6 +216,7 @@
 				73DA36C32CCFF1BD00483A30 /* LoginModel.swift in Sources */,
 				73DA36C42CCFF1BD00483A30 /* LoginService.swift in Sources */,
 				EE849F622CC4242100A7B18E /* LoginCoordinator.swift in Sources */,
+				73B3C3B42CDD4FFA00703D7B /* LoginAlertPresenter.swift in Sources */,
 				EE849F602CC4241800A7B18E /* LoginViewModel.swift in Sources */,
 				73DA36C62CCFF1BD00483A30 /* LoginUseCase.swift in Sources */,
 				EE849F5E2CC4241200A7B18E /* LoginView.swift in Sources */,
@@ -363,7 +367,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -399,7 +403,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

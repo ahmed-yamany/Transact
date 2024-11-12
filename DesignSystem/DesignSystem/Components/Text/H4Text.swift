@@ -7,19 +7,15 @@
 
 import SwiftUI
 
-public struct H4Text: View {
-    private let attributedString: AttributedString
+public struct H4Text: TextProtocol {
+    public let text: Text
 
-    public init(_ text: String) {
-        attributedString = AttributedString(text)
-    }
-
-    public init(_ attributedString: AttributedString) {
-        self.attributedString = attributedString
+    public init(_ text: Text) {
+        self.text = text
     }
 
     public var body: some View {
-        Text(attributedString)
+        text
             .font(DesignSystem.Foundation.Typography.semiBold.swiftUIFont(size: .fontSizes.h4.size))
             .tracking(DesignSystem.Foundation.Measurements.Font.letterSpacing)
             .lineSpacing(.fontSizes.h4.lineSpacing)

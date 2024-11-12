@@ -12,7 +12,7 @@ public struct RoutableNavigationStack<NavigationRouter: NavigationStackRouterInt
     @ObservedObject private var router: NavigationRouter
 
     public init(router: NavigationRouter) {
-        self.router = router
+        self._router = ObservedObject(wrappedValue: router)
     }
 
     public var body: some View {

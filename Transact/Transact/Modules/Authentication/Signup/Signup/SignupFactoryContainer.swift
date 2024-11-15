@@ -6,11 +6,13 @@
 //
 
 import Coordinator
+import DesignSystem
 import Shared
 import Signup
 import SwiftUI
 import URLSessionHTTPClient
 
+@MainActor
 struct SignupFactoryContainer {
     static func service() -> SignupServiceInterface {
         let client = TransactFactoryContainer.client()
@@ -25,18 +27,19 @@ struct SignupFactoryContainer {
         )
     }
 
-    @MainActor
-    static func viewModel(_ coordinator: SignupCoordinatorInterface) -> SignupViewModel {
-        SignupViewModel(useCase: Self.useCase(), coordinator: coordinator)
+    static func viewModel(_ coordinator: SignupCoordinatorInterface, alertPresenter: AlertPresenter) -> SignupViewModel {
+        SignupViewModel(
+            useCase: Self.useCase(),
+            coordinator: coordinator,
+            alertPresenter: alertPresenter
+        )
     }
 
-    @MainActor
-    static func view(_ coordinator: SignupCoordinatorInterface) -> AnyView {
-        AnyView(SignupView(viewModel: Self.viewModel(coordinator)))
+    static func view(_ coordinator: SignupCoordinatorInterface, alertPresenter: AlertPresenter) -> AnyView {
+        AnyView(SignupView(viewModel: Self.viewModel(coordinator, alertPresenter: alertPresenter)))
     }
 
-    @MainActor
-    static func coordinator(_ router: Router, authenticationFlow: AuthenticationFlowInterface) -> Coordinator {
-        SignupCoordinator(router: router, view: Self.view, authenticationFlow: authenticationFlow)
+    static func coordinator(_ router: Router, authenticationFlow: AuthenticationFlowInterface, alertPresenter: AlertPresenter) -> Coordinator {
+        SignupCoordinator(router: router, view: Self.view, authenticationFlow: authenticationFlow, alertPresenter: alertPresenter)
     }
 }

@@ -11,6 +11,7 @@ import OTP
 import SwiftUI
 import URLSessionHTTPClient
 
+@MainActor
 struct SignupOTPFactoryContainer {
     static func client() -> HTTPClient {
         TransactFactoryContainer.client()
@@ -26,12 +27,10 @@ struct SignupOTPFactoryContainer {
         OTPUseCase(repository: Self.repository())
     }
 
-    @MainActor
     static func viewModel(_ coordinator: OTPCoordinatorInterface, _ entity: OTPViewModelEntity) -> OTPViewModel {
         OTPViewModel(entity, coordinator: coordinator, useCase: Self.useCase())
     }
 
-    @MainActor
     static func view(_ coordinator: OTPCoordinatorInterface, _ entity: OTPViewModelEntity) -> AnyView {
         return AnyView(
             OTPView(
@@ -41,7 +40,6 @@ struct SignupOTPFactoryContainer {
         )
     }
 
-    @MainActor
     static func coordinator(_ router: Router, signupFlow: SignupFlowInterFace, entity: OTPViewModelEntity) -> Coordinator {
         SignupOTPCoordinator(router: router, view: Self.view, signupFlow: signupFlow, entity: entity)
     }

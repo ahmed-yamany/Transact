@@ -33,7 +33,7 @@ public final class LoginViewModel: LoginViewModelInterface {
     public init(
         coordinator: LoginCoordinatorInterface,
         useCase: LoginUseCaseInterface,
-        alertPresenter: any AlertPresenter
+        alertPresenter: AlertPresenter
     ) {
         self.coordinator = coordinator
         self.useCase = useCase
@@ -41,25 +41,14 @@ public final class LoginViewModel: LoginViewModelInterface {
     }
 
     public func loginButtonTapped() {
-        
-        alertPresenter.presentAlert(.toast(.error(title: Text("Hello"), message: Text("Error Occured"))))
-//        
-//        Task {
-//            try? await Task.sleep(for: .seconds(1))
-//            let item = ToastAlertItem(title: Text("Ahemd"))
-//            alertPresenter.presentAlert(.toast(item))
-//        }
-        
+        alertPresenter.presentAlert(.toast(.error(title: Text("error.localizedDescription"))))
 //        Task {
 //            do {
 //                let model = LoginModel(phoneNumber: phoneNumber, password: password)
 //                try await useCase.login(model)
 //                coordinator.authenticationCompleted()
 //            } catch {
-//                let alert = AlertItem(title: Text(""), primaryButton: { [weak self] in
-//                    self?.alertPresenter.dissmisAlert()
-//                })
-//                alertPresenter.presentAlert(alert)
+//                alertPresenter.presentAlert(.toast(.error(title: Text(error.localizedDescription))))
 //            }
 //        }
     }
@@ -72,4 +61,3 @@ public final class LoginViewModel: LoginViewModelInterface {
         coordinator.navigateToForgotPassword()
     }
 }
-

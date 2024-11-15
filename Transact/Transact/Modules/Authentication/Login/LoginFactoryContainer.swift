@@ -11,6 +11,7 @@ import Login
 import SwiftUI
 import URLSessionHTTPClient
 
+@MainActor
 struct LoginFactoryContainer {
     static func service() -> LoginServiceInterface {
         let client = TransactFactoryContainer.client()
@@ -21,17 +22,14 @@ struct LoginFactoryContainer {
         LoginUseCase(service: Self.service())
     }
 
-    @MainActor
     static func viewModel(_ coordinator: LoginCoordinatorInterface, alertPresenter: any AlertPresenter) -> LoginViewModel {
         LoginViewModel(coordinator: coordinator, useCase: Self.useCase(), alertPresenter: alertPresenter)
     }
 
-    @MainActor
     static func view(_ coordinator: LoginCoordinatorInterface, _ alertPresenter: any AlertPresenter) -> AnyView {
         AnyView(LoginView(viewModel: Self.viewModel(coordinator, alertPresenter: alertPresenter)))
     }
 
-    @MainActor
     static func coordinator(
         _ router: Router,
         authenticationFlow: AuthenticationFlowInterface,

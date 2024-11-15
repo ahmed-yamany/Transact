@@ -8,5 +8,5 @@ import Foundation
 
 public enum AlertType {
     case toast(any ToastAlertItem)
-    case variable(VariableAlertItem)
+    case variable(any VariableAlertItem)
 }

@@ -10,6 +10,7 @@ import Password
 import Shared
 import SwiftUI
 
+@MainActor
 struct ForgotpasswordPasswordFactoryContainer {
     static func useCase() -> PasswordUseCaseInterface {
         let passwordValidator = AnyValidator(PasswordValidators())
@@ -24,17 +25,14 @@ struct ForgotpasswordPasswordFactoryContainer {
         )
     }
 
-    @MainActor
     static func viewModel(_ coordinator: PasswordCoordinatorInterface) -> PasswordViewModel {
         PasswordViewModel(coordinator: coordinator, useCase: Self.useCase())
     }
 
-    @MainActor
     static func view(_ coordinator: PasswordCoordinatorInterface) -> AnyView {
         AnyView(PasswordView(viewModel: Self.viewModel(coordinator), content: ForgotpasswordPasswordContent()))
     }
 
-    @MainActor
     static func coordinator(_ router: Router, forgotPasswordFlow: ForgotPasswordFlowInterface) -> Coordinator {
         ForgotpasswordPasswordCoordinator(router: router, view: Self.view, forgotPasswordFlow: forgotPasswordFlow)
     }

@@ -6,6 +6,7 @@
 //
 
 import Coordinator
+import DesignSystem
 import Onboarding
 import SwiftUI
 
@@ -19,13 +20,13 @@ struct OnboardingFactoryContainer {
     }
 
     @MainActor
-    static func viewModel(_ coordinator: OnboardingCoordinatorInterface) -> OnboardingViewModel {
-        OnboardingViewModel(coordinator: coordinator, useCase: Self.useCase())
+    static func viewModel(_ coordinator: OnboardingCoordinatorInterface, alertPresenter: AlertPresenter) -> OnboardingViewModel {
+        OnboardingViewModel(coordinator: coordinator, useCase: Self.useCase(), alertPresenter: alertPresenter)
     }
 
     @MainActor
-    static func view(_ coordinator: OnboardingCoordinatorInterface) -> AnyView {
-        AnyView(OnboardingView(viewModel: Self.viewModel(coordinator)))
+    static func view(_ coordinator: OnboardingCoordinatorInterface, alertPresenter: AlertPresenter) -> AnyView {
+        AnyView(OnboardingView(viewModel: Self.viewModel(coordinator, alertPresenter: alertPresenter)))
     }
 
     @MainActor

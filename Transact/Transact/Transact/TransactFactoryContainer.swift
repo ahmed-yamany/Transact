@@ -6,22 +6,26 @@
 //
 
 import Coordinator
+import DesignSystem
 import Foundation
 import HTTPClient
 import URLSessionHTTPClient
 
+@MainActor
 struct TransactFactoryContainer {
     static func client() -> HTTPClient {
         URLSessionHTTPClient(session: .shared, enableLogger: true)
     }
 
-    @MainActor
     static func viewModel() -> TransactViewModel {
         TransactViewModel()
     }
 
-    @MainActor
     static func router() -> NavigationStackRouter {
         NavigationStackRouter()
+    }
+
+    static func alertPresenter() -> AlertPresenterController {
+        AlertPresenterController()
     }
 }

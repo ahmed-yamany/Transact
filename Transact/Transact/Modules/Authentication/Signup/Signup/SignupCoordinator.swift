@@ -6,6 +6,7 @@
 //
 
 import Coordinator
+import DesignSystem
 import OTP
 import Signup
 import SwiftUI
@@ -17,21 +18,24 @@ protocol SignupFlowInterFace {
 
 struct SignupCoordinator: Coordinator, SignupCoordinatorInterface, SignupFlowInterFace {
     let router: Router
-    let view: (SignupCoordinatorInterface) -> AnyView
+    let view: (SignupCoordinatorInterface, AlertPresenter) -> AnyView
     let authenticationFlow: AuthenticationFlowInterface
+    let alertPresenter: AlertPresenter
 
     init(
         router: Router,
-        view: @escaping (SignupCoordinatorInterface) -> AnyView,
-        authenticationFlow: AuthenticationFlowInterface
+        view: @escaping (SignupCoordinatorInterface, AlertPresenter) -> AnyView,
+        authenticationFlow: AuthenticationFlowInterface,
+        alertPresenter: AlertPresenter
     ) {
         self.router = router
         self.view = view
         self.authenticationFlow = authenticationFlow
+        self.alertPresenter = alertPresenter
     }
 
     func start() {
-        router.setView(view(self), animated: true, completion: nil)
+        router.setView(view(self, alertPresenter), animated: true, completion: nil)
     }
 
     func navigateToConfirmSignup(_ entity: SignupResponseEntity) {

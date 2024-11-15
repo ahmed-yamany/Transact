@@ -31,7 +31,7 @@ struct AuthenticationFlow: AuthenticationFlowInterface, View {
             .onAppear {
                 navigateToLogin()
             }
-            .animation(.easeInOut(duration: 1), value: router.rootView)
+            .animation(.easeInOut(duration: 0.5), value: router.rootView)
     }
 
     func navigateToLogin() {
@@ -39,11 +39,11 @@ struct AuthenticationFlow: AuthenticationFlowInterface, View {
     }
 
     func navigateToSignup() {
-        SignupFactoryContainer.coordinator(router, authenticationFlow: self).start()
+        SignupFactoryContainer.coordinator(router, authenticationFlow: self, alertPresenter: alertPresenter).start()
     }
 
     func navigateToForgotPassword() {
-        ForgotPasswordFactoryContainer.coordinator(router, authenticationFlow: self).start()
+        ForgotPasswordFactoryContainer.coordinator(router, authenticationFlow: self, alertPresenter: alertPresenter).start()
     }
 
     func navigateToTabBar() {

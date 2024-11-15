@@ -6,10 +6,12 @@
 //
 
 import Coordinator
+import DesignSystem
 import ForgotPassword
 import Shared
 import SwiftUI
 
+@MainActor
 struct ForgotPasswordFactoryContainer {
     static func useCase() -> ForgotPasswordUseCaseInterface {
         let client = TransactFactoryContainer.client()
@@ -18,18 +20,30 @@ struct ForgotPasswordFactoryContainer {
         return ForgotPasswordUseCase(service: service, phoneNumberValidator: phoneNumberValidator)
     }
 
-    @MainActor
-    static func viewModel(_ coordinator: ForgotPasswordCoordinatorInterface) -> ForgotPasswordViewModel {
-        ForgotPasswordViewModel(useCase: Self.useCase(), coordinator: coordinator)
+    static func viewModel(
+        _ coordinator: ForgotPasswordCoordinatorInterface,
+        alertPresenter: AlertPresenter
+    ) -> ForgotPasswordViewModel {
+        ForgotPasswordViewModel(useCase: Self.useCase(), coordinator: coordinator, alertPresenter: alertPresenter)
     }
 
-    @MainActor
-    static func view(_ coordinator: ForgotPasswordCoordinatorInterface) -> AnyView {
-        AnyView(ForgotPasswordView(viewModel: Self.viewModel(coordinator)))
+    static func view(
+        _ coordinator: ForgotPasswordCoordinatorInterface,
+        alertPresenter: AlertPresenter
+    ) -> AnyView {
+        AnyView(ForgotPasswordView(viewModel: Self.viewModel(coordinator, alertPresenter: alertPresenter)))
     }
 
-    @MainActor
-    static func coordinator(_ router: Router, authenticationFlow: AuthenticationFlowInterface) -> Coordinator {
-        ForgotPasswordCoordinator(router: router, view: Self.view, authenticationFlow: authenticationFlow)
+    static func coordinator(
+        _ router: Router,
+        authenticationFlow: AuthenticationFlowInterface,
+        alertPresenter: AlertPresenter
+    ) -> Coordinator {
+        ForgotPasswordCoordinator(
+            router: router,
+            view: Self.view,
+            authenticationFlow: authenticationFlow,
+            alertPresenter: alertPresenter
+        )
     }
 }

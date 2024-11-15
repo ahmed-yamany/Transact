@@ -8,7 +8,7 @@
 import Foundation
 
 @MainActor
-public protocol AlertPresenter: ObservableObject {
+public protocol AlertPresenter {
     func presentAlert(_ alert: AlertType, _ completion: (() -> Void)?)
 //    func dissmisAlert(_ completion: (() -> Void)?)
 }

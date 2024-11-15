@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		733A4E692CE7AB3700BBD854 /* OnboardingErrorVariableAlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733A4E682CE7AB3700BBD854 /* OnboardingErrorVariableAlertItem.swift */; };
 		EE6EA4422CC3D04300BBC748 /* OnboardingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EA4412CC3D04300BBC748 /* OnboardingEntity.swift */; };
 		EE6EA4452CC3D21B00BBC748 /* OnboardingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EA4442CC3D21B00BBC748 /* OnboardingUseCase.swift */; };
 		EE6EA4542CC3E36600BBC748 /* OnboardingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6EA4532CC3E36600BBC748 /* OnboardingService.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		733A4E682CE7AB3700BBD854 /* OnboardingErrorVariableAlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingErrorVariableAlertItem.swift; sourceTree = "<group>"; };
 		EE6EA4412CC3D04300BBC748 /* OnboardingEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingEntity.swift; sourceTree = "<group>"; };
 		EE6EA4442CC3D21B00BBC748 /* OnboardingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUseCase.swift; sourceTree = "<group>"; };
 		EE6EA4532CC3E36600BBC748 /* OnboardingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingService.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		EEC175262CC187F2005966B1 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				733A4E682CE7AB3700BBD854 /* OnboardingErrorVariableAlertItem.swift */,
 				EEC175272CC1882B005966B1 /* OnboardingView.swift */,
 				EEC175292CC18833005966B1 /* OnboardingViewModel.swift */,
 				EEC1752B2CC1883A005966B1 /* OnboardingCoordinator.swift */,
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE6EA4542CC3E36600BBC748 /* OnboardingService.swift in Sources */,
+				733A4E692CE7AB3700BBD854 /* OnboardingErrorVariableAlertItem.swift in Sources */,
 				EEC175282CC1882B005966B1 /* OnboardingView.swift in Sources */,
 				EE6EA4422CC3D04300BBC748 /* OnboardingEntity.swift in Sources */,
 				EE6EA4452CC3D21B00BBC748 /* OnboardingUseCase.swift in Sources */,

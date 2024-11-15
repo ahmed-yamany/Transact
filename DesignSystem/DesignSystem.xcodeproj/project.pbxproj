@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		733A4E6B2CE7AD7F00BBD854 /* VariableAlertPresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733A4E6A2CE7AD7F00BBD854 /* VariableAlertPresenterView.swift */; };
 		739555942CE1587400D36D97 /* ToastAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739555932CE1587400D36D97 /* ToastAlertView.swift */; };
+		7397D6AF2CE665FB00893553 /* VariableAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7397D6AE2CE665FB00893553 /* VariableAlertView.swift */; };
+		7397D6B12CE6686000893553 /* SecondaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7397D6B02CE6686000893553 /* SecondaryButtonStyle.swift */; };
 		739EBBA62CE3F14000FA3D5E /* AlertType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739EBBA52CE3F14000FA3D5E /* AlertType.swift */; };
 		739EBBA82CE3F45900FA3D5E /* AlertPresenterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739EBBA72CE3F45900FA3D5E /* AlertPresenterController.swift */; };
 		739EBBAA2CE3F4E500FA3D5E /* VariableAlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739EBBA92CE3F4E500FA3D5E /* VariableAlertItem.swift */; };
 		739EBBAE2CE3FFE600FA3D5E /* TextProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739EBBAD2CE3FFE600FA3D5E /* TextProtocol.swift */; };
-		739EBBB02CE408E200FA3D5E /* ToastAlertPresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739EBBAF2CE408E200FA3D5E /* ToastAlertPresenterView.swift */; };
+		739EBBB02CE408E200FA3D5E /* ToastAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739EBBAF2CE408E200FA3D5E /* ToastAlertPresenter.swift */; };
 		73B3C3B02CDD4F8000703D7B /* ToastAlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B3C3AF2CDD4F8000703D7B /* ToastAlertItem.swift */; };
 		73B3C3B22CDD4F9900703D7B /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B3C3B12CDD4F9900703D7B /* AlertPresenter.swift */; };
 		73D7E4AA2CD2B9AB001B2DAF /* PrimaryToggleTyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7E4A92CD2B9AB001B2DAF /* PrimaryToggleTyle.swift */; };
@@ -82,12 +85,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		733A4E6A2CE7AD7F00BBD854 /* VariableAlertPresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableAlertPresenterView.swift; sourceTree = "<group>"; };
 		739555932CE1587400D36D97 /* ToastAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastAlertView.swift; sourceTree = "<group>"; };
+		7397D6AE2CE665FB00893553 /* VariableAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableAlertView.swift; sourceTree = "<group>"; };
+		7397D6B02CE6686000893553 /* SecondaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButtonStyle.swift; sourceTree = "<group>"; };
 		739EBBA52CE3F14000FA3D5E /* AlertType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertType.swift; sourceTree = "<group>"; };
 		739EBBA72CE3F45900FA3D5E /* AlertPresenterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenterController.swift; sourceTree = "<group>"; };
 		739EBBA92CE3F4E500FA3D5E /* VariableAlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableAlertItem.swift; sourceTree = "<group>"; };
 		739EBBAD2CE3FFE600FA3D5E /* TextProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextProtocol.swift; sourceTree = "<group>"; };
-		739EBBAF2CE408E200FA3D5E /* ToastAlertPresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastAlertPresenterView.swift; sourceTree = "<group>"; };
+		739EBBAF2CE408E200FA3D5E /* ToastAlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastAlertPresenter.swift; sourceTree = "<group>"; };
 		73B3C3AF2CDD4F8000703D7B /* ToastAlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastAlertItem.swift; sourceTree = "<group>"; };
 		73B3C3B12CDD4F9900703D7B /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
 		73D7E4A92CD2B9AB001B2DAF /* PrimaryToggleTyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryToggleTyle.swift; sourceTree = "<group>"; };
@@ -159,7 +165,7 @@
 			children = (
 				73B3C3AF2CDD4F8000703D7B /* ToastAlertItem.swift */,
 				739555932CE1587400D36D97 /* ToastAlertView.swift */,
-				739EBBAF2CE408E200FA3D5E /* ToastAlertPresenterView.swift */,
+				739EBBAF2CE408E200FA3D5E /* ToastAlertPresenter.swift */,
 			);
 			path = Toast;
 			sourceTree = "<group>";
@@ -167,7 +173,9 @@
 		739EBBAC2CE3F58300FA3D5E /* Variable */ = {
 			isa = PBXGroup;
 			children = (
+				733A4E6A2CE7AD7F00BBD854 /* VariableAlertPresenterView.swift */,
 				739EBBA92CE3F4E500FA3D5E /* VariableAlertItem.swift */,
+				7397D6AE2CE665FB00893553 /* VariableAlertView.swift */,
 			);
 			path = Variable;
 			sourceTree = "<group>";
@@ -342,6 +350,7 @@
 			children = (
 				EE41D1112CB721180043182D /* ButtonSize */,
 				EE41D1272CB722790043182D /* PrimaryButtonStyle.swift */,
+				7397D6B02CE6686000893553 /* SecondaryButtonStyle.swift */,
 				EEC1753A2CC19E10005966B1 /* TextButtonStyle.swift */,
 			);
 			path = Button;
@@ -540,6 +549,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				739EBBA82CE3F45900FA3D5E /* AlertPresenterController.swift in Sources */,
+				7397D6AF2CE665FB00893553 /* VariableAlertView.swift in Sources */,
 				EE41D0F42CB71BD90043182D /* P4Text.swift in Sources */,
 				EEC175112CC17D12005966B1 /* WhiteLogoView.swift in Sources */,
 				EE41D1092CB71BD90043182D /* Spacing.swift in Sources */,
@@ -560,6 +570,7 @@
 				EE41D1082CB71BD90043182D /* Padding.swift in Sources */,
 				EE41D1022CB71BD90043182D /* FoundationIcons.swift in Sources */,
 				EE018F3B2CB6AAC600235DD9 /* DesignSystem.swift in Sources */,
+				7397D6B12CE6686000893553 /* SecondaryButtonStyle.swift in Sources */,
 				EEC1750E2CC15DCA005966B1 /* ApplyPrimaryDesign.swift in Sources */,
 				EE41D10D2CB71BD90043182D /* Typography+FontConvertible.swift in Sources */,
 				EE6EA44F2CC3DADC00BBC748 /* PaginationView.swift in Sources */,
@@ -585,7 +596,8 @@
 				73DA16F52CD3E7F30002DDD2 /* PrimaryOTPTextField.swift in Sources */,
 				EEF413D32CC596B600F21A13 /* PrimaryTextField.swift in Sources */,
 				EE41D1052CB71BD90043182D /* FontSizes.swift in Sources */,
-				739EBBB02CE408E200FA3D5E /* ToastAlertPresenterView.swift in Sources */,
+				733A4E6B2CE7AD7F00BBD854 /* VariableAlertPresenterView.swift in Sources */,
+				739EBBB02CE408E200FA3D5E /* ToastAlertPresenter.swift in Sources */,
 				EE849F742CC4295B00A7B18E /* BlueLogoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

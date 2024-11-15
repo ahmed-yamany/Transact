@@ -6,6 +6,7 @@
 //
 
 import Combine
+import DesignSystem
 import Localization
 import SwiftUI
 
@@ -21,7 +22,7 @@ public protocol OnboardingViewModelInterface: ObservableObject {
     func nextButtonTapped()
     func backButtonTapped()
     func getStartedButtonTapped()
-    
+
     func skipOrRestartButtonTitle() -> String
     func shouldShowGetStartedButton() -> Bool
     func shouldDisableBackButton() -> Bool
@@ -34,10 +35,16 @@ public final class OnboardingViewModel: OnboardingViewModelInterface {
 
     private let coordinator: OnboardingCoordinatorInterface
     private let useCase: OnboardingUseCaseInterface
+    private let alertPresenter: AlertPresenter
 
-    public init(coordinator: OnboardingCoordinatorInterface, useCase: OnboardingUseCaseInterface) {
+    public init(
+        coordinator: OnboardingCoordinatorInterface,
+        useCase: OnboardingUseCaseInterface,
+        alertPresenter: AlertPresenter
+    ) {
         self.coordinator = coordinator
         self.useCase = useCase
+        self.alertPresenter = alertPresenter
     }
 
     public func loadModels() {
@@ -45,6 +52,13 @@ public final class OnboardingViewModel: OnboardingViewModelInterface {
             do {
                 models = try await useCase.getOnboardingModels()
             } catch {
+                let alertItem = OnboardingErrorVariableAlertItem(
+                    message: error.localizedDescription,
+                    realoadAction: { [weak self] in
+                        self?.loadModels()
+                    }
+                )
+                alertPresenter.presentAlert(.variable(alertItem))
             }
         }
     }
@@ -68,7 +82,7 @@ public final class OnboardingViewModel: OnboardingViewModelInterface {
     public func backButtonTapped() {
         selectedIndex -= 1
     }
-    
+
     public func getStartedButtonTapped() {
         coordinator.skipOnboarding()
     }
@@ -76,15 +90,15 @@ public final class OnboardingViewModel: OnboardingViewModelInterface {
     public func skipOrRestartButtonTitle() -> String {
         isIndexAtLast() ? L10n.restart : L10n.skip
     }
-    
+
     public func shouldShowGetStartedButton() -> Bool {
         !isIndexAtLast()
     }
-    
+
     public func shouldDisableBackButton() -> Bool {
         selectedIndex == 0
     }
-    
+
     private func isIndexAtLast() -> Bool {
         selectedIndex == models.count - 1
     }

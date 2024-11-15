@@ -7,14 +7,18 @@
 
 import SwiftUI
 
-public struct ToastAlertView: View {
-    let item: any ToastAlertItem
+struct ToastAlertView: View {
+    @State private var dragXValue: CGFloat = 0
 
-    public init(_ item: any ToastAlertItem) {
+    let item: any ToastAlertItem
+    let deleteAction: () -> Void
+
+    init(_ item: any ToastAlertItem, deleteAction: @escaping () -> Void) {
         self.item = item
+        self.deleteAction = deleteAction
     }
 
-    public var body: some View {
+    var body: some View {
         HStack(alignment: .top, spacing: .spacing.medium) {
             item.image
                 .resizable()
@@ -34,13 +38,28 @@ public struct ToastAlertView: View {
         .padding(.spacing.medium)
         .frame(height: 78)
         .frame(maxWidth: .infinity)
-        .background(item.backgroundColor)
+        .background(.ultraThinMaterial)
         .mask(shapeToClip)
         .background {
             shapeToClip
                 .stroke(lineWidth: DesignSystem.Foundation.Measurements.BorderWidth.default)
                 .fill(item.tintColor)
         }
+        .offset(x: dragXValue)
+        .gesture(
+            DragGesture()
+                .onChanged({ gestureValue in
+                    dragXValue = gestureValue.translation.width < 0 ? gestureValue.translation.width : 0
+                })
+                .onEnded({ gestureValue in
+                    if -gestureValue.translation.width > 200 {
+                        deleteAction()
+                    } else {
+                        dragXValue = 0
+                    }
+                })
+        )
+        .animation(.bouncy, value: dragXValue)
     }
 
     private var shapeToClip: some Shape {

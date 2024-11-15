@@ -6,16 +6,16 @@
 //
 
 import Coordinator
+import DesignSystem
 import Login
 import SwiftUI
-import DesignSystem
 
 struct LoginCoordinator: LoginCoordinatorInterface, Coordinator {
     let router: Router
     let view: (LoginCoordinatorInterface, any AlertPresenter) -> AnyView
     let authenticationFlow: AuthenticationFlowInterface
     let alertPresenter: any AlertPresenter
-    
+
     init(
         router: Router,
         view: @escaping (LoginCoordinatorInterface, any AlertPresenter) -> AnyView,

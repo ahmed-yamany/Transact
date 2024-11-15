@@ -54,10 +54,16 @@ public final class SignupViewModel: SignupViewModelInterface {
 
     private let useCase: SignupUseCaseInterface
     private let coordinator: SignupCoordinatorInterface
+    private let alertPresenter: AlertPresenter
 
-    public init(useCase: SignupUseCaseInterface, coordinator: SignupCoordinatorInterface) {
+    public init(
+        useCase: SignupUseCaseInterface,
+        coordinator: SignupCoordinatorInterface,
+        alertPresenter: AlertPresenter
+    ) {
         self.useCase = useCase
         self.coordinator = coordinator
+        self.alertPresenter = alertPresenter
     }
 
     public func loginButtonTapped() {
@@ -75,6 +81,7 @@ public final class SignupViewModel: SignupViewModelInterface {
                 let response: SignupResponseEntity = try await useCase.signupNewUser(phoneNumber: phoneNumber, fullName: fullName)
                 coordinator.navigateToConfirmSignup(response)
             } catch {
+                alertPresenter.presentAlert(.toast(.error(title: Text(error.localizedDescription))))
             }
         }
     }

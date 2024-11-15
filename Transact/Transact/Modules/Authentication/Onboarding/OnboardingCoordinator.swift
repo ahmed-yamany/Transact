@@ -6,20 +6,24 @@
 //
 
 import Coordinator
+import DesignSystem
 import Onboarding
 import SwiftUI
 
 struct OnboardingCoordinator: OnboardingCoordinatorInterface, View {
+    typealias ViewProviderType = (OnboardingCoordinatorInterface, AlertPresenter) -> AnyView
+
     @EnvironmentObject private var transactViewModel: TransactViewModel
+    @EnvironmentObject private var alertPresenter: AlertPresenterController
 
-    let view: (OnboardingCoordinatorInterface) -> AnyView
+    let view: ViewProviderType
 
-    init(view: @escaping (OnboardingCoordinatorInterface) -> AnyView) {
+    init(view: @escaping ViewProviderType) {
         self.view = view
     }
 
     var body: some View {
-        view(self)
+        view(self, alertPresenter)
     }
 
     func skipOnboarding() {

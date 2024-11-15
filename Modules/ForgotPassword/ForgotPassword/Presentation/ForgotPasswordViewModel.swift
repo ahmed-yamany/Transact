@@ -36,10 +36,12 @@ public final class ForgotPasswordViewModel: ForgotPasswordViewModelInterface {
 
     private let useCase: ForgotPasswordUseCaseInterface
     private let coordinator: ForgotPasswordCoordinatorInterface
+    private let alertPresenter: AlertPresenter
 
-    public init(useCase: ForgotPasswordUseCaseInterface, coordinator: ForgotPasswordCoordinatorInterface) {
+    public init(useCase: ForgotPasswordUseCaseInterface, coordinator: ForgotPasswordCoordinatorInterface, alertPresenter: AlertPresenter) {
         self.useCase = useCase
         self.coordinator = coordinator
+        self.alertPresenter = alertPresenter
     }
 
     public func changePasswordButtonTapped() {
@@ -49,6 +51,7 @@ public final class ForgotPasswordViewModel: ForgotPasswordViewModelInterface {
                 let responseEntity: ForgotPasswordResponseEntity = try await useCase.forgotPassword(phoneNumber)
                 coordinator.navigateToConfirmForgotPassword(responseEntity)
             } catch {
+                alertPresenter.presentAlert(.toast(.error(title: Text(error.localizedDescription))))
             }
         }
     }

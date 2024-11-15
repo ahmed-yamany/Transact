@@ -9,7 +9,7 @@ import Onboarding
 import UIKit
 
 struct OnboardingResourceModel: Decodable {
-    let image: String
+    let image: Int
     let description: String
 }
 
@@ -19,14 +19,12 @@ class OnboardingService: OnboardingServiceInterface {
             return []
         }
 
-        guard let data = try? Data(contentsOf: url) else {
-            return []
+        let data = try Data(contentsOf: url)
+
+        let models: [OnboardingResourceModel] = try JSONDecoder().decode([OnboardingResourceModel].self, from: data)
+
+        return models.map {
+            OnboardingModel(image: UIImage(named: String($0.image))?.pngData() ?? Data(), description: $0.description)
         }
-
-        let models: [OnboardingResourceModel]? = try? JSONDecoder().decode([OnboardingResourceModel].self, from: data)
-
-        return models?.map {
-            OnboardingModel(image: UIImage(named: $0.image)?.pngData() ?? Data(), description: $0.description)
-        } ?? []
     }
 }

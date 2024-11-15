@@ -14,43 +14,32 @@ protocol TransactCoordinatorInterface {
     func checkAuthentication()
 }
 
-struct TransactCoordinator<ViewModel: TransactViewModelInterface>: TransactCoordinatorInterface, View {
+struct TransactCoordinator: TransactCoordinatorInterface, View {
     @ObservedObject var languageSettings = LocalizationSettings.shared
-    @ObservedObject var viewModel: ViewModel
-    @StateObject var alertPresenter = AlertPresenterController()
-
-    init(viewModel: ViewModel) {
-        _viewModel = ObservedObject(wrappedValue: viewModel)
-    }
+    @StateObject var viewModel = TransactFactoryContainer.viewModel()
+    @StateObject var alertPresenter = TransactFactoryContainer.alertPresenter()
 
     var body: some View {
-        GeometryReader { geometryReader in
-            Group {
-                switch viewModel.flow {
-                case .splash:
-                    SplashFactoryContainer.coordinator {
-                        viewModel.checkAuthentication()
-                    }
-                case .onboarding:
-                    OnboardingFactoryContainer.coordinator()
-                case .authentication:
-                    AuthenticationFlow(transactCoordinator: self)
-                case .tabBar:
-                    TabBarFlow()
+        Group {
+            switch viewModel.flow {
+            case .splash:
+                SplashFactoryContainer.coordinator {
+                    viewModel.checkAuthentication()
                 }
-            }
-            .tint(DesignSystem.Tokens.Colors.tint)
-            .configureLanguageSettings(languageSettings)
-            .environmentObject(viewModel)
-            .environmentObject(alertPresenter)
-            .overlay {
-                ToastAlertPresenterView(
-                    alertPresenter,
-                    safeAreaInsets: geometryReader.safeAreaInsets,
-                    rect: geometryReader.frame(in: .global)
-                )
+            case .onboarding:
+                OnboardingFactoryContainer.coordinator()
+            case .authentication:
+                AuthenticationFlow(transactCoordinator: self)
+            case .tabBar:
+                TabBarFlow()
             }
         }
+        .tint(DesignSystem.Tokens.Colors.tint)
+        .configureLanguageSettings(languageSettings)
+        .environmentObject(viewModel)
+        .environmentObject(alertPresenter)
+        .toastAlertPresenter($alertPresenter.toastAlerts)
+        .variableAlertPresenter($alertPresenter.variableAlert)
     }
 
     func checkAuthentication() {

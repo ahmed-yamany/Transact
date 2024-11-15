@@ -7,16 +7,17 @@
 import SwiftUI
 
 public final class AlertPresenterController: AlertPresenter, ObservableObject {
-    @Published public var toastAlert: AnyToastAlertItem? = nil
+    @Published public var toastAlerts: [AnyToastAlertItem] = []
+    @Published public var variableAlert: AnyVariableAlertItem? = nil
 
     public init() {}
 
     public func presentAlert(_ alert: AlertType, _ completion: (() -> Void)?) {
         switch alert {
         case let .toast(toastAlertItem):
-            toastAlert = AnyToastAlertItem(toastAlertItem)
+            toastAlerts.append(AnyToastAlertItem(toastAlertItem))
         case let .variable(variableAlertItem):
-            break
+            variableAlert = AnyVariableAlertItem(variableAlertItem)
         }
     }
 }

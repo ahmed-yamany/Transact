@@ -125,6 +125,7 @@
 		735BEBC72CD3B44C00AA4FA3 /* SignupPasswordContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPasswordContent.swift; sourceTree = "<group>"; };
 		735BEBC82CD3B44C00AA4FA3 /* SignupPasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPasswordCoordinator.swift; sourceTree = "<group>"; };
 		735BEBC92CD3B44C00AA4FA3 /* SignupPasswordFactoryContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPasswordFactoryContainer.swift; sourceTree = "<group>"; };
+		73CFA5F02CE92359009FBA14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		73DA17362CD4FE300002DDD2 /* SignupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupService.swift; sourceTree = "<group>"; };
 		73E92D342CD507F500A4A640 /* SignupOTPViewModelEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupOTPViewModelEntityMapper.swift; sourceTree = "<group>"; };
 		73E92D522CD5234B00A4A640 /* SignupVerifyOtpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupVerifyOtpService.swift; sourceTree = "<group>"; };
@@ -404,6 +405,7 @@
 		EED8F5EE2C9995A100B11D2B /* Transact */ = {
 			isa = PBXGroup;
 			children = (
+				73CFA5F02CE92359009FBA14 /* Info.plist */,
 				EEC1750B2CC1582C005966B1 /* Transact */,
 				EE46AE6A2CB7289200C5F23B /* Modules */,
 				EED8F65E2C99A3DA00B11D2B /* Resources */,
@@ -721,6 +723,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Transact/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -755,6 +758,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Transact/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

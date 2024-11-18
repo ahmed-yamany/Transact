@@ -33,9 +33,9 @@ public final class OnboardingViewModel: OnboardingViewModelInterface {
     @Published public var models: [OnboardingEntity] = []
     @Published public var selectedIndex: Int = 0
 
-    private let coordinator: OnboardingCoordinatorInterface
-    private let useCase: OnboardingUseCaseInterface
-    private let alertPresenter: AlertPresenter
+    internal let coordinator: OnboardingCoordinatorInterface
+    internal let useCase: OnboardingUseCaseInterface
+    internal let alertPresenter: AlertPresenter
 
     public init(
         coordinator: OnboardingCoordinatorInterface,

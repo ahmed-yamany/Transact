@@ -12,13 +12,12 @@ public protocol OnboardingUseCaseInterface {
 }
 
 public actor OnboardingUseCase: OnboardingUseCaseInterface {
-    
-    let service: OnboardingServiceInterface
-    
+    internal let service: OnboardingServiceInterface
+
     public init(service: OnboardingServiceInterface) {
         self.service = service
     }
-    
+
     public func getOnboardingModels() async throws -> [OnboardingEntity] {
         let models: [OnboardingModel] = try await service.getOnboardingModels()
         return models.map { OnboardingEntity(model: $0) }

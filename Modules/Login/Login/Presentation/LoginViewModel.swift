@@ -41,16 +41,15 @@ public final class LoginViewModel: LoginViewModelInterface {
     }
 
     public func loginButtonTapped() {
-        alertPresenter.presentAlert(.toast(.error(title: Text("error.localizedDescription"))))
-//        Task {
-//            do {
-//                let model = LoginModel(phoneNumber: phoneNumber, password: password)
-//                try await useCase.login(model)
-//                coordinator.authenticationCompleted()
-//            } catch {
-//                alertPresenter.presentAlert(.toast(.error(title: Text(error.localizedDescription))))
-//            }
-//        }
+        Task {
+            do {
+                let model = LoginModel(phoneNumber: phoneNumber, password: password)
+                try await useCase.login(model)
+                coordinator.authenticationCompleted()
+            } catch {
+                alertPresenter.presentAlert(.toast(.error(title: Text(error.localizedDescription))))
+            }
+        }
     }
 
     public func signupButtonTapped() {

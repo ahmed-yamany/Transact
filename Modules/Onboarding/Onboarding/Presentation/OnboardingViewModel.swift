@@ -49,17 +49,17 @@ public final class OnboardingViewModel: OnboardingViewModelInterface {
 
     public func loadModels() {
         Task {
-            do {
-                models = try await useCase.getOnboardingModels()
-            } catch {
+//            do {
+//                models = try await useCase.getOnboardingModels()
+//            } catch {
                 let alertItem = OnboardingErrorVariableAlertItem(
-                    message: error.localizedDescription,
+                    message: "error.localizedDescription",
                     realoadAction: { [weak self] in
                         self?.loadModels()
                     }
                 )
                 alertPresenter.presentAlert(.variable(alertItem))
-            }
+//            }
         }
     }
 

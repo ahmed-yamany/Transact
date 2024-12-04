@@ -9,7 +9,7 @@ import Coordinator
 import DesignSystem
 import Login
 import SwiftUI
-import URLSessionHTTPClient
+import HTTPClient
 
 @MainActor
 struct LoginFactoryContainer {

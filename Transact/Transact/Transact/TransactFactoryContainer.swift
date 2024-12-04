@@ -9,7 +9,6 @@ import Coordinator
 import DesignSystem
 import Foundation
 import HTTPClient
-import URLSessionHTTPClient
 
 @MainActor
 struct TransactFactoryContainer {

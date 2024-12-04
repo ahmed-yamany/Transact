@@ -10,7 +10,7 @@ import DesignSystem
 import Shared
 import Signup
 import SwiftUI
-import URLSessionHTTPClient
+import HTTPClient
 
 @MainActor
 struct SignupFactoryContainer {
@@ -39,7 +39,11 @@ struct SignupFactoryContainer {
         AnyView(SignupView(viewModel: Self.viewModel(coordinator, alertPresenter: alertPresenter)))
     }
 
-    static func coordinator(_ router: Router, authenticationFlow: AuthenticationFlowInterface, alertPresenter: AlertPresenter) -> Coordinator {
+    static func coordinator(
+        _ router: Router,
+        authenticationFlow: AuthenticationFlowInterface,
+        alertPresenter: AlertPresenter
+    ) -> Coordinator {
         SignupCoordinator(router: router, view: Self.view, authenticationFlow: authenticationFlow, alertPresenter: alertPresenter)
     }
 }

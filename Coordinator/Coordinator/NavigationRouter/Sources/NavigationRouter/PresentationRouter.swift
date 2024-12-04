@@ -460,7 +460,8 @@ open class PresentationRouter {
 }
 
 // extension UIViewController: @retroactive UIAdaptivePresentationControllerDelegate {}
-extension UIViewController: UIPopoverPresentationControllerDelegate {
+extension UIViewController: @retroactive UIAdaptivePresentationControllerDelegate {}
+extension UIViewController: @retroactive UIPopoverPresentationControllerDelegate {
     public func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
         return .none
     }

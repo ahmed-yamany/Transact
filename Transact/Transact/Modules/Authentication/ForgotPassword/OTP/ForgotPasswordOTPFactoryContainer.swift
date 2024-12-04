@@ -10,7 +10,6 @@ import ForgotPassword
 import HTTPClient
 import OTP
 import SwiftUI
-import URLSessionHTTPClient
 
 @MainActor
 struct ForgotPasswordOTPFactoryContainer {

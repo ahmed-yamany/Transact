@@ -9,7 +9,6 @@ import Coordinator
 import HTTPClient
 import OTP
 import SwiftUI
-import URLSessionHTTPClient
 
 @MainActor
 struct SignupOTPFactoryContainer {

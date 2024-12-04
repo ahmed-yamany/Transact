@@ -10,7 +10,7 @@ import SwiftUI
 public enum Language: String, CaseIterable, Hashable {
     case english = "en"
     case arabic = "ar"
-    
+
     var identifier: String {
         rawValue
     }
@@ -30,15 +30,15 @@ extension Language {
         Locale(identifier: rawValue)
     }
 
-    public var path: String {
+    private func path(forLocalization localization: String) -> String {
         // swiftlint: disable force_unwrapping
-        Bundle(for: LocalizationSettings.self).path(forResource: rawValue, ofType: "lproj")!
+        Bundle(for: LocalizationSettings.self).path(forResource: rawValue, ofType: "lproj", inDirectory: nil, forLocalization: localization)!
         // swiftlint: enable force_unwrapping
     }
 
-    public var bundle: Bundle {
+    public func bundle(forLocalization localization: String) -> Bundle {
         // swiftlint: disable force_unwrapping
-        Bundle(path: path)!
+        Bundle(path: path(forLocalization: localization))!
         // swiftlint: enable force_unwrapping
     }
 }

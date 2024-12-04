@@ -3,23 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73E37F7D2D01210D000E7C2A /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E37F7B2D01210D000E7C2A /* UserDefault.swift */; };
 		EEF25F502CC1445600407E09 /* EnvironmentValues+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF25F4B2CC1445600407E09 /* EnvironmentValues+.swift */; };
 		EEF25F512CC1445600407E09 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF25F4C2CC1445600407E09 /* Language.swift */; };
 		EEF25F522CC1445600407E09 /* LocalizationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF25F4D2CC1445600407E09 /* LocalizationSettings.swift */; };
 		EEF25F532CC1445600407E09 /* View+configureLanguageSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF25F4E2CC1445600407E09 /* View+configureLanguageSettings.swift */; };
 		EEF25F5D2CC1447A00407E09 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF25F582CC1447A00407E09 /* Strings+Generated.swift */; };
 		EEF25F5E2CC1447A00407E09 /* swiftgen+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF25F592CC1447A00407E09 /* swiftgen+localized.swift */; };
-		EEF25F612CC1455100407E09 /* FoundationExtensions in Resources */ = {isa = PBXBuildFile; fileRef = EEF25F602CC1455100407E09 /* FoundationExtensions */; };
-		EEF25F642CC1455900407E09 /* FoundationExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = EEF25F632CC1455900407E09 /* FoundationExtensions */; };
 		EEF25F662CC147A800407E09 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = EEF25F652CC147A800407E09 /* swiftgen.yml */; };
-		EEF25F712CC14E7900407E09 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EEF25F6F2CC14E7900407E09 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		73E37F7B2D01210D000E7C2A /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		EEF25F302CC143F300407E09 /* Localization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Localization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEF25F4B2CC1445600407E09 /* EnvironmentValues+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+.swift"; sourceTree = "<group>"; };
 		EEF25F4C2CC1445600407E09 /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
@@ -27,24 +26,32 @@
 		EEF25F4E2CC1445600407E09 /* View+configureLanguageSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+configureLanguageSettings.swift"; sourceTree = "<group>"; };
 		EEF25F582CC1447A00407E09 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		EEF25F592CC1447A00407E09 /* swiftgen+localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "swiftgen+localized.swift"; sourceTree = "<group>"; };
-		EEF25F602CC1455100407E09 /* FoundationExtensions */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = FoundationExtensions; sourceTree = "<group>"; };
 		EEF25F652CC147A800407E09 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
-		EEF25F702CC14E7900407E09 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		EEF25F722CC14E7D00407E09 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		73E37F7A2D012043000E7C2A /* Localizable */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Localizable; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EEF25F2D2CC143F300407E09 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEF25F642CC1455900407E09 /* FoundationExtensions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73E37F7C2D01210D000E7C2A /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				73E37F7B2D01210D000E7C2A /* UserDefault.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
 		EEF25F262CC143F300407E09 = {
 			isa = PBXGroup;
 			children = (
@@ -68,7 +75,6 @@
 			children = (
 				EEF25F5A2CC1447A00407E09 /* Localization */,
 				EEF25F4F2CC1445600407E09 /* LanguageSettings */,
-				EEF25F5F2CC144EB00407E09 /* SwiftPackages */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -76,6 +82,7 @@
 		EEF25F4F2CC1445600407E09 /* LanguageSettings */ = {
 			isa = PBXGroup;
 			children = (
+				73E37F7C2D01210D000E7C2A /* UserDefaults */,
 				EEF25F4C2CC1445600407E09 /* Language.swift */,
 				EEF25F4D2CC1445600407E09 /* LocalizationSettings.swift */,
 				EEF25F4B2CC1445600407E09 /* EnvironmentValues+.swift */,
@@ -87,19 +94,11 @@
 		EEF25F5A2CC1447A00407E09 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
+				73E37F7A2D012043000E7C2A /* Localizable */,
 				EEF25F582CC1447A00407E09 /* Strings+Generated.swift */,
 				EEF25F592CC1447A00407E09 /* swiftgen+localized.swift */,
-				EEF25F6F2CC14E7900407E09 /* Localizable.strings */,
 			);
 			path = Localization;
-			sourceTree = "<group>";
-		};
-		EEF25F5F2CC144EB00407E09 /* SwiftPackages */ = {
-			isa = PBXGroup;
-			children = (
-				EEF25F602CC1455100407E09 /* FoundationExtensions */,
-			);
-			path = SwiftPackages;
 			sourceTree = "<group>";
 		};
 		EEF25F622CC1455900407E09 /* Frameworks */ = {
@@ -136,9 +135,11 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				73E37F7A2D012043000E7C2A /* Localizable */,
+			);
 			name = Localization;
 			packageProductDependencies = (
-				EEF25F632CC1455900407E09 /* FoundationExtensions */,
 			);
 			productName = Localization;
 			productReference = EEF25F302CC143F300407E09 /* Localization.framework */;
@@ -182,8 +183,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEF25F612CC1455100407E09 /* FoundationExtensions in Resources */,
-				EEF25F712CC14E7900407E09 /* Localizable.strings in Resources */,
 				EEF25F662CC147A800407E09 /* swiftgen.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEF25F5E2CC1447A00407E09 /* swiftgen+localized.swift in Sources */,
+				73E37F7D2D01210D000E7C2A /* UserDefault.swift in Sources */,
 				EEF25F5D2CC1447A00407E09 /* Strings+Generated.swift in Sources */,
 				EEF25F532CC1445600407E09 /* View+configureLanguageSettings.swift in Sources */,
 				EEF25F522CC1445600407E09 /* LocalizationSettings.swift in Sources */,
@@ -227,18 +227,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		EEF25F6F2CC14E7900407E09 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EEF25F702CC14E7900407E09 /* en */,
-				EEF25F722CC14E7D00407E09 /* ar */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EEF25F352CC143F300407E09 /* Debug */ = {
@@ -458,13 +446,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		EEF25F632CC1455900407E09 /* FoundationExtensions */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = FoundationExtensions;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EEF25F272CC143F300407E09 /* Project object */;
 }

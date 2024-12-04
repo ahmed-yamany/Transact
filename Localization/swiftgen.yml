@@ -3,7 +3,7 @@ output_dir: Localization/
 
 strings:
    inputs:
-     - Localization/en.lproj
+     - Localization/Localizable/en.lproj
    outputs:
      - templateName: structured-swift5
        output: Localization/Strings+Generated.swift

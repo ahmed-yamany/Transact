@@ -27,3 +27,9 @@ public struct DefaultHTTPEndPointDecorator: HTTPEndPoint {
         ].merging(endPoint.headers ?? [:]) { _, new in new }
     }
 }
+
+public extension HTTPEndPoint where Self == DefaultHTTPEndPointDecorator {
+    static func `default`(endPoint: HTTPEndPoint, languageProvider: @escaping () -> String) -> Self {
+        DefaultHTTPEndPointDecorator(endPoint: endPoint, languageProvider: languageProvider)
+    }
+}

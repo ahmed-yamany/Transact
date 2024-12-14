@@ -28,3 +28,9 @@ public struct AuthenticatedHTTPEndPointDecorator: HTTPEndPoint {
         ].merging(endPoint.headers ?? [:]) { _, new in new }
     }
 }
+
+public extension HTTPEndPoint where Self == AuthenticatedHTTPEndPointDecorator {
+    static func authenticated(endPoint: HTTPEndPoint, tokenProvider: @escaping () -> String, languageProvider: @escaping () -> String) -> Self {
+        AuthenticatedHTTPEndPointDecorator(endPoint: endPoint, tokenProvider: tokenProvider, languageProvider: languageProvider)
+    }
+}

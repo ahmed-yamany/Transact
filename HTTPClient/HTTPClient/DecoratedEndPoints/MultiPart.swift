@@ -35,4 +35,20 @@ public struct MultiPartAuthenticatedHTTPEndPointDecorator: HTTPEndPoint {
     }
 }
 
+public extension HTTPEndPoint where Self == MultiPartAuthenticatedHTTPEndPointDecorator {
+    static func multipart(
+        endPoint: HTTPEndPoint,
+        boundary: String,
+        tokenProvider: @escaping () -> String,
+        languageProvider: @escaping () -> String
+    ) -> Self {
+        MultiPartAuthenticatedHTTPEndPointDecorator(
+            endPoint: endPoint,
+            boundary: boundary,
+            tokenProvider: tokenProvider,
+            languageProvider: languageProvider
+        )
+    }
+}
+
 // swiftlint: enable type_name

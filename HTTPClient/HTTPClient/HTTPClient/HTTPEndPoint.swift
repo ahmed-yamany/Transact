@@ -7,13 +7,11 @@
 
 import Foundation
 
-public typealias Headers = [String: String]
-
 public protocol HTTPEndPoint {
     var url: String { get }
     var method: HTTPMethod { get }
     var task: HTTPEndPointTask { get }
-    var headers: Headers? { get }
+    var headers: [String: String]? { get }
     var timeInterval: TimeInterval { get }
 }
 

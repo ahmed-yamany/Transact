@@ -11,7 +11,7 @@ public struct AuthenticatedHTTPEndPointDecorator: HTTPEndPoint {
     public var url: String { endPoint.url }
     public var method: HTTPMethod { endPoint.method }
     public var task: HTTPEndPointTask { endPoint.task }
-    public var headers: Headers?
+    public var headers: [String: String]?
     public var timeInterval: TimeInterval { endPoint.timeInterval }
 
     let endPoint: HTTPEndPoint

@@ -20,7 +20,7 @@ public struct URLSessionHTTPClient: HTTPClient {
     }
 
     @discardableResult
-    public func perform(urlRequest: @escaping () -> URLRequest, completion: @escaping (HTTPClient.Result) -> Void) -> URLSessionTask {
+    public func perform(urlRequest: @escaping () -> URLRequest, completion: @escaping (HTTPClient.Result) -> Void) -> HTTPClientTask {
         let urlRequest = urlRequest()
         let task = session.dataTask(with: urlRequest) { data, response, error in
             let result = Result {
@@ -30,42 +30,12 @@ public struct URLSessionHTTPClient: HTTPClient {
         }
 
         task.resume()
-        return task
+        return URLSessionTaskWrapper(wrapped: task)
     }
 
     @discardableResult
-    public func perform(endpoint: @escaping () -> HTTPEndPoint, completion: @escaping (HTTPClient.Result) -> Void) -> URLSessionTask {
+    public func perform(endpoint: @escaping () -> HTTPEndPoint, completion: @escaping (HTTPClient.Result) -> Void) -> HTTPClientTask {
         perform(urlRequest: { URLRequest(endpoint: endpoint()) }, completion: completion)
-    }
-
-    public func perform(urlRequest: @escaping () -> URLRequest) async throws -> HTTPClient.Response {
-        let urlRequest = urlRequest()
-        let (data, response): (Data?, URLResponse) = try await session.data(for: urlRequest)
-        return try validate(request: urlRequest, response: response, data: data, error: nil)
-    }
-
-    public func perform(endpoint: @escaping () -> HTTPEndPoint) async throws -> HTTPClient.Response {
-        try await perform(urlRequest: { URLRequest(endpoint: endpoint()) })
-    }
-
-    public func perform(urlRequest: @escaping () -> URLRequest) -> HTTPClient.PublisherResult {
-        var task: URLSessionTask?
-        return Future { promise in
-            task = perform(urlRequest: urlRequest) { result in
-                switch result {
-                case let .success(response):
-                    promise(.success(response))
-                case let .failure(error):
-                    promise(.failure(error))
-                }
-            }
-        }.handleEvents(receiveCancel: {
-            task?.cancel()
-        }).eraseToAnyPublisher()
-    }
-
-    public func perform(endpoint: @escaping () -> HTTPEndPoint) -> HTTPClient.PublisherResult {
-        perform(urlRequest: { URLRequest(endpoint: endpoint()) })
     }
 }
 

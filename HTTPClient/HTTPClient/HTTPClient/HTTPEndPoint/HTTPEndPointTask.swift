@@ -7,13 +7,11 @@
 
 import Foundation
 
-public typealias Parameters = [String: Any]
-
 public enum HTTPEndPointTask {
     case plain
     case body(Encodable)
-    case query(Parameters)
-    case bodyWithQuery((body: Encodable, query: Parameters))
+    case query([String: Any])
+    case bodyWithQuery((body: Encodable, query: [String: Any]))
     case multipart(multipart: [MultipartItem])
-    case multipartWithQuery((multipart: [MultipartItem], query: Parameters))
+    case multipartWithQuery((multipart: [MultipartItem], query: [String: Any]))
 }

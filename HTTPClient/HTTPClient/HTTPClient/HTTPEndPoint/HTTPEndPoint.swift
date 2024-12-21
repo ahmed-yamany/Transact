@@ -13,8 +13,10 @@ public protocol HTTPEndPoint {
     var task: HTTPEndPointTask { get }
     var headers: [String: String]? { get }
     var timeInterval: TimeInterval { get }
+    var encoder: JSONEncoder { get }
 }
 
-extension HTTPEndPoint {
+public extension HTTPEndPoint {
     var timeInterval: TimeInterval { 60.0 }
+    var encoder: JSONEncoder { JSONEncoder.dateAndSnakeCaseStrategy() }
 }

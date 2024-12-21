@@ -20,15 +20,19 @@ public struct MultiPartWrapper {
 
         for item in items {
             for (key, value) in item.objectDic {
+                let boundary = item.boundary
+                let contentType = item.type.rawValue
+                let extensionType = item.type.extensionType
+
                 if let value = value as? Data {
-                    body.append("--\(item.boundary + lineBreak)")
-                    body.append("Content-Disposition: form-data; name=\"\(key)\"; filename=\"\(UUID().uuidString).\(item.type.extensionType)\"\(lineBreak)")
-                    body.append("Content-Type: \(item.type.rawValue)" + lineBreak + lineBreak)
+                    body.append("--\(boundary + lineBreak)")
+                    body.append("Content-Disposition: form-data; name=\"\(key)\"; filename=\"\(UUID().uuidString).\(extensionType)\"\(lineBreak)")
+                    body.append("Content-Type: \(contentType)" + lineBreak + lineBreak)
                     body.append(value)
                     body.append(lineBreak)
 
                 } else if let value = value as? String {
-                    body.append("--\(item.boundary + lineBreak)")
+                    body.append("--\(boundary + lineBreak)")
                     body.append("Content-Disposition: form-data; name=\"\(key)\"\(lineBreak + lineBreak)")
                     body.append("\(value + lineBreak)")
 
@@ -41,7 +45,9 @@ public struct MultiPartWrapper {
             }
         }
 
-        body.append("--\(items.first?.boundary ?? "")--\(lineBreak)")
+        if let firstItem = items.first {
+            body.append("--\(firstItem.boundary)--\(lineBreak)")
+        }
 
         return body
     }

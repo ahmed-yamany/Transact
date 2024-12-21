@@ -23,6 +23,9 @@
 		73BE7F262D170801003F4FE9 /* TransactHTTPEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BE7F252D170801003F4FE9 /* TransactHTTPEndpoint.swift */; };
 		73BE7F292D170E4B003F4FE9 /* LoginEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BE7F282D170E4B003F4FE9 /* LoginEndPoint.swift */; };
 		73BE7F2D2D171787003F4FE9 /* HTTPEndPoint+authenticated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BE7F2C2D171787003F4FE9 /* HTTPEndPoint+authenticated.swift */; };
+		73BE7F2F2D173490003F4FE9 /* TransactErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BE7F2E2D173490003F4FE9 /* TransactErrorResponse.swift */; };
+		73BE7F352D1739D4003F4FE9 /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BE7F342D1739D4003F4FE9 /* EmptyResponse.swift */; };
+		73BE7F372D173C25003F4FE9 /* HTTPClient+decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BE7F362D173C25003F4FE9 /* HTTPClient+decode.swift */; };
 		73DA17372CD4FE300002DDD2 /* SignupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DA17362CD4FE300002DDD2 /* SignupService.swift */; };
 		73E92D352CD507F500A4A640 /* SignupOTPViewModelEntityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E92D342CD507F500A4A640 /* SignupOTPViewModelEntityMapper.swift */; };
 		73E92D532CD5234B00A4A640 /* SignupVerifyOtpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E92D522CD5234B00A4A640 /* SignupVerifyOtpService.swift */; };
@@ -134,6 +137,9 @@
 		73BE7F252D170801003F4FE9 /* TransactHTTPEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactHTTPEndpoint.swift; sourceTree = "<group>"; };
 		73BE7F282D170E4B003F4FE9 /* LoginEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEndPoint.swift; sourceTree = "<group>"; };
 		73BE7F2C2D171787003F4FE9 /* HTTPEndPoint+authenticated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPEndPoint+authenticated.swift"; sourceTree = "<group>"; };
+		73BE7F2E2D173490003F4FE9 /* TransactErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactErrorResponse.swift; sourceTree = "<group>"; };
+		73BE7F342D1739D4003F4FE9 /* EmptyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
+		73BE7F362D173C25003F4FE9 /* HTTPClient+decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPClient+decode.swift"; sourceTree = "<group>"; };
 		73CFA5F02CE92359009FBA14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		73DA17362CD4FE300002DDD2 /* SignupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupService.swift; sourceTree = "<group>"; };
 		73E92D342CD507F500A4A640 /* SignupOTPViewModelEntityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupOTPViewModelEntityMapper.swift; sourceTree = "<group>"; };
@@ -250,8 +256,11 @@
 		73BE7F242D1707F0003F4FE9 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				73BE7F342D1739D4003F4FE9 /* EmptyResponse.swift */,
+				73BE7F2E2D173490003F4FE9 /* TransactErrorResponse.swift */,
 				73BE7F252D170801003F4FE9 /* TransactHTTPEndpoint.swift */,
 				73BE7F2C2D171787003F4FE9 /* HTTPEndPoint+authenticated.swift */,
+				73BE7F362D173C25003F4FE9 /* HTTPClient+decode.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -563,6 +572,7 @@
 				EEC175042CC157A4005966B1 /* TransactFlow.swift in Sources */,
 				73199EAB2CD2BF2700C96DBD /* SignupOTPCoordinator.swift in Sources */,
 				73E92D632CD553B200A4A640 /* ForgotPasswordOTPFactoryContainer.swift in Sources */,
+				73BE7F352D1739D4003F4FE9 /* EmptyResponse.swift in Sources */,
 				7302A6132CCBF0680078D08C /* LoginService.swift in Sources */,
 				73E92D612CD553A600A4A640 /* ForgotPasswordOTPCoordinator.swift in Sources */,
 				73370F6B2CD3AAA300501AE0 /* SignupOTPContent.swift in Sources */,
@@ -577,6 +587,7 @@
 				73ECBA4E2CD15C7500715062 /* ForgotPasswordFactoryContainer.swift in Sources */,
 				EEC175342CC18B1C005966B1 /* OnboardingFactoryContainer.swift in Sources */,
 				EE6EA45C2CC3E4FF00BBC748 /* OnboardingService.swift in Sources */,
+				73BE7F372D173C25003F4FE9 /* HTTPClient+decode.swift in Sources */,
 				7308DF772CDC35C1009476D3 /* ForgotpasswordPasswordService.swift in Sources */,
 				EEC175072CC157E5005966B1 /* AuthenticationFlow.swift in Sources */,
 				EEFBB0BE2CBD58CC00AC4A7B /* TransactFactoryContainer.swift in Sources */,
@@ -587,6 +598,7 @@
 				EE849F672CC4250600A7B18E /* LoginCoordinator.swift in Sources */,
 				EEC1750A2CC15812005966B1 /* TabBarFlow.swift in Sources */,
 				73BE7F262D170801003F4FE9 /* TransactHTTPEndpoint.swift in Sources */,
+				73BE7F2F2D173490003F4FE9 /* TransactErrorResponse.swift in Sources */,
 				73DA17372CD4FE300002DDD2 /* SignupService.swift in Sources */,
 				735BEBCA2CD3B44C00AA4FA3 /* SignupPasswordCoordinator.swift in Sources */,
 				735BEBCB2CD3B44C00AA4FA3 /* SignupPasswordFactoryContainer.swift in Sources */,

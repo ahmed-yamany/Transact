@@ -7,10 +7,15 @@
 import Combine
 import Foundation
 
-public struct URLSessionHTTPClient: HTTPClient {
-    public struct InvalidHTTPResponseError: Error {}
-    public struct InvalidData: Error {}
+public struct InvalidHTTPResponseError: Error, LocalizedError {
+    public var errorDescription: String? { "Invalid HTTP response" }
+}
 
+public struct InvalidDataResponse: Error, LocalizedError {
+    public var errorDescription: String? { "Invalid data response" }
+}
+
+public struct URLSessionHTTPClient: HTTPClient {
     private let session: URLSession
     private let enableLogger: Bool
 
@@ -49,7 +54,7 @@ private extension URLSessionHTTPClient {
         }
 
         guard let data else {
-            throw InvalidData()
+            throw InvalidDataResponse()
         }
 
         guard let httpResponse = response as? HTTPURLResponse else {

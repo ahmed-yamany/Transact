@@ -3,12 +3,14 @@ import Foundation
 public extension JSONEncoder {
     static func dateAndSnakeCaseStrategy() -> JSONEncoder {
         let encoder = JSONEncoder()
-        encoder.dateEncodingStrategy = Self.dateEncodingStrategy()
+        encoder.dateEncodingStrategy = .dateFormateWithSingleValueCounter
         encoder.keyEncodingStrategy = .convertToSnakeCase
         return encoder
     }
+}
 
-    private static func dateEncodingStrategy() -> JSONEncoder.DateEncodingStrategy {
+public extension JSONEncoder.DateEncodingStrategy {
+    static var dateFormateWithSingleValueCounter: JSONEncoder.DateEncodingStrategy {
         .custom { date, encoder in
             let formatter = DateFormatter()
             formatter.dateFormat = "dd-MM-yyyy"

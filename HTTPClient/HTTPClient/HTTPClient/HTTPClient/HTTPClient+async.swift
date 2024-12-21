@@ -8,7 +8,7 @@
 import Foundation
 
 public extension HTTPClient {
-    func perform(urlRequest: @escaping () async -> URLRequest) async throws -> Response {
+    func perform(urlRequest: @escaping () async -> URLRequest) async throws -> HTTPClientResponse {
         var taskStore = TaskStore()
 
         let urlRequest = await urlRequest()
@@ -34,7 +34,7 @@ public extension HTTPClient {
         }
     }
 
-    func perform(endpoint: @escaping () async -> HTTPEndPoint) async throws -> HTTPClient.Response {
+    func perform(endpoint: @escaping () async -> HTTPEndPoint) async throws -> HTTPClientResponse {
         try await perform(urlRequest: { await URLRequest(endpoint: endpoint()) })
     }
 }

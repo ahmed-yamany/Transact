@@ -9,7 +9,9 @@ import Combine
 import Foundation
 
 public extension HTTPClient {
-    func perform(urlRequest: @escaping () -> URLRequest) -> HTTPClient.PublisherResult {
+    typealias PublisherResult = AnyPublisher<HTTPClientResponse, Error>
+
+    func perform(urlRequest: @escaping () -> URLRequest) -> Self.PublisherResult {
         var task: HTTPClientTask?
         return Future { promise in
             task = perform(urlRequest: urlRequest) { result in
@@ -25,7 +27,7 @@ public extension HTTPClient {
         }).eraseToAnyPublisher()
     }
 
-    func perform(endpoint: @escaping () -> HTTPEndPoint) -> HTTPClient.PublisherResult {
+    func perform(endpoint: @escaping () -> HTTPEndPoint) -> Self.PublisherResult {
         perform(urlRequest: { URLRequest(endpoint: endpoint()) })
     }
 }

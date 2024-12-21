@@ -17,6 +17,6 @@ class LoginService: LoginServiceInterface {
     }
 
     func login(_ model: LoginModel) async throws {
-        try await client.perform(endpoint: { await .login(model) })
+        _ = try await client.perform(endpoint: { await .login(model) }) as EmptyResponse
     }
 }

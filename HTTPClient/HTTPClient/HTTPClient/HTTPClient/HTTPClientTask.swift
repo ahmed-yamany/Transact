@@ -9,3 +9,12 @@ import Foundation
 public protocol HTTPClientTask {
     func cancel()
 }
+
+
+public struct URLSessionTaskWrapper: HTTPClientTask {
+    let wrapped: URLSessionTask
+
+    public func cancel() {
+        wrapped.cancel()
+    }
+}

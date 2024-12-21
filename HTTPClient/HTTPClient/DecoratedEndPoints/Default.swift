@@ -13,6 +13,7 @@ public struct DefaultHTTPEndPointDecorator: HTTPEndPoint {
     public var task: HTTPEndPointTask { endPoint.task }
     public var headers: [String: String]?
     public var timeInterval: TimeInterval { endPoint.timeInterval }
+    public var encoder: JSONEncoder { endPoint.encoder }
 
     let endPoint: HTTPEndPoint
 

@@ -1,6 +1,6 @@
 import Foundation
 
-extension JSONEncoder {
+public extension JSONEncoder {
     static func dateAndSnakeCaseStrategy() -> JSONEncoder {
         let encoder = JSONEncoder()
         encoder.dateEncodingStrategy = Self.dateEncodingStrategy()

@@ -24,7 +24,10 @@ class OnboardingService: OnboardingServiceInterface {
         let models: [OnboardingResourceModel] = try JSONDecoder().decode([OnboardingResourceModel].self, from: data)
 
         return models.map {
-            OnboardingModel(image: UIImage(named: $0.image)?.pngData() ?? Data(), description: $0.description)
+            OnboardingModel(
+                image: UIImage(named: $0.image)?.pngData() ?? Data(),
+                description: $0.description
+            )
         }
     }
 }

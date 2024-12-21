@@ -8,12 +8,13 @@
 import Foundation
 
 public extension HTTPClient {
-    func perform(urlRequest: @escaping () -> URLRequest) async throws -> Response {
-        var task: HTTPClientTask?
+    func perform(urlRequest: @escaping () async -> URLRequest) async throws -> Response {
+        var taskStore = TaskStore()
 
+        let urlRequest = await urlRequest()
         return try await withTaskCancellationHandler {
             return try await withCheckedThrowingContinuation { continuation in
-                task = perform(urlRequest: urlRequest) { result in
+                let task = perform(urlRequest: { urlRequest }) { result in
                     if Task.isCancelled {
                         return continuation.resume(throwing: CancellationError())
                     }
@@ -25,13 +26,32 @@ public extension HTTPClient {
                         continuation.resume(with: .failure(error))
                     }
                 }
+
+                taskStore.store(task: task)
             }
         } onCancel: {
-            task?.cancel()
+            taskStore.cancel()
         }
     }
 
-    func perform(endpoint: @escaping () -> HTTPEndPoint) async throws -> HTTPClient.Response {
-        try await perform(urlRequest: { URLRequest(endpoint: endpoint()) })
+    func perform(endpoint: @escaping () async -> HTTPEndPoint) async throws -> HTTPClient.Response {
+        try await perform(urlRequest: { await URLRequest(endpoint: endpoint()) })
+    }
+}
+
+private final class TaskStore {
+    var task: HTTPClientTask?
+    let lock = NSLock()
+    
+    func store(task: HTTPClientTask) {
+        lock.lock()
+        self.task = task
+        lock.unlock()
+    }
+
+    func cancel() {
+        lock.lock()
+        task?.cancel()
+        lock.unlock()
     }
 }

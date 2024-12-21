@@ -14,21 +14,23 @@ public struct MultiPartAuthenticatedHTTPEndPointDecorator: HTTPEndPoint {
     public var task: HTTPEndPointTask { endPoint.task }
     public var headers: [String: String]?
     public var timeInterval: TimeInterval { endPoint.timeInterval }
+    public var encoder: JSONEncoder { endPoint.encoder }
 
     let endPoint: HTTPEndPoint
 
     public init(
         endPoint: HTTPEndPoint,
         boundary: String,
-        tokenProvider: @escaping () -> String,
-        languageProvider: @escaping () -> String
-    ) {
+        tokenProvider: @escaping () async -> String,
+        languageProvider: @escaping () async -> String
+    ) async {
         self.endPoint = endPoint
-        let language = languageProvider()
+        let language = await languageProvider()
+
         headers = [
             "Accept": "application/json",
             "Content-Type": "multipart/form-data; boundary=\(boundary)",
-            "Authorization": "Bearer \(tokenProvider())",
+            "Authorization": "Bearer \(await tokenProvider())",
             "Accept-Language": language,
             "Lang": language,
         ].merging(endPoint.headers ?? [:]) { _, new in new }
@@ -39,10 +41,10 @@ public extension HTTPEndPoint where Self == MultiPartAuthenticatedHTTPEndPointDe
     static func multipart(
         endPoint: HTTPEndPoint,
         boundary: String,
-        tokenProvider: @escaping () -> String,
-        languageProvider: @escaping () -> String
-    ) -> Self {
-        MultiPartAuthenticatedHTTPEndPointDecorator(
+        tokenProvider: @escaping () async -> String,
+        languageProvider: @escaping () async -> String
+    ) async -> Self {
+        await MultiPartAuthenticatedHTTPEndPointDecorator(
             endPoint: endPoint,
             boundary: boundary,
             tokenProvider: tokenProvider,

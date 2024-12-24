@@ -45,7 +45,7 @@ public struct URLSessionHTTPClient: HTTPClient {
 }
 
 private extension URLSessionHTTPClient {
-    private func validate(request: URLRequest, response: URLResponse?, data: Data?, error: Error?) throws -> HTTPClient.Response {
+    private func validate(request: URLRequest, response: URLResponse?, data: Data?, error: Error?) throws -> HTTPClientResponse {
         if let error {
             if enableLogger {
                 NetworkLogger.log(urlRequest: request, response: nil, dataResponse: nil, error: error)
@@ -65,6 +65,6 @@ private extension URLSessionHTTPClient {
             NetworkLogger.log(urlRequest: request, response: httpResponse, dataResponse: data, error: nil)
         }
 
-        return (data, httpResponse)
+        return HTTPClientResponse(data: data, response: httpResponse)
     }
 }

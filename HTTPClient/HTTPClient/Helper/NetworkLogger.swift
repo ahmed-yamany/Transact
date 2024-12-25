@@ -1,8 +1,13 @@
 import Foundation
 
-struct NetworkLogger {
-    private init() {}
-    static func log(
+public protocol NetworkLoggerProtocol {
+    func log(urlRequest: URLRequest, response: HTTPURLResponse?, dataResponse: Data?, error: Error?)
+}
+
+public struct NetworkLogger: NetworkLoggerProtocol {
+    public init() {}
+
+    public func log(
         urlRequest: URLRequest,
         response: HTTPURLResponse?,
         dataResponse: Data?,
@@ -11,7 +16,7 @@ struct NetworkLogger {
         #if DEBUG
             print("🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️ Request 🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️")
             print("🔗🔗🔗 URL: \(String(describing: urlRequest.url))")
-            print("👉👉👉 methods: \(String(describing: urlRequest.httpMethod))")
+            print("👉👉👉 method: \(String(describing: urlRequest.httpMethod))")
             print("⏰⏰⏰ Headers: \(String(describing: urlRequest.allHTTPHeaderFields))")
 
             if let body = try? JSONSerialization.jsonObject(
@@ -20,7 +25,7 @@ struct NetworkLogger {
             ) {
                 print("🧠🧠🧠 Body: \(String(describing: body))")
             }
-            
+
             // swiftlint: disable line_length
             if let response {
                 print("📲📲📲 StatusCode: \(response.statusCode), description: \(HTTPURLResponse.localizedString(forStatusCode: response.statusCode))")

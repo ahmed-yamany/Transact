@@ -18,6 +18,17 @@ struct HTTPClientResponseDecodeTests {
     struct MockErrorResponse: Decodable, Error, Equatable {
         let code: Int
         let errorMessage: String
+        
+        static func == (lhs: MockErrorResponse, rhs: MockErrorResponse) -> Bool {
+            lhs.code == rhs.code && lhs.errorMessage == rhs.errorMessage
+        }
+    }
+
+    func makeSut(mockData: Data) throws -> MockSuccessResponse {
+        let httpResponse = HTTPClientResponse(data: mockData, response: HTTPURLResponse())
+        let decoder = JSONDecoder()
+
+        return try httpResponse.decode(to: MockSuccessResponse.self, errorType: MockErrorResponse.self, using: decoder)
     }
 
     @Test("Successful decoding")
@@ -28,11 +39,8 @@ struct HTTPClientResponseDecodeTests {
             "message": "Success"
         }
         """.data(using: .utf8)!
-        let httpResponse = HTTPClientResponse(data: mockData, response: HTTPURLResponse())
-        let decoder = JSONDecoder()
 
-        let result = try httpResponse.decode(to: MockSuccessResponse.self, errorType: MockErrorResponse.self, using: decoder)
-
+        let result = try makeSut(mockData: mockData)
         #expect(result == MockSuccessResponse(id: 1, message: "Success"))
     }
 
@@ -44,12 +52,9 @@ struct HTTPClientResponseDecodeTests {
             "errorMessage": "Unauthorized access"
         }
         """.data(using: .utf8)!
-        let httpResponse = HTTPClientResponse(data: mockErrorData, response: HTTPURLResponse())
-        let decoder = JSONDecoder()
 
         do {
-            _ = try httpResponse.decode(to: MockSuccessResponse.self, errorType: MockErrorResponse.self, using: decoder)
-
+            _ = try makeSut(mockData: mockErrorData)
             Issue.record("Expected an error to be thrown")
         } catch let error as MockErrorResponse {
             #expect(error == MockErrorResponse(code: 401, errorMessage: "Unauthorized access"))
@@ -59,12 +64,8 @@ struct HTTPClientResponseDecodeTests {
     @Test("Decoding failure for both types")
     func testDecodeFailureForBothTypes() throws {
         let invalidData = "Invalid JSON".data(using: .utf8)!
-        let httpResponse = HTTPClientResponse(data: invalidData, response: HTTPURLResponse())
-        let decoder = JSONDecoder()
-
         do {
-            _ = try httpResponse.decode(to: MockSuccessResponse.self, errorType: MockErrorResponse.self, using: decoder)
-
+            _ = try makeSut(mockData: invalidData)
             Issue.record("Expected an error to be thrown")
         } catch {
             #expect(true, "An unknown decoding error occurred")

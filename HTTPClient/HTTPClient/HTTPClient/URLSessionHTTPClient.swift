@@ -7,21 +7,13 @@
 import Combine
 import Foundation
 
-public struct InvalidHTTPResponseError: Error, LocalizedError {
-    public var errorDescription: String? { "Invalid HTTP response" }
-}
-
-public struct InvalidDataResponse: Error, LocalizedError {
-    public var errorDescription: String? { "Invalid data response" }
-}
-
 public struct URLSessionHTTPClient: HTTPClient {
     private let session: URLSession
-    private let enableLogger: Bool
+    private let logger: NetworkLoggerProtocol?
 
-    public init(session: URLSession = URLSession.shared, enableLogger: Bool = true) {
+    public init(session: URLSession = URLSession.shared, logger: NetworkLoggerProtocol? = NetworkLogger()) {
         self.session = session
-        self.enableLogger = enableLogger
+        self.logger = logger
     }
 
     @discardableResult
@@ -47,9 +39,10 @@ public struct URLSessionHTTPClient: HTTPClient {
 private extension URLSessionHTTPClient {
     private func validate(request: URLRequest, response: URLResponse?, data: Data?, error: Error?) throws -> HTTPClientResponse {
         if let error {
-            if enableLogger {
-                NetworkLogger.log(urlRequest: request, response: nil, dataResponse: nil, error: error)
+            if let logger {
+                logger.log(urlRequest: request, response: nil, dataResponse: nil, error: error)
             }
+
             throw error
         }
 
@@ -61,8 +54,8 @@ private extension URLSessionHTTPClient {
             throw InvalidHTTPResponseError()
         }
 
-        if enableLogger {
-            NetworkLogger.log(urlRequest: request, response: httpResponse, dataResponse: data, error: nil)
+        if let logger {
+            logger.log(urlRequest: request, response: httpResponse, dataResponse: data, error: nil)
         }
 
         return HTTPClientResponse(data: data, response: httpResponse)

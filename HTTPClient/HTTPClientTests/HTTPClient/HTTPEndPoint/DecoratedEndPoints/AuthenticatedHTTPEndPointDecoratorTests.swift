@@ -48,6 +48,7 @@ struct AuthenticatedHTTPEndPointDecoratorTests {
         #expect(decorator.headers?["X-Custom-Header"] == "CustomValue", "Custom headers should be merged with default headers.")
         #expect(decorator.url == mockEndPoint.url, "Decorator should retain the endpoint's URL.")
         #expect(decorator.method == mockEndPoint.method, "Decorator should retain the endpoint's HTTP method.")
+        #expect(decorator.timeInterval == mockEndPoint.timeInterval)
     }
 
     @Test("Authenticated extension creates decorator correctly")

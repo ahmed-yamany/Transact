@@ -10,7 +10,7 @@ public extension HTTPClientResponse {
     func decode<To: Decodable, ErrorDecodable: Decodable & Error>(
         to type: To.Type,
         errorType: ErrorDecodable.Type,
-        using decoder: JSONDecoder
+        using decoder: JSONDecoder = JSONDecoder()
     ) throws -> To {
         do {
             return try decoder.decode(type, from: data)

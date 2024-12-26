@@ -15,9 +15,17 @@ public struct NetworkLogger: NetworkLoggerProtocol {
     ) {
         #if DEBUG
             print("🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️ Request 🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️")
-            print("🔗🔗🔗 URL: \(String(describing: urlRequest.url))")
-            print("👉👉👉 method: \(String(describing: urlRequest.httpMethod))")
-            print("⏰⏰⏰ Headers: \(String(describing: urlRequest.allHTTPHeaderFields))")
+            if let url = urlRequest.url {
+                print("🔗🔗🔗 URL: \(url)")
+            }
+
+            if let httpMethod = urlRequest.httpMethod {
+                print("👉👉👉 method: \(httpMethod)")
+            }
+
+            if let headers = urlRequest.allHTTPHeaderFields {
+                print("⏰⏰⏰ Headers: \(headers)")
+            }
 
             if let body = try? JSONSerialization.jsonObject(
                 with: urlRequest.httpBody ?? Data(),
@@ -38,7 +46,7 @@ public struct NetworkLogger: NetworkLoggerProtocol {
             }
 
             if let dataResponse, let json = try? JSONSerialization.jsonObject(with: dataResponse, options: .fragmentsAllowed) {
-                print("✅✅✅ ResponseData: \(String(describing: json))")
+                print("✅✅✅ ResponseData: \(json)")
             }
 
             print("🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️ End Request 🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️🏋️‍♀️")

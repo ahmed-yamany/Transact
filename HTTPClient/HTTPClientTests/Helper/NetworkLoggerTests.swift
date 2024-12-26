@@ -31,15 +31,16 @@ final class NetworkLoggerTests: XCTestCase {
 
         // Intercept stdout
         let capturedOutput = captureOutput {
-            logger.log(urlRequest: request, response: response, dataResponse: data, error: nil)
+            self.logger.log(urlRequest: request, response: response, dataResponse: data, error: nil)
         }
 
         // Assert
+        print(capturedOutput)
         XCTAssertTrue(capturedOutput.contains("🔗🔗🔗 URL: https://example.com/api"))
-        XCTAssertTrue(capturedOutput.contains("👉👉👉 method: nil")) // Since no HTTP method is set in the request
+        XCTAssertTrue(capturedOutput.contains("👉👉👉 method: GET")) // Since no HTTP method is set in the request
         XCTAssertTrue(capturedOutput.contains("📲📲📲 StatusCode: 200"))
-        XCTAssertTrue(capturedOutput.contains("✅✅✅ ResponseData: {"))
-        XCTAssertTrue(capturedOutput.contains("\"key\": \"value\""))
+        XCTAssertTrue(capturedOutput.contains("✅✅✅ ResponseData:"))
+        XCTAssertTrue(capturedOutput.contains("key = value;"))
     }
 
     func testLogRequestWithError() {
@@ -49,7 +50,7 @@ final class NetworkLoggerTests: XCTestCase {
 
         // Intercept stdout
         let capturedOutput = captureOutput {
-            logger.log(urlRequest: request, response: nil, dataResponse: nil, error: error)
+            self.logger.log(urlRequest: request, response: nil, dataResponse: nil, error: error)
         }
 
         // Assert
@@ -64,7 +65,7 @@ final class NetworkLoggerTests: XCTestCase {
 
         // Intercept stdout
         let capturedOutput = captureOutput {
-            logger.log(urlRequest: request, response: nil, dataResponse: nil, error: nil)
+            self.logger.log(urlRequest: request, response: nil, dataResponse: nil, error: nil)
         }
 
         // Assert
@@ -73,8 +74,28 @@ final class NetworkLoggerTests: XCTestCase {
         XCTAssertFalse(capturedOutput.contains("🧠🧠🧠 Body:")) // No body was set
     }
 
+    func testLogRequestWithBody() {
+        // Arrange
+        var request = URLRequest(url: URL(string: "https://example.com/api")!)
+        request.httpMethod = "POST"
+        request.httpBody = """
+        {"name": "John", "age": 30}
+        """.data(using: .utf8)
+        
+        // Intercept stdout
+        let capturedOutput = captureOutput {
+            self.logger.log(urlRequest: request, response: nil, dataResponse: nil, error: nil)
+        }
+        
+        // Assert
+        print(capturedOutput)
+        XCTAssertTrue(capturedOutput.contains("🧠🧠🧠 Body: {"))
+        XCTAssertTrue(capturedOutput.contains("name = John;"))
+        XCTAssertTrue(capturedOutput.contains("age = 30;"))
+    }
+
     // Helper function to capture print output
-    private func captureOutput(_ closure: () -> Void) -> String {
+    private func captureOutput(_ closure: @escaping () -> Void) -> String {
         let pipe = Pipe()
         let previousStdout = dup(fileno(stdout))
         dup2(pipe.fileHandleForWriting.fileDescriptor, fileno(stdout))

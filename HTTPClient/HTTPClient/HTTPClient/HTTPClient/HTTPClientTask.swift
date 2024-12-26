@@ -10,7 +10,6 @@ public protocol HTTPClientTask {
     func cancel()
 }
 
-
 public struct URLSessionTaskWrapper: HTTPClientTask {
     let wrapped: URLSessionTask
 

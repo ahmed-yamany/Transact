@@ -10,15 +10,6 @@ import Testing
 
 @Suite("AuthenticatedHTTPEndPointDecorator")
 struct AuthenticatedHTTPEndPointDecoratorTests {
-    struct MockHTTPEndPoint: HTTPEndPoint {
-        let url: String
-        let method: HTTPMethod
-        let task: HTTPEndPointTask
-        let headers: [String: String]?
-        let timeInterval: TimeInterval
-        let encoder: JSONEncoder
-    }
-
     @Test("Decorator correctly merges headers and adds authentication")
     func decoratorAddsAuthAndMergesHeaders() async throws {
         // Arrange

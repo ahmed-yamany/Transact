@@ -10,15 +10,6 @@ import Testing
 
 @Suite("MultiPartAuthenticatedHTTPEndPointDecorator")
 struct MultiPartAuthenticatedHTTPEndPointDecoratorTests {
-    struct MockHTTPEndPoint: HTTPEndPoint {
-        let url: String
-        let method: HTTPMethod
-        let task: HTTPEndPointTask
-        let headers: [String: String]?
-        let timeInterval: TimeInterval
-        let encoder: JSONEncoder
-    }
-
     @Test("Decorator sets multipart headers correctly")
     func decoratorSetsMultipartHeaders() async {
         // Arrange

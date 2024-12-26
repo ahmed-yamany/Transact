@@ -8,14 +8,6 @@ import Foundation
 @testable import HTTPClient
 import Testing
 
-private class MockURLSessionTask: URLSessionTask {
-    var cancelCalled = false
-
-    override func cancel() {
-        cancelCalled = true
-    }
-}
-
 @Suite("HTTPClientTask")
 struct HTTPClientTaskTests {
     @Test("Cancel calls wrapped task's cancel")

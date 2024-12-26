@@ -10,15 +10,6 @@ import Testing
 
 @Suite("DefaultHTTPEndPointDecorator")
 struct DefaultHTTPEndPointDecoratorTests {
-    struct MockHTTPEndPoint: HTTPEndPoint {
-        let url: String
-        let method: HTTPMethod
-        let task: HTTPEndPointTask
-        let headers: [String: String]?
-        let timeInterval: TimeInterval
-        let encoder: JSONEncoder
-    }
-
     @Test("Decorator correctly merges headers and adds default values")
     func decoratorAddsDefaultHeadersAndMerges() {
         // Arrange

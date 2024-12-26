@@ -13,7 +13,7 @@ import XCTest
 @Suite("URLSessionHTTPClient")
 struct URLSessionHTTPClientTests {
     func makeSut(data: Data? = nil, response: URLResponse? = nil, error: Error? = nil, logger: NetworkLoggerProtocol? = nil) -> HTTPClient {
-        let mockSession = MockURLSession(mockData: data, mockResponse: response, mockError: error)
+        let mockSession = MockHTTPSession(mockData: data, mockResponse: response, mockError: error)
         return URLSessionHTTPClient(session: mockSession, logger: logger)
     }
 
@@ -107,6 +107,34 @@ struct URLSessionHTTPClientTests {
         }
     }
 
+    @Test
+    func asyncPerformRequestAndReturnsValidResponse() async throws {
+        let expectedData = Data("Success".utf8)
+        let expectedResponse = HTTPURLResponse(url: URL(string: "https://example.com")!,
+                                               statusCode: 200,
+                                               httpVersion: nil,
+                                               headerFields: nil)
+        let client = makeSut(data: expectedData, response: expectedResponse)
+
+        let response = try await client.perform {
+            URLRequest(url: URL(string: "https://example.com")!)
+        }
+
+        #expect(response.data == expectedData)
+        #expect(response.response == expectedResponse)
+    }
+
+    @Test("Handles network error gracefully")
+    func asyncPerformShouldThrowError() async {
+        let client = makeSut(error: NSError(domain: "TestError", code: -1))
+        do {
+            _ = try await client.perform(urlRequest: { URLRequest(url: URL(string: "https://example.com")!) })
+            Issue.record("expected error not thrown")
+        } catch {
+            #expect(error.localizedDescription == "The operation couldn’t be completed. (TestError error -1.)", "Error should match the mock error")
+        }
+    }
+
     @Test("Logs error")
     func logsErrorWhenInjectingLoggerToClient() async {
         let mockLogger = MockNetworkLogger()
@@ -146,7 +174,7 @@ struct URLSessionHTTPClientTests {
         }
 
         switch result {
-        case .success(_):
+        case .success:
             #expect(mockLogger.loggedRequests.first?.dataResponse == expectedData, "Response data should match expected data")
             #expect(mockLogger.loggedRequests.first?.response == expectedResponse, "Response should match expected HTTPURLResponse")
         default:

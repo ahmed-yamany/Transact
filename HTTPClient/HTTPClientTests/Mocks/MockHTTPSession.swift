@@ -1,12 +1,13 @@
 //
-//  MockURLSession.swift
+//  MockHTTPSession.swift
 //  HTTPClient
 //
 //  Created by Ahmed Yamany on 23/12/2024.
 //
 import Foundation
+@testable import HTTPClient
 
-class MockURLSession: URLSession {
+class MockHTTPSession: HTTPSession {
     var mockData: Data?
     var mockResponse: URLResponse?
     var mockError: Error?
@@ -17,7 +18,7 @@ class MockURLSession: URLSession {
         self.mockError = mockError
     }
 
-    override func dataTask(
+    func dataTask(
         with request: URLRequest,
         completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void
     ) -> URLSessionDataTask {
@@ -25,7 +26,20 @@ class MockURLSession: URLSession {
             completionHandler(self.mockData, self.mockResponse, self.mockError)
         }
     }
-}
+
+    func data(for request: URLRequest) async throws -> (Data, URLResponse) {
+        if let mockError {
+            throw mockError
+        }
+        
+        if let mockData, let mockResponse {
+            return (mockData, mockResponse)
+        }
+        
+        throw InvalidHTTPResponseError()
+    }
+    
+ }
 
 class MockURLSessionDataTask: URLSessionDataTask {
     private let closure: () -> Void

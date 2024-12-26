@@ -13,7 +13,7 @@ import HTTPClient
 @MainActor
 struct TransactFactoryContainer {
     static func client() -> HTTPClient {
-        URLSessionHTTPClient(session: .shared, enableLogger: true)
+        URLSessionHTTPClient(session: URLSession.shared)
     }
 
     static func viewModel() -> TransactViewModel {

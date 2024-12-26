@@ -176,4 +176,14 @@ final class NavigationStackRouterTests: XCTestCase {
         XCTAssertNotNil(sut.sheetView)
         XCTAssertNil(sut.fullScreenCoverView)
     }
+    
+    @MainActor
+    func test_pushContentsOf_shouldPushNewViewsToStack() {
+        let views = [Text("First"), Text("Second"), Text("Third")]
+        sut.setViews(views, animated: false, completion: nil)
+        XCTAssertTrue(sut.navigationStack.count == 2)
+        let viewsToPush = [Text("Fourth"), Text("Fifth"), Text("Sixth")]
+        sut.push(contentsOf: viewsToPush, animated: false, completion: nil)
+        XCTAssertTrue(sut.navigationStack.count == 5)
+    }
 }

@@ -5,7 +5,6 @@
 //  Created by Ahmed Yamany on 13/10/2024.
 //
 
-import NavigationRouter
 import SwiftUI
 
 public protocol NavigationStackRouterInterface: Router, ObservableObject {
@@ -40,7 +39,11 @@ public class NavigationStackRouter: NavigationStackRouterInterface {
     }
 
     public func push(contentsOf viewsToAppend: [some View], animated: Bool, completion: (() -> Void)?) {
-        setViews(navigationStack + viewsToAppend.map { AnyHashableView($0) }, animated: animated, completion: completion)
+        var viewsToPush = navigationStack + viewsToAppend.map { AnyHashableView($0) }
+        if let rootView {
+            viewsToPush = [rootView] + viewsToPush
+        }
+        setViews(viewsToPush, animated: animated, completion: completion)
     }
 
     public func setView(_ view: some View, animated: Bool, completion: (() -> Void)?) {
@@ -56,6 +59,7 @@ public class NavigationStackRouter: NavigationStackRouterInterface {
                 navigationStack = []
                 return
             }
+            
             if views.count == 1 {
                 rootView = AnyHashableView(firstView.lifecycle(onDidLoad: completion))
             } else {

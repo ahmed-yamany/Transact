@@ -32,4 +32,6 @@ public protocol Router {
         completion: (() -> Void)?
     )
     func dismiss(animated: Bool, completion: (() -> Void)?)
+    
+    func popToView<T: View>(ofType type: T.Type, animated: Bool, completion: (() -> Void)?)
 }

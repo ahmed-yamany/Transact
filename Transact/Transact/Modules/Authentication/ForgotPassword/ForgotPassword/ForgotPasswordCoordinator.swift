@@ -10,21 +10,24 @@ import DesignSystem
 import ForgotPassword
 import OTP
 import SwiftUI
+import Login
 
 protocol ForgotPasswordFlowInterface {
     func navigateToUpdatePassword()
     func navigateToSignin()
 }
 
+typealias ForgotPasswordViewType = ForgotPasswordView<ForgotPasswordViewModel>
+
 final class ForgotPasswordCoordinator: Coordinator, ForgotPasswordCoordinatorInterface, ForgotPasswordFlowInterface {
     let router: Router
-    let view: (ForgotPasswordCoordinatorInterface, AlertPresenter) -> AnyView
+    let view: (ForgotPasswordCoordinatorInterface, AlertPresenter) -> ForgotPasswordViewType
     let authenticationFlow: AuthenticationFlowInterface
     let alertPresenter: AlertPresenter
 
     init(
         router: Router,
-        view: @escaping (ForgotPasswordCoordinatorInterface, AlertPresenter) -> AnyView,
+        view: @escaping (ForgotPasswordCoordinatorInterface, AlertPresenter) -> ForgotPasswordViewType,
         authenticationFlow: AuthenticationFlowInterface,
         alertPresenter: AlertPresenter
     ) {
@@ -35,7 +38,9 @@ final class ForgotPasswordCoordinator: Coordinator, ForgotPasswordCoordinatorInt
     }
 
     func start() {
-        router.push(view(self, alertPresenter), animated: true, completion: nil)
+        router.push(view(self, alertPresenter), animated: true, completion: {
+            print("navigate to fortgot password")
+        })
     }
 
     func navigateToConfirmForgotPassword(_ entity: ForgotPasswordResponseEntity) {

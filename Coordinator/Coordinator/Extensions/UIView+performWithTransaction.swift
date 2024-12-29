@@ -1,6 +1,6 @@
 //
 //  UIView+performWithTransaction.swift
-//  
+//
 //
 //  Created by Ahmed Yamany on 02/08/2024.
 //
@@ -12,7 +12,7 @@ public extension UIView {
     /// - Parameters:
     ///   - action: A closure that performs the action.
     ///   - completion: A closure to execute after the transaction completes.
-    static func performWithTransaction(_ action: () -> Void, completion: @escaping () -> Void) {
+    static func performWithTransaction(_ action: () -> Void, completion: (() -> Void)? = nil) {
         CATransaction.begin()
         CATransaction.setCompletionBlock(completion)
         action()

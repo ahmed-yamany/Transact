@@ -8,6 +8,7 @@
 import Coordinator
 import Password
 import SwiftUI
+import ForgotPassword
 
 struct ForgotpasswordPasswordCoordinator: Coordinator, PasswordCoordinatorInterface {
     let router: Router
@@ -26,6 +27,11 @@ struct ForgotpasswordPasswordCoordinator: Coordinator, PasswordCoordinatorInterf
 
     func start() {
         router.push(view(self), animated: true, completion: nil)
+        
+        Task {
+            try? await Task.sleep(for: .seconds(2))
+            router.popToView(ofType: ForgotPasswordViewType.self, animated: true, completion: nil)
+        }
     }
     
     func navigateToSignin() {

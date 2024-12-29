@@ -30,8 +30,8 @@ struct ForgotPasswordFactoryContainer {
     static func view(
         _ coordinator: ForgotPasswordCoordinatorInterface,
         alertPresenter: AlertPresenter
-    ) -> AnyView {
-        AnyView(ForgotPasswordView(viewModel: Self.viewModel(coordinator, alertPresenter: alertPresenter)))
+    ) -> ForgotPasswordViewType {
+        ForgotPasswordView(viewModel: Self.viewModel(coordinator, alertPresenter: alertPresenter))
     }
 
     static func coordinator(

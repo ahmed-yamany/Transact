@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7372084D2D20A7E300AF5598 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7372084C2D20A7E300AF5598 /* Array+.swift */; };
+		7372084F2D20A7E500AF5598 /* UIView+performWithTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7372084E2D20A7E500AF5598 /* UIView+performWithTransaction.swift */; };
+		737208512D20A7F700AF5598 /* PresentationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737208502D20A7F700AF5598 /* PresentationRouter.swift */; };
+		7385B2A92D202F5300F06778 /* NavigationControllerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385B2A82D202F5300F06778 /* NavigationControllerManager.swift */; };
+		7385B2AD2D202FA100F06778 /* NavigationControllerManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385B2AC2D202FA100F06778 /* NavigationControllerManagerTests.swift */; };
 		EE75AF382CBD961200B1D849 /* Coordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED1C9162C6EC02B00472518 /* Coordinator.framework */; platformFilter = ios; };
 		EE75AF402CBD97A400B1D849 /* NavigationStackRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75AF3F2CBD97A400B1D849 /* NavigationStackRouterTests.swift */; };
-		EE776A102CBBC5250021E942 /* NavigationRouter in Frameworks */ = {isa = PBXBuildFile; productRef = EE776A0F2CBBC5250021E942 /* NavigationRouter */; };
 		EEA402302CBEDAAD001867DE /* View+LifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA4022F2CBEDAAD001867DE /* View+LifeCycle.swift */; };
 		EEC332FE2CC03141000B7AB4 /* RecursiveModifierApplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC332FD2CC03141000B7AB4 /* RecursiveModifierApplier.swift */; };
 		EED1C9262C6EC06C00472518 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED1C9202C6EC06C00472518 /* Coordinator.swift */; };
@@ -31,6 +35,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7372084C2D20A7E300AF5598 /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
+		7372084E2D20A7E500AF5598 /* UIView+performWithTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+performWithTransaction.swift"; sourceTree = "<group>"; };
+		737208502D20A7F700AF5598 /* PresentationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationRouter.swift; sourceTree = "<group>"; };
+		7385B2A82D202F5300F06778 /* NavigationControllerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerManager.swift; sourceTree = "<group>"; };
+		7385B2AC2D202FA100F06778 /* NavigationControllerManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerManagerTests.swift; sourceTree = "<group>"; };
 		EE75AF342CBD961200B1D849 /* CoordinatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoordinatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE75AF3F2CBD97A400B1D849 /* NavigationStackRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackRouterTests.swift; sourceTree = "<group>"; };
 		EEA4022F2CBEDAAD001867DE /* View+LifeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+LifeCycle.swift"; sourceTree = "<group>"; };
@@ -41,7 +50,6 @@
 		EED1C9222C6EC06C00472518 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		EED75A822CBBA9BD00F0F206 /* NavigationStackRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackRouter.swift; sourceTree = "<group>"; };
 		EEEA40B32CBD03040013CB02 /* AnyHashableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyHashableView.swift; sourceTree = "<group>"; };
-		EEF25F252CC1363A00407E09 /* NavigationRouter */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = NavigationRouter; path = Coordinator/NavigationRouter; sourceTree = "<group>"; };
 		EEFBB0BF2CBD5F2100AC4A7B /* RoutableNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutableNavigationStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,17 +66,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE776A102CBBC5250021E942 /* NavigationRouter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7385B2A72D202F3600F06778 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				737208502D20A7F700AF5598 /* PresentationRouter.swift */,
+				7385B2A82D202F5300F06778 /* NavigationControllerManager.swift */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
 		EE75AF352CBD961200B1D849 /* CoordinatorTests */ = {
 			isa = PBXGroup;
 			children = (
 				EE75AF3E2CBD979800B1D849 /* Router */,
+				7385B2AC2D202FA100F06778 /* NavigationControllerManagerTests.swift */,
 			);
 			path = CoordinatorTests;
 			sourceTree = "<group>";
@@ -84,6 +101,8 @@
 		EEA4022E2CBEDA9C001867DE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				7372084E2D20A7E500AF5598 /* UIView+performWithTransaction.swift */,
+				7372084C2D20A7E300AF5598 /* Array+.swift */,
 				EEA4022F2CBEDAAD001867DE /* View+LifeCycle.swift */,
 				EEC332FD2CC03141000B7AB4 /* RecursiveModifierApplier.swift */,
 			);
@@ -93,7 +112,6 @@
 		EED1C90C2C6EC02B00472518 = {
 			isa = PBXGroup;
 			children = (
-				EEF25F252CC1363A00407E09 /* NavigationRouter */,
 				EED1C9182C6EC02B00472518 /* Coordinator */,
 				EE75AF352CBD961200B1D849 /* CoordinatorTests */,
 				EED1C9172C6EC02B00472518 /* Products */,
@@ -113,6 +131,7 @@
 		EED1C9182C6EC02B00472518 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				7385B2A72D202F3600F06778 /* NavigationController */,
 				EEA4022E2CBEDA9C001867DE /* Extensions */,
 				EED1C9232C6EC06C00472518 /* Coordinator */,
 			);
@@ -122,6 +141,7 @@
 		EED1C9232C6EC06C00472518 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				EEEA40B32CBD03040013CB02 /* AnyHashableView.swift */,
 				EED1C9222C6EC06C00472518 /* Router.swift */,
 				EED1C9202C6EC06C00472518 /* Coordinator.swift */,
 				EEFBB0C12CBD5F9200AC4A7B /* NavigationStackRouter */,
@@ -140,7 +160,6 @@
 		EEFBB0C12CBD5F9200AC4A7B /* NavigationStackRouter */ = {
 			isa = PBXGroup;
 			children = (
-				EEEA40B32CBD03040013CB02 /* AnyHashableView.swift */,
 				EED75A822CBBA9BD00F0F206 /* NavigationStackRouter.swift */,
 				EEFBB0BF2CBD5F2100AC4A7B /* RoutableNavigationStack.swift */,
 			);
@@ -203,7 +222,6 @@
 			);
 			name = Coordinator;
 			packageProductDependencies = (
-				EE776A0F2CBBC5250021E942 /* NavigationRouter */,
 			);
 			productName = Coordinator;
 			productReference = EED1C9162C6EC02B00472518 /* Coordinator.framework */;
@@ -271,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE75AF402CBD97A400B1D849 /* NavigationStackRouterTests.swift in Sources */,
+				7385B2AD2D202FA100F06778 /* NavigationControllerManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,14 +297,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				737208512D20A7F700AF5598 /* PresentationRouter.swift in Sources */,
 				EED1C9262C6EC06C00472518 /* Coordinator.swift in Sources */,
 				EED75A832CBBA9BD00F0F206 /* NavigationStackRouter.swift in Sources */,
 				EEFBB0C02CBD5F2100AC4A7B /* RoutableNavigationStack.swift in Sources */,
 				EEA402302CBEDAAD001867DE /* View+LifeCycle.swift in Sources */,
+				7385B2A92D202F5300F06778 /* NavigationControllerManager.swift in Sources */,
 				EEEA40B42CBD03040013CB02 /* AnyHashableView.swift in Sources */,
 				EEC332FE2CC03141000B7AB4 /* RecursiveModifierApplier.swift in Sources */,
 				EED1C9282C6EC06C00472518 /* Router.swift in Sources */,
+				7372084F2D20A7E500AF5598 /* UIView+performWithTransaction.swift in Sources */,
 				EED1C9272C6EC06C00472518 /* NavigationControllerRouter.swift in Sources */,
+				7372084D2D20A7E300AF5598 /* Array+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,13 +590,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		EE776A0F2CBBC5250021E942 /* NavigationRouter */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = NavigationRouter;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EED1C90D2C6EC02B00472518 /* Project object */;
 }

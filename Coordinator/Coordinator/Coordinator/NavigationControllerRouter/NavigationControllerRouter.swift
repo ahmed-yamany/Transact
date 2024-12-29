@@ -5,18 +5,17 @@
 //  Created by Ahmed Yamany on 09/08/2024.
 //
 
-import NavigationRouter
 import SwiftUI
 
 @MainActor
 public final class NavigationControllerRouter: Router {
     public let navigationController: UINavigationController
-    public let navigationRouter: NavigationRouter
+    public let navigationRouter: NavigationControllerManager
     public let presentationRouter: PresentationRouter
 
     public init(
         navigationController: UINavigationController,
-        navigationRouter: NavigationRouter,
+        navigationRouter: NavigationControllerManager,
         presentationRouter: PresentationRouter
     ) {
         self.navigationController = navigationController
@@ -78,6 +77,7 @@ public final class NavigationControllerRouter: Router {
         completion: (() -> Void)?
     ) {
         let viewController = UIHostingController(rootView: view)
+        
         presentationRouter.present(
             viewController,
             animated: animated,
@@ -89,5 +89,9 @@ public final class NavigationControllerRouter: Router {
 
     public func dismiss(animated: Bool, completion: (() -> Void)?) {
         presentationRouter.dismiss(animated: animated, completion: completion ?? {})
+    }
+    
+    public func popToView<T: View>(ofType type: T.Type, animated: Bool, completion: (() -> Void)?) {
+        
     }
 }

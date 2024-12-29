@@ -1,15 +1,15 @@
 //
-//  NavigationRouter.swift
+//  NavigationControllerManager.swift
+//  Coordinator
 //
-//
-//  Created by Ahmed Yamany on 01/08/2024.
+//  Created by Ahmed Yamany on 28/12/2024.
 //
 
 import UIKit
 
 /// A class that manages navigation actions for a `UINavigationController`.
 @MainActor
-public class NavigationRouter {
+public class NavigationControllerManager {
     /// The underlying `UINavigationController` instance.
     public let navigationController: UINavigationController
 
@@ -71,62 +71,6 @@ public class NavigationRouter {
     ///   - completion: A closure to execute after the push operation completes.
     public func push(contentsOf viewControllersToAppend: [UIViewController], animated: Bool = true, completion: @escaping () -> Void = {}) {
         setViewControllers(viewControllers + viewControllersToAppend, animated: animated, completion: completion)
-    }
-
-    /// Pushes a view controller if it does not already exist in the navigation stack.
-    /// - Parameters:
-    ///   - viewController: The view controller to push.
-    ///   - animated: A boolean indicating whether the transition is animated.
-    ///   - completion: A closure to execute after the push operation completes.
-    public func pushIfNotExists(_ viewController: UIViewController, animated: Bool = true, completion: @escaping () -> Void = {}) {
-        guard !containsViewController(viewController) else {
-            completion()
-            return
-        }
-        push(viewController, animated: animated, completion: completion)
-    }
-
-    /// Pushes a view controller onto the navigation stack while respecting the safe area.
-    /// - Parameters:
-    ///   - viewController: The view controller to push.
-    ///   - animated: A boolean indicating whether the transition is animated.
-    ///   - completion: A closure to execute after the push operation completes.
-    public func pushRespectingSafeArea(_ viewController: UIViewController, animated: Bool = true, completion: @escaping () -> Void = {}) {
-        viewController.view.layoutIfNeeded()
-        push(viewController, animated: animated, completion: completion)
-    }
-
-    /// Pushes a view controller with a custom animation.
-    /// - Parameters:
-    ///   - viewController: The view controller to push.
-    ///   - animation: A closure defining the custom animation.
-    ///   - animated: A boolean indicating whether the transition is animated.
-    ///   - completion: A closure to execute after the push operation completes.
-    public func push(
-        _ viewController: UIViewController,
-        withAnimation animation: @escaping ((containerView: UIView, viewController: UIViewController)) -> Void,
-        animated: Bool = true,
-        completion: @escaping () -> Void = {}
-    ) {
-        if animated {
-            UIView.transition(
-                with: navigationController.view,
-                duration: 0.5,
-                options: .transitionCrossDissolve,
-                animations: {
-                    self.navigationController.pushViewController(viewController, animated: false)
-                },
-                completion: { _ in
-                    UIView.performWithTransaction({
-                        animation((self.navigationController.view, viewController))
-                    }, completion: completion)
-                }
-            )
-        } else {
-            UIView.performWithTransaction({
-                navigationController.pushViewController(viewController, animated: false)
-            }, completion: completion)
-        }
     }
 
     /// Sets the view controllers of the navigation stack.
@@ -269,19 +213,6 @@ public class NavigationRouter {
 
         let targetViewController = viewControllers[viewControllers.count - count - 1]
         popToViewController(targetViewController, animated: animated, completion: completion)
-    }
-
-    /// Pops a specific number of view controllers from the navigation stack if a condition is met.
-    /// - Parameters:
-    ///   - count: The number of view controllers to pop.
-    ///   - condition: A closure that returns a boolean indicating whether the condition is met.
-    ///   - animated: A boolean indicating whether the transition is animated.
-    ///   - completion: A closure to execute after the operation completes.
-    public func pop(count: Int, when condition: @escaping () -> Bool, animated: Bool = true, completion: @escaping () -> Void = {}) {
-        guard condition() else {
-            return completion()
-        }
-        return pop(count: count, animated: animated, completion: completion)
     }
 
     /// Pops to a view controller of a specific type on the navigation stack.

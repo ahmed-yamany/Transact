@@ -10,9 +10,11 @@ import SwiftUI
 public struct AnyHashableView: View, Hashable, Identifiable {
     private let _view: AnyView
     public var id: UUID = UUID()
+    public var type: Any.Type
 
     public init<T: View>(_ routableView: T) {
         _view = AnyView(routableView)
+        type = T.self
     }
 
     public func hash(into hasher: inout Hasher) {

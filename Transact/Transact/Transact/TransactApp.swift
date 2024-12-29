@@ -16,49 +16,12 @@ extension NavigationControllerManager: @retroactive ObservableObject {}
 struct TransactApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 //    @StateObject var test = BinanceTradeStream(coin1: "btc", coin2: "usdt")
-    @StateObject var manager = createManager()
 
     var body: some Scene {
         WindowGroup {
-//            RepresentableViewController(viewController: manager.navigationController)
-//                .tint(.black)
-//                .ignoresSafeArea()
-//                .onAppear {
-//                    manager.setViewControllers([BlueVC(), RedVC()])
-//                    manager.replaceLastViewController(with: YellowVC())
-//                }
-            
             TransactCoordinator()
-//                .onAppear {
-//                }
         }
     }
-}
-
-class BlueVC: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .blue
-    }
-}
-
-class RedVC: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .red
-    }
-}
-
-class YellowVC: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .yellow
-    }
-}
-
-@MainActor
-func createManager() -> NavigationControllerManager {
-    return NavigationControllerManager(navigationController: .init())
 }
 
 struct RepresentableViewController: UIViewControllerRepresentable {

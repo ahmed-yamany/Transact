@@ -14,7 +14,6 @@
 		7385B2AD2D202FA100F06778 /* NavigationControllerManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385B2AC2D202FA100F06778 /* NavigationControllerManagerTests.swift */; };
 		EE75AF382CBD961200B1D849 /* Coordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED1C9162C6EC02B00472518 /* Coordinator.framework */; platformFilter = ios; };
 		EE75AF402CBD97A400B1D849 /* NavigationStackRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE75AF3F2CBD97A400B1D849 /* NavigationStackRouterTests.swift */; };
-		EEA402302CBEDAAD001867DE /* View+LifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA4022F2CBEDAAD001867DE /* View+LifeCycle.swift */; };
 		EEC332FE2CC03141000B7AB4 /* RecursiveModifierApplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC332FD2CC03141000B7AB4 /* RecursiveModifierApplier.swift */; };
 		EED1C9262C6EC06C00472518 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED1C9202C6EC06C00472518 /* Coordinator.swift */; };
 		EED1C9272C6EC06C00472518 /* NavigationControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED1C9212C6EC06C00472518 /* NavigationControllerRouter.swift */; };
@@ -42,7 +41,6 @@
 		7385B2AC2D202FA100F06778 /* NavigationControllerManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerManagerTests.swift; sourceTree = "<group>"; };
 		EE75AF342CBD961200B1D849 /* CoordinatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoordinatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE75AF3F2CBD97A400B1D849 /* NavigationStackRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackRouterTests.swift; sourceTree = "<group>"; };
-		EEA4022F2CBEDAAD001867DE /* View+LifeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+LifeCycle.swift"; sourceTree = "<group>"; };
 		EEC332FD2CC03141000B7AB4 /* RecursiveModifierApplier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecursiveModifierApplier.swift; sourceTree = "<group>"; };
 		EED1C9162C6EC02B00472518 /* Coordinator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Coordinator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EED1C9202C6EC06C00472518 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 			children = (
 				7372084E2D20A7E500AF5598 /* UIView+performWithTransaction.swift */,
 				7372084C2D20A7E300AF5598 /* Array+.swift */,
-				EEA4022F2CBEDAAD001867DE /* View+LifeCycle.swift */,
 				EEC332FD2CC03141000B7AB4 /* RecursiveModifierApplier.swift */,
 			);
 			path = Extensions;
@@ -301,7 +298,6 @@
 				EED1C9262C6EC06C00472518 /* Coordinator.swift in Sources */,
 				EED75A832CBBA9BD00F0F206 /* NavigationStackRouter.swift in Sources */,
 				EEFBB0C02CBD5F2100AC4A7B /* RoutableNavigationStack.swift in Sources */,
-				EEA402302CBEDAAD001867DE /* View+LifeCycle.swift in Sources */,
 				7385B2A92D202F5300F06778 /* NavigationControllerManager.swift in Sources */,
 				EEEA40B42CBD03040013CB02 /* AnyHashableView.swift in Sources */,
 				EEC332FE2CC03141000B7AB4 /* RecursiveModifierApplier.swift in Sources */,

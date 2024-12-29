@@ -8,9 +8,9 @@
 import Coordinator
 import DesignSystem
 import ForgotPassword
+import Login
 import OTP
 import SwiftUI
-import Login
 
 protocol ForgotPasswordFlowInterface {
     func navigateToUpdatePassword()
@@ -38,7 +38,8 @@ final class ForgotPasswordCoordinator: Coordinator, ForgotPasswordCoordinatorInt
     }
 
     func start() {
-        router.push(view(self, alertPresenter), animated: true, completion: {
+        let view = AnyHashableView(view(self, alertPresenter))
+        router.push(view, animated: true, completion: {
             print("navigate to fortgot password")
         })
     }

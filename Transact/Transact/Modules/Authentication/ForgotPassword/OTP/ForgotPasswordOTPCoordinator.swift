@@ -28,7 +28,8 @@ struct ForgotPasswordOTPCoordinator: Coordinator, OTPCoordinatorInterface {
     }
 
     func start() {
-        router.push(view(self, entity), animated: true, completion: nil)
+        let view = AnyHashableView(view(self, entity))
+        router.push(view, animated: true, completion: nil)
     }
 
     func navigateToUpdatePassword() {

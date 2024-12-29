@@ -17,8 +17,9 @@ protocol AuthenticationFlowInterface {
 }
 
 struct AuthenticationFlow: AuthenticationFlowInterface, View {
-    @StateObject var router = TransactFactoryContainer.router()
+//    @StateObject var router = TransactFactoryContainer.router()
     @EnvironmentObject var alertPresenter: AlertPresenterController
+    @StateObject var router = navigationControllerRouter()
 
     let transactCoordinator: TransactCoordinatorInterface
 
@@ -27,11 +28,14 @@ struct AuthenticationFlow: AuthenticationFlowInterface, View {
     }
 
     var body: some View {
-        RoutableNavigationStack(router: router)
+        RepresentableViewController(viewController: router.navigationController)
+            .ignoresSafeArea()
+
+//        RoutableNavigationStack(router: router)
             .onAppear {
                 navigateToLogin()
             }
-            .animation(.easeInOut(duration: 0.5), value: router.rootView)
+//            .animation(.easeInOut(duration: 0.5), value: router.rootView)
     }
 
     func navigateToLogin() {
@@ -49,4 +53,16 @@ struct AuthenticationFlow: AuthenticationFlowInterface, View {
     func navigateToTabBar() {
         transactCoordinator.checkAuthentication()
     }
+}
+
+extension NavigationControllerRouter: ObservableObject {}
+
+@MainActor
+func navigationControllerRouter() -> NavigationControllerRouter {
+    let nvController = UINavigationController()
+    return NavigationControllerRouter(
+        navigationController: nvController,
+        navigationRouter: NavigationControllerManager(navigationController: nvController),
+        presentationRouter: PresentationRouter(rootViewController: nvController)
+    )
 }

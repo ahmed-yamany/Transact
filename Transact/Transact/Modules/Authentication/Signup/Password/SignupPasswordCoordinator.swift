@@ -21,7 +21,8 @@ struct SignupPasswordCoordinator: Coordinator, PasswordCoordinatorInterface {
     }
 
     func start() {
-        router.push(view(self), animated: true, completion: nil)
+        let view = AnyHashableView(view(self))
+        router.push(view, animated: true, completion: nil)
     }
 
     func navigateToSignin() {

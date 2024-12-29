@@ -29,7 +29,8 @@ struct LoginCoordinator: LoginCoordinatorInterface, Coordinator {
     }
 
     func start() {
-        router.setView(view(self, alertPresenter), animated: true, completion: nil)
+        let view = AnyHashableView(view(self, alertPresenter))
+        router.setView(view, animated: true, completion: nil)
     }
 
     func navigateToSignUp() {

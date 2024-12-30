@@ -17,9 +17,9 @@ protocol AuthenticationFlowInterface {
 }
 
 struct AuthenticationFlow: AuthenticationFlowInterface, View {
-//    @StateObject var router = TransactFactoryContainer.router()
+    @StateObject var router = TransactFactoryContainer.router()
     @EnvironmentObject var alertPresenter: AlertPresenterController
-    @StateObject var router = navigationControllerRouter()
+//    @StateObject var router = navigationControllerRouter()
 
     let transactCoordinator: TransactCoordinatorInterface
 
@@ -28,10 +28,10 @@ struct AuthenticationFlow: AuthenticationFlowInterface, View {
     }
 
     var body: some View {
-        RepresentableViewController(viewController: router.navigationController)
-            .ignoresSafeArea()
+//        RepresentableViewController(viewController: router.navigationController)
+//            .ignoresSafeArea()
 
-//        RoutableNavigationStack(router: router)
+        RoutableNavigationStack(router: router)
             .onAppear {
                 navigateToLogin()
             }

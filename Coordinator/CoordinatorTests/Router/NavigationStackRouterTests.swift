@@ -249,13 +249,13 @@ final class NavigationStackRouterTests: XCTestCase {
         sut.popToView(withType: MockView2.self, animated: false, completion: {
             popToViewExpectation.fulfill()
         })
-        XCTAssertTrue(sut.navigationStack.last?.type == MockView2.self)
+        XCTAssertTrue(sut.navigationStack.last == v2)
 
         sut.popToView(withType: MockView1.self, animated: false, completion: {
             popToRootExpectation.fulfill()
         })
         XCTAssertTrue(sut.navigationStack.isEmpty)
-        XCTAssertTrue(sut.rootView?.type == MockView1.self)
+        XCTAssertTrue(sut.rootView == v1)
 
         wait(for: [popToViewExpectation, popToRootExpectation], timeout: 1)
     }
@@ -270,11 +270,11 @@ final class NavigationStackRouterTests: XCTestCase {
         let v5 = AnyHashableView(MockView3())
         sut.insert(contentsOfViews: [v4, v5], at: 0, animated: true, completion: nil)
 
-        XCTAssertTrue(sut.rootView?.type == MockView2.self)
-        XCTAssertTrue(sut.navigationStack.first?.type == MockView3.self)
-        XCTAssertTrue(sut.navigationStack[1].type == MockView1.self)
-        XCTAssertTrue(sut.navigationStack[2].type == MockView1.self)
-        XCTAssertTrue(sut.navigationStack[3].type == MockView1.self)
+        XCTAssertTrue(sut.rootView == v4)
+        XCTAssertTrue(sut.navigationStack.first == v5)
+        XCTAssertTrue(sut.navigationStack[1] == v1)
+        XCTAssertTrue(sut.navigationStack[2] == v2)
+        XCTAssertTrue(sut.navigationStack[3] == v3)
         XCTAssertTrue(sut.navigationStack.count == 4)
     }
 
@@ -287,12 +287,11 @@ final class NavigationStackRouterTests: XCTestCase {
         let v4 = AnyHashableView(MockView2())
         let v5 = AnyHashableView(MockView3())
         sut.insert(contentsOfViews: [v4, v5], at: 1, animated: true, completion: nil)
-        XCTAssertNotNil(sut.rootView)
-        XCTAssertTrue(sut.navigationStack.first?.type == MockView2.self)
-        XCTAssertTrue(sut.navigationStack[1].type == MockView3.self)
-        XCTAssertTrue(sut.rootView?.type == MockView1.self)
-        XCTAssertTrue(sut.navigationStack[2].type == MockView1.self)
-        XCTAssertTrue(sut.navigationStack[3].type == MockView1.self)
+        XCTAssertTrue(sut.navigationStack.first == v4)
+        XCTAssertTrue(sut.navigationStack[1] == v5)
+        XCTAssertTrue(sut.rootView == v1)
+        XCTAssertTrue(sut.navigationStack[2] == v2)
+        XCTAssertTrue(sut.navigationStack[3] == v3)
         XCTAssertTrue(sut.navigationStack.count == 4)
     }
 
@@ -306,11 +305,11 @@ final class NavigationStackRouterTests: XCTestCase {
         let v5 = AnyHashableView(MockView3())
         sut.insert(contentsOfViews: [v4, v5], at: 2, animated: true, completion: nil)
 
-        XCTAssertTrue(sut.rootView?.type == MockView1.self)
-        XCTAssertTrue(sut.navigationStack[0].type == MockView1.self)
-        XCTAssertTrue(sut.navigationStack[1].type == MockView2.self)
-        XCTAssertTrue(sut.navigationStack[2].type == MockView3.self)
-        XCTAssertTrue(sut.navigationStack[3].type == MockView1.self)
+        XCTAssertTrue(sut.rootView == v1)
+        XCTAssertTrue(sut.navigationStack[0] == v2)
+        XCTAssertTrue(sut.navigationStack[1] == v4)
+        XCTAssertTrue(sut.navigationStack[2] == v5)
+        XCTAssertTrue(sut.navigationStack[3] == v3)
         XCTAssertTrue(sut.navigationStack.count == 4)
     }
 
@@ -340,10 +339,10 @@ final class NavigationStackRouterTests: XCTestCase {
         let v4 = AnyHashableView(MockView2())
         sut.insert(v4, at: 0, animated: true, completion: nil)
 
-        XCTAssertTrue(sut.rootView?.type == MockView2.self)
-        XCTAssertTrue(sut.navigationStack[0].type == MockView1.self)
-        XCTAssertTrue(sut.navigationStack[1].type == MockView1.self)
-        XCTAssertTrue(sut.navigationStack[2].type == MockView1.self)
+        XCTAssertTrue(sut.rootView == v4)
+        XCTAssertTrue(sut.navigationStack[0] == v1)
+        XCTAssertTrue(sut.navigationStack[1] == v2)
+        XCTAssertTrue(sut.navigationStack[2] == v3)
         XCTAssertTrue(sut.navigationStack.count == 3)
     }
 
@@ -356,10 +355,10 @@ final class NavigationStackRouterTests: XCTestCase {
         let v4 = AnyHashableView(MockView2())
         sut.insert(v4, at: 1, animated: true, completion: nil)
 
-        XCTAssertTrue(sut.rootView?.type == MockView1.self)
-        XCTAssertTrue(sut.navigationStack.first?.type == MockView2.self)
-        XCTAssertTrue(sut.navigationStack[1].type == MockView1.self)
-        XCTAssertTrue(sut.navigationStack[2].type == MockView1.self)
+        XCTAssertTrue(sut.rootView == v1)
+        XCTAssertTrue(sut.navigationStack.first == v4)
+        XCTAssertTrue(sut.navigationStack[1] == v2)
+        XCTAssertTrue(sut.navigationStack[2] == v3)
         XCTAssertTrue(sut.navigationStack.count == 3)
     }
 
@@ -388,9 +387,9 @@ final class NavigationStackRouterTests: XCTestCase {
         let v4 = AnyHashableView(MockView2())
         sut.replaceView(at: 0, with: v4, animated: true, completion: nil)
 
-        XCTAssertTrue(sut.rootView?.type == MockView2.self)
-        XCTAssertTrue(sut.navigationStack.first?.type == MockView1.self)
-        XCTAssertTrue(sut.navigationStack[1].type == MockView1.self)
+        XCTAssertTrue(sut.rootView == v4)
+        XCTAssertTrue(sut.navigationStack.first == v2)
+        XCTAssertTrue(sut.navigationStack[1] == v3)
         XCTAssertTrue(sut.navigationStack.count == 2)
     }
 
@@ -403,9 +402,9 @@ final class NavigationStackRouterTests: XCTestCase {
         let v4 = AnyHashableView(MockView2())
         sut.replaceView(at: 1, with: v4, animated: true, completion: nil)
 
-        XCTAssertTrue(sut.rootView?.type == MockView1.self)
-        XCTAssertTrue(sut.navigationStack.first?.type == MockView2.self)
-        XCTAssertTrue(sut.navigationStack[1].type == MockView1.self)
+        XCTAssertTrue(sut.rootView == v1)
+        XCTAssertTrue(sut.navigationStack.first == v4)
+        XCTAssertTrue(sut.navigationStack[1] == v3)
         XCTAssertTrue(sut.navigationStack.count == 2)
     }
 
@@ -418,9 +417,9 @@ final class NavigationStackRouterTests: XCTestCase {
         let v4 = AnyHashableView(MockView2())
         sut.replaceFirstView(with: v4, animated: true, completion: nil)
 
-        XCTAssertTrue(sut.rootView?.type == MockView2.self)
-        XCTAssertTrue(sut.navigationStack.first?.type == MockView1.self)
-        XCTAssertTrue(sut.navigationStack[1].type == MockView1.self)
+        XCTAssertTrue(sut.rootView == v4)
+        XCTAssertTrue(sut.navigationStack.first == v2)
+        XCTAssertTrue(sut.navigationStack[1] == v3)
         XCTAssertTrue(sut.navigationStack.count == 2)
     }
 
@@ -433,9 +432,9 @@ final class NavigationStackRouterTests: XCTestCase {
         let v4 = AnyHashableView(MockView2())
         sut.replaceLastView(with: v4, animated: true, completion: nil)
 
-        XCTAssertTrue(sut.rootView?.type == MockView1.self)
-        XCTAssertTrue(sut.navigationStack.first?.type == MockView1.self)
-        XCTAssertTrue(sut.navigationStack.last?.type == MockView2.self)
+        XCTAssertTrue(sut.rootView == v1)
+        XCTAssertTrue(sut.navigationStack.first == v2)
+        XCTAssertTrue(sut.navigationStack.last == v4)
         XCTAssertTrue(sut.navigationStack.count == 2)
     }
 

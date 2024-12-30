@@ -15,6 +15,7 @@ public protocol Router {
     func setView(_ view: AnyHashableView, animated: Bool, completion: (() -> Void)?)
     func setViews(_ views: [AnyHashableView], animated: Bool, completion: (() -> Void)?)
 
+    func replaceView(at index: Int, with view: AnyHashableView, animated: Bool, completion: (() -> Void)?)
     func replaceLastView(with view: AnyHashableView, animated: Bool, completion: (() -> Void)?)
     func replaceFirstView(with view: AnyHashableView, animated: Bool, completion: (() -> Void)?)
 

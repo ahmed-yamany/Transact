@@ -10,6 +10,9 @@
 		7372084D2D20A7E300AF5598 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7372084C2D20A7E300AF5598 /* Array+.swift */; };
 		7372084F2D20A7E500AF5598 /* UIView+performWithTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7372084E2D20A7E500AF5598 /* UIView+performWithTransaction.swift */; };
 		737208512D20A7F700AF5598 /* PresentationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737208502D20A7F700AF5598 /* PresentationRouter.swift */; };
+		738343792D229E040045B680 /* UIHashableHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738343782D229E040045B680 /* UIHashableHostingController.swift */; };
+		7383437B2D229E530045B680 /* NavigationControllerRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7383437A2D229E530045B680 /* NavigationControllerRouterTests.swift */; };
+		7383437E2D22AC6E0045B680 /* MockNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7383437D2D22AC6E0045B680 /* MockNavigationController.swift */; };
 		7385B2A92D202F5300F06778 /* NavigationControllerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385B2A82D202F5300F06778 /* NavigationControllerManager.swift */; };
 		7385B2AD2D202FA100F06778 /* NavigationControllerManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385B2AC2D202FA100F06778 /* NavigationControllerManagerTests.swift */; };
 		EE75AF382CBD961200B1D849 /* Coordinator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED1C9162C6EC02B00472518 /* Coordinator.framework */; platformFilter = ios; };
@@ -37,6 +40,9 @@
 		7372084C2D20A7E300AF5598 /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 		7372084E2D20A7E500AF5598 /* UIView+performWithTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+performWithTransaction.swift"; sourceTree = "<group>"; };
 		737208502D20A7F700AF5598 /* PresentationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationRouter.swift; sourceTree = "<group>"; };
+		738343782D229E040045B680 /* UIHashableHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHashableHostingController.swift; sourceTree = "<group>"; };
+		7383437A2D229E530045B680 /* NavigationControllerRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerRouterTests.swift; sourceTree = "<group>"; };
+		7383437D2D22AC6E0045B680 /* MockNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNavigationController.swift; sourceTree = "<group>"; };
 		7385B2A82D202F5300F06778 /* NavigationControllerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerManager.swift; sourceTree = "<group>"; };
 		7385B2AC2D202FA100F06778 /* NavigationControllerManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerManagerTests.swift; sourceTree = "<group>"; };
 		EE75AF342CBD961200B1D849 /* CoordinatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoordinatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +76,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7383437C2D22AC640045B680 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				7383437D2D22AC6E0045B680 /* MockNavigationController.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		7385B2A72D202F3600F06778 /* NavigationController */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +96,7 @@
 		EE75AF352CBD961200B1D849 /* CoordinatorTests */ = {
 			isa = PBXGroup;
 			children = (
+				7383437C2D22AC640045B680 /* Mocks */,
 				EE75AF3E2CBD979800B1D849 /* Router */,
 				7385B2AC2D202FA100F06778 /* NavigationControllerManagerTests.swift */,
 			);
@@ -92,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				EE75AF3F2CBD97A400B1D849 /* NavigationStackRouterTests.swift */,
+				7383437A2D229E530045B680 /* NavigationControllerRouterTests.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -128,6 +144,8 @@
 		EED1C9182C6EC02B00472518 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				738343782D229E040045B680 /* UIHashableHostingController.swift */,
+				EEEA40B32CBD03040013CB02 /* AnyHashableView.swift */,
 				7385B2A72D202F3600F06778 /* NavigationController */,
 				EEA4022E2CBEDA9C001867DE /* Extensions */,
 				EED1C9232C6EC06C00472518 /* Coordinator */,
@@ -138,7 +156,6 @@
 		EED1C9232C6EC06C00472518 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				EEEA40B32CBD03040013CB02 /* AnyHashableView.swift */,
 				EED1C9222C6EC06C00472518 /* Router.swift */,
 				EED1C9202C6EC06C00472518 /* Coordinator.swift */,
 				EEFBB0C12CBD5F9200AC4A7B /* NavigationStackRouter */,
@@ -285,8 +302,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7383437B2D229E530045B680 /* NavigationControllerRouterTests.swift in Sources */,
 				EE75AF402CBD97A400B1D849 /* NavigationStackRouterTests.swift in Sources */,
 				7385B2AD2D202FA100F06778 /* NavigationControllerManagerTests.swift in Sources */,
+				7383437E2D22AC6E0045B680 /* MockNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +323,7 @@
 				EED1C9282C6EC06C00472518 /* Router.swift in Sources */,
 				7372084F2D20A7E500AF5598 /* UIView+performWithTransaction.swift in Sources */,
 				EED1C9272C6EC06C00472518 /* NavigationControllerRouter.swift in Sources */,
+				738343792D229E040045B680 /* UIHashableHostingController.swift in Sources */,
 				7372084D2D20A7E300AF5598 /* Array+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

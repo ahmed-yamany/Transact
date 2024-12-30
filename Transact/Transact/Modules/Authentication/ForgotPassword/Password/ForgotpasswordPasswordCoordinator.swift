@@ -6,9 +6,9 @@
 //
 
 import Coordinator
+import ForgotPassword
 import Password
 import SwiftUI
-import ForgotPassword
 
 struct ForgotpasswordPasswordCoordinator: Coordinator, PasswordCoordinatorInterface {
     let router: Router
@@ -28,13 +28,13 @@ struct ForgotpasswordPasswordCoordinator: Coordinator, PasswordCoordinatorInterf
     func start() {
         let view = AnyHashableView(view(self))
         router.push(view, animated: true, completion: nil)
-        
+
         Task {
             try? await Task.sleep(for: .seconds(2))
             router.popToView(withType: ForgotPasswordViewType.self, animated: true, completion: nil)
         }
     }
-    
+
     func navigateToSignin() {
         forgotPasswordFlow.navigateToSignin()
     }

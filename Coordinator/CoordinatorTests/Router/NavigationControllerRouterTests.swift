@@ -291,7 +291,7 @@ final class NavigationControllerRouterTests: XCTestCase {
         wait(for: [expectation], timeout: 1.0)
     }
 
-    func testPresentFullScreenStyle() {
+    func test_Present() {
         let sut = makeSut()
 
         sut.setView(AnyHashableView(Text("")), animated: false, completion: nil)
@@ -327,61 +327,47 @@ final class NavigationControllerRouterTests: XCTestCase {
         )
     }
 
-    func testPresentMultipleViews() {
+    func test_dismiss() async {
         let sut = makeSut()
-
-        sut.setView(AnyHashableView(Text("")), animated: false, completion: nil)
         let view = AnyHashableView(MockView1())
 
-        _ = sut.navigationController.view
-        _ = sut.navigationController.topViewController?.view
-
         sut.present(
             view,
             animated: false,
             presentationStyle: .fullScreen,
-            transitionStyle: .coverVertical,
+            transitionStyle: .crossDissolve,
             completion: nil
         )
-        _ = sut.navigationController.visibleViewController?.view
-
-        guard let presentedViewController = sut.navigationController.visibleViewController as? UIHashableHostingController else {
-            XCTFail("No view controller was presented.")
-            return
-        }
-
-        XCTAssertEqual(
-            presentedViewController.rootView,
-            view,
-            "The presented view controller's root view should match the provided view."
-        )
-   
-        let view2 = AnyHashableView(MockView2())
-        sut.present(
-            view2,
-            animated: false,
-            presentationStyle: .fullScreen,
-            transitionStyle: .coverVertical,
-            completion: nil
-        )
-        _ = sut.navigationController.visibleViewController?.view
-        
-        // Verify the presented view controller
-        guard let presentedViewController = sut.navigationController.visibleViewController as? UIHashableHostingController else {
-            XCTFail("No view controller was presented.")
-            return
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            XCTAssertEqual(
-                presentedViewController.rootView,
-                view2,
-                "The presented view controller's root view should match the provided view."
-            )
-        }
-
-
+        XCTAssertEqual((sut.presentedViewController as? UIHashableHostingController)?.rootView, view)
+        sut.dismiss(animated: false, completion: nil)
+        try? await Task.sleep(for: .seconds(1))
+        XCTAssertEqual(sut.presentedViewController, sut.navigationController)
     }
 
+    // MARK: - Pop to View Tests
+
+    func testPopToViewWithMatchingType() {
+        let sut = makeSut()
+
+        let view1 = AnyHashableView(MockView1())
+        let view2 = AnyHashableView(MockView2())
+        let view3 = AnyHashableView(MockView3())
+        sut.setViews([view1, view2, view3], animated: false, completion: nil)
+        _ = sut.navigationController.view
+        _ = sut.navigationController.topViewController?.view
+        _ = sut.navigationController.visibleViewController?.view
+        XCTAssertEqual(sut.navigationController.viewControllers.count, 3, "Navigation stack should have three views.")
+        let expectation = expectation(description: "Pop to view completion called")
+
+        sut.popToView(withType: MockView1.self, animated: false) {
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 1.0)
+
+        let viewControllers = sut.hashableViewControllers
+        XCTAssertEqual(viewControllers.count, 1, "Navigation stack should have popped to the matching view.")
+        XCTAssertTrue(viewControllers.last?.rootView == view1, "The last view controller should match the target view.")
+    }
 }
 
 extension NavigationControllerRouter {

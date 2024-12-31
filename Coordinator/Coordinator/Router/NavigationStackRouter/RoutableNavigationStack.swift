@@ -12,7 +12,7 @@ public struct RoutableNavigationStack<NavigationRouter: NavigationStackRouterInt
     @ObservedObject private var router: NavigationRouter
 
     public init(router: NavigationRouter) {
-        self._router = ObservedObject(wrappedValue: router)
+        _router = ObservedObject(wrappedValue: router)
     }
 
     public var body: some View {
@@ -20,10 +20,17 @@ public struct RoutableNavigationStack<NavigationRouter: NavigationStackRouterInt
             Group {
                 router.rootView
             }
-            .toolbar(.visible, for: .navigationBar)
-            .navigationDestination(for: AnyHashableView.self) { $0 }
+            .toolbar(router.hideNavigationBar ? .hidden : .visible, for: .navigationBar)
+            .navigationDestination(for: AnyHashableView.self) {
+                $0.toolbar(router.hideNavigationBar ? .hidden : .visible, for: .navigationBar)
+                    .onCondition(router.animateHideNavigationBar) {
+                        $0.animation(.default, value: router.hideNavigationBar)
+                    }
+            }
             .fullScreenCover(item: $router.fullScreenCoverView) { $0 }
             .sheet(item: $router.sheetView) { $0 }
+            .navigationBarBackButtonImage(router.backButtonImage)
         }
     }
 }
+

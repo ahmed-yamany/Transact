@@ -6,10 +6,37 @@
 //
 
 import SwiftUI
+@MainActor
+public protocol NavigationControllerRouterInterface: Router, ObservableObject {
+    var navigationController: UINavigationController { get }
+    var presentedViewControllers: [UIViewController] { get }
+    var presentedViewController: UIViewController { get }
+}
 
 @MainActor
-public final class NavigationControllerRouter: Router {
-    
+public final class NavigationControllerRouter: NavigationControllerRouterInterface {
+    public var presentedViewControllers: [UIViewController] {
+        var stack: [UIViewController] = []
+
+        if var currentViewController = navigationController.presentedViewController {
+            stack.append(currentViewController)
+            while let nextViewController = currentViewController.presentedViewController {
+                currentViewController = nextViewController
+                stack.append(currentViewController)
+            }
+        }
+        return stack
+    }
+
+    /// The top-most presented view controller.
+    public var presentedViewController: UIViewController {
+        guard let presentedViewController = presentedViewControllers.last else {
+            return navigationController
+        }
+
+        return presentedViewController
+    }
+
     public let navigationController: UINavigationController
 
     public init(navigationController: UINavigationController) {
@@ -90,19 +117,28 @@ public final class NavigationControllerRouter: Router {
         let viewController = UIHashableHostingController(rootView: view)
         viewController.modalPresentationStyle = presentationStyle
         viewController.modalTransitionStyle = transitionStyle
-        navigationController.visibleViewController?.present(viewController, animated: animated, completion: completion)
+        presentedViewController.present(viewController, animated: animated, completion: completion)
     }
 
     public func dismiss(animated: Bool, completion: (() -> Void)?) {
-        navigationController.visibleViewController?.dismiss(animated: animated, completion: completion ?? {})
+        presentedViewController.dismiss(animated: animated, completion: completion ?? {})
     }
 
     public func popToView<T: View>(withType type: T.Type, animated: Bool, completion: (() -> Void)?) {
         let stack = navigationController.viewControllers.compactMap { $0 as? UIHashableHostingController }
-        if let index = stack.firstIndex(where: { $0.type == type }) {
+        if let viewController = stack.first(where: { $0.type == type }) {
             UIView.performWithTransaction({
-                navigationController.popToViewController(navigationController.viewControllers[index], animated: animated)
+                navigationController.popToViewController(viewController, animated: animated)
             }, completion: completion)
         }
+    }
+
+    public func setNavigationBarHidden(_ hidden: Bool, animated: Bool) {
+        navigationController.setNavigationBarHidden(hidden, animated: animated)
+    }
+    
+    public func setBackButtonImage(_ image: UIImage?) {
+        navigationController.navigationBar.backIndicatorImage = image
+        navigationController.navigationBar.backIndicatorTransitionMaskImage = image
     }
 }

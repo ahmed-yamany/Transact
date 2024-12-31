@@ -28,8 +28,7 @@ struct AuthenticationFlow: AuthenticationFlowInterface, View {
     }
 
     var body: some View {
-//        RepresentableViewController(viewController: router.navigationController)
-//            .ignoresSafeArea()
+//        RoutableNavigationController(router: router)
 
         RoutableNavigationStack(router: router)
             .onAppear {
@@ -61,8 +60,6 @@ extension NavigationControllerRouter: ObservableObject {}
 func navigationControllerRouter() -> NavigationControllerRouter {
     let nvController = UINavigationController()
     return NavigationControllerRouter(
-        navigationController: nvController,
-        navigationRouter: NavigationControllerManager(navigationController: nvController),
-        presentationRouter: PresentationRouter(rootViewController: nvController)
+        navigationController: nvController
     )
 }

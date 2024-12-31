@@ -75,39 +75,8 @@ open class PresentationRouter {
         presentedViewController.sheetPresentationController
     }
 
-    /// Presents a view controller.
-    ///
-    /// - Parameters:
-    ///   - viewController: The view controller to present.
-    ///   - animated: Whether to animate the presentation. Default is `true`.
-    ///   - presentationStyle: The modal presentation style to use. Default is `.automatic`.
-    ///   - transitionStyle: The modal transition style to use. Default is `.coverVertical`.
-    ///   - completion: A closure to be called after the presentation finishes. Default is an empty closure.
-    public func present(
-        _ viewController: UIViewController,
-        animated: Bool = true,
-        presentationStyle: UIModalPresentationStyle,
-        transitionStyle: UIModalTransitionStyle = .coverVertical,
-        completion: @escaping () -> Void = {}
-    ) {
-        viewController.modalPresentationStyle = presentationStyle
-        viewController.modalTransitionStyle = transitionStyle
+  
 
-        present(viewController, on: presentedViewController, animated: animated, completion: completion)
-    }
-
-    private func present(
-        _ viewController: UIViewController,
-        on presentingViewController: UIViewController,
-        animated: Bool,
-        completion: @escaping () -> Void
-    ) {
-        presentingViewController.present(viewController, animated: animated) { [weak self] in
-            guard let self else { return }
-            delegate?.didPresentViewController(viewController)
-            completion()
-        }
-    }
 
     public func present(
         contentsOf viewControllersToPresent: [UIViewController],
@@ -119,21 +88,21 @@ open class PresentationRouter {
         guard let viewControllerToPresent = viewControllersToPresent.first else {
             return completion()
         }
-        present(
-            viewControllerToPresent,
-            animated: animated,
-            presentationStyle: presentationStyle,
-            transitionStyle: transitionStyle
-        ) { [weak self] in
-            guard let self else { return }
-            present(
-                contentsOf: viewControllersToPresent.removedFirst(),
-                animated: animated,
-                presentationStyle: presentationStyle,
-                transitionStyle: transitionStyle,
-                completion: completion
-            )
-        }
+//        present(
+//            viewControllerToPresent,
+//            animated: animated,
+//            presentationStyle: presentationStyle,
+//            transitionStyle: transitionStyle
+//        ) { [weak self] in
+//            guard let self else { return }
+//            present(
+//                contentsOf: viewControllersToPresent.removedFirst(),
+//                animated: animated,
+//                presentationStyle: presentationStyle,
+//                transitionStyle: transitionStyle,
+//                completion: completion
+//            )
+//        }
     }
 
     /// Dismisses the top-most presented view controller.
@@ -187,16 +156,16 @@ open class PresentationRouter {
         transitionStyle: UIModalTransitionStyle = .coverVertical,
         completion: @escaping () -> Void = {}
     ) {
-        dismiss(animated: animated) { [weak self] in
-            guard let self else { return }
-            present(
-                viewController,
-                animated: animated,
-                presentationStyle: presentationStyle,
-                transitionStyle: transitionStyle,
-                completion: completion
-            )
-        }
+//        dismiss(animated: animated) { [weak self] in
+//            guard let self else { return }
+//            present(
+//                viewController,
+//                animated: animated,
+//                presentationStyle: presentationStyle,
+//                transitionStyle: transitionStyle,
+//                completion: completion
+//            )
+//        }
     }
 
     /// Replaces the first presented view controller with a new one.
@@ -315,12 +284,12 @@ open class PresentationRouter {
             sheet.prefersScrollingExpandsWhenScrolledToEdge = scrollingExpandsWhenScrolledToEdge
             sheet.largestUndimmedDetentIdentifier = largestUndimmedDetentIdentifier
         }
-        present(
-            viewController,
-            animated: animated,
-            presentationStyle: .automatic,
-            completion: completion
-        )
+//        present(
+//            viewController,
+//            animated: animated,
+//            presentationStyle: .automatic,
+//            completion: completion
+//        )
     }
 
     /// Sets the selected detent for the sheet presentation controller.

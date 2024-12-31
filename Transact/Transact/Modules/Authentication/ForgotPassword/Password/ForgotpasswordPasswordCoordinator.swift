@@ -28,11 +28,6 @@ struct ForgotpasswordPasswordCoordinator: Coordinator, PasswordCoordinatorInterf
     func start() {
         let view = AnyHashableView(view(self))
         router.push(view, animated: true, completion: nil)
-
-        Task {
-            try? await Task.sleep(for: .seconds(2))
-            router.popToView(withType: ForgotPasswordViewType.self, animated: true, completion: nil)
-        }
     }
 
     func navigateToSignin() {

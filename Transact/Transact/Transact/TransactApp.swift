@@ -10,7 +10,6 @@ import Coordinator
 import HTTPClient
 import SwiftUI
 
-extension NavigationControllerManager: @retroactive ObservableObject {}
 
 @main
 struct TransactApp: App {

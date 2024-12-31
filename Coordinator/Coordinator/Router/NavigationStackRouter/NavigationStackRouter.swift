@@ -13,10 +13,9 @@ public protocol NavigationStackRouterInterface: Router, ObservableObject {
     var navigationStack: [AnyHashableView] { get set }
     var fullScreenCoverView: AnyHashableView? { get set }
     var sheetView: AnyHashableView? { get set }
-    var hideNavigationBar: Bool { get set }
-    var animateHideNavigationBar: Bool { get set }
-    var backButtonImage: UIImage? { get set }
 }
+
+
 
 @MainActor
 public class NavigationStackRouter: NavigationStackRouterInterface {
@@ -24,10 +23,7 @@ public class NavigationStackRouter: NavigationStackRouterInterface {
     @Published public var navigationStack: [AnyHashableView] = []
     @Published public var fullScreenCoverView: AnyHashableView?
     @Published public var sheetView: AnyHashableView?
-    @Published public var hideNavigationBar: Bool = false
-    @Published public var animateHideNavigationBar: Bool = false
-    @Published public var backButtonImage: UIImage? = nil
-    
+
     var transaction = Transaction()
 
     public init() {}
@@ -177,14 +173,5 @@ public class NavigationStackRouter: NavigationStackRouterInterface {
         } else if rootView?.type == T.self {
             popToRoot(animated: animated, completion: completion)
         }
-    }
-
-    public func setNavigationBarHidden(_ hidden: Bool, animated: Bool) {
-        hideNavigationBar = hidden
-        animateHideNavigationBar = animated
-    }
-    
-    public func setBackButtonImage(_ image: UIImage?) {
-        backButtonImage = image // nil means set to default
     }
 }

@@ -40,7 +40,7 @@ final class ForgotPasswordCoordinator: Coordinator, ForgotPasswordCoordinatorInt
     func start() {
         let view = AnyHashableView(view(self, alertPresenter))
         router.push(view, animated: true, completion: nil)
-        router.setBackButtonImage(UIImage())
+//        router.setBackButtonImage(UIImage())
     }
 
     func navigateToConfirmForgotPassword(_ entity: ForgotPasswordResponseEntity) {

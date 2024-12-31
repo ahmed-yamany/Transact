@@ -38,7 +38,6 @@ public final class NavigationControllerRouter: NavigationControllerRouterInterfa
     }
 
     public let navigationController: UINavigationController
-
     public init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
@@ -131,14 +130,5 @@ public final class NavigationControllerRouter: NavigationControllerRouterInterfa
                 navigationController.popToViewController(viewController, animated: animated)
             }, completion: completion)
         }
-    }
-
-    public func setNavigationBarHidden(_ hidden: Bool, animated: Bool) {
-        navigationController.setNavigationBarHidden(hidden, animated: animated)
-    }
-    
-    public func setBackButtonImage(_ image: UIImage?) {
-        navigationController.navigationBar.backIndicatorImage = image
-        navigationController.navigationBar.backIndicatorTransitionMaskImage = image
     }
 }

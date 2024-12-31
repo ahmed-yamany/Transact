@@ -35,7 +35,4 @@ public protocol Router {
     func dismiss(animated: Bool, completion: (() -> Void)?)
 
     func popToView<T: View>(withType type: T.Type, animated: Bool, completion: (() -> Void)?)
-
-    func setNavigationBarHidden(_ hidden: Bool, animated: Bool)
-    func setBackButtonImage(_ image: UIImage?)
 }

@@ -9,6 +9,7 @@ import SwiftUI
 
 @MainActor
 public final class NavigationControllerRouter: Router {
+    
     public let navigationController: UINavigationController
 
     public init(navigationController: UINavigationController) {
@@ -50,7 +51,7 @@ public final class NavigationControllerRouter: Router {
     }
 
     public func replaceLastView(with view: AnyHashableView, animated: Bool, completion: (() -> Void)?) {
-        replaceView(at: navigationController.viewControllers.endIndex, with: view, animated: animated, completion: completion)
+        replaceView(at: navigationController.viewControllers.count - 1, with: view, animated: animated, completion: completion)
     }
 
     public func replaceFirstView(with view: AnyHashableView, animated: Bool, completion: (() -> Void)?) {
@@ -58,20 +59,25 @@ public final class NavigationControllerRouter: Router {
     }
 
     public func insert(_ view: AnyHashableView, at index: Int, animated: Bool, completion: (() -> Void)?) {
-//        navigationRouter.insert(UIHashableHostingController(rootView: view), at: index, animated: animated, completion: completion ?? {})
+        insert(contentsOfViews: [view], at: index, animated: animated, completion: completion)
     }
 
     public func insert(contentsOfViews viewsToInsert: [AnyHashableView], at index: Int, animated: Bool, completion: (() -> Void)?) {
-//        let viewControllers = viewsToInsert.map { UIHashableHostingController(rootView: $0) }
-//        navigationRouter.insert(contentsOfViewControllers: viewControllers, at: index, animated: animated, completion: completion ?? {})
+        let viewControllerToInsert = viewsToInsert.map { UIHashableHostingController(rootView: $0) }
+        let viewControllers = navigationController.viewControllers.inserted(contentsOf: viewControllerToInsert, at: index)
+        setViewControllers(viewControllers, animated: animated, completion: completion)
     }
 
     public func pop(animated: Bool, completion: (() -> Void)?) {
-//        navigationRouter.pop(animated: animated, completion: completion ?? {})
+        UIView.performWithTransaction({
+            navigationController.popViewController(animated: animated)
+        }, completion: completion)
     }
 
     public func popToRoot(animated: Bool, completion: (() -> Void)?) {
-//        navigationRouter.popToRoot(animated: animated, completion: completion ?? {})
+        UIView.performWithTransaction({
+            navigationController.popToRootViewController(animated: animated)
+        }, completion: completion)
     }
 
     public func present(
@@ -81,25 +87,22 @@ public final class NavigationControllerRouter: Router {
         transitionStyle: UIModalTransitionStyle,
         completion: (() -> Void)?
     ) {
-//        let viewController = UIHashableHostingController(rootView: view)
-//
-//        presentationRouter.present(
-//            viewController,
-//            animated: animated,
-//            presentationStyle: presentationStyle,
-//            transitionStyle: transitionStyle,
-//            completion: completion ?? {}
-//        )
+        let viewController = UIHashableHostingController(rootView: view)
+        viewController.modalPresentationStyle = presentationStyle
+        viewController.modalTransitionStyle = transitionStyle
+        navigationController.visibleViewController?.present(viewController, animated: animated, completion: completion)
     }
 
     public func dismiss(animated: Bool, completion: (() -> Void)?) {
-//        presentationRouter.dismiss(animated: animated, completion: completion ?? {})
+        navigationController.visibleViewController?.dismiss(animated: animated, completion: completion ?? {})
     }
 
     public func popToView<T: View>(withType type: T.Type, animated: Bool, completion: (() -> Void)?) {
-//        let stack = navigationRouter.viewControllers.compactMap { $0 as? UIHashableHostingController }
-//        if let index = stack.firstIndex(where: { $0.type == type}) {
-//            navigationRouter.popToViewController(navigationController.viewControllers[index], animated: animated, completion: completion ?? {})
-//        }
+        let stack = navigationController.viewControllers.compactMap { $0 as? UIHashableHostingController }
+        if let index = stack.firstIndex(where: { $0.type == type }) {
+            UIView.performWithTransaction({
+                navigationController.popToViewController(navigationController.viewControllers[index], animated: animated)
+            }, completion: completion)
+        }
     }
 }

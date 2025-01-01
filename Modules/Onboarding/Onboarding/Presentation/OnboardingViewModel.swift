@@ -88,7 +88,7 @@ public final class OnboardingViewModel: OnboardingViewModelInterface {
     }
 
     public func skipOrRestartButtonTitle() -> String {
-        isIndexAtLast() ? L10n.restart : L10n.skip
+        isIndexAtLast() ? L10n.Localizable.restart : L10n.Localizable.skip
     }
 
     public func shouldShowGetStartedButton() -> Bool {

@@ -14,10 +14,14 @@ extension HTTPEndPoint where Self == AuthenticatedHTTPEndPointDecorator {
         await .authenticated(
             endPoint: endpoint,
             tokenProvider: {
-                "user-token"
+                await MainActor.run {
+                    "user-token"
+                }
             },
             languageProvider: {
-                await LocalizationSettings.shared.getLanguage().local.identifier
+                await MainActor.run {
+                    LocalizationSettings.shared.getLanguage().local.identifier
+                }
             }
         )
     }

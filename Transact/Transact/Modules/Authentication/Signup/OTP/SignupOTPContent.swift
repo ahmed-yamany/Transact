@@ -10,5 +10,5 @@ import Localization
 import OTP
 
 struct SignupOTPContent: OTPContentInterFace {
-    let header: String = L10n.signup
+    let header: String = L10n.Localizable.signup
 }

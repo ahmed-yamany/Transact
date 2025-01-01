@@ -92,7 +92,7 @@ public final class PasswordViewModel: PasswordViewModelInterface {
         Task {
             do {
                 try await useCase.validatePassword(password)
-                passwordError = .success(L10n.strongPassword)
+                passwordError = .success(L10n.Localizable.strongPassword)
             } catch {
                 passwordError = .error(error.localizedDescription)
             }

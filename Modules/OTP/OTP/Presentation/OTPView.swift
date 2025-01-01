@@ -51,7 +51,7 @@ public struct OTPView<ViewModel: OTPViewModelInterface>: View {
             viewModel.resendButtonTapped()
         } label: {
             HStack {
-                P2Text(L10n.resendCode)
+                P2Text(L10n.Localizable.resendCode)
 
                 DesignSystem.Foundation.Icons.reload.swiftUIImage
                     .resizable()
@@ -63,7 +63,7 @@ public struct OTPView<ViewModel: OTPViewModelInterface>: View {
     }
 
     private var verifyButton: some View {
-        Button(L10n.verify) {
+        Button(L10n.Localizable.verify) {
             viewModel.verifyButtonTapped()
         }
         .buttonStyle(.primary())

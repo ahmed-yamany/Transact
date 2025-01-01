@@ -51,17 +51,5 @@
 "forgotPassword.subtitle" = "Please provide your phone number and change a new password";
 
 // MARK: - OTP
-"otp.title" = "Please verify your Phone Number";
-"otp.subtitle" = "OTP has been Sent to your phone number %s.  The code expires in %s";
 
 // MARK: - Error
-"error.empty-phoneNumber" = "Phone Number shouldn't be empty";
-"error.phoneNumber-length" = "Phone Number length shouldn't be empty less than 11";
-"error.phoneNumber-invalid-charachters" = "Phone Number shouldn't contain invalid charachters";
-"error.fullName-length" = "Full Name length shouldn't be less than 3 chrachters";
-"error.otp-length" = "The OTP code length shouldn't be less than %s";
-"error.otp-invalid-characters" = "otp contains invalid charachers";
-"error.password-length" = "Password must be at least 8 characters long";
-"error.password-letter" = "Password must include at least a letter";
-"error.password-special-character" = "Password must must include at least a special charcter";
-"error.password-match" = "Passwords doesn't match";

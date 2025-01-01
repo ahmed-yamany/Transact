@@ -18,7 +18,7 @@ public struct BlueLogoView: View {
                 .resizable()
                 .frame(width: 56, height: 56)
             
-            H4Text(L10n.appName)
+            H4Text(L10n.Localizable.appName)
                 .foregroundStyle(DesignSystem.Tokens.Colors.gradient)
         }
     }

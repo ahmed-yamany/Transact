@@ -1,12 +1,15 @@
-input_dir: Localization/
-output_dir: Localization/
+input_dir: Localization/Localization/
+output_dir: Localization/Localization/
 
 strings:
    inputs:
-     - Localization/Localizable/en.lproj
+     - Localizable/en.lproj
+     - Login/en.lproj
+     - Error/en.lproj
+     - Otp/en.lproj
    outputs:
      - templateName: structured-swift5
-       output: Localization/Strings+Generated.swift
+       output: Strings+Generated.swift
        params:
         lookupFunction: localized(forKey:table:fallbackValue:)
         publicAccess: true

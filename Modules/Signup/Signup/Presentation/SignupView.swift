@@ -19,7 +19,7 @@ public struct SignupView<ViewModel: SignupViewModelInterface>: View {
     public var body: some View {
         ScrollView {
             VStack(spacing: .measurements.Spacing.xxxLarge) {
-                AuthenticationView(title: L10n.welcomeToTransact, subtitle: L10n.Signup.subtitle)
+                AuthenticationView(title: L10n.Localizable.welcomeToTransact, subtitle: L10n.Localizable.Signup.subtitle)
 
                 VStack(spacing: .measurements.Spacing.large) {
                     phoneNumberTextField
@@ -47,8 +47,8 @@ public struct SignupView<ViewModel: SignupViewModelInterface>: View {
 
     private var phoneNumberTextField: some View {
         PrimaryTextField(
-            L10n.enterPhoneNumber,
-            title: L10n.phoneNumber,
+            L10n.Localizable.enterPhoneNumber,
+            title: L10n.Localizable.phoneNumber,
             text: $viewModel.phoneNumber,
             error: viewModel.phoneNumberError
         )
@@ -58,8 +58,8 @@ public struct SignupView<ViewModel: SignupViewModelInterface>: View {
 
     private var fullNameTextField: some View {
         PrimaryTextField(
-            L10n.enterYourFullName,
-            title: L10n.fullName,
+            L10n.Localizable.enterYourFullName,
+            title: L10n.Localizable.fullName,
             text: $viewModel.fullName,
             error: viewModel.fullNameError
         )
@@ -67,7 +67,7 @@ public struct SignupView<ViewModel: SignupViewModelInterface>: View {
     }
 
     private var signupButton: some View {
-        Button(L10n.signup) {
+        Button(L10n.Localizable.signup) {
             viewModel.signupButtonTapped()
         }
         .buttonStyle(.primary())
@@ -75,7 +75,7 @@ public struct SignupView<ViewModel: SignupViewModelInterface>: View {
     }
 
     private var forgotPasswordButton: some View {
-        Button(L10n.forgotPassword) {
+        Button(L10n.Localizable.forgotPassword) {
             viewModel.forgotPasswordButtonTapped()
         }
         .buttonStyle(.text())
@@ -83,9 +83,9 @@ public struct SignupView<ViewModel: SignupViewModelInterface>: View {
 
     private var signinView: some View {
         HStack {
-            P3Text(L10n.alreadyHaveAccount)
+            P3Text(L10n.Localizable.alreadyHaveAccount)
 
-            Button(L10n.login) {
+            Button(L10n.Localizable.login) {
                 viewModel.loginButtonTapped()
             }
             .buttonStyle(.text())

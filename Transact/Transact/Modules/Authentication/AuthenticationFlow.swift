@@ -54,7 +54,6 @@ struct AuthenticationFlow: AuthenticationFlowInterface, View {
     }
 }
 
-
 @MainActor
 func navigationControllerRouter() -> NavigationControllerRouter {
     let nvController = UINavigationController()

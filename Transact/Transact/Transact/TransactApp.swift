@@ -10,7 +10,6 @@ import Coordinator
 import HTTPClient
 import SwiftUI
 
-
 @main
 struct TransactApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
@@ -23,16 +22,6 @@ struct TransactApp: App {
     }
 }
 
-struct RepresentableViewController: UIViewControllerRepresentable {
-    let viewController: UIViewController
-
-    func makeUIViewController(context: Context) -> UIViewController {
-        viewController
-    }
-
-    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
-    }
-}
 
 struct Message {
 }

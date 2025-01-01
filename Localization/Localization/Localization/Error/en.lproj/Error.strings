@@ -1,0 +1,17 @@
+/* 
+  Error.strings
+  Localization
+
+  Created by Ahmed Yamany on 01/01/2025.
+  
+*/
+"empty-phoneNumber" = "Phone Number shouldn't be empty";
+"phoneNumber-length" = "Phone Number length shouldn't be empty less than 11";
+"phoneNumber-invalid-charachters" = "Phone Number shouldn't contain invalid charachters";
+"fullName-length" = "Full Name length shouldn't be less than 3 chrachters";
+"otp-length" = "The OTP code length shouldn't be less than %s";
+"otp-invalid-characters" = "otp contains invalid charachers";
+"password-length" = "Password must be at least 8 characters long";
+"password-letter" = "Password must include at least a letter";
+"password-special-character" = "Password must must include at least a special charcter";
+"password-match" = "Passwords doesn't match";

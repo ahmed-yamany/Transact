@@ -19,7 +19,7 @@ public struct LoginView<ViewModel: LoginViewModelInterface>: View {
     public var body: some View {
         ScrollView {
             VStack(spacing: .measurements.Spacing.xxxLarge) {
-                AuthenticationView(title: L10n.welcomeBack, subtitle: L10n.Login.subtitle)
+                AuthenticationView(title: L10n.Localizable.welcomeBack, subtitle: L10n.Login.subtitle)
 
                 VStack(spacing: .measurements.Spacing.large) {
                     phoneNumberTextField
@@ -49,8 +49,8 @@ public struct LoginView<ViewModel: LoginViewModelInterface>: View {
 
     private var phoneNumberTextField: some View {
         PrimaryTextField(
-            L10n.enterPhoneNumber,
-            title: L10n.phoneNumber,
+            L10n.Localizable.enterPhoneNumber,
+            title: L10n.Localizable.phoneNumber,
             text: $viewModel.phoneNumber
         )
         .keyboardType(.numberPad)
@@ -59,8 +59,8 @@ public struct LoginView<ViewModel: LoginViewModelInterface>: View {
 
     private var passworedTextField: some View {
         PrimaryTextField(
-            L10n.enterPassword,
-            title: L10n.password,
+            L10n.Localizable.enterPassword,
+            title: L10n.Localizable.password,
             text: $viewModel.password,
             secured: true
         )
@@ -69,21 +69,21 @@ public struct LoginView<ViewModel: LoginViewModelInterface>: View {
 
     private var rememberMe: some View {
         Toggle(isOn: $viewModel.rememberMe) {
-            P4Text(L10n.rememberMe)
+            P4Text(L10n.Localizable.rememberMe)
         }
         .toggleStyle(.primary)
         .frame(maxWidth: .infinity, alignment: .leading)
     }
 
     private var loginButton: some View {
-        Button(L10n.login) {
+        Button(L10n.Localizable.login) {
             viewModel.loginButtonTapped()
         }
         .buttonStyle(.primary())
     }
 
     private var forgotPasswordButton: some View {
-        Button(L10n.forgotPassword) {
+        Button(L10n.Localizable.forgotPassword) {
             viewModel.forgotPasswordButtonTapped()
         }
         .buttonStyle(.text())
@@ -91,9 +91,9 @@ public struct LoginView<ViewModel: LoginViewModelInterface>: View {
 
     private var signupView: some View {
         HStack {
-            P3Text(L10n.dontHaveAccount)
+            P3Text(L10n.Localizable.dontHaveAccount)
 
-            Button(L10n.signup) {
+            Button(L10n.Localizable.signup) {
                 viewModel.signupButtonTapped()
             }
             .buttonStyle(.text())

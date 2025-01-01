@@ -10,5 +10,5 @@ import Localization
 import OTP
 
 struct ForgotPasswordOTPContent: OTPContentInterFace {
-    let header: String = L10n.forgotPassword
+    let header: String = L10n.Localizable.forgotPassword
 }

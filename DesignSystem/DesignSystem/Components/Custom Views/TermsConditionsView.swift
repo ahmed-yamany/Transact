@@ -16,13 +16,13 @@ public struct TermsConditionsView: View {
     }
 
     private var string: AttributedString {
-        var string = AttributedString("\(L10n.termsConditionDescription) \(L10n.termsOfUse) \(L10n.and) \(L10n.privacyPolicy)")
+        var string = AttributedString("\(L10n.Localizable.termsConditionDescription) \(L10n.Localizable.termsOfUse) \(L10n.Localizable.and) \(L10n.Localizable.privacyPolicy)")
 
-        if let range = string.range(of: L10n.termsOfUse) {
+        if let range = string.range(of: L10n.Localizable.termsOfUse) {
             string[range].foregroundColor = DesignSystem.Tokens.Colors.primary
         }
 
-        if let range = string.range(of: L10n.privacyPolicy) {
+        if let range = string.range(of: L10n.Localizable.privacyPolicy) {
             string[range].foregroundColor = DesignSystem.Tokens.Colors.primary
         }
 

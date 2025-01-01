@@ -5,7 +5,7 @@
       location = "group:HTTPClient/HTTPClient.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Shared/Shared.xcodeproj">
+      location = "group:Coordinator/Coordinator.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Localization/Localization.xcodeproj">
@@ -14,7 +14,7 @@
       location = "group:DesignSystem/DesignSystem.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:DesignSystem/../Coordinator/Coordinator.xcodeproj">
+      location = "group:Shared/Shared.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Modules/Splash/Splash.xcodeproj">

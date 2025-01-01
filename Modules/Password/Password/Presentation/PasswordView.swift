@@ -44,8 +44,8 @@ public struct PasswordView<ViewModel: PasswordViewModelInterface>: View {
 
     private var passworedTextField: some View {
         PrimaryTextField(
-            L10n.enterPassword,
-            title: L10n.password,
+            L10n.Localizable.enterPassword,
+            title: L10n.Localizable.password,
             text: $viewModel.password,
             error: viewModel.passwordError, secured: true,
             tip: content.passwordTip
@@ -56,8 +56,8 @@ public struct PasswordView<ViewModel: PasswordViewModelInterface>: View {
 
     private var confirmPassworedTextField: some View {
         PrimaryTextField(
-            L10n.enterPassword,
-            title: L10n.password,
+            L10n.Localizable.enterPassword,
+            title: L10n.Localizable.password,
             text: $viewModel.confirmPassword,
             error: viewModel.confirmPasswordError,
             secured: true
@@ -67,7 +67,7 @@ public struct PasswordView<ViewModel: PasswordViewModelInterface>: View {
     }
 
     private var completeButton: some View {
-        Button(L10n.complete) {
+        Button(L10n.Localizable.complete) {
             viewModel.completeButtonTapped()
         }
         .buttonStyle(.primary())

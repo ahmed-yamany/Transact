@@ -19,7 +19,7 @@ public struct ForgotPasswordView<ViewModel: ForgotPasswordViewModelInterface>: V
     public var body: some View {
         ScrollView {
             VStack(spacing: .measurements.Spacing.xxxLarge) {
-                AuthenticationView(title: L10n.forgotPassword, subtitle: L10n.ForgotPassword.subtitle)
+                AuthenticationView(title: L10n.Localizable.forgotPassword, subtitle: L10n.Localizable.ForgotPassword.subtitle)
 
                 phoneNumberTextField
 
@@ -37,8 +37,8 @@ public struct ForgotPasswordView<ViewModel: ForgotPasswordViewModelInterface>: V
 
     private var phoneNumberTextField: some View {
         PrimaryTextField(
-            L10n.enterPhoneNumber,
-            title: L10n.phoneNumber,
+            L10n.Localizable.enterPhoneNumber,
+            title: L10n.Localizable.phoneNumber,
             text: $viewModel.phoneNumber,
             error: viewModel.phoneNumberError
         )
@@ -47,7 +47,7 @@ public struct ForgotPasswordView<ViewModel: ForgotPasswordViewModelInterface>: V
     }
 
     private var forgotPasswordButton: some View {
-        Button(L10n.changePassword) {
+        Button(L10n.Localizable.changePassword) {
             viewModel.changePasswordButtonTapped()
         }
         .buttonStyle(.primary())

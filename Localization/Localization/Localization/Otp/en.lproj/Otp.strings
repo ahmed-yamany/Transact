@@ -1,0 +1,9 @@
+/* 
+  Otp.strings
+  Localization
+
+  Created by Ahmed Yamany on 01/01/2025.
+  
+*/
+"title" = "Please verify your Phone Number";
+"subtitle" = "OTP has been Sent to your phone number %s.  The code expires in %s";

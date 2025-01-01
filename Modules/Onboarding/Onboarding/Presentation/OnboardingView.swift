@@ -95,7 +95,7 @@ public struct OnboardingView<ViewModel: OnboardingViewModelInterface>: View {
         Button {
             viewModel.nextButtonTapped()
         } label: {
-            P3Text(L10n.next)
+            P3Text(L10n.Localizable.next)
         }
         .buttonStyle(.text())
     }
@@ -104,7 +104,7 @@ public struct OnboardingView<ViewModel: OnboardingViewModelInterface>: View {
         Button {
             viewModel.backButtonTapped()
         } label: {
-            P3Text(L10n.back)
+            P3Text(L10n.Localizable.back)
         }
         .buttonStyle(.text())
         .disabled(viewModel.shouldDisableBackButton())
@@ -114,7 +114,7 @@ public struct OnboardingView<ViewModel: OnboardingViewModelInterface>: View {
         Button {
             viewModel.getStartedButtonTapped()
         } label: {
-            P3Text(L10n.getStarted)
+            P3Text(L10n.Localizable.getStarted)
         }
         .buttonStyle(.primary())
     }

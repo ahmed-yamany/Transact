@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7366505D2D2444A400918174 /* RoutableNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7366505C2D2444A400918174 /* RoutableNavigationController.swift */; };
-		736650602D244F7400918174 /* View+onCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7366505F2D244F7400918174 /* View+onCondition.swift */; };
 		736650622D24514400918174 /* UIView+parentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736650612D24514400918174 /* UIView+parentViewController.swift */; };
 		736650642D24519E00918174 /* navigationBarBackButtonImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736650632D24519E00918174 /* navigationBarBackButtonImage.swift */; };
 		736650662D24628100918174 /* NavigationRouterConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736650652D24628100918174 /* NavigationRouterConfigurations.swift */; };
@@ -41,7 +40,6 @@
 
 /* Begin PBXFileReference section */
 		7366505C2D2444A400918174 /* RoutableNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutableNavigationController.swift; sourceTree = "<group>"; };
-		7366505F2D244F7400918174 /* View+onCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+onCondition.swift"; sourceTree = "<group>"; };
 		736650612D24514400918174 /* UIView+parentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+parentViewController.swift"; sourceTree = "<group>"; };
 		736650632D24519E00918174 /* navigationBarBackButtonImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navigationBarBackButtonImage.swift; sourceTree = "<group>"; };
 		736650652D24628100918174 /* NavigationRouterConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouterConfigurations.swift; sourceTree = "<group>"; };
@@ -129,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				736650632D24519E00918174 /* navigationBarBackButtonImage.swift */,
-				7366505F2D244F7400918174 /* View+onCondition.swift */,
 				7372084E2D20A7E500AF5598 /* UIView+performWithTransaction.swift */,
 				7372084C2D20A7E300AF5598 /* Array+.swift */,
 				EEC332FD2CC03141000B7AB4 /* RecursiveModifierApplier.swift */,
@@ -339,7 +336,6 @@
 				EEC332FE2CC03141000B7AB4 /* RecursiveModifierApplier.swift in Sources */,
 				EED1C9282C6EC06C00472518 /* Router.swift in Sources */,
 				736650642D24519E00918174 /* navigationBarBackButtonImage.swift in Sources */,
-				736650602D244F7400918174 /* View+onCondition.swift in Sources */,
 				736650662D24628100918174 /* NavigationRouterConfigurations.swift in Sources */,
 				7372084F2D20A7E500AF5598 /* UIView+performWithTransaction.swift in Sources */,
 				EED1C9272C6EC06C00472518 /* NavigationControllerRouter.swift in Sources */,

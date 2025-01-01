@@ -37,17 +37,15 @@ public struct PrimaryTextField: View {
 
             VStack(spacing: .spacing.xSmall) {
                 Group {
-                    Group {
-                        if secured {
-                            SecureField(placeholder, text: $text)
-                        } else {
-                            TextField(placeholder, text: $text)
-                        }
+                    if secured {
+                        SecureField(placeholder, text: $text)
+                    } else {
+                        TextField(placeholder, text: $text)
                     }
-                    .overlay(alignment: .trailing) {
-                        if !text.isEmpty {
-                            xButton
-                        }
+                }
+                .overlay(alignment: .trailing) {
+                    if !text.isEmpty {
+                        xButton
                     }
                 }
                 .font(DesignSystem.Foundation.Typography.regular.swiftUIFont(size: .fontSizes.p2.size))

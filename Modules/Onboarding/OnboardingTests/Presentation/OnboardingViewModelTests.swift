@@ -107,7 +107,7 @@ struct OnboardingViewModelTests {
         let models = try await useCase.getOnboardingModels()
         await sut.setModels(models)
         await sut.setSelectedIndexToLast()
-        await #expect(sut.skipOrRestartButtonTitle() == L10n.restart)
+        await #expect(sut.skipOrRestartButtonTitle() == L10n.Localizable.restart)
     }
     
     @Test
@@ -115,7 +115,7 @@ struct OnboardingViewModelTests {
         let models = try await useCase.getOnboardingModels()
         await sut.setModels(models)
         await sut.setSelectedIndex(1)
-        await #expect(sut.skipOrRestartButtonTitle() == L10n.skip)
+        await #expect(sut.skipOrRestartButtonTitle() == L10n.Localizable.skip)
     }
 }
 

@@ -30,11 +30,7 @@ struct LoginFactoryContainer {
         AnyView(LoginView(viewModel: Self.viewModel(coordinator, alertPresenter: alertPresenter)))
     }
 
-    static func coordinator(
-        _ router: Router,
-        authenticationFlow: AuthenticationFlowInterface,
-        alertPresenter: any AlertPresenter
-    ) -> Coordinator {
-        LoginCoordinator(router: router, view: Self.view, authenticationFlow: authenticationFlow, alertPresenter: alertPresenter)
+    static func coordinator(_ router: Router, authenticationFlow: AuthenticationFlowInterface) -> Coordinator {
+        LoginCoordinator(router: router, view: Self.view, authenticationFlow: authenticationFlow)
     }
 }

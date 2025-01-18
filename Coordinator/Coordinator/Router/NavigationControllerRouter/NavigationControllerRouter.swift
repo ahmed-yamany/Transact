@@ -38,6 +38,7 @@ public final class NavigationControllerRouter: NavigationControllerRouterInterfa
     }
 
     public let navigationController: UINavigationController
+
     public init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }

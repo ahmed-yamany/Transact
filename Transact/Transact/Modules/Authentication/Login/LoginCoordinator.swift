@@ -10,27 +10,28 @@ import DesignSystem
 import Login
 import SwiftUI
 
-struct LoginCoordinator: LoginCoordinatorInterface, Coordinator {
+struct LoginCoordinator: LoginCoordinatorInterface, Coordinator, View {
     let router: Router
     let view: (LoginCoordinatorInterface, any AlertPresenter) -> AnyView
     let authenticationFlow: AuthenticationFlowInterface
-    let alertPresenter: any AlertPresenter
+    @EnvironmentObject var alertPresenter: AlertPresenterController
 
     init(
         router: Router,
         view: @escaping (LoginCoordinatorInterface, any AlertPresenter) -> AnyView,
-        authenticationFlow: AuthenticationFlowInterface,
-        alertPresenter: any AlertPresenter
+        authenticationFlow: AuthenticationFlowInterface
     ) {
         self.router = router
         self.view = view
         self.authenticationFlow = authenticationFlow
-        self.alertPresenter = alertPresenter
+    }
+
+    var body: some View {
+        view(self, alertPresenter)
     }
 
     func start() {
-        let view = AnyHashableView(view(self, alertPresenter))
-        router.setView(view, animated: true, completion: nil)
+        router.setView(AnyHashableView(self), animated: true, completion: nil)
     }
 
     func navigateToSignUp() {

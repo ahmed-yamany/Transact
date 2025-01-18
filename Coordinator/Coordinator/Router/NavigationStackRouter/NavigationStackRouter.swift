@@ -15,8 +15,6 @@ public protocol NavigationStackRouterInterface: Router, ObservableObject {
     var sheetView: AnyHashableView? { get set }
 }
 
-
-
 @MainActor
 public class NavigationStackRouter: NavigationStackRouterInterface {
     @Published public var rootView: AnyHashableView?

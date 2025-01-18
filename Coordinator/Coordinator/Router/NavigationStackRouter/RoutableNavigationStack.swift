@@ -11,6 +11,7 @@ import SwiftUI
 public struct RoutableNavigationStack<NavigationRouter: NavigationStackRouterInterface>: View {
     @ObservedObject private var router: NavigationRouter
     let configurations: NavigationRouterConfigurations
+
     public init(router: NavigationRouter, configurations: NavigationRouterConfigurations = .init()) {
         _router = ObservedObject(wrappedValue: router)
         self.configurations = configurations
@@ -24,7 +25,6 @@ public struct RoutableNavigationStack<NavigationRouter: NavigationStackRouterInt
             .toolbar(configurations.hideNavigationBar ? .hidden : .visible, for: .navigationBar)
             .navigationDestination(for: AnyHashableView.self) {
                 $0.toolbar(configurations.hideNavigationBar ? .hidden : .visible, for: .navigationBar)
-                    .animation(.default, value: configurations.hideNavigationBar)
             }
             .fullScreenCover(item: $router.fullScreenCoverView) { $0 }
             .sheet(item: $router.sheetView) { $0 }

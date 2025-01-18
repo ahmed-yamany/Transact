@@ -24,7 +24,8 @@ public protocol Router {
 
     func pop(animated: Bool, completion: (() -> Void)?)
     func popToRoot(animated: Bool, completion: (() -> Void)?)
-
+    func popToView<T: View>(withType type: T.Type, animated: Bool, completion: (() -> Void)?)
+    
     func present(
         _ view: AnyHashableView,
         animated: Bool,
@@ -34,5 +35,5 @@ public protocol Router {
     )
     func dismiss(animated: Bool, completion: (() -> Void)?)
 
-    func popToView<T: View>(withType type: T.Type, animated: Bool, completion: (() -> Void)?)
+    
 }

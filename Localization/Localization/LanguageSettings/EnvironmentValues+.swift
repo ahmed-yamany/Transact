@@ -8,23 +8,25 @@
 import SwiftUI
 
 public struct EnvironmentLanguageKey: EnvironmentKey {
-    public static var defaultValue: Language = .english
+    public static var defaultValue: Language = LocalizationSettings.shared.getLanguage()
 }
 
 public extension EnvironmentValues {
     var language: Language {
         get { self[EnvironmentLanguageKey.self] }
-        set { self[EnvironmentLanguageKey.self] = newValue }
+        set {
+            self[EnvironmentLanguageKey.self] = newValue
+        }
     }
 }
 
-public struct SettingsEnvironmentKey: EnvironmentKey {
+public struct LanguageSettingsEnvironmentKey: EnvironmentKey {
     public static var defaultValue: any LocalizationSettingsProtocol = LocalizationSettings.shared
 }
 
 public extension EnvironmentValues {
-    var settings: any LocalizationSettingsProtocol {
-        get { self[SettingsEnvironmentKey.self] }
-        set { self[SettingsEnvironmentKey.self] = newValue }
+    var languageSettings: any LocalizationSettingsProtocol {
+        get { self[LanguageSettingsEnvironmentKey.self] }
+        set { self[LanguageSettingsEnvironmentKey.self] = newValue }
     }
 }
